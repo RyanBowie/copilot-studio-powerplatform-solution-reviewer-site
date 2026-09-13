@@ -14,7 +14,7 @@ DEPLOY = [
     "downloads/real-canvas-review-example.zip", "PRIVACY-REPORT.json", ".nojekyll",
 ] + ["examples/real-canvas/" + name for name in IMAGES + REPORTS + PROVENANCE]
 REPOSITORY_ONLY = [
-    ".gitignore", ".gitattributes", "qa/RESULTS.json",
+    ".gitignore", ".gitattributes", ".github/workflows/pages.yml", "qa/RESULTS.json",
     "tools/build_home.py", "tools/generate_content.py", "tools/prepare_real_example.py",
     "tools/public_inventory.py", "tools/check_public.py", "tools/qa_site.py",
     "tools/make_manifest.py", "tools/stage_site.py", "tools/serve_preview.py",

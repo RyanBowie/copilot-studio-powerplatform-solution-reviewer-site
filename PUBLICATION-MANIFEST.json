@@ -130,8 +130,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "6b9224b62e226ec05ad4d643b57c3bdcb645e05a01ff610248bad0187db42722",
-      "bytes": 5875,
+      "sha256": "813140daff23e090ef08bdce918a73c013900ce9d0f385c5519d58f0ec687dfc",
+      "bytes": 6455,
       "deployToPages": true
     },
     {
@@ -237,6 +237,12 @@
       "deployToPages": false
     },
     {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "1eb1850c8ce9b6085e39808ffa51c8d21bfc146bc217fe6e769ea2ef95f62180",
+      "bytes": 791,
+      "deployToPages": false
+    },
+    {
       "path": "qa/RESULTS.json",
       "sha256": "f6876fb270375b0a9bb0ac103ed73b23c1f88ce55c0a682fa4e8ba15e017c21a",
       "bytes": 22954,
@@ -262,8 +268,8 @@
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "8a3cdeacdd268177c3ff056100d3c8ab4aa59406bd06e38eb418cf9784cfb0bd",
-      "bytes": 1616,
+      "sha256": "563cc0fb79bbc520654f8cca170a22c85c8bb2120c864e19b62ebd75035fdc9f",
+      "bytes": 1647,
       "deployToPages": false
     },
     {
@@ -331,6 +337,7 @@
     "examples/real-canvas/user-capture-provenance.v1.json",
     ".gitignore",
     ".gitattributes",
+    ".github/workflows/pages.yml",
     "qa/RESULTS.json",
     "tools/build_home.py",
     "tools/generate_content.py",
@@ -380,6 +387,7 @@
   "repositoryOnlyAllowlist": [
     ".gitignore",
     ".gitattributes",
+    ".github/workflows/pages.yml",
     "qa/RESULTS.json",
     "tools/build_home.py",
     "tools/generate_content.py",
