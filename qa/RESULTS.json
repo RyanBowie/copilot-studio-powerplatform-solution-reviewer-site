@@ -1,0 +1,867 @@
+{
+  "status": "PASS",
+  "scope": "APPROVED_REAL_CANVAS_LOCAL_SITE_QA",
+  "historicalQaInherited": false,
+  "runtimeActionsPerformed": false,
+  "capturesPublished": false,
+  "contentSourceSha256": "c9fe66ed607a23db333d7c7eea22866249697ffe0481d0d66c20df67d51c2291",
+  "exampleBundleSha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
+  "cases": [
+    {
+      "check": "All fourteen approved published files verified; four complete TXT pins and eight image inputs unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "Full 58,939-byte coverage retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Installer remains excluded",
+      "result": "PASS"
+    },
+    {
+      "check": "Clean replacement hosting is not falsely reported as created/live",
+      "result": "PASS"
+    },
+    {
+      "check": "Report source is escaped, not executable markup",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: actual journey followed immediately by complete-output entry",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: receipt caveat beside example",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: requested user-provided notification is the lead notification image",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: only the approved real-example ZIP",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: full output link above fold",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: all MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: no clipped or height-limited report",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete exact text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: actual journey followed immediately by complete-output entry",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: receipt caveat beside example",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: requested user-provided notification is the lead notification image",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: only the approved real-example ZIP",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: full output link above fold",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: all MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: no clipped or height-limited report",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete exact text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: actual journey followed immediately by complete-output entry",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: receipt caveat beside example",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: requested user-provided notification is the lead notification image",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: only the approved real-example ZIP",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: full output link above fold",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: all MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: no clipped or height-limited report",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete exact text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: actual journey followed immediately by complete-output entry",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: receipt caveat beside example",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: requested user-provided notification is the lead notification image",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: only the approved real-example ZIP",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: full output link above fold",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: all MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: no clipped or height-limited report",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete exact text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: actual journey followed immediately by complete-output entry",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: receipt caveat beside example",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: requested user-provided notification is the lead notification image",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: only the approved real-example ZIP",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: full output link above fold",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: all MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: no clipped or height-limited report",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete exact text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard skip link first",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard skip navigation",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 1",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 1",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 1",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 2",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 2",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 2",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 3",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 3",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 3",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 4",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 4",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 4",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 5",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 5",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 5",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 6",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 6",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 6",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 7",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 7",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 7",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard real-image viewer 8",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 8",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 8",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete project instruction reference retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual tool and connection configuration retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Optional document formatter not passed off as implemented",
+      "result": "PASS"
+    },
+    {
+      "check": "Keyboard theme switch",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete keyboard download \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual received archive matches displayed manifest",
+      "result": "PASS"
+    },
+    {
+      "check": "Exact fourteen-member report/image/provenance archive",
+      "result": "PASS"
+    },
+    {
+      "check": "Every archive member is complete and exactly pinned",
+      "result": "PASS"
+    },
+    {
+      "check": "Downloaded bundle includes all coverage bytes",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: index.html",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: site.css",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: layout.css",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: site.js",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: example.css",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: example.js",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: full-example.html",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: content.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: content.js",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: reference.js",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: README.md",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: reference/agent-instructions.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: reference/topic-tool-source.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/real-canvas-example-manifest.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/real-canvas-review-example.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: PRIVACY-REPORT.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: .nojekyll",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/native-upload-menu-before-selection.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/native-upload-file-row-confirmed.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/actual-result-review-txt.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/actual-result-C4-txt.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/user-provided-notification-body.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/user-provided-main-opening.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/user-provided-main-assessment-findings.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/user-provided-main-verification-omissions.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/real-canvas-MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/real-canvas-C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/real-canvas-inventory.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/real-canvas-coverage.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/public-provenance.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/real-canvas/user-capture-provenance.v1.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Nonpublic/holding path blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "Nonpublic/holding path blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "Nonpublic/holding path blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "Nonpublic/holding path blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-5",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-10",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-2",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
+      "check": "Print button invokes browser print (intercepted wiring test)",
+      "result": "PASS"
+    },
+    {
+      "check": "Light print palette from dark reader",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains complete text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 main",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete without JavaScript \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "No external browser requests",
+      "result": "PASS"
+    },
+    {
+      "check": "No browser script errors",
+      "result": "PASS"
+    }
+  ],
+  "externalRequests": [],
+  "errors": [],
+  "printValidation": {
+    "allSixDocumentsComplete": true,
+    "pages": 38,
+    "publicPdfIncluded": false,
+    "runtimeFormatterExecuted": false
+  }
+}

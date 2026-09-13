@@ -1,0 +1,46 @@
+﻿PSR_COMPONENT_REVIEW_V3
+Job: [PRIVATE IDENTIFIER 1]; pass: C4; actual extracted source: Screen1.pa.yaml
+Contract: PSR_COMPONENT_V3; source-evidence checks passed. Not runtime/import/accessibility certification.
+
+Component assessment
+- LoadingSpinnerColor is assigned an RGBA expression. [line 12]: LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+- Form DataSource is set via an expression to the '[PRIVATE TABLE NAME 1]' source. [line 20]: DataSource: ='[PRIVATE TABLE NAME 1]'
+- The data card binds to the '[PRIVATE SCHEMA NAME 1]' data field. [line 33]: DataField: ="[PRIVATE SCHEMA NAME 1]"
+- The data card's Default value references ThisItem.Name. [line 34]: Default: =ThisItem.Name
+- DisplayName is derived dynamically from DataSourceInfo for the '[PRIVATE SCHEMA NAME 1]' field. [line 35]: DisplayName: =DataSourceInfo([@'[PRIVATE TABLE NAME 1]'],DataSourceInfo.DisplayName,'[PRIVATE SCHEMA NAME 1]')
+- The field is marked as required. [line 37]: Required: =true
+- The text input border color switches to red when the parent has an error. [line 61]: BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+Not assessed:
+- Complete app coverage: Only a partial source excerpt (80 lines) was returned and complete=false; unreturned screens/controls were not in scope.
+
+Evidence-grounded findings
+No supported defects were identified in the visible excerpt; properties and bindings shown are syntactically valid with no static failures evidenced.
+
+Observed strengths
+No specific positive practices with confirmed user-facing benefits are evidenced in this limited excerpt.
+
+Verification and not-assessed checks
+- VERIFICATION NEEDED / NOT RUN - Visuals [source line 12]: LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+  Applicability: Applicable to Screen1 when a loading spinner is displayed.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: LoadingSpinnerColor; observed serialization state: EXPLICIT_EXPRESSION
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Run the app and trigger the loading spinner on Screen1 to observe its color.
+  Expected observation: The spinner's color matches RGBA(56, 96, 178, 1).
+- VERIFICATION NEEDED / NOT RUN - Data connections [source line 20]: DataSource: ='[PRIVATE TABLE NAME 1]'
+  Applicability: Applies when the app environment has the referenced data source configured and accessible.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: DataSource; observed serialization state: EXPLICIT_EXPRESSION
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Open the app with a profile that has access to the '[PRIVATE TABLE NAME 1]' data source and load Form1.
+  Expected observation: Form1 can read Defaults('[PRIVATE TABLE NAME 1]') without connection or permission errors, and fields populate as expected.
+- VERIFICATION NEEDED / NOT RUN - Validation [source line 37]: Required: =true
+  Applicability: Relevant when Form1 has a submit action wired and validation is active.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: Required; observed serialization state: EXPLICIT_EXPRESSION
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Attempt to submit the form with the Name field empty.
+  Expected observation: Submission is blocked and an error indication appears for the Name field per the form’s validation behavior.
+
+Current official checker: NOT RUN. Historical checker evidence only if actually acquired.
+END_PSR_COMPONENT_REVIEW_V3

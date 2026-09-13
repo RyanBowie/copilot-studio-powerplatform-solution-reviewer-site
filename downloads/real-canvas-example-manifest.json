@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0",
+  "approvedPublicDerivatives": true,
+  "scope": "REAL_CANVAS_REVIEW_PARTIAL_NOT_COMPLETE_APPLICATION_ASSESSMENT",
+  "inputApprovalPins": {
+    "user-capture-provenance.v1.json": "f3cb2bc2c68c078d7f314267d018878cef5b48d84f442c4241478c8092c98476",
+    "public-provenance.json": "79b2cf94ba22bc4dda99229da77e8506af45506fefb74288a40e4372a22a2a92"
+  },
+  "textBodyPins": {
+    "real-canvas-MAIN.txt": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+    "real-canvas-C4.txt": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+    "real-canvas-inventory.txt": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+    "real-canvas-coverage.txt": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e"
+  },
+  "files": [
+    {
+      "path": "examples/real-canvas/user-capture-provenance.v1.json",
+      "archivePath": "user-capture-provenance.v1.json",
+      "inputSha256": "f3cb2bc2c68c078d7f314267d018878cef5b48d84f442c4241478c8092c98476",
+      "inputBytes": 8765,
+      "sha256": "49d09e1ab46e79fc747c83471b182d30ab62740f4772de1cc81d835b0af64e79",
+      "bytes": 12540,
+      "transformation": "Provenance approval/header and published-hash framing only"
+    },
+    {
+      "path": "examples/real-canvas/user-provided-notification-body.png",
+      "archivePath": "user-provided-notification-body.png",
+      "inputSha256": "3ff2f36d1472c159afa5474c6a3629825fd8e1986bc73efe0c61ed1abf7216ce",
+      "inputBytes": 73125,
+      "sha256": "3ff2f36d1472c159afa5474c6a3629825fd8e1986bc73efe0c61ed1abf7216ce",
+      "bytes": 73125,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/user-provided-main-opening.png",
+      "archivePath": "user-provided-main-opening.png",
+      "inputSha256": "8a7da1ba6bc03c7133175daa9aeec33c496f5612922ce2e63aa5a8b56a300666",
+      "inputBytes": 305120,
+      "sha256": "8a7da1ba6bc03c7133175daa9aeec33c496f5612922ce2e63aa5a8b56a300666",
+      "bytes": 305120,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/user-provided-main-assessment-findings.png",
+      "archivePath": "user-provided-main-assessment-findings.png",
+      "inputSha256": "edc5f60de026e315efa77593b35f7c153a699c35ffe6daf91f01998cedc823b0",
+      "inputBytes": 355766,
+      "sha256": "edc5f60de026e315efa77593b35f7c153a699c35ffe6daf91f01998cedc823b0",
+      "bytes": 355766,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/user-provided-main-verification-omissions.png",
+      "archivePath": "user-provided-main-verification-omissions.png",
+      "inputSha256": "8fb26cfa01f47039d9d38290df0a0cb2281abad4c1276808e3ee6e020d07711b",
+      "inputBytes": 249742,
+      "sha256": "8fb26cfa01f47039d9d38290df0a0cb2281abad4c1276808e3ee6e020d07711b",
+      "bytes": 249742,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/actual-result-C4-txt.png",
+      "archivePath": "actual-result-C4-txt.png",
+      "inputSha256": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a",
+      "inputBytes": 96899,
+      "sha256": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a",
+      "bytes": 96899,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/actual-result-review-txt.png",
+      "archivePath": "actual-result-review-txt.png",
+      "inputSha256": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a",
+      "inputBytes": 71259,
+      "sha256": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a",
+      "bytes": 71259,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/native-upload-file-row-confirmed.png",
+      "archivePath": "native-upload-file-row-confirmed.png",
+      "inputSha256": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28",
+      "inputBytes": 33290,
+      "sha256": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28",
+      "bytes": 33290,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/native-upload-menu-before-selection.png",
+      "archivePath": "native-upload-menu-before-selection.png",
+      "inputSha256": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c",
+      "inputBytes": 74985,
+      "sha256": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c",
+      "bytes": 74985,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/public-provenance.json",
+      "archivePath": "public-provenance.json",
+      "inputSha256": "79b2cf94ba22bc4dda99229da77e8506af45506fefb74288a40e4372a22a2a92",
+      "inputBytes": 5714,
+      "sha256": "63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff",
+      "bytes": 7079,
+      "transformation": "Provenance approval/header and published-hash framing only"
+    },
+    {
+      "path": "examples/real-canvas/real-canvas-C4.txt",
+      "archivePath": "real-canvas-C4.txt",
+      "inputSha256": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+      "inputBytes": 3602,
+      "sha256": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+      "bytes": 3602,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/real-canvas-coverage.txt",
+      "archivePath": "real-canvas-coverage.txt",
+      "inputSha256": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
+      "inputBytes": 58939,
+      "sha256": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
+      "bytes": 58939,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/real-canvas-inventory.txt",
+      "archivePath": "real-canvas-inventory.txt",
+      "inputSha256": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+      "inputBytes": 13612,
+      "sha256": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+      "bytes": 13612,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    },
+    {
+      "path": "examples/real-canvas/real-canvas-MAIN.txt",
+      "archivePath": "real-canvas-MAIN.txt",
+      "inputSha256": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+      "inputBytes": 16883,
+      "sha256": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+      "bytes": 16883,
+      "transformation": "NONE_BYTE_IDENTICAL"
+    }
+  ],
+  "bundle": {
+    "path": "downloads/real-canvas-review-example.zip",
+    "memberCount": 14,
+    "sha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
+    "bytes": 1374765
+  },
+  "outcome": "Partial: one of five assessments accepted, four unavailable; six model calls. C4 covers 80/326 screen lines.",
+  "delivery": "One guarded SendEmailV2 succeeded. Original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. The user-provided notification body is not proof of verified Inbox receipt or single delivery.",
+  "excluded": "No raw app/solution, private originals/diagnostics, mailbox/autoreply images, installer or previously excluded application material.",
+  "archiveTimestamps": "Fixed to 1980 for reproducibility; not review or screenshot capture times."
+}

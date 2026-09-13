@@ -1,0 +1,140 @@
+﻿Power Platform Solution Reviewer - AUTHORITATIVE DETAILED REPORT BUNDLE
+Agent: [PRIVATE IDENTIFIER 2]; configured model: GPT5Reasoning; standard harness
+Outcome: ReviewPartial; analysis time UTC: 2026-09-13T20:05:28.5739946Z
+Input: [PRIVATE UPLOAD NAME 1]; SharePoint file identity: [PRIVATE IDENTIFIER 3]
+Source version: 1.0; ETag: "{[PRIVATE IDENTIFIER 3]},1"
+Source SHA-256: not computed. Identity/version/ETag were checked across the source content read.
+Rules 3.3.1: final-response transport plus structured applicability/evidence checks; unverified runtime behavior is unrated VERIFICATION NEEDED, not a defect; at most one same-source repair; no Power Fx semantic parser or current official checker.
+Automation identity: verified demo owner; not uploader impersonation.
+Job: [PRIVATE IDENTIFIER 1]; main conversation: [PRIVATE IDENTIFIER 5]
+
+PSR_REVIEW_REPORT_V1
+jobId: [PRIVATE IDENTIFIER 1]
+sourceVersion: 1.0
+Current official checker: NOT RUN.
+
+1. Executive summary and readiness
+- Provisional readiness: Not established. The review is PARTIAL_OR_LIMITED due to excerpt-only source returns, unsupported content exclusions, and degraded path provenance for the nested canvas app.
+- What we did see showed syntactically valid bindings and no static failures in the visible canvas excerpt. No supported defects were confirmed from source.
+- Blockers/unknowns: Large/unsupported files were not reviewed (for example, customizations.xml over budget), the canvas app’s source coverage is incomplete, and no current checker execution evidence was acquired. Release readiness cannot be determined from this limited evidence.
+
+2. Provenance and methodology
+- Package: [PRIVATE UPLOAD NAME 1]; sourceLocation: /sites/[PRIVATE SITE NAME 1]/SolutionPackages/Incoming; sourceSnapshot: uniqueId [PRIVATE IDENTIFIER 3], etag "{[PRIVATE IDENTIFIER 3]},1", version 1.0.
+- Analysis context time (UTC): 2026-09-13T19:53:44.7934106Z. Review rules version: 3.3.1. Model: configured GPT-5. Parser: Native UTF-8 decoding, SARIF JSON parsing, and bounded solution.xml RootComponent XML/XPath metadata extraction only; no Power Fx semantic execution.
+- Authentication: Scoped automation maker/service connections; not uploader impersonation. Interactive OneDrive intake remains Invoker.
+- Extraction/limits: Connector extraction only with bounded continuation; per-file excerpt limit 4,000 characters and 80 lines; total excerpt budget 12,000 characters. Some sources are excerpt-only and others excluded due to size or unsupported type. Returned paths are extracted-path identifiers, not proof of original archive hierarchy preservation.
+- Retention: Original SharePoint file unchanged. Extracted copies persisted in the service owner’s OneDrive job folder (/PSRAuto-[PRIVATE IDENTIFIER 1]). The GUID-prefixed staged archive targeted for best-effort cleanup. Reports retained in the private SharePoint Results folder.
+
+3. Inventory and coverage
+- Container packages returned (2):
+  - Solution container: [PRIVATE UPLOAD NAME 1] (returnedEntries: 7; SOLUTION_CONTAINER).
+  - Nested canvas app: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp (returnedEntries: 16; PA_YAML_WITH_DEGRADED_PATH_PROVENANCE). Nested coverage status: EXTRACTED_PA_YAML_DEGRADED_PATHS (2 degraded .pa.yaml candidates), modernSrcFilesReturned: 2, editorMetadataFilesReturned: 1.
+- Evidence-bearing sources (5 of 23 inventoried entries):
+  - solution.xml (solution-xml): 78 lines excerpt returned; complete=false; path: solution.xml.
+  - Canvas app embedded checker (embedded-checker): AppCheckerResult.sarif; complete=true; path: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/AppCheckerResult.sarif.
+  - Canvas source (canvas-source): App.pa.yaml; 12 lines; complete=true; path: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/App.pa.yaml.
+  - Canvas source (canvas-source): Screen1.pa.yaml; 80 lines excerpt; complete=false; path: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/Screen1.pa.yaml.
+  - Flow definition (flow-definition): [PRIVATE WORKFLOW PATH 1]; 31 lines excerpt; complete=false.
+- Excerpt-only and size/unsupported coverage notes:
+  - Excerpt-only due to limits: solution.xml (78 lines), Screen1.pa.yaml (80 lines), [PRIVATE WORKFLOW PATH 1] (31 lines).
+  - Over budget/not reviewed: customizations.xml (TEXT_FILE_TOO_LARGE).
+  - Unsupported/nonselected inventoried items excluded (at least 15), including CanvasApps/.../DataSources.json, Properties.json, Templates.json, Themes.json, Resources.json, ModernThemes.json, QualifiedValues.json, Header.json, 1.json, 4.json, .gitignore, BackgroundImageUri, AdditionalUris0_identity.json, [Content_Types].xml, plus the msapp binary itself (not read; separate nested coverage applied).
+  - Editor-only file excluded from runtime source review: CanvasApps/.../_EditorState.pa.yaml.
+
+4. Per-component assessment
+Accepted detailed component report(s):
+- passId C4 — sourcePath: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/Screen1.pa.yaml (complete=false; 80-line excerpt)
+  - Accessibility: A Label control’s Text is bound to Parent.DisplayName (line 52), establishing a visible caption for the Name data card label. No serialized AccessibleLabel properties are shown in the excerpt for text inputs; absence in the excerpt is not a defect. Screen-reader behavior and accessible names require runtime verification.
+  - Formulas/correctness: Form1 DataSource explicitly references '[PRIVATE TABLE NAME 1]' (line 20); Default for the Name field uses ThisItem.Name (line 34); Required=true (line 37); Update=DataCardValue1.Text (line 38). These bindings are syntactically valid in the excerpt.
+  - Data/delegation/performance: Defaults('[PRIVATE TABLE NAME 1]') is used to seed Item (line 22). Delegation/volume behavior not assessed from this static excerpt.
+  - Responsive UX: Fixed Width/Height/X/Y values appear (lines 21, 23–25, 39–41). No scaling/layout formulas evidenced beyond this single screen; responsiveness not assessed.
+  - Error handling: DataCardValue1.BorderColor switches to red on error (line 61), indicating visual validation feedback. Submit/OnFailure logic not visible; unassessed.
+  - Connections/configuration: The referenced data source name is visible, but connection references and permissions are evaluated outside canvas source verification; runtime access must be validated.
+  - ALM/dependencies: Outside the excerpt scope.
+  - Not assessed due to absent evidence: Additional screens/components, navigation, submit logic, retry/error handling patterns, performance optimizations, theming/accessibility contrast, and environment-specific dependency configuration.
+
+Failed detailed component report preparations (no accepted assessment produced; pipeline issue, not a package defect):
+- passId C1 — solution.xml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+- passId C2 — AppCheckerResult.sarif (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+- passId C3 — App.pa.yaml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: RESPONSE_ENVELOPE_INVALID, NOT_INVOKED).
+- passId C5 — [PRIVATE WORKFLOW PATH 1] (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+
+5. Evidence-grounded findings
+- No supported defects were identified in the accepted component excerpt. The visible properties and bindings are syntactically valid with no static failures evidenced in source.
+- Static source observations from passId C4 (quotes include line numbers and extracted path):
+  - Line 12: "LoadingSpinnerColor: =RGBA(56, 96, 178, 1)" — explicit spinner color assignment in Screen1.pa.yaml.
+  - Line 20: "DataSource: ='[PRIVATE TABLE NAME 1]'" — Form1 bound to the named data source.
+  - Line 33: "DataField: ="[PRIVATE SCHEMA NAME 1]"" — Name data card bound to [PRIVATE SCHEMA NAME 1].
+  - Line 34: "Default: =ThisItem.Name" — Name field default from record.
+  - Line 35: "DisplayName: =DataSourceInfo([@'[PRIVATE TABLE NAME 1]'],DataSourceInfo.DisplayName,'[PRIVATE SCHEMA NAME 1]')" — dynamic display name.
+  - Line 37: "Required: =true" — field marked required.
+  - Line 61: "BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)" — error highlighting logic.
+
+6. Historical checker evidence
+- Source: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/AppCheckerResult.sarif (tool: PowerApps app checker 1.346). Status: Stale embedded publication-time evidence; not a current checker execution.
+- Returned results (publication-time, levels as recorded in the SARIF; ages unknown):
+  - acc-ReadableScreenNameNeeded (level Low) targeting "Screen1".
+  - acc-AccessibleLabelNeeded (level Medium) targeting "Screen1.Form1.Name_DataCard1.DataCardValue1.AccessibleLabel".
+  - acc-AccessibleLabelNeeded (level Medium) targeting "Screen1.Form1.'Created By_DataCard1'.DataCardValue3.AccessibleLabel".
+- These are not confirmed current defects. They inform verification focus areas but do not substitute for a current official checker run.
+
+7. Remediation backlog
+- No confirmed source-grounded defects to remediate from this excerpt.
+- Prioritized next actions (evidence-linked tasks):
+  - Execute verification steps from passId C4 in a running app/session and record outcomes:
+    - C4-V1: Validate spinner color behavior on Screen1.
+    - C4-V2: Confirm Form1 access to '[PRIVATE TABLE NAME 1]' without connection/permission errors and correct Defaults(...) loading.
+    - C4-V3: Confirm Required=true blocks submission when Name is empty and error indication appears.
+  - Optional improvement checks guided by historical SARIF (non-binding until verified):
+    - Evaluate whether Screen1’s title/name is meaningful to screen readers.
+    - Evaluate AccessibleLabel coverage for data-entry controls (for example, DataCardValue1 and related inputs) in context.
+
+8. Observed strengths
+- None evidenced with confirmed user-facing benefit in the limited excerpt. The component assessment reported no confirmed strengths.
+
+9. Runtime/manual checks NOT RUN
+The following verification items are supplied and remain VERIFICATION NEEDED. They are not defects and require execution in a valid running app:
+- C4 Screen1.pa.yaml, line 12, property LoadingSpinnerColor (EXPLICIT_EXPRESSION)
+  - Quote: "LoadingSpinnerColor: =RGBA(56, 96, 178, 1)"
+  - Area: Visuals
+  - Action: Run the app and trigger the loading spinner on Screen1 to observe its color.
+  - Expected: The spinner's color matches RGBA(56, 96, 178, 1).
+  - Status: NOT RUN; Applicability: when a loading spinner is displayed.
+- C4 Screen1.pa.yaml, line 20, property DataSource (EXPLICIT_EXPRESSION)
+  - Quote: "DataSource: ='[PRIVATE TABLE NAME 1]'"
+  - Area: Data connections
+  - Action: Open the app with a profile that has access to the '[PRIVATE TABLE NAME 1]' data source and load Form1.
+  - Expected: Form1 can read Defaults('[PRIVATE TABLE NAME 1]') without connection or permission errors, and fields populate as expected.
+  - Status: NOT RUN; Applicability: when the referenced data source is configured and accessible.
+- C4 Screen1.pa.yaml, line 37, property Required (EXPLICIT_EXPRESSION)
+  - Quote: "Required: =true"
+  - Area: Validation
+  - Action: Attempt to submit the form with the Name field empty.
+  - Expected: Submission is blocked and an error indication appears for the Name field per the form’s validation behavior.
+  - Status: NOT RUN; Applicability: when Form1 has a submit action wired and validation is active.
+
+10. Omissions and next actions
+- Omissions and limits:
+  - Degraded path provenance for canvas source: App.pa.yaml and Screen1.pa.yaml are returned outside an extracted Src folder; original hierarchy mapping, collisions, or omissions cannot be excluded.
+  - Excerpt-only: solution.xml (78 lines); Screen1.pa.yaml (80 lines); Workflows/.../SyncUser-...json (31 lines). Unreturned portions remain unreviewed.
+  - Over budget/not reviewed: customizations.xml (TEXT_FILE_TOO_LARGE).
+  - Unsupported/nonselected inventory excluded from review (≥15 entries), including DataSources.json, Properties.json, Templates.json, Themes.json, Resources.json, ModernThemes.json, QualifiedValues.json, Header.json, 1.json, 4.json, .gitignore, BackgroundImageUri, AdditionalUris0_identity.json, [Content_Types].xml, and the msapp binary (binary not read; see nested coverage).
+  - Editor-only: _EditorState.pa.yaml inventoried but excluded from runtime source assessment.
+- Readiness impact: Insufficient coverage to establish release readiness; current official checker not run; some accessibility and naming topics only appear as historical hints.
+- Next evidence actions:
+  - Provide full canvas source coverage (complete .pa.yaml set under preserved Src hierarchy) or re-extract to avoid degraded paths.
+  - Reattempt reading customizations.xml within budget (or provide a targeted excerpt for relevant components).
+  - Run the current Power Apps Checker and include fresh SARIF for this app.
+  - Execute the three verification steps from passId C4 and supply outcomes/screenshots.
+  - If applicable, include additional screens/flows not present in the excerpt for holistic assessment.
+
+END_PSR_REVIEW_REPORT_V1
+
+FULL PER-SOURCE ANALYSES (complete saved text, not email previews)
+C4 | CanvasApps/[PRIVATE SCHEMA NAME 2].msapp | extracted Screen1.pa.yaml | findings prefix C4-F | [PRIVATE SITE URL 1]/SolutionPackages/Results/[PRIVATE IDENTIFIER 1]-C4.txt
+
+Unavailable detailed passes: [{"code":"DETAILED_COMPONENT_REPORT_UNAVAILABLE","conversationId":"[PRIVATE IDENTIFIER 7]","passId":"C1","path":"solution.xml","preparation":{"status":"READY","ready":true,"sourceSchemaStatus":"Succeeded","sourceLinesStatus":"Succeeded","preparedLinesTypeStatus":"Succeeded","sourcePath":"solution.xml","sourcePathStatus":"TYPED_SOURCE_PATH","lineCount":78},"reason":"No accepted source assessment is available. Preparation/data errors are pipeline failures, not model defects or evidence that the package needs replacement. FIRST/REPAIR accounting distinguishes skipped phases, actual invocation attempts and invalid responses.","sourceIndex":0,"validationIssues":["MODEL_RESPONSE_INVALID","NOT_INVOKED"]},{"code":"DETAILED_COMPONENT_REPORT_UNAVAILABLE","conversationId":"[PRIVATE IDENTIFIER 8]","passId":"C2","path":"AppCheckerResult.sarif","preparation":{"status":"READY","ready":true,"sourceSchemaStatus":"Succeeded","sourceLinesStatus":"Succeeded","preparedLinesTypeStatus":"Succeeded","sourcePath":"AppCheckerResult.sarif","sourcePathStatus":"TYPED_SOURCE_PATH","lineCount":1},"reason":"No accepted source assessment is available. Preparation/data errors are pipeline failures, not model defects or evidence that the package needs replacement. FIRST/REPAIR accounting distinguishes skipped phases, actual invocation attempts and invalid responses.","sourceIndex":1,"validationIssues":["MODEL_RESPONSE_INVALID","NOT_INVOKED"]},{"code":"DETAILED_COMPONENT_REPORT_UNAVAILABLE","conversationId":null,"passId":"C3","path":"App.pa.yaml","preparation":{"status":"READY","ready":true,"sourceSchemaStatus":"Succeeded","sourceLinesStatus":"Succeeded","preparedLinesTypeStatus":"Succeeded","sourcePath":"App.pa.yaml","sourcePathStatus":"TYPED_SOURCE_PATH","lineCount":12},"reason":"No accepted source assessment is available. Preparation/data errors are pipeline failures, not model defects or evidence that the package needs replacement. FIRST/REPAIR accounting distinguishes skipped phases, actual invocation attempts and invalid responses.","sourceIndex":2,"validationIssues":["RESPONSE_ENVELOPE_INVALID","NOT_INVOKED"]},{"code":"DETAILED_COMPONENT_REPORT_UNAVAILABLE","conversationId":"[PRIVATE IDENTIFIER 9]","passId":"C5","path":"[PRIVATE WORKFLOW PATH 1]","preparation":{"status":"READY","ready":true,"sourceSchemaStatus":"Succeeded","sourceLinesStatus":"Succeeded","preparedLinesTypeStatus":"Succeeded","sourcePath":"[PRIVATE WORKFLOW PATH 1]","sourcePathStatus":"TYPED_SOURCE_PATH","lineCount":31},"reason":"No accepted source assessment is available. Preparation/data errors are pipeline failures, not model defects or evidence that the package needs replacement. FIRST/REPAIR accounting distinguishes skipped phases, actual invocation attempts and invalid responses.","sourceIndex":4,"validationIssues":["MODEL_RESPONSE_INVALID","NOT_INVOKED"]}]
+
+COMPLETE AVAILABLE INVENTORY: [PRIVATE SITE URL 1]/SolutionPackages/Results/[PRIVATE IDENTIFIER 1]-inventory.json
+ANALYZED / METADATA-ONLY / SKIPPED / UNSUPPORTED / FAILURE COVERAGE: [PRIVATE SITE URL 1]/SolutionPackages/Results/[PRIVATE IDENTIFIER 1]-coverage.json
+The main file plus every linked section and appendix is the authoritative report. No valid saved component finding text is shortened for email. Unknown original archive members, meaningful omitted sources and failed passes remain unreviewed; static analysis cannot certify runtime/accessibility/import readiness.

@@ -1,0 +1,206 @@
+{
+  "version": "USER_CAPTURE_ADDENDUM_V1",
+  "status": "PARENT_APPROVED_PUBLIC_USER_CAPTURE_DERIVATIVES_NOT_INBOX_RECEIPT_PROOF",
+  "publicApproval": true,
+  "description": "Four user-provided output screenshots, privately correlated with one retained genuine canvas review. These are not newly executed TEST captures.",
+  "captureTime": "Unknown for all four originals. Visible report/notification analysis timestamps and the parent's preservation timestamp do not establish screenshot capture time.",
+  "outcome": "ReviewPartial",
+  "selectedSources": 5,
+  "acceptedAssessments": 1,
+  "unavailableAssessments": 4,
+  "sourceLines": "Accepted screen assessment covers an 80-line prefix of a 326-line screen; later source remains unreviewed.",
+  "mainAndAssessmentCompleteness": "Complete retained redacted MAIN and the sole complete accepted C4 report body are included unchanged, with full redacted inventory and coverage appendices. No accepted C1/C2/C3/C5 report is available. Screenshot viewports are excerpts, not complete reports.",
+  "screenshots": [
+    {
+      "file": "user-provided-notification-body.png",
+      "sha256": "3ff2f36d1472c159afa5474c6a3629825fd8e1986bc73efe0c61ed1abf7216ce",
+      "bytes": 73125,
+      "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
+      "captureTimeEstablished": false,
+      "caption": "User-provided review-notification body excerpt: Partial, five supplied excerpts, one saved assessment and four unavailable. Source filename is privacy-masked. This is not a TEST browser capture.",
+      "correlation": "The visible uniquely named source copy, version 1.0, completion timestamp, 5/1/4 counts, 22 omission records and 23 inventory records match retained private run evidence.",
+      "evidenceBoundary": "No sender, recipient, mailbox, folder or message identity is visible. This does not verify original owner Inbox receipt or recipient containment.",
+      "visibleAnalysisTime": "2026-09-13T20:05:28.1446252Z",
+      "analysisTimeIsNotCaptureTime": true,
+      "visualPrivacyQa": "PASS_LOCAL_REVIEW_PARENT_APPROVAL_REQUIRED"
+    },
+    {
+      "file": "user-provided-main-opening.png",
+      "sha256": "8a7da1ba6bc03c7133175daa9aeec33c496f5612922ce2e63aa5a8b56a300666",
+      "bytes": 305120,
+      "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
+      "captureTimeEstablished": false,
+      "caption": "User-provided MAIN opening and sections 1–3, including Partial status, scope and inventory limitations. Browser chrome and private identities/paths are cropped or masked; the complete redacted MAIN text is supplied separately.",
+      "correlation": "The original visibly contains the exact retained job/report URL, source filename, source file identity, job ID and MAIN conversation, and matches the retained report header and substantive opening.",
+      "evidenceBoundary": "This proves displayed retained-report identity, not capture time or a new runtime execution. The native viewport clips some long right-hand lines.",
+      "visibleAnalysisTime": "2026-09-13T20:05:28.5739946Z",
+      "analysisTimeIsNotCaptureTime": true,
+      "visualPrivacyQa": "PASS_LOCAL_REVIEW_PARENT_APPROVAL_REQUIRED"
+    },
+    {
+      "file": "user-provided-main-assessment-findings.png",
+      "sha256": "edc5f60de026e315efa77593b35f7c153a699c35ffe6daf91f01998cedc823b0",
+      "bytes": 355766,
+      "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
+      "captureTimeEstablished": false,
+      "caption": "User-provided MAIN sections 4–8: accepted C4 scope, four unavailable assessments, source observations, historical checker, suggested next steps and no confirmed strengths. Private bindings/paths are masked.",
+      "correlation": "Visible text, C4 source path, failed-pass list, seven source observations and historical-checker section match the retained MAIN. This image contains no independent complete job identifier; correlation is by retained document content and the user-provided companion images.",
+      "evidenceBoundary": "Not an independently authenticated job capture or a complete standalone report. Native right-edge clipping is preserved.",
+      "visibleAnalysisTime": null,
+      "analysisTimeIsNotCaptureTime": true,
+      "visualPrivacyQa": "PASS_LOCAL_REVIEW_PARENT_APPROVAL_REQUIRED"
+    },
+    {
+      "file": "user-provided-main-verification-omissions.png",
+      "sha256": "8fb26cfa01f47039d9d38290df0a0cb2281abad4c1276808e3ee6e020d07711b",
+      "bytes": 249742,
+      "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
+      "captureTimeEstablished": false,
+      "caption": "User-provided MAIN sections 8–10: no confirmed strengths, three NOT RUN verification checks, omissions and next actions. Private data-source names are masked; the lower private report-link/footer area is cropped.",
+      "correlation": "Three exact NOT RUN verification topics, omissions and the end-of-report marker match the retained MAIN. No intact independent job identifier is used from this image; correlation is by retained document content and companion images.",
+      "evidenceBoundary": "Recommendations are unexecuted report content. Neither this image nor this curation ran the source application, workflow, checks or another review.",
+      "visibleAnalysisTime": null,
+      "analysisTimeIsNotCaptureTime": true,
+      "visualPrivacyQa": "PASS_LOCAL_REVIEW_PARENT_APPROVAL_REQUIRED"
+    }
+  ],
+  "mailReceipt": "The user-provided notification-body excerpt matches the run's source and counts, but shows no recipient/mailbox/folder headers. Original owner Inbox receipt and delivery containment remain unverified; no new send or mailbox investigation occurred.",
+  "semanticCaveats": [
+    "Partial does not establish release readiness or app certification; zero confirmed findings is not a clean bill of health.",
+    "Syntactically valid wording in the original report is not a compiler or Power Fx semantic-parser result.",
+    "Embedded checker records are historical with unknown age; publication-time wording does not establish a timestamp. Levels are custom checker properties, not normalized standard SARIF result levels.",
+    "Verification suggestions and next actions are NOT RUN; this curation did not import or execute the app or workflow.",
+    "Failed/unavailable component labels are pipeline results, not confirmed application defects. Phase labels must not be counted as additional model calls."
+  ],
+  "privacy": "Browser URLs, private owner/site/agent/job/conversation/file identities, source paths and private data-source/schema bindings are masked/cropped. No originals, raw source, solution ZIP, role configuration, diagnostics or unrelated mailbox/automatic-reply content are included.",
+  "noRestrictedApplicationMaterial": true,
+  "noNewUploadModelEmailImportApplicationExecutionOrPublication": true,
+  "visualPrivacyQa": "TEST_REPORTED_DERIVATIVE_PRIVACY_PASS_PARENT_APPROVED_SITE_VISUAL_REVIEW_COMPLETED",
+  "pixelIntegrity": "Every output pixel equals the corresponding original pixel except documented opaque privacy-mask rectangles; only documented crop rectangles are removed. No report text was recreated, corrected or spliced.",
+  "inputPublishedState": false,
+  "originalCandidatePins": [
+    {
+      "file": "actual-result-C4-txt.png",
+      "bytes": 96899,
+      "sha256": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a"
+    },
+    {
+      "file": "actual-result-review-txt.png",
+      "bytes": 71259,
+      "sha256": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a"
+    },
+    {
+      "file": "native-upload-file-row-confirmed.png",
+      "bytes": 33290,
+      "sha256": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28"
+    },
+    {
+      "file": "native-upload-menu-before-selection.png",
+      "bytes": 74985,
+      "sha256": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c"
+    },
+    {
+      "file": "public-provenance.json",
+      "bytes": 5714,
+      "sha256": "79b2cf94ba22bc4dda99229da77e8506af45506fefb74288a40e4372a22a2a92"
+    },
+    {
+      "file": "real-canvas-C4.txt",
+      "bytes": 3602,
+      "sha256": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c"
+    },
+    {
+      "file": "real-canvas-coverage.txt",
+      "bytes": 58939,
+      "sha256": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e"
+    },
+    {
+      "file": "real-canvas-inventory.txt",
+      "bytes": 13612,
+      "sha256": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4"
+    },
+    {
+      "file": "real-canvas-MAIN.txt",
+      "bytes": 16883,
+      "sha256": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b"
+    }
+  ],
+  "publicDerivativeApproval": {
+    "scope": "Parent-approved public derivatives of this exact real canvas review; not production, compiler, complete-application or runtime certification.",
+    "parentReview": "Parent read complete redacted MAIN and both provenance records, verified fourteen pins and performed scoped restricted-context/private-binding/URL/email/credential screening with zero matches.",
+    "siteReview": "Normal derivative visual/privacy review of the eight approved images. Site author did not inspect private originals or independently repeat the original-to-derivative pixel comparison.",
+    "bodyPolicy": "All four TXT files, including BOM, complete coverage, claims, quotes, redactions and footer/unavailable records, remain byte-identical to the approved inputs.",
+    "imagePolicy": "All eight image payloads remain byte-identical. Four user-provided images are not TEST captures; their capture times remain unknown.",
+    "deliveryBoundary": "One guarded SendEmailV2 succeeded. Original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. The user-provided notification body is not proof of verified Inbox receipt or single delivery.",
+    "hostingBoundary": "Public derivative approval is distinct from hosting/deployment; hosting state is recorded separately in content.json."
+  },
+  "inputProvenanceSha256": "f3cb2bc2c68c078d7f314267d018878cef5b48d84f442c4241478c8092c98476",
+  "originalQaFieldScope": "Per-image QA strings describe the original TEST curation stage; the current parent public-derivative approval is recorded above. No capture origin, time, correlation or report claim is changed.",
+  "publishedPayloadPins": [
+    {
+      "file": "user-provided-notification-body.png",
+      "sha256": "3ff2f36d1472c159afa5474c6a3629825fd8e1986bc73efe0c61ed1abf7216ce",
+      "bytes": 73125
+    },
+    {
+      "file": "user-provided-main-opening.png",
+      "sha256": "8a7da1ba6bc03c7133175daa9aeec33c496f5612922ce2e63aa5a8b56a300666",
+      "bytes": 305120
+    },
+    {
+      "file": "user-provided-main-assessment-findings.png",
+      "sha256": "edc5f60de026e315efa77593b35f7c153a699c35ffe6daf91f01998cedc823b0",
+      "bytes": 355766
+    },
+    {
+      "file": "user-provided-main-verification-omissions.png",
+      "sha256": "8fb26cfa01f47039d9d38290df0a0cb2281abad4c1276808e3ee6e020d07711b",
+      "bytes": 249742
+    },
+    {
+      "file": "actual-result-C4-txt.png",
+      "sha256": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a",
+      "bytes": 96899
+    },
+    {
+      "file": "actual-result-review-txt.png",
+      "sha256": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a",
+      "bytes": 71259
+    },
+    {
+      "file": "native-upload-file-row-confirmed.png",
+      "sha256": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28",
+      "bytes": 33290
+    },
+    {
+      "file": "native-upload-menu-before-selection.png",
+      "sha256": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c",
+      "bytes": 74985
+    },
+    {
+      "file": "public-provenance.json",
+      "sha256": "63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff",
+      "bytes": 7079
+    },
+    {
+      "file": "real-canvas-C4.txt",
+      "sha256": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+      "bytes": 3602
+    },
+    {
+      "file": "real-canvas-coverage.txt",
+      "sha256": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
+      "bytes": 58939
+    },
+    {
+      "file": "real-canvas-inventory.txt",
+      "sha256": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+      "bytes": 13612
+    },
+    {
+      "file": "real-canvas-MAIN.txt",
+      "sha256": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+      "bytes": 16883
+    }
+  ]
+}

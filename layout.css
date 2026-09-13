@@ -1,0 +1,13 @@
+.awaiting-capture { min-height: 200px; padding: 28px; display: flex; flex-direction: column; justify-content: center; gap: 16px; border: 1px dashed var(--cp-border-strong); border-radius: 16px; background: var(--cp-bg-elevated); color: var(--cp-text-soft); }
+.awaiting-capture strong { font-size: 18px; color: var(--cp-text); }
+.awaiting-capture p { font-size: 14px; }
+.layout-hold { margin-top: 24px; }
+.intake-list { line-height: 1.8; padding-left: 24px; }
+.intake-list li + li { margin-top: 12px; }
+.showcase-review-note { margin-top: 24px; }
+.case-metrics { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--cp-border); }
+.screenshot-stack { display: grid; gap: 16px; }
+.case-metrics .metric strong { font-size: 30px; }
+@media (max-width: 760px) {
+  .awaiting-capture { min-height: 160px; padding: 24px; }
+}

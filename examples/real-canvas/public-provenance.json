@@ -1,0 +1,128 @@
+{
+  "status": "PARENT_APPROVED_PUBLIC_REAL_CANVAS_DERIVATIVE_NOT_RUNTIME_ACCEPTANCE",
+  "category": "Real classic canvas solution review; not a synthetic or source-app runtime demonstration.",
+  "observedReviewerVersion": "3.3.1.3",
+  "reviewScope": "One private passive upload/job. Original app, roles and workflow were not imported, launched or executed.",
+  "outcome": "ReviewPartial",
+  "selectedSources": 5,
+  "acceptedSources": 1,
+  "unavailableSources": 4,
+  "completeAvailableBodies": [
+    "real-canvas-C4.txt",
+    "real-canvas-MAIN.txt",
+    "real-canvas-inventory.txt",
+    "real-canvas-coverage.txt"
+  ],
+  "omissionsAndPartialStatusPreserved": true,
+  "wholeApplicationOrSecurityCertification": false,
+  "embeddedChecker": "Historical embedded results only; no current checker execution; recorded age unavailable.",
+  "encoding": "Original files decoded as UTF8. Text derivatives use UTF8 BOM/LF; originals remain unchanged.",
+  "redactions": [
+    "Owner/creator identities, tenant/environment/connection and user/team identifiers.",
+    "Private URLs, job/source/run identities, uploaded filenames and source fingerprints.",
+    "Private security-domain, schema, role and connection-reference names.",
+    "No raw solution/MSAPP/source/security-role configuration or diagnostic payload files are included."
+  ],
+  "evidenceQuotes": "Limited evidence excerpts inside actual reports are retained or visibly privacy-redacted; placeholders are not asserted to be literal source evidence.",
+  "screenshots": [
+    {
+      "file": "native-upload-menu-before-selection.png",
+      "capturedUtc": "2026-09-13T19:49:47.277474+00:00",
+      "caption": "Actual current-run native native upload menu before selection; cropped/privacy-redacted derivative."
+    },
+    {
+      "file": "native-upload-file-row-confirmed.png",
+      "capturedUtc": "2026-09-13T19:51:40.902841+00:00",
+      "caption": "Actual current-run native native upload file row confirmed; cropped/privacy-redacted derivative."
+    },
+    {
+      "file": "actual-result-review-txt.png",
+      "capturedUtc": "2026-09-13T20:15:23.241220+00:00",
+      "caption": "Actual current-run MAIN opening sections, cropped/privacy-redacted; complete redacted MAIN text is supplied separately."
+    },
+    {
+      "file": "actual-result-C4-txt.png",
+      "capturedUtc": "2026-09-13T20:15:26.212907+00:00",
+      "caption": "Actual current-run native actual result C4 txt; cropped/privacy-redacted derivative."
+    }
+  ],
+  "receipt": "Matching owner Inbox receipt not verified; no historical receipt substituted.",
+  "sourceAndPrivateCaptureBindings": "Retained only in private curation; no operational identifiers or original image files included.",
+  "semanticLimitations": [
+    "Experimental Partial outcome: one of five selected component assessments accepted; unavailable assessments are pipeline limitations, not confirmed application defects.",
+    "Only an 80-line screen prefix was assessed; the later buttons, table and creator lookup were outside the returned excerpt.",
+    "Large customization/security configuration and data-source metadata were not assessed.",
+    "Three embedded checker results are historical, with unknown age and no new official checker execution.",
+    "No compilation, import, source-app execution or runtime/security certification was performed.",
+    "One controlled send was accepted; the original owner Inbox receipt remains unresolved. No Inbox/automatic-reply image is eligible for this candidate set."
+  ],
+  "allowlist": [
+    {
+      "file": "real-canvas-C4.txt",
+      "bytes": 3602,
+      "sha256": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+      "kind": "complete-redacted-text"
+    },
+    {
+      "file": "real-canvas-MAIN.txt",
+      "bytes": 16883,
+      "sha256": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+      "kind": "complete-redacted-text"
+    },
+    {
+      "file": "real-canvas-inventory.txt",
+      "bytes": 13612,
+      "sha256": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+      "kind": "complete-redacted-text"
+    },
+    {
+      "file": "real-canvas-coverage.txt",
+      "bytes": 58939,
+      "sha256": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
+      "kind": "complete-redacted-text"
+    },
+    {
+      "file": "native-upload-menu-before-selection.png",
+      "bytes": 74985,
+      "sha256": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c",
+      "kind": "privacy-redacted-native-capture"
+    },
+    {
+      "file": "native-upload-file-row-confirmed.png",
+      "bytes": 33290,
+      "sha256": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28",
+      "kind": "privacy-redacted-native-capture"
+    },
+    {
+      "file": "actual-result-review-txt.png",
+      "bytes": 71259,
+      "sha256": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a",
+      "kind": "privacy-redacted-native-capture"
+    },
+    {
+      "file": "actual-result-C4-txt.png",
+      "bytes": 96899,
+      "sha256": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a",
+      "kind": "privacy-redacted-native-capture"
+    }
+  ],
+  "visualQa": "TEST_REPORTED_DERIVATIVE_PRIVACY_PASS_PARENT_APPROVED_SITE_VISUAL_REVIEW_COMPLETED",
+  "privateOnlyCaptureCategories": [
+    "Review-job identity views",
+    "Operational inventory/coverage JSON UI views",
+    "Mixed Inbox conversation and automatic reply",
+    "Additional detailed MAIN source/path screenshots"
+  ],
+  "originalInboxReceiptVerified": false,
+  "noMailboxConversationOrAutomaticReplyMaterialIncluded": true,
+  "publicApproval": {
+    "scope": "Parent-approved public derivatives of this exact real canvas review; not production, compiler, complete-application or runtime certification.",
+    "parentReview": "Parent read complete redacted MAIN and both provenance records, verified fourteen pins and performed scoped restricted-context/private-binding/URL/email/credential screening with zero matches.",
+    "siteReview": "Normal derivative visual/privacy review of the eight approved images. Site author did not inspect private originals or independently repeat the original-to-derivative pixel comparison.",
+    "bodyPolicy": "All four TXT files, including BOM, complete coverage, claims, quotes, redactions and footer/unavailable records, remain byte-identical to the approved inputs.",
+    "imagePolicy": "All eight image payloads remain byte-identical. Four user-provided images are not TEST captures; their capture times remain unknown.",
+    "deliveryBoundary": "One guarded SendEmailV2 succeeded. Original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. The user-provided notification body is not proof of verified Inbox receipt or single delivery.",
+    "hostingBoundary": "Public derivative approval is distinct from hosting/deployment; hosting state is recorded separately in content.json."
+  },
+  "inputProvenanceSha256": "79b2cf94ba22bc4dda99229da77e8506af45506fefb74288a40e4372a22a2a92"
+}

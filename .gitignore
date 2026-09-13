@@ -1,0 +1,6 @@
+_private-hold/
+_public-repository/
+_site/
+.qa-work/
+__pycache__/
+*.pyc
