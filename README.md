@@ -4,6 +4,31 @@ Screenshot-first, static Clawpilot-themed public derivatives of one genuine
 classic canvas solution review. **Not a synthetic example.** No upload/chat
 backend, telemetry, remote fonts or tracking.
 
+## Six-step automatic journey
+
+1. Upload a trusted solution ZIP or canvas `.msapp` directly into Incoming.
+2. SharePoint detects the new file and starts the Power Automate review flow.
+   The configured **When a file is created (properties only)** trigger
+   (`GetOnNewFileItems`) polls `SolutionPackages/Incoming` every minute; this
+   is not an instant-delivery or latency guarantee. Enabled-intake, approval,
+   privacy and file-scope checks gate processing. After bounded extraction,
+   `ExecuteCopilotAsyncV2` supplies evidence to the published review agent
+   without a chat prompt.
+3. The agent reviews bounded evidence; six model calls occurred in this example.
+4. Inspect the actual saved MAIN/C4 reports and explicit coverage limits.
+5. View the guarded notification body and its protected-report link, with
+   delivery limitations retained.
+6. Open the full report: all three user-provided report screenshots show its
+   opening/scope, assessment/findings, and verification/omissions. A link opens
+   the complete redacted assessment, not just those viewport excerpts.
+
+Steps 2–3 are **configuration explainers, not flow-run screenshots or synthetic
+runs**. The agent does not independently monitor storage. Creating an empty
+folder does not start a review; files inside newly created subfolders are also
+outside the current direct-Incoming-file scope. This page change does not
+enable intake, approve another upload or run the agent.
+The report screenshots do not independently prove an email-link click.
+
 ## What the real run establishes
 
 **Partial: one of five selected assessments accepted, four unavailable, six

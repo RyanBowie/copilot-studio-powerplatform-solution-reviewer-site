@@ -44,6 +44,30 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: upload, trigger, agent, results, email and open report are six ordered stages",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: automatic handoff and file/folder boundary are explicit",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: step three explains the actual agent invocation",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: actual saved report and notification follow the agent",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: step six uses all three user report screenshots and links the complete report",
+      "result": "PASS"
+    },
+    {
       "check": "1440-light: actual Partial/coverage/call metrics",
       "result": "PASS"
     },
@@ -121,6 +145,30 @@
     },
     {
       "check": "1440-dark: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: upload, trigger, agent, results, email and open report are six ordered stages",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: step two explains the trigger instead of showing a report or fabricated run capture",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: automatic handoff and file/folder boundary are explicit",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: step three explains the actual agent invocation",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: actual saved report and notification follow the agent",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: step six uses all three user report screenshots and links the complete report",
       "result": "PASS"
     },
     {
@@ -204,6 +252,30 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: upload, trigger, agent, results, email and open report are six ordered stages",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: automatic handoff and file/folder boundary are explicit",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: step three explains the actual agent invocation",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: actual saved report and notification follow the agent",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: step six uses all three user report screenshots and links the complete report",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: actual Partial/coverage/call metrics",
       "result": "PASS"
     },
@@ -284,6 +356,30 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: upload, trigger, agent, results, email and open report are six ordered stages",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: step two explains the trigger instead of showing a report or fabricated run capture",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: automatic handoff and file/folder boundary are explicit",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: step three explains the actual agent invocation",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: actual saved report and notification follow the agent",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: step six uses all three user report screenshots and links the complete report",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: actual Partial/coverage/call metrics",
       "result": "PASS"
     },
@@ -361,6 +457,30 @@
     },
     {
       "check": "320-light: exact eight current real-review derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: upload, trigger, agent, results, email and open report are six ordered stages",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: automatic handoff and file/folder boundary are explicit",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: step three explains the actual agent invocation",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: actual saved report and notification follow the agent",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: step six uses all three user report screenshots and links the complete report",
       "result": "PASS"
     },
     {
@@ -728,11 +848,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-5",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-4",
+      "check": "Complete reader anchor #main-section-2",
       "result": "PASS"
     },
     {
@@ -740,15 +856,15 @@
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #inventory",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-3",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-7",
       "result": "PASS"
     },
     {
@@ -756,11 +872,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-9",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main",
+      "check": "Complete reader anchor #main-section-7",
       "result": "PASS"
     },
     {
@@ -768,15 +880,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-2",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-6",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #provenance",
+      "check": "Complete reader anchor #component",
       "result": "PASS"
     },
     {
@@ -784,11 +888,27 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #component",
+      "check": "Complete reader anchor #main-section-3",
       "result": "PASS"
     },
     {
       "check": "Complete reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-5",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-6",
       "result": "PASS"
     },
     {

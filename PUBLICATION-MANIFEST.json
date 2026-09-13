@@ -40,20 +40,20 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "6dbdcd1165a957204f707c69c977486692552d915876bacce4f4c6594f63d08d",
-      "bytes": 38526,
+      "sha256": "83298aa9aa861c60436783152a8d40ad0566208b4a2df5e42ca5ce33f593e300",
+      "bytes": 40712,
       "deployToPages": true
     },
     {
       "path": "site.css",
-      "sha256": "96e2543e122ec58976d21994dfe30b3493eff9eebe0d9df39f3bb546c8fd4d67",
-      "bytes": 21808,
+      "sha256": "2d60528bdfff7dd360b2cb73453b93eaaa418fb2e61da3f8b0d1c7fb245617ef",
+      "bytes": 21872,
       "deployToPages": true
     },
     {
       "path": "layout.css",
-      "sha256": "ba7cc809778f49e32cca9b8794e01f437eacb926f7206b6cb53013a1814b6a12",
-      "bytes": 840,
+      "sha256": "fa9e0d7b193ed87b38a9a4d216469b8737b81e0f74de6df1cef6a50ba4c9d917",
+      "bytes": 2084,
       "deployToPages": true
     },
     {
@@ -100,8 +100,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "a183cbb8bb359f61094d6825834f2e5afc3819a366cc23b57081593a96908f8a",
-      "bytes": 6428,
+      "sha256": "9f94ab0179b564d9f6f4371d5a6cbc8c89be1dcd9c6838fecaf76f66d67815e0",
+      "bytes": 7973,
       "deployToPages": true
     },
     {
@@ -130,8 +130,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "813140daff23e090ef08bdce918a73c013900ce9d0f385c5519d58f0ec687dfc",
-      "bytes": 6455,
+      "sha256": "e39f3edff20cde5bfb29fc3d8ddf8c5edd62033c698bb65d4cdc80fbeb2e8938",
+      "bytes": 5979,
       "deployToPages": true
     },
     {
@@ -244,14 +244,14 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "f6876fb270375b0a9bb0ac103ed73b23c1f88ce55c0a682fa4e8ba15e017c21a",
-      "bytes": 22954,
+      "sha256": "91e7a55b25e0b9510667d2ed0da88a85000f35773beaa2a1669c8a488cb530e4",
+      "bytes": 27014,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "8087ac2d7a19cabd38dc7ec198fc817a1e4cba0c8c2b07e47932e9e89880cde7",
-      "bytes": 16095,
+      "sha256": "2dd307bbcbda3c618e6a39f251dda498bc9eb815689b0e96f94cca0bf5e86fff",
+      "bytes": 19143,
       "deployToPages": false
     },
     {
@@ -280,8 +280,8 @@
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "c5338c6f8b482448be38a95b34c41a285aca30a582456c9f5a10a41d6a138f39",
-      "bytes": 15086,
+      "sha256": "0ae534d4b64a95d21faf6954f65458ce37c1ecef4679b139448685141c4dcc09",
+      "bytes": 16675,
       "deployToPages": false
     },
     {
@@ -402,7 +402,7 @@
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 212,
+    "checksPassed": 242,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

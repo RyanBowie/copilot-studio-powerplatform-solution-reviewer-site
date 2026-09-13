@@ -40,7 +40,7 @@ nav a:hover { text-decoration: underline; }
 .showcase-caution { margin-top: 16px; font-size: 12px; color: var(--cp-text-soft); }
 .showcase-caution strong { color: var(--cp-accent); }
 .journey-note { font-size: 12px; line-height: 1.65; color: var(--cp-text-soft); border-top: 1px solid var(--cp-border); padding-top: 20px; margin-top: 28px; }
-.screenshot-journey { display: grid; grid-template-columns: .85fr 1.075fr 1.075fr; gap: 24px; align-items: start; margin-top: 24px; }
+.screenshot-journey { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; align-items: start; margin-top: 24px; }
 .journey-stage { min-width: 0; }
 .journey-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .journey-number { display: grid; place-items: center; width: 40px; height: 40px; flex: none; background: var(--cp-accent-soft); color: var(--cp-accent); border: 1px solid var(--cp-border); border-radius: .625rem; font: 600 15px Consolas, "Courier New", Courier, monospace; }
@@ -189,7 +189,7 @@ pre code { background: var(--cp-surface-soft); padding: 0; }
   .site-header { flex-wrap: wrap; gap: 16px; }
   nav { order: 3; width: 100%; justify-content: center; padding-top: 8px; }
   .showcase-intro { gap: 28px; }
-  .screenshot-journey { gap: 16px; }
+  .screenshot-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
   .automatic-steps { grid-template-columns: 1fr; gap: 24px; }
   .automatic-steps li + li::before { content: "↓"; left: 22px; top: -25px; }
   .automatic-steps li { display: grid; grid-template-columns: 140px 1fr 1.5fr; align-items: start; gap: 20px; }
@@ -278,7 +278,7 @@ pre code { background: var(--cp-surface-soft); padding: 0; }
   .site-header, .theme-button, .actions, .small-button, .skip-link, .image-viewer { display: none; }
   .wrap { width: 100%; }
   .showcase-intro, .snapshot, .experience-row, .download-grid, .example-entry { display: block; }
-  .screenshot-journey { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .screenshot-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section { padding-block: 24px; }
   .table-wrap { overflow: visible; }
   .table-wrap table { min-width: 0; }
