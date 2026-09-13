@@ -77,7 +77,12 @@ correlations were not rewritten.
 ## Product reference and formatting options
 
 The reviewer uses the standard Copilot Studio harness, not GitHub Copilot.
-GPT-5 Reasoning is Preview and is not recommended for production.
+**GPT-5 Reasoning Preview was selected for this example; it is not required.**
+Choose a supported model available in your Copilot Studio environment and
+evaluate grounded output, structured-response reliability, latency and cost.
+The selected preview model is not recommended for production; using another
+model does not automatically make this experimental reviewer production-ready.
+Historical report headers retain the model actually used.
 
 Manual: consent topic → actual internal `CollectReviewEvidence` tool via
 `InvokeFlowTaskAction` → caller-owned OneDrive **Invoker** → source advice.
@@ -92,6 +97,41 @@ is **not implemented or included**: a controlled template, private resources,
 explicit connections, applicable Premium licensing and policy checks are needed.
 Formatting cannot upgrade review status, broaden access, select recipients or
 retry sends. Do not weaken authentication, labels or sharing to permit conversion.
+
+## Improving coverage: plan, not a claimed result
+
+The current **1/5 is assessment acceptance, not the application's pass rate**.
+Three selected responses failed validation and one failed the response-envelope
+check. The four unavailable assessments are pipeline failures, not four app
+defects. Separately, the accepted screen assessment covers only 80/326 lines.
+
+1. Improve response handling, source-specific instructions and eligible bounded
+   correction. Keep exact-evidence, privacy and stop-signal checks; do not accept
+   invalid output just to raise the success percentage. Work is in development,
+   not demonstrated as an improvement in this deployed example.
+2. Review the whole supported source in control-aware chunks with stable paths,
+   line ranges and overlapping context. Count unique lines once; mark missing
+   chunks explicitly. Require a suitable source export if reliable extraction
+   provenance cannot be established.
+3. Parse supported XML/JSON/SARIF metadata deterministically and assess it with
+   source-appropriate rules. Add bounded handling for larger supported files and
+   checkpointed per-source jobs/child flows. Metadata extraction alone is not a
+   completed AI assessment. This broader coverage work is planned, not deployed.
+4. Compare available supported models and repeat real-export reviews. A different
+   model cannot overcome a fixed excerpt cap. Current checker execution and
+   runtime/accessibility verification remain separate evidence requirements.
+
+**Proposed targets, not achieved results:** at least 4/5 of the same originally
+selected sources assessed next, aiming for 5/5, and 326/326 screen lines covered
+by accepted chunks. Source completion requires every required chunk to be
+accepted. The broader goal is at least 90% source-level completion over a declared,
+repeated set of real supported exports. Keep comparison source sets fixed and
+report unsupported, failed and unreviewed items separately rather than shrinking
+the denominator. These targets do not certify application release readiness.
+
+The public historical report, screenshots and 1/5 result are unchanged.
+No new runtime review, model switch or email is performed by this documentation
+update. [Coverage improvement plan](index.html#coverage-improvements).
 
 ## Public scope and hosting
 

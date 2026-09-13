@@ -21,6 +21,9 @@
 .automation-boundary { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--cp-border); color: var(--cp-text-soft); }
 .report-entry { margin: 0 0 16px; }
 .report-entry a { display: inline-block; margin-top: 8px; }
+.coverage-targets { margin-top: 24px; }
+.coverage-targets h3 { margin-bottom: 12px; }
+.coverage-targets p + p { margin-top: 12px; }
 @media (max-width: 760px) {
   .awaiting-capture { min-height: 160px; padding: 24px; }
 }

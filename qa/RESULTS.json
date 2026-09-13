@@ -72,6 +72,18 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: selected example model is not presented as an architectural requirement",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: the observed partial result links directly to its improvement plan",
+      "result": "PASS"
+    },
+    {
       "check": "1440-light: receipt caveat beside example",
       "result": "PASS"
     },
@@ -173,6 +185,18 @@
     },
     {
       "check": "1440-dark: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: selected example model is not presented as an architectural requirement",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: proposed reliability and source coverage targets are explicit, not current achievements",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: the observed partial result links directly to its improvement plan",
       "result": "PASS"
     },
     {
@@ -280,6 +304,18 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: selected example model is not presented as an architectural requirement",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: the observed partial result links directly to its improvement plan",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: receipt caveat beside example",
       "result": "PASS"
     },
@@ -384,6 +420,18 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: selected example model is not presented as an architectural requirement",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: proposed reliability and source coverage targets are explicit, not current achievements",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: the observed partial result links directly to its improvement plan",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: receipt caveat beside example",
       "result": "PASS"
     },
@@ -485,6 +533,18 @@
     },
     {
       "check": "320-light: actual Partial/coverage/call metrics",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: selected example model is not presented as an architectural requirement",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: the observed partial result links directly to its improvement plan",
       "result": "PASS"
     },
     {
@@ -848,27 +908,11 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-2",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-10",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #provenance",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-4",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #inventory",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-1",
+      "check": "Complete reader anchor #provenance",
       "result": "PASS"
     },
     {
@@ -880,14 +924,6 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #component",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #coverage",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #main-section-3",
       "result": "PASS"
     },
@@ -896,19 +932,43 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #main-section-5",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-9",
+      "check": "Complete reader anchor #main-section-2",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-10",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main",
       "result": "PASS"
     },
     {
       "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-9",
       "result": "PASS"
     },
     {
