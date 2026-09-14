@@ -5,6 +5,7 @@ from pathlib import Path
 from zipfile import ZipFile
 from public_inventory import ALL, DEPLOY, REPOSITORY_ONLY, MANIFEST, LOCAL_DIRECTORIES
 from prepare_real_example import validate_files, MANIFEST as EXAMPLE_MANIFEST
+from build_followup import verify as verify_followup
 
 SITE = Path(__file__).resolve().parents[1]
 c = json.loads((SITE / "content.json").read_text(encoding="utf-8"))
@@ -15,6 +16,7 @@ if (SITE / "content.js").read_text(encoding="utf-8") != script:
     raise ValueError("Regenerate current browser data.")
 e = json.loads((SITE / EXAMPLE_MANIFEST).read_text(encoding="utf-8"))
 validate_files(e)
+followup = verify_followup()
 archive_data = (SITE / e["bundle"]["path"]).read_bytes()
 if hashlib.sha256(archive_data).hexdigest() != e["bundle"]["sha256"]:
     raise ValueError("Real-example archive pin mismatch.")
@@ -50,6 +52,7 @@ m = {
     "publicationPerformedBySiteAuthor": False, "runtimeActionsPerformed": False,
     "hosting": c["hosting"], "singleStatusSource": "content.json",
     "example": c["example"], "approvedArchive": e["bundle"],
+    "followUp": c["followUp"], "followUpProvenance": followup,
     "files": files, "exactPublicRepositoryAllowlist": ALL,
     "exactDeploymentAllowlist": DEPLOY + [MANIFEST], "repositoryOnlyAllowlist": REPOSITORY_ONLY,
     "privacyReport": "PRIVACY-REPORT.json",

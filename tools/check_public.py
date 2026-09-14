@@ -11,6 +11,7 @@ from zipfile import ZipFile
 from PIL import Image
 from public_inventory import ALL, IMAGES, MANIFEST
 from prepare_real_example import validate_files
+from build_followup import verify as verify_followup
 
 SITE = Path(__file__).resolve().parents[1]
 GENERIC = [
@@ -33,6 +34,7 @@ def main():
     review = json.loads(args.image_review.read_text(encoding="utf-8-sig"))
     e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
     validate_files(e)
+    followup = verify_followup()
     failures = []
     totals = {"textMembers": 0, "archives": 0, "decodedCandidates": 0}
 
@@ -98,7 +100,8 @@ def main():
         "hashScope": "Exact current public files, not private acceptance records. Generated privacy/publication manifests are text-screened when present and excluded from this map to avoid circular hashes.",
         "privateTermsOrOcrPayloadsPublished": False,
         "imageReview": "Normal site-author visual/privacy review of eight exact approved derivatives, assisted by offline OCR. Original-to-derivative pixel comparison is Test-reported, not independently repeated by the site author. Four images are user-provided, not TEST captures.",
-        "bodyPolicy": "All four complete TXT files and all eight PNGs match approved input bytes. Only provenance approval/header and published-hash framing changed.",
+        "bodyPolicy": "All four historical TXT files and all eight PNGs match approved input bytes. The separately reviewed complete follow-up MAIN and identity-free measurements match their own public provenance pins.",
+        "followUpReport": followup["files"][0],
         "excluded": ["Raw app/solution and private originals/diagnostics", "Mixed Inbox/autoreply images", "Installers, previous examples and previous QA/publication artifacts", "Restricted application evidence and private bindings"],
         "historyPolicy": "Only a new clean repository/history may publish this exact current allowlist.",
         "runtimeActionsPerformed": False,

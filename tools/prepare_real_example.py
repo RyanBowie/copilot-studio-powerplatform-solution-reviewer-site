@@ -145,7 +145,8 @@ def render_text(value, kind):
     headings = {"Component assessment", "Not assessed:", "Evidence-grounded findings", "Observed strengths", "Verification and not-assessed checks"}
     def flush():
         if pending:
-            parts.append("<pre>" + html.escape("".join(pending), quote=False) + "</pre>")
+            # An initial element prevents HTML's removal of a leading newline in pre.
+            parts.append('<pre><span aria-hidden="true"></span>' + html.escape("".join(pending), quote=False) + "</pre>")
             pending.clear()
     for line in value.splitlines(keepends=True):
         match = re.match(r"^(10|[1-9])\. ", line) if kind == "main" else None
@@ -205,7 +206,7 @@ def main():
     (SITE / "downloads").mkdir(exist_ok=True)
     (SITE / BUNDLE).write_bytes(data)
     (SITE / MANIFEST).write_text(json.dumps(m, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (SITE / "full-example.html").write_text(reader(m), encoding="utf-8")
+    (SITE / "full-example.html").write_text(reader(m), encoding="utf-8", newline="")
     print("Real-example files verified: four TXT bodies and eight images unchanged.")
     print("Complete 14-file archive SHA-256:", m["bundle"]["sha256"])
 

@@ -16,6 +16,7 @@ from playwright.sync_api import sync_playwright
 from pypdf import PdfReader
 from public_inventory import IMAGES, DEPLOY
 from prepare_real_example import validate_files, DOCUMENTS, TEXT_PINS, render_text
+from build_followup import verify as verify_followup
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -66,10 +67,11 @@ def compact(value):
 
 try:
     validate_files(e)
+    verify_followup()
     check(True, "All fourteen approved published files verified; four complete TXT pins and eight image inputs unchanged")
     check((SITE / "examples/real-canvas/real-canvas-coverage.txt").stat().st_size == 58939, "Full 58,939-byte coverage retained")
     check(not c["downloads"]["installerIncluded"], "Installer remains excluded")
-    check(not c["hosting"]["liveHttpVerified"] and not c["hosting"]["repositoryApiVerified"], "Clean replacement hosting is not falsely reported as created/live")
+    check(c["hosting"]["liveHttpVerified"] and c["hosting"]["repositoryApiVerified"] and c["hosting"]["pagesConfigured"], "Verified existing public hosting replaces stale planned-state flags")
     escaped = render_text('<script>untrusted()</script>\nA & B <tag>\n', "main")
     check("<script>" not in escaped and "&lt;script&gt;" in escaped, "Report source is escaped, not executable markup")
     with sync_playwright() as p:
@@ -102,7 +104,8 @@ try:
             check(page.locator(".case-metrics strong").all_text_contents() == ["1 / 5", "80 / 326", "6"], label + ": actual Partial/coverage/call metrics")
             check("it is not required" in page.locator("#model-choice").text_content() and "Example model · not required" in page.locator("#reference .config-strip").text_content(), label + ": selected example model is not presented as an architectural requirement")
             improvement = page.locator("#coverage-improvements")
-            check(all(text in improvement.text_content() for text in ["not an app pass rate", "at least 4/5", "326/326", "at least 90%", "not achieved results", "failed and unsupported sources stay visible"]), label + ": proposed reliability and source coverage targets are explicit, not current achievements")
+            check(all(text.lower() in improvement.text_content().lower() for text in ["not an app pass rate", "at least 4/5", "at least 90%", "not achieved together", "failed and unsupported sources stay visible", "deterministic MAIN", "0/5"]), label + ": measured progress and still-unmet targets remain distinct, with regressions retained")
+            check(page.locator(".follow-up-metrics strong").all_text_contents() == ["3 / 5", "326 / 326", "2 / 2"], label + ": exact repeat-run acceptance, supplied screen and MAIN metrics")
             check(page.locator('.showcase-review-note a[href="#coverage-improvements"]').count() == 1, label + ": the observed partial result links directly to its improvement plan")
             check("not verified Inbox receipt" in page.locator("#example-caveat").text_content(), label + ": receipt caveat beside example")
             check(page.locator('img[src$="user-provided-notification-body.png"]').count() == 1, label + ": requested user-provided notification is the lead notification image")
@@ -123,6 +126,13 @@ try:
             check(page.locator(".report-text a").count() == 0, label + ": redaction labels/source strings are not live links")
             if width != 320:
                 capture(page, "reader-" + label + ".png")
+            page.goto(urljoin(args.base_url, "follow-up.html?scoutTheme=" + theme), wait_until="networkidle")
+            check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": follow-up reader no overflow")
+            check(page.locator("#main .report-text h3").count() == 10, label + ": follow-up has all ten MAIN headings")
+            check(page.locator("[data-followup-text]").text_content() == (SITE / "examples/follow-up/complete-review.txt").read_text(encoding="utf-8"), label + ": complete follow-up text retained with HTML newline normalization only")
+            check("4/5 combined target remains unmet" in page.locator(".example-lead").text_content(), label + ": follow-up does not claim the target passed")
+            if width != 320:
+                capture(page, "followup-" + label + ".png")
 
         page.goto(args.base_url, wait_until="networkidle")
         page.keyboard.press("Tab")
@@ -201,6 +211,14 @@ try:
         plain.goto(urljoin(args.base_url, "full-example.html"), wait_until="networkidle")
         for name, kind, _ in DOCUMENTS:
             check(plain.locator('[data-example-text="' + kind + '"]').text_content() == (SITE / "examples/real-canvas" / name).read_bytes().decode("utf-8-sig"), "Complete without JavaScript — " + kind)
+        plain.goto(urljoin(args.base_url, "follow-up.html"), wait_until="networkidle")
+        check(plain.locator("[data-followup-text]").text_content() == (SITE / "examples/follow-up/complete-review.txt").read_text(encoding="utf-8"), "Complete new MAIN is readable without JavaScript")
+        page.goto(urljoin(args.base_url, "follow-up.html?scoutTheme=dark"), wait_until="networkidle")
+        page.emulate_media(media="print")
+        followup_pdf = page.pdf(format="A4", print_background=False, prefer_css_page_size=True, display_header_footer=False)
+        (captures / "local-followup-print.pdf").write_bytes(followup_pdf)
+        followup_printed = compact("\n".join(sheet.extract_text() or "" for sheet in PdfReader(io.BytesIO(followup_pdf)).pages))
+        check(compact((SITE / "examples/follow-up/complete-review.txt").read_text(encoding="utf-8")) in followup_printed, "Actual browser PDF contains the complete follow-up MAIN and footer")
         plain_context.close()
         check(not result["externalRequests"], "No external browser requests")
         check(not result["errors"], "No browser script errors")

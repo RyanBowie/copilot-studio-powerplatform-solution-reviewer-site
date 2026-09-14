@@ -12,12 +12,15 @@ DEPLOY = [
     "content.json", "content.js", "reference.js", "README.md", "reference/agent-instructions.txt",
     "reference/topic-tool-source.json", "downloads/real-canvas-example-manifest.json",
     "downloads/real-canvas-review-example.zip", "PRIVACY-REPORT.json", ".nojekyll",
+    "follow-up.html", "examples/follow-up/results.json", "examples/follow-up/complete-review.txt",
+    "examples/follow-up/provenance.json",
 ] + ["examples/real-canvas/" + name for name in IMAGES + REPORTS + PROVENANCE]
 REPOSITORY_ONLY = [
     ".gitignore", ".gitattributes", ".github/workflows/pages.yml", "qa/RESULTS.json",
     "tools/build_home.py", "tools/generate_content.py", "tools/prepare_real_example.py",
     "tools/public_inventory.py", "tools/check_public.py", "tools/qa_site.py",
     "tools/make_manifest.py", "tools/stage_site.py", "tools/serve_preview.py",
+    "tools/build_followup.py",
 ]
 MANIFEST = "PUBLICATION-MANIFEST.json"
 ALL = DEPLOY + REPOSITORY_ONLY + [MANIFEST]

@@ -4,7 +4,7 @@
   "historicalQaInherited": false,
   "runtimeActionsPerformed": false,
   "capturesPublished": false,
-  "contentSourceSha256": "c9fe66ed607a23db333d7c7eea22866249697ffe0481d0d66c20df67d51c2291",
+  "contentSourceSha256": "ba1509846ce5e257639fdf946e46dbd4f3db6c5473964ae7f4107acb806a14fa",
   "exampleBundleSha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
   "cases": [
     {
@@ -20,7 +20,7 @@
       "result": "PASS"
     },
     {
-      "check": "Clean replacement hosting is not falsely reported as created/live",
+      "check": "Verified existing public hosting replaces stale planned-state flags",
       "result": "PASS"
     },
     {
@@ -76,7 +76,11 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "check": "1440-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: exact repeat-run acceptance, supplied screen and MAIN metrics",
       "result": "PASS"
     },
     {
@@ -144,6 +148,22 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: follow-up reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: follow-up has all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete follow-up text retained with HTML newline normalization only",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: follow-up does not claim the target passed",
+      "result": "PASS"
+    },
+    {
       "check": "1440-dark: homepage theme",
       "result": "PASS"
     },
@@ -192,7 +212,11 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: proposed reliability and source coverage targets are explicit, not current achievements",
+      "check": "1440-dark: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: exact repeat-run acceptance, supplied screen and MAIN metrics",
       "result": "PASS"
     },
     {
@@ -260,6 +284,22 @@
       "result": "PASS"
     },
     {
+      "check": "1440-dark: follow-up reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: follow-up has all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete follow-up text retained with HTML newline normalization only",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: follow-up does not claim the target passed",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: homepage theme",
       "result": "PASS"
     },
@@ -308,7 +348,11 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "check": "390-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: exact repeat-run acceptance, supplied screen and MAIN metrics",
       "result": "PASS"
     },
     {
@@ -376,6 +420,22 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: follow-up reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: follow-up has all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete follow-up text retained with HTML newline normalization only",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: follow-up does not claim the target passed",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: homepage theme",
       "result": "PASS"
     },
@@ -424,7 +484,11 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: proposed reliability and source coverage targets are explicit, not current achievements",
+      "check": "390-dark: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: exact repeat-run acceptance, supplied screen and MAIN metrics",
       "result": "PASS"
     },
     {
@@ -492,6 +556,22 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: follow-up reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: follow-up has all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete follow-up text retained with HTML newline normalization only",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: follow-up does not claim the target passed",
+      "result": "PASS"
+    },
+    {
       "check": "320-light: homepage theme",
       "result": "PASS"
     },
@@ -540,7 +620,11 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: proposed reliability and source coverage targets are explicit, not current achievements",
+      "check": "320-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: exact repeat-run acceptance, supplied screen and MAIN metrics",
       "result": "PASS"
     },
     {
@@ -605,6 +689,22 @@
     },
     {
       "check": "320-light: redaction labels/source strings are not live links",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: follow-up reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: follow-up has all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete follow-up text retained with HTML newline normalization only",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: follow-up does not claim the target passed",
       "result": "PASS"
     },
     {
@@ -836,6 +936,22 @@
       "result": "PASS"
     },
     {
+      "check": "Declared current local resource: follow-up.html",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/follow-up/results.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/follow-up/complete-review.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/follow-up/provenance.json",
+      "result": "PASS"
+    },
+    {
       "check": "Declared current local resource: examples/real-canvas/native-upload-menu-before-selection.png",
       "result": "PASS"
     },
@@ -908,15 +1024,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #inventory",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #provenance",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-7",
+      "check": "Complete reader anchor #main",
       "result": "PASS"
     },
     {
@@ -924,11 +1032,43 @@
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #main-section-10",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #main-section-3",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-8",
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #provenance",
       "result": "PASS"
     },
     {
@@ -940,31 +1080,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #component",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-4",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-1",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #coverage",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-10",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-6",
+      "check": "Complete reader anchor #main-section-8",
       "result": "PASS"
     },
     {
@@ -1025,6 +1141,14 @@
     },
     {
       "check": "Complete without JavaScript \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete new MAIN is readable without JavaScript",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF contains the complete follow-up MAIN and footer",
       "result": "PASS"
     },
     {

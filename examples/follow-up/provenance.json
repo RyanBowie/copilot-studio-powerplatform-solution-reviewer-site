@@ -1,0 +1,21 @@
+{
+  "kind": "REVIEWED_GENUINE_CANVAS_FOLLOW_UP_DERIVATIVE",
+  "approvedPublicDerivative": true,
+  "completeAssembledMain": true,
+  "allTenSectionsAndFooterRetained": true,
+  "redactionBoundary": "Private source identities, links, schema/table names and connection references are masked. Labels are not original source literals. No original package or private source fingerprint is published.",
+  "reportBoundary": "AI-generated component assessments passed the existing flow checks. MAIN is deterministic report assembly, not a second AI assessment or a corrected failed narrative. Report wording is retained, not compiler proof.",
+  "newScreenshotsIncluded": false,
+  "files": [
+    {
+      "path": "examples/follow-up/complete-review.txt",
+      "bytes": 43691,
+      "sha256": "fab3a88488feda525294759614e7536de60d01212fe2ccfc7828acb765e13cc0"
+    },
+    {
+      "path": "examples/follow-up/results.json",
+      "bytes": 6448,
+      "sha256": "cb16f6b409680d67b4ed776ace1e74de4927cf38c2c388ab684109f9bfec243c"
+    }
+  ]
+}

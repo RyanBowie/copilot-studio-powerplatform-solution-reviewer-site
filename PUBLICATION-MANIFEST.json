@@ -7,10 +7,10 @@
   "hosting": {
     "repository": "RyanBowie/copilot-studio-powerplatform-solution-reviewer-site",
     "pagesUrl": "https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/",
-    "repositoryApiVerified": false,
-    "pagesConfigured": false,
-    "liveHttpVerified": false,
-    "statusDescription": "Planned clean-history public deployment; replacement repository and Pages are not yet created or HTTP-verified. Parent owns creation and publication."
+    "repositoryApiVerified": true,
+    "pagesConfigured": true,
+    "liveHttpVerified": true,
+    "statusDescription": "The public repository, configured Pages site and existing live HTTP content have been verified. Historical examples and separately measured follow-up results are distinguished."
   },
   "singleStatusSource": "content.json",
   "example": {
@@ -26,7 +26,7 @@
     "modelCalls": 6,
     "acceptedScreenLines": 80,
     "totalScreenLines": 326,
-    "briefCaveat": "Partial: 1/5 assessments accepted, four unavailable. C4 covers 80/326 screen lines. The notification body is not verified Inbox receipt.",
+    "briefCaveat": "Historical screenshot run: Partial, 1/5 accepted; C4 covers 80/326 screen lines. The notification body is not verified Inbox receipt.",
     "bodyBoundary": "Complete available MAIN/C4/inventory/coverage, not a full application assessment. All four approved TXT files remain byte-identical.",
     "deliveryBoundary": "One guarded SendEmailV2 succeeded; original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. No single-delivery guarantee.",
     "semanticBoundary": "Retained syntactically-valid wording is not compiler proof. Three embedded checker records are historical with unknown age; no current checker ran. Role/customization and large data-source material were omitted or unassessed."
@@ -37,11 +37,46 @@
     "sha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
     "bytes": 1374765
   },
+  "followUp": {
+    "revision": "3.3.2.5",
+    "accepted": 3,
+    "selected": 5,
+    "unchangedRevisionRuns": 2,
+    "mainValidInBothRuns": true,
+    "screenContentLinesSupplied": 326,
+    "fourOfFiveCombinedTargetMet": false,
+    "broaderReliabilityEstablished": false,
+    "readerPath": "follow-up.html",
+    "resultsPath": "examples/follow-up/results.json",
+    "completeMainPath": "examples/follow-up/complete-review.txt",
+    "mainMethod": "Deterministic assembly of flow-accepted canonical component records; components remain model-generated."
+  },
+  "followUpProvenance": {
+    "kind": "REVIEWED_GENUINE_CANVAS_FOLLOW_UP_DERIVATIVE",
+    "approvedPublicDerivative": true,
+    "completeAssembledMain": true,
+    "allTenSectionsAndFooterRetained": true,
+    "redactionBoundary": "Private source identities, links, schema/table names and connection references are masked. Labels are not original source literals. No original package or private source fingerprint is published.",
+    "reportBoundary": "AI-generated component assessments passed the existing flow checks. MAIN is deterministic report assembly, not a second AI assessment or a corrected failed narrative. Report wording is retained, not compiler proof.",
+    "newScreenshotsIncluded": false,
+    "files": [
+      {
+        "path": "examples/follow-up/complete-review.txt",
+        "bytes": 43691,
+        "sha256": "fab3a88488feda525294759614e7536de60d01212fe2ccfc7828acb765e13cc0"
+      },
+      {
+        "path": "examples/follow-up/results.json",
+        "bytes": 6448,
+        "sha256": "cb16f6b409680d67b4ed776ace1e74de4927cf38c2c388ab684109f9bfec243c"
+      }
+    ]
+  },
   "files": [
     {
       "path": "index.html",
-      "sha256": "9672271a23d56146a6f8487e4ecf2950f59f817bef1841b25fb4c185676dc2b4",
-      "bytes": 44956,
+      "sha256": "24b707f5bae07798b4b4a50e5f7e8f35b87df50c3c5aa4b5d1892191498c976b",
+      "bytes": 46943,
       "deployToPages": true
     },
     {
@@ -76,20 +111,20 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "2414a12a6d406c9caf471caa16d9a312e05ce423234620ac6b744b154e065a7c",
-      "bytes": 126878,
+      "sha256": "4d8e6ed811d7495b687fb5c65102f8a26c0c9898e9d67509e53ce1b9e2c5f5a6",
+      "bytes": 125947,
       "deployToPages": true
     },
     {
       "path": "content.json",
-      "sha256": "c9fe66ed607a23db333d7c7eea22866249697ffe0481d0d66c20df67d51c2291",
-      "bytes": 2338,
+      "sha256": "ba1509846ce5e257639fdf946e46dbd4f3db6c5473964ae7f4107acb806a14fa",
+      "bytes": 3016,
       "deployToPages": true
     },
     {
       "path": "content.js",
-      "sha256": "2adaa7fdd1da1509e557a8ae576652a2161c908e296676639f3c509f9040b89b",
-      "bytes": 2360,
+      "sha256": "2a8cb5a4e01a6a18b7233b6051bd7ee6a7be0688eb66ce0c56dae701dbbf030d",
+      "bytes": 3038,
       "deployToPages": true
     },
     {
@@ -100,8 +135,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "456be827c9d5bf13527ce1fb4a41e0b127b467037512d1a6fff50d0201210408",
-      "bytes": 10672,
+      "sha256": "f82f10545a81b9744c735ad01c9508f4848e6821b5f21d45e84e67ea5c5eb551",
+      "bytes": 11743,
       "deployToPages": true
     },
     {
@@ -130,14 +165,38 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "60969f68511dbab954af3a63702989d61fb2334942b64fb5e7afbc019d6bb9fe",
-      "bytes": 5979,
+      "sha256": "6f6908f51b67ce64ed132bec7463956f40c363fb71fbe5b2c11815699f33cb8b",
+      "bytes": 6744,
       "deployToPages": true
     },
     {
       "path": ".nojekyll",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
+      "deployToPages": true
+    },
+    {
+      "path": "follow-up.html",
+      "sha256": "e36f5f45dd2206d7c2738b327da0334f30f38ba3bc411f2b8172caaca36b17f8",
+      "bytes": 52675,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/follow-up/results.json",
+      "sha256": "cb16f6b409680d67b4ed776ace1e74de4927cf38c2c388ab684109f9bfec243c",
+      "bytes": 6448,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/follow-up/complete-review.txt",
+      "sha256": "fab3a88488feda525294759614e7536de60d01212fe2ccfc7828acb765e13cc0",
+      "bytes": 43691,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/follow-up/provenance.json",
+      "sha256": "e2c7a45b7a9fad2c1f367f34e69a681e68aa627425de01d4da960df91bbad3cd",
+      "bytes": 1046,
       "deployToPages": true
     },
     {
@@ -244,14 +303,14 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "e2567346212a6b5674a9111b98e327b3528973e8a472d0a63078b8b24e91be46",
-      "bytes": 29184,
+      "sha256": "debc38fceefd88a3fd3a7718ca3e43f4b086eeb8e779a2ea8cbb80d6a58d8c8f",
+      "bytes": 32813,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "03167b54dca48b8e7e76696bf4cf929d9e092abd63fa165c191fc7b927e904fc",
-      "bytes": 23429,
+      "sha256": "27fc252a704f5ac9acaaf697d7133157fbc2fd81826f7dbee817f46a60a32e21",
+      "bytes": 20476,
       "deployToPages": false
     },
     {
@@ -262,32 +321,32 @@
     },
     {
       "path": "tools/prepare_real_example.py",
-      "sha256": "d50e6bacdea2dd33c3e4efd6e7471cac627def0043ea3d447212fa2e6fe22d44",
-      "bytes": 16860,
+      "sha256": "5fa754376b074bd8acccf008f979ee9bccff2f8e1c56866c03eb1086d53e3698",
+      "bytes": 16991,
       "deployToPages": false
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "563cc0fb79bbc520654f8cca170a22c85c8bb2120c864e19b62ebd75035fdc9f",
-      "bytes": 1647,
+      "sha256": "54e2a9c56660db70b2af9a28f75030be2fc267c1462ece9c69d4cd22d8e4bf2a",
+      "bytes": 1822,
       "deployToPages": false
     },
     {
       "path": "tools/check_public.py",
-      "sha256": "9dd59f3ea36c6fa7f7d7fa68b9698d85a8f76a3ebd22c977bd9eab539b57bc66",
-      "bytes": 6557,
+      "sha256": "44ecfd98f3de7d3ac886c50f8c3c764aa68fd1ff83857b5be66d3f097ec8e238",
+      "bytes": 6747,
       "deployToPages": false
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "1acd48f93573d0fe6a9e8d0ff5bc178a866a1b73aa0021f3480601cb67374721",
-      "bytes": 17506,
+      "sha256": "031bb447a04b3ab8c642906b4ea5a67c9c4c155a2999d8a429890daa5067e628",
+      "bytes": 19644,
       "deployToPages": false
     },
     {
       "path": "tools/make_manifest.py",
-      "sha256": "748737f7943d9ab67231dea3e463b0480d89d6a187de19caa5e843adebfbc0bf",
-      "bytes": 4328,
+      "sha256": "bc9c0c119e6f703ca6b53f1e7a1659bc5ff6b5c514a962573d7722c190009815",
+      "bytes": 4476,
       "deployToPages": false
     },
     {
@@ -300,6 +359,12 @@
       "path": "tools/serve_preview.py",
       "sha256": "1251cef9e759cadc71bc93659cc38423277110e058f04140bef4038d3d4d9453",
       "bytes": 1669,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/build_followup.py",
+      "sha256": "37ab7746bc009daee5f8437af85c76c8ccf0ad74993cc51374d78ef35205d856",
+      "bytes": 14574,
       "deployToPages": false
     }
   ],
@@ -321,6 +386,10 @@
     "downloads/real-canvas-review-example.zip",
     "PRIVACY-REPORT.json",
     ".nojekyll",
+    "follow-up.html",
+    "examples/follow-up/results.json",
+    "examples/follow-up/complete-review.txt",
+    "examples/follow-up/provenance.json",
     "examples/real-canvas/native-upload-menu-before-selection.png",
     "examples/real-canvas/native-upload-file-row-confirmed.png",
     "examples/real-canvas/actual-result-review-txt.png",
@@ -348,6 +417,7 @@
     "tools/make_manifest.py",
     "tools/stage_site.py",
     "tools/serve_preview.py",
+    "tools/build_followup.py",
     "PUBLICATION-MANIFEST.json"
   ],
   "exactDeploymentAllowlist": [
@@ -368,6 +438,10 @@
     "downloads/real-canvas-review-example.zip",
     "PRIVACY-REPORT.json",
     ".nojekyll",
+    "follow-up.html",
+    "examples/follow-up/results.json",
+    "examples/follow-up/complete-review.txt",
+    "examples/follow-up/provenance.json",
     "examples/real-canvas/native-upload-menu-before-selection.png",
     "examples/real-canvas/native-upload-file-row-confirmed.png",
     "examples/real-canvas/actual-result-review-txt.png",
@@ -397,12 +471,13 @@
     "tools/qa_site.py",
     "tools/make_manifest.py",
     "tools/stage_site.py",
-    "tools/serve_preview.py"
+    "tools/serve_preview.py",
+    "tools/build_followup.py"
   ],
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 257,
+    "checksPassed": 288,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

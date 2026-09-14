@@ -1,17 +1,17 @@
 window.PSR_CONTENT = {
   "publication": {
     "approvedPublicPreview": true,
-    "scope": "The exact approved real-canvas public derivatives and generic product reference only.",
+    "scope": "Approved historical real-canvas derivatives, separately reviewed genuine follow-up MAIN/results, and generic product reference only.",
     "runtimeAcceptance": false,
     "siteVisualReview": "Site author visually reviewed all eight approved derivatives; private originals were not inspected."
   },
   "hosting": {
     "repository": "RyanBowie/copilot-studio-powerplatform-solution-reviewer-site",
     "pagesUrl": "https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/",
-    "repositoryApiVerified": false,
-    "pagesConfigured": false,
-    "liveHttpVerified": false,
-    "statusDescription": "Planned clean-history public deployment; replacement repository and Pages are not yet created or HTTP-verified. Parent owns creation and publication."
+    "repositoryApiVerified": true,
+    "pagesConfigured": true,
+    "liveHttpVerified": true,
+    "statusDescription": "The public repository, configured Pages site and existing live HTTP content have been verified. Historical examples and separately measured follow-up results are distinguished."
   },
   "example": {
     "kind": "REAL_EXPORTED_CLASSIC_CANVAS_APP",
@@ -26,14 +26,28 @@ window.PSR_CONTENT = {
     "modelCalls": 6,
     "acceptedScreenLines": 80,
     "totalScreenLines": 326,
-    "briefCaveat": "Partial: 1/5 assessments accepted, four unavailable. C4 covers 80/326 screen lines. The notification body is not verified Inbox receipt.",
+    "briefCaveat": "Historical screenshot run: Partial, 1/5 accepted; C4 covers 80/326 screen lines. The notification body is not verified Inbox receipt.",
     "bodyBoundary": "Complete available MAIN/C4/inventory/coverage, not a full application assessment. All four approved TXT files remain byte-identical.",
     "deliveryBoundary": "One guarded SendEmailV2 succeeded; original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. No single-delivery guarantee.",
     "semanticBoundary": "Retained syntactically-valid wording is not compiler proof. Three embedded checker records are historical with unknown age; no current checker ran. Role/customization and large data-source material were omitted or unassessed."
   },
+  "followUp": {
+    "revision": "3.3.2.5",
+    "accepted": 3,
+    "selected": 5,
+    "unchangedRevisionRuns": 2,
+    "mainValidInBothRuns": true,
+    "screenContentLinesSupplied": 326,
+    "fourOfFiveCombinedTargetMet": false,
+    "broaderReliabilityEstablished": false,
+    "readerPath": "follow-up.html",
+    "resultsPath": "examples/follow-up/results.json",
+    "completeMainPath": "examples/follow-up/complete-review.txt",
+    "mainMethod": "Deterministic assembly of flow-accepted canonical component records; components remain model-generated."
+  },
   "downloads": {
     "installerIncluded": false,
     "exampleIncluded": true,
-    "status": "Only the approved real-canvas report/capture bundle and generic source references are included. No app/solution package, installer, private originals, diagnostics or mailbox/autoreply images."
+    "status": "The historical approved report/capture bundle, separately reviewed complete follow-up MAIN/results and generic references are included. No app/solution package, installer, private originals, diagnostics or mailbox/autoreply images."
   }
 };
