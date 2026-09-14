@@ -14,9 +14,14 @@ from zipfile import ZipFile
 from PIL import Image
 from playwright.sync_api import sync_playwright
 from pypdf import PdfReader
-from public_inventory import IMAGES, DEPLOY
+from public_inventory import IMAGES, WALKTHROUGH_IMAGES, DEPLOY, ALL, MANIFEST
 from prepare_real_example import validate_files, DOCUMENTS, TEXT_PINS, render_text
 from build_followup import verify as verify_followup
+from build_walkthrough import (
+    verify as verify_walkthrough, verify_outputs, documents as walkthrough_documents,
+    normalized_text, extract_markdown, primary_content, combined_target, PREFIX as WALKTHROUGH_PREFIX,
+    PROVENANCE as WALKTHROUGH_PROVENANCE, MARKDOWN, IMAGE_ROLES,
+)
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -24,8 +29,19 @@ parser.add_argument("--base-url", default="http://127.0.0.1:4178/preview/")
 parser.add_argument("--capture-directory", type=Path, required=True)
 args = parser.parse_args()
 captures = args.capture_directory.resolve()
-if urlparse(args.base_url).hostname != "127.0.0.1" or not captures.is_relative_to(SITE):
+if urlparse(args.base_url).hostname != "127.0.0.1" or not captures.is_relative_to(SITE / "_private-hold"):
     raise SystemExit("Only a local preview and owned private capture directory are allowed.")
+walkthrough = verify_walkthrough()
+verify_outputs(walkthrough)
+walkthrough_rows = walkthrough_documents(walkthrough)
+target_status = combined_target(walkthrough)
+expected_target = (
+    walkthrough["accepted"] >= 4 and walkthrough["selected"] == 5
+    and walkthrough["mainValid"] is True and walkthrough["allFiveSelectedSourcesComplete"] is True
+    and "C4" in walkthrough["acceptedPassIds"]
+    and walkthrough["screenLinesSupplied"] == walkthrough["totalScreenLines"]
+    and 3 * walkthrough["totalScreenLines"] < 4 * walkthrough["latestScreenCitation"] <= 4 * walkthrough["totalScreenLines"]
+)
 if captures.exists():
     raise SystemExit("Capture directory exists; do not overwrite.")
 captures.mkdir(parents=True)
@@ -38,10 +54,14 @@ os.environ["TEMP"] = os.environ["TMP"] = str(storage)
 tempfile.tempdir = str(storage)
 c = json.loads((SITE / "content.json").read_text(encoding="utf-8"))
 e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
-result = {"status": "PENDING", "scope": "APPROVED_REAL_CANVAS_LOCAL_SITE_QA",
+result = {"status": "PENDING", "scope": "MATCHED_CANVAS_WALKTHROUGH_LOCAL_SITE_QA",
           "historicalQaInherited": False, "runtimeActionsPerformed": False, "capturesPublished": False,
           "contentSourceSha256": hashlib.sha256((SITE / "content.json").read_bytes()).hexdigest(),
-          "exampleBundleSha256": e["bundle"]["sha256"], "cases": [], "externalRequests": [], "errors": []}
+          "exampleBundleSha256": e["bundle"]["sha256"],
+          "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
+          "validatedFileSha256": {name: hashlib.sha256((SITE / name).read_bytes()).hexdigest()
+                                 for name in ALL if name not in {"qa/RESULTS.json", "PRIVACY-REPORT.json", MANIFEST}},
+          "cases": [], "externalRequests": [], "errors": []}
 
 
 def check(condition, label):
@@ -68,6 +88,13 @@ def compact(value):
 try:
     validate_files(e)
     verify_followup()
+    check(c["example"] == primary_content(walkthrough), "Primary metrics are derived from actual reviewed matched-run provenance")
+    check(target_status["achieved"] is expected_target, "Combined target requires >=4/5, valid MAIN, five complete sources, accepted C4 and a last-quarter citation")
+    check(target_status["scope"] == "ONE_MATCHED_RUN_ONLY" and target_status["summary"] in (SITE / MARKDOWN).read_text(encoding="utf-8"),
+          "Full Markdown carries the same bounded one-run target statement")
+    check(extract_markdown((SITE / MARKDOWN).read_bytes().decode("utf-8")) ==
+          {row["file"]: (SITE / WALKTHROUGH_PREFIX / row["file"]).read_bytes() for row in walkthrough_rows},
+          "Full Markdown roundtrips every authoritative report byte, including footer, JSON, BOM and line endings")
     check(True, "All fourteen approved published files verified; four complete TXT pins and eight image inputs unchanged")
     check((SITE / "examples/real-canvas/real-canvas-coverage.txt").stat().st_size == 58939, "Full 58,939-byte coverage retained")
     check(not c["downloads"]["installerIncluded"], "Installer remains excluded")
@@ -92,23 +119,32 @@ try:
             check(page.locator("html").get_attribute("data-theme") == theme, label + ": homepage theme")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": homepage no overflow")
             check(page.locator("main > section").evaluate_all("(nodes)=>nodes.slice(0,2).map(n=>n.id).join(',')") == "showcase,full-example", label + ": actual journey followed immediately by complete-output entry")
-            check(page.locator("figure.screenshot img").count() == 8, label + ": exact eight current real-review derivatives")
+            check(page.locator("figure.screenshot img").count() == 9, label + ": exact nine matched native derivatives")
+            check(page.locator("figure.screenshot").evaluate_all("(nodes)=>nodes.map(n=>n.dataset.imageRole)") == list(IMAGE_ROLES), label + ": all matched image roles in the agreed presentation order")
             check(page.locator(".journey-number").all_text_contents() == ["01", "02", "03", "04", "05", "06"], label + ": upload, trigger, agent, results, email and open report are six ordered stages")
             trigger = page.locator(".journey-stage").nth(1)
-            check(trigger.locator("#automatic-intake").count() == 1 and trigger.locator("img").count() == 0, label + ": step two explains the trigger instead of showing a report or fabricated run capture")
-            check(all(text in trigger.text_content() for text in ["When a file is created (properties only)", "every minute", "not a run-history screenshot", "A new file, not a new folder", "No chat prompt is needed"]), label + ": automatic handoff and file/folder boundary are explicit")
+            check(trigger.locator("#automatic-intake").count() == 1 and trigger.locator('img[src$="native-flow-run.png"]').count() == 1, label + ": step two uses the actual matched flow run")
+            check(all(text in trigger.text_content() for text in ["When a file is created (properties only)", "every minute", "A new file, not a new folder", "No chat prompt is needed"]), label + ": automatic handoff and file/folder boundary are explicit")
             check("ExecuteCopilotAsyncV2" in page.locator(".journey-stage").nth(2).text_content(), label + ": step three explains the actual agent invocation")
-            check(page.locator(".journey-stage").nth(3).locator('img[src$="actual-result-review-txt.png"]').count() == 1 and page.locator(".journey-stage").nth(4).locator('img[src$="user-provided-notification-body.png"]').count() == 1, label + ": actual saved report and notification follow the agent")
+            check(page.locator(".journey-stage").nth(2).locator('img[src$="native-agent-handoff.png"]').count() == 1, label + ": actual agent-action evidence replaces the historical configuration explainer")
+            check(page.locator(".journey-stage").nth(3).locator('img[src$="native-main-opening.png"]').count() == 1 and page.locator(".journey-stage").nth(4).locator('img[src$="native-email-received.png"]').count() == 1, label + ": matched output and received email follow the actual agent action")
             opened_report = page.locator(".journey-stage").nth(5)
-            check(opened_report.locator("h2").text_content() == "Open the full report" and opened_report.locator("img").count() == 3 and opened_report.locator('a[href="full-example.html"]').count() == 1, label + ": step six uses all three user report screenshots and links the complete report")
-            check(page.locator(".case-metrics strong").all_text_contents() == ["1 / 5", "80 / 326", "6"], label + ": actual Partial/coverage/call metrics")
-            check("it is not required" in page.locator("#model-choice").text_content() and "Example model · not required" in page.locator("#reference .config-strip").text_content(), label + ": selected example model is not presented as an architectural requirement")
+            check(opened_report.locator("h2").text_content() == "Open the full report" and opened_report.locator("img").count() == 2 and opened_report.locator('a[href="walkthrough.html"]').count() == 1, label + ": step six uses the matched native assessment/verification views and full reader")
+            check(page.locator(".case-metrics strong").all_text_contents() == [f'{walkthrough["accepted"]} / 5', "326 / 326", str(walkthrough["logicalAgentInvocations"])], label + ": actual improved acceptance, complete-input and invocation metrics")
+            check(page.locator("#combined-target").text_content() == target_status["summary"]
+                  and page.locator("#combined-target").get_attribute("data-combined-target-met") == str(expected_target).lower(),
+                  label + ": primary combined-target claim is conditional and one-run only")
+            check("GPT-5 Reasoning is not required" in page.locator("#model-choice").text_content() and "GPT5Chat" in page.locator("#reference .config-strip").text_content(), label + ": current GPT5Chat is not confused with historical Reasoning")
+            primary_text = page.locator("#showcase, #full-example").all_text_contents()
+            check(not re.search(r"(?<!\d)1\s*/\s*5|80\s*/\s*326|not verified Inbox receipt", " ".join(primary_text)), label + ": no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence")
+            check("historical" in page.locator("#history").text_content().lower() and page.locator('#history a[href="full-example.html"]').count() == 1, label + ": immutable historical example remains explicitly separate")
             improvement = page.locator("#coverage-improvements")
-            check(all(text.lower() in improvement.text_content().lower() for text in ["not an app pass rate", "at least 4/5", "at least 90%", "not achieved together", "failed and unsupported sources stay visible", "deterministic MAIN", "0/5"]), label + ": measured progress and still-unmet targets remain distinct, with regressions retained")
+            check(all(text.lower() in improvement.text_content().lower() for text in ["not an app pass rate", "at least 4/5", "at least 90%", "not achieved together in these two historical no-email benchmark runs", "failed and unsupported sources stay visible", "deterministic MAIN", "0/5"]), label + ": benchmark target limitations are explicitly historical, with regressions retained")
             check(page.locator(".follow-up-metrics strong").all_text_contents() == ["3 / 5", "326 / 326", "2 / 2"], label + ": exact repeat-run acceptance, supplied screen and MAIN metrics")
             check(page.locator('.showcase-review-note a[href="#coverage-improvements"]').count() == 1, label + ": the observed partial result links directly to its improvement plan")
-            check("not verified Inbox receipt" in page.locator("#example-caveat").text_content(), label + ": receipt caveat beside example")
-            check(page.locator('img[src$="user-provided-notification-body.png"]').count() == 1, label + ": requested user-provided notification is the lead notification image")
+            check("Owner Inbox receipt and the matching protected-report link verified" in page.locator("#example-caveat").text_content(), label + ": actual receipt and protected-report proof beside primary example")
+            check("Forwarded corporate receipt is not established" in page.locator("#delivery-boundary").text_content(), label + ": owner receipt does not imply corporate forwarding receipt")
+            check("no-email" in improvement.text_content() and improvement.locator("tbody tr").count() == 11, label + ": both no-email benchmarks and all 11 historical comparisons remain distinct")
             check(set(page.locator('a[href$=".zip"]').evaluate_all("(nodes)=>nodes.map(n=>n.getAttribute('href'))")) == {e["bundle"]["path"]}, label + ": only the approved real-example ZIP")
             box = page.locator("[data-full-example-link]").bounding_box()
             check(box["y"] + box["height"] < height, label + ": full output link above fold")
@@ -117,6 +153,19 @@ try:
             page.evaluate("scrollTo(0,0)")
             if width != 320:
                 capture(page, "home-" + label + ".png")
+            page.goto(urljoin(args.base_url, "walkthrough.html?scoutTheme=" + theme), wait_until="networkidle")
+            check(page.locator("html").get_attribute("data-theme") == theme, label + ": matched reader theme")
+            check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": matched reader no overflow")
+            check(page.locator("#main .report-text h3").count() == 10, label + ": matched reader retains all ten MAIN headings")
+            check(page.locator("#combined-target").text_content() == target_status["summary"]
+                  and page.locator("#combined-target").get_attribute("data-combined-target-met") == str(expected_target).lower(),
+                  label + ": matched reader agrees with conditional homepage/Markdown target metadata")
+            check(page.locator(".report-text pre").evaluate_all("(nodes)=>nodes.every(n=>getComputedStyle(n).maxHeight==='none'&&getComputedStyle(n).overflowY==='visible')"), label + ": matched reports have no clipping or height limits")
+            for row in walkthrough_rows:
+                check(page.locator('[data-walkthrough-text="' + row["file"] + '"]').text_content() == normalized_text((SITE / WALKTHROUGH_PREFIX / row["file"]).read_bytes()), label + ": complete matched DOM/source equality — " + row["file"])
+            check(page.locator(".report-text a, .report-text script, .report-text img").count() == 0, label + ": matched source text is escaped and cannot create live links or markup")
+            if width != 320:
+                capture(page, "walkthrough-" + label + ".png")
             page.goto(urljoin(args.base_url, "full-example.html?scoutTheme=" + theme), wait_until="networkidle")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": reader no overflow")
             check(page.locator("#main .report-text h3").count() == 10, label + ": all MAIN headings")
@@ -130,7 +179,7 @@ try:
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": follow-up reader no overflow")
             check(page.locator("#main .report-text h3").count() == 10, label + ": follow-up has all ten MAIN headings")
             check(page.locator("[data-followup-text]").text_content() == (SITE / "examples/follow-up/complete-review.txt").read_text(encoding="utf-8"), label + ": complete follow-up text retained with HTML newline normalization only")
-            check("4/5 combined target remains unmet" in page.locator(".example-lead").text_content(), label + ": follow-up does not claim the target passed")
+            check("4/5 combined target remained unmet in these two historical no-email benchmark runs" in page.locator(".example-lead").text_content(), label + ": benchmark reader scopes its unmet target to those historical runs")
             if width != 320:
                 capture(page, "followup-" + label + ".png")
 
@@ -139,7 +188,7 @@ try:
         check(page.evaluate("document.activeElement.classList.contains('skip-link')"), "Keyboard skip link first")
         page.keyboard.press("Enter")
         check(page.evaluate("location.hash") == "#main", "Keyboard skip navigation")
-        for index in range(8):
+        for index in range(len(WALKTHROUGH_IMAGES)):
             link = page.locator("figure.screenshot a.image-link").nth(index)
             href = link.get_attribute("href")
             link.focus()
@@ -162,7 +211,24 @@ try:
         check(page.locator("html").get_attribute("data-theme") != current, "Keyboard theme switch")
         page.locator("[data-full-example-link]").focus()
         page.keyboard.press("Enter")
-        page.wait_for_url("**/full-example.html")
+        page.wait_for_url("**/walkthrough.html")
+        for row in walkthrough_rows:
+            page.locator('.document-header a[href="' + WALKTHROUGH_PREFIX + "/" + row["file"] + '"]').focus()
+            with page.expect_download() as event:
+                page.keyboard.press("Enter")
+            target = storage / ("matched-" + row["file"])
+            event.value.save_as(str(target))
+            check(hashlib.sha256(target.read_bytes()).hexdigest() == row["sha256"], "Complete matched keyboard download — " + row["file"])
+        page.locator('.reader-actions a[href="' + MARKDOWN + '"]').focus()
+        with page.expect_download() as event:
+            page.keyboard.press("Enter")
+        target = storage / "matched-full-report.md"
+        event.value.save_as(str(target))
+        check(target.read_bytes() == (SITE / MARKDOWN).read_bytes(), "Browser receives exact complete Markdown derivative")
+        check(extract_markdown(target.read_bytes().decode("utf-8")) == {row["file"]: (SITE / WALKTHROUGH_PREFIX / row["file"]).read_bytes() for row in walkthrough_rows}, "Downloaded Markdown is lossless for every authoritative document")
+        for link in set(page.locator('a[href^="#"]').evaluate_all("(nodes)=>nodes.map(n=>n.getAttribute('href'))")):
+            check(page.locator(link).count() == 1, "Matched reader anchor " + link)
+        page.goto(urljoin(args.base_url, "full-example.html"), wait_until="networkidle")
         for name, kind, _ in DOCUMENTS:
             link = page.locator('.document-header a[href="examples/real-canvas/' + name + '"]')
             link.focus()
@@ -202,12 +268,35 @@ try:
         printed = compact("\n".join(sheet.extract_text() or "" for sheet in pdf.pages))
         for name, kind, _ in DOCUMENTS:
             check(compact((SITE / "examples/real-canvas" / name).read_bytes().decode("utf-8-sig")) in printed, "Actual browser PDF contains complete text — " + kind)
-        result["printValidation"] = {"allSixDocumentsComplete": True, "pages": len(pdf.pages), "publicPdfIncluded": False, "runtimeFormatterExecuted": False}
+        result["printValidation"] = {"allSixHistoricalDocumentsComplete": True, "historicalPages": len(pdf.pages), "publicPdfIncluded": False, "runtimeFormatterExecuted": False}
         page.set_viewport_size({"width": 794, "height": 1123})
         capture(page, "print-layout.png")
         plain_context = context.browser.new_context(java_script_enabled=False)
         plain_context.route("**/*", route)
         plain = plain_context.new_page()
+        plain.goto(args.base_url, wait_until="networkidle")
+        check(plain.locator("#example-caveat").text_content() == primary_content(walkthrough)["briefCaveat"], "No-JavaScript homepage retains exact improved metrics and receipt proof")
+        check(plain.locator("#combined-target").text_content() == combined_target(walkthrough)["summary"], "No-JavaScript homepage retains bounded target evidence")
+        check(plain.locator("figure.screenshot a.image-link").count() == 9 and plain.locator('[data-full-example-link]').get_attribute("href") == "walkthrough.html", "No-JavaScript image inspection and main reader links")
+        plain.goto(urljoin(args.base_url, "walkthrough.html"), wait_until="networkidle")
+        check(plain.locator("#combined-target").text_content() == combined_target(walkthrough)["summary"], "No-JavaScript reader retains the same bounded target evidence")
+        for row in walkthrough_rows:
+            check(plain.locator('[data-walkthrough-text="' + row["file"] + '"]').text_content() == normalized_text((SITE / WALKTHROUGH_PREFIX / row["file"]).read_bytes()), "Complete matched report without JavaScript — " + row["file"])
+        page.emulate_media(media="screen")
+        page.goto(urljoin(args.base_url, "walkthrough.html?scoutTheme=dark"), wait_until="networkidle")
+        page.evaluate("window.print=()=>{window.__printRequested=true}")
+        page.locator("#print-example").focus()
+        page.keyboard.press("Enter")
+        check(page.evaluate("window.__printRequested===true"), "Matched reader keyboard print wiring")
+        page.emulate_media(media="print")
+        check(page.evaluate("getComputedStyle(document.documentElement).getPropertyValue('--cp-text').trim()") == "#242424", "Matched reader light print palette from dark theme")
+        matched_pdf = page.pdf(format="A4", print_background=False, prefer_css_page_size=True, display_header_footer=False)
+        (captures / "local-walkthrough-print.pdf").write_bytes(matched_pdf)
+        matched_pages = PdfReader(io.BytesIO(matched_pdf)).pages
+        matched_printed = compact("\n".join(sheet.extract_text() or "" for sheet in matched_pages))
+        for row in walkthrough_rows:
+            check(compact(normalized_text((SITE / WALKTHROUGH_PREFIX / row["file"]).read_bytes()).lstrip("\ufeff")) in matched_printed, "Actual browser PDF retains full matched content — " + row["file"])
+        result["printValidation"].update(allMatchedDocumentsComplete=True, matchedPages=len(matched_pages))
         plain.goto(urljoin(args.base_url, "full-example.html"), wait_until="networkidle")
         for name, kind, _ in DOCUMENTS:
             check(plain.locator('[data-example-text="' + kind + '"]').text_content() == (SITE / "examples/real-canvas" / name).read_bytes().decode("utf-8-sig"), "Complete without JavaScript — " + kind)
@@ -223,7 +312,7 @@ try:
         check(not result["externalRequests"], "No external browser requests")
         check(not result["errors"], "No browser script errors")
         context.close()
-    for prefix in ["home", "reader"]:
+    for prefix in ["home", "reader", "walkthrough"]:
         first = Image.open(captures / (prefix + "-1440-light.png")).convert("RGB")
         board = Image.new("RGB", (1500, 1000), first.getpixel((0, first.height - 1)))
         for suffix, xy, size in [("1440-light", (0, 0), (720, 500)), ("1440-dark", (0, 500), (720, 500)), ("390-light", (720, 0), (390, 844)), ("390-dark", (1110, 0), (390, 844))]:

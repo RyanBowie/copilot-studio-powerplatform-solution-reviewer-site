@@ -1,0 +1,299 @@
+{
+  "declaredRootComponents": [
+    {
+      "boundary": "Manifest declarations only, not proof that components were analyzed, imported or checked. At most 200 declarations; absent attributes remain empty.",
+      "components": [
+        {
+          "behavior": "0",
+          "componentType": "1",
+          "id": "",
+          "schemaName": "[PRIVATE SCHEMA 5]"
+        },
+        {
+          "behavior": "0",
+          "componentType": "1",
+          "id": "",
+          "schemaName": "[PRIVATE SCHEMA 6]"
+        },
+        {
+          "behavior": "0",
+          "componentType": "20",
+          "id": "{[PRIVATE IDENTIFIER 9]}",
+          "schemaName": ""
+        },
+        {
+          "behavior": "0",
+          "componentType": "20",
+          "id": "{[PRIVATE IDENTIFIER 10]}",
+          "schemaName": ""
+        },
+        {
+          "behavior": "0",
+          "componentType": "29",
+          "id": "{[PRIVATE IDENTIFIER 11]}",
+          "schemaName": ""
+        },
+        {
+          "behavior": "0",
+          "componentType": "300",
+          "id": "",
+          "schemaName": "[PRIVATE SCHEMA 7]"
+        }
+      ],
+      "omittedComponentCount": 0,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "solution.xml",
+      "returnedComponentCount": 6,
+      "rootComponentCount": 6
+    }
+  ],
+  "extractedInventory": [
+    {
+      "bytes": 1323,
+      "category": "not-selected",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "CanvasApps/[PRIVATE SCHEMA 2].json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 14684,
+      "category": "not-selected",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "CanvasApps/[PRIVATE SCHEMA 3]",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 327865,
+      "category": "nested-canvas-app",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 3523,
+      "category": "flow-definition",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "[PRIVATE WORKFLOW PATH 1]",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 448,
+      "category": "not-selected",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "[Content_Types].xml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 165369,
+      "category": "solution-xml",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "customizations.xml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 5440,
+      "category": "solution-xml",
+      "folder": false,
+      "package": "[PRIVATE UPLOAD 1]",
+      "path": "solution.xml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 114,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": ".gitignore",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 2417,
+      "category": "embedded-checker",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "AppCheckerResult.sarif",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 4393,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "1.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 206749,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "4.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 224,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Header.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 4983,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Properties.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 7019630,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "DataSources.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 114,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "ModernThemes.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 743,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "QualifiedValues.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 23,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Resources.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 87641,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Templates.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 147650,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Themes.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 245,
+      "category": "not-selected",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "PublishInfo.json",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 636,
+      "category": "canvas-source",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "App.pa.yaml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 14344,
+      "category": "canvas-source",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "Screen1.pa.yaml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    },
+    {
+      "bytes": 633,
+      "category": "canvas-editor-metadata",
+      "folder": false,
+      "package": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "path": "_EditorState.pa.yaml",
+      "pathKind": "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
+    }
+  ],
+  "jobId": "[PRIVATE IDENTIFIER 4]",
+  "nestedAppCoverage": [
+    {
+      "degradedPathCandidates": 2,
+      "detail": "Extracted-path source candidates only, not original archive hierarchy or full coverage. Per-file/read/paging/flattening omissions apply.",
+      "editorMetadataFilesReturned": 1,
+      "modernSrcFilesReturned": 2,
+      "path": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "status": "EXTRACTED_PA_YAML_DEGRADED_PATHS"
+    }
+  ],
+  "packages": [
+    {
+      "editorMetadataFilesReturned": 0,
+      "extraction": "Connector extraction only; not official checker execution or provenance verification.",
+      "extractionPaging": {
+        "distinctRecordsRetained": 7,
+        "limits": "At most eight responses and 30 seconds of explicit continuation per archive; a wait above ten seconds is deferred, never shortened.",
+        "metadataRowsAcrossResponses": 7,
+        "note": "Duplicate complete metadata records across pages are unioned. Distinct extracted records are not proof of original archive completeness or preserved paths.",
+        "pagesCompleted": 2,
+        "terminalHttpStatus": 200
+      },
+      "kind": "solution",
+      "modernCanvasSourceFiles": 0,
+      "name": "[PRIVATE UPLOAD 1]",
+      "paYamlCandidatesOutsideExtractedSrc": 0,
+      "pathBoundary": "Paths are actual extracted locations. Original archive paths, hierarchy, missing members and flattening collisions are not independently verified.",
+      "returnedEntries": 7,
+      "sourceStatus": "SOLUTION_CONTAINER"
+    },
+    {
+      "editorMetadataFilesReturned": 1,
+      "extraction": "Connector extraction only; not official checker execution or provenance verification.",
+      "extractionPaging": {
+        "distinctRecordsRetained": 16,
+        "limits": "At most eight responses and 30 seconds of explicit continuation per archive; a wait above ten seconds is deferred, never shortened.",
+        "metadataRowsAcrossResponses": 16,
+        "note": "Duplicate complete metadata records across pages are unioned. Distinct extracted records are not proof of original archive completeness or preserved paths.",
+        "pagesCompleted": 3,
+        "terminalHttpStatus": 200
+      },
+      "kind": "msapp",
+      "modernCanvasSourceFiles": 2,
+      "name": "CanvasApps/[PRIVATE SCHEMA 4].msapp",
+      "paYamlCandidatesOutsideExtractedSrc": 2,
+      "pathBoundary": "Paths are actual extracted locations. Original archive paths, hierarchy, missing members and flattening collisions are not independently verified.",
+      "returnedEntries": 16,
+      "sourceStatus": "PA_YAML_WITH_DEGRADED_PATH_PROVENANCE"
+    }
+  ],
+  "reportSchema": "2.0",
+  "scope": "Complete retained validated extracted metadata and available bounded parsed manifest declarations. This is not proof of all original archive members or all runtime components. Unsafe/unretained/unreturned metadata and bounds are separately recorded; unknown original members cannot be enumerated honestly.",
+  "sourceSnapshot": {
+    "etag": "\"{[PRIVATE IDENTIFIER 3]},1\"",
+    "hashAlgorithm": "Not computed; native source identity/version/ETag checked before and after content read.",
+    "libraryId": "[PRIVATE IDENTIFIER 6]",
+    "siteId": "[PRIVATE IDENTIFIER 7]",
+    "sourceBytes": 352120,
+    "uniqueId": "[PRIVATE IDENTIFIER 2]",
+    "version": "1.0"
+  },
+  "unavailableOrRejectedInventory": []
+}

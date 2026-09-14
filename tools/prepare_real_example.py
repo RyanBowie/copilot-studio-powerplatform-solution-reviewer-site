@@ -149,7 +149,7 @@ def render_text(value, kind):
             parts.append('<pre><span aria-hidden="true"></span>' + html.escape("".join(pending), quote=False) + "</pre>")
             pending.clear()
     for line in value.splitlines(keepends=True):
-        match = re.match(r"^(10|[1-9])\. ", line) if kind == "main" else None
+        match = re.match(r"^\ufeff?(10|[1-9])\. ", line) if kind == "main" else None
         if match or (kind == "component" and line.rstrip("\n") in headings):
             flush()
             identifier = ' id="main-section-' + match.group(1) + '"' if match else ""
@@ -175,12 +175,12 @@ def reader(m):
         navigation.append(f'<li><a href="#{kind}">{html.escape(title)}</a></li>')
         if kind == "main":
             main_nav = [f'<li><a href="#main-section-{number}">{html.escape(title)}</a></li>' for number, title in re.findall(r"^(10|[1-9])\. (.+)$", value, re.M)]
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Complete real canvas review · Partial</title>
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historical real canvas review · original 1/5 Partial</title>
 <script>{script}</script><style>{style}
 @media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
 <body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Actual real-canvas review</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Actual journey</a><a href="index.html#boundaries">Evidence boundaries</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
-<main class="wrap"><section class="example-intro"><p class="eyebrow">Real exported canvas app · not a synthetic example</p><h1>The full available record.<br><span>A Partial assessment.</span></h1>
+<main class="wrap"><section class="example-intro"><p class="eyebrow">Historical original 1/5 review · not the improved matched email walkthrough</p><h1>The original available record.<br><span>A historical Partial assessment.</span></h1><p class="example-boundary"><a href="walkthrough.html">Read the current matched improved-run report →</a> · <a href="index.html#history">Historical evidence context</a>. The original report, image and provenance bytes below are unchanged.</p>
 <p class="example-lead">All ten MAIN sections and footer, the sole accepted C4 report, complete inventory and complete coverage. Four unavailable assessments are not fabricated or filled in.</p>
 <div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the MAIN assessment ↓</a><a class="button secondary" href="{PREFIX}/real-canvas-MAIN.txt" download>Complete MAIN (.txt) ↓</a><a class="button secondary" href="{BUNDLE}" download>All 14 files (.zip) ↓</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
 <div class="example-facts"><div><strong>1 / 5</strong><span>selected assessments accepted · four unavailable</span></div><div><strong>80 / 326</strong><span>screen lines covered by accepted C4</span></div><div><strong>6</strong><span>actual model calls · not phase-record count</span></div><div><strong>Partial</strong><span>not full application assessment</span></div></div>

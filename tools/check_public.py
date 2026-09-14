@@ -9,9 +9,10 @@ from pathlib import Path
 from urllib.parse import unquote
 from zipfile import ZipFile
 from PIL import Image
-from public_inventory import ALL, IMAGES, MANIFEST
+from public_inventory import ALL, IMAGES, WALKTHROUGH_IMAGES, MANIFEST
 from prepare_real_example import validate_files
 from build_followup import verify as verify_followup
+from build_walkthrough import verify as verify_walkthrough, verify_outputs, PROVENANCE as WALKTHROUGH_PROVENANCE, PREFIX as WALKTHROUGH_PREFIX
 
 SITE = Path(__file__).resolve().parents[1]
 GENERIC = [
@@ -25,16 +26,51 @@ GENERIC = [
 ]
 
 
+def verify_image_review(review, prefix, names, site=SITE):
+    if review.get("visualReviewComplete") is not True or not isinstance(review.get("images"), list):
+        raise ValueError("Every image needs a separately supplied, completed hash-bound visual/privacy review.")
+    rows = {}
+    for row in review["images"]:
+        name = row.get("file")
+        if name in names:
+            name = prefix + "/" + name
+        if name in rows or name not in {prefix + "/" + item for item in names}:
+            raise ValueError("Unexpected or duplicate image-review path.")
+        if not isinstance(row.get("text"), str):
+            raise ValueError("Reviewed offline OCR text is required, including an explicit empty string when no text exists.")
+        rows[name] = row
+    if set(rows) != {prefix + "/" + item for item in names}:
+        raise ValueError("Every exact current image must have an independent review pin.")
+    for name, row in rows.items():
+        data = (Path(site) / name).read_bytes()
+        if hashlib.sha256(data).hexdigest() != row.get("sha256"):
+            raise ValueError("Image differs from independently reviewed bytes: " + name)
+        with Image.open(io.BytesIO(data)) as image:
+            if image.format != "PNG" or image.info or getattr(image, "n_frames", 1) != 1:
+                raise ValueError("Only metadata-free static PNG pixels may be public.")
+            image.load()
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--private-patterns", type=Path, required=True)
     parser.add_argument("--image-review", type=Path, required=True)
+    parser.add_argument("--walkthrough-image-review", type=Path, required=True)
     args = parser.parse_args()
+    for path in [args.private_patterns, args.image_review, args.walkthrough_image_review]:
+        if not path.resolve().is_relative_to(SITE / "_private-hold") or not path.is_file():
+            raise ValueError("Private screening inputs must be existing files under this site's _private-hold.")
     patterns = json.loads(args.private_patterns.read_text(encoding="utf-8-sig"))
+    if not isinstance(patterns, list) or not patterns or not all(isinstance(pattern, str) and pattern for pattern in patterns):
+        raise ValueError("A nonempty reviewed list of private restriction patterns is required.")
     review = json.loads(args.image_review.read_text(encoding="utf-8-sig"))
+    walkthrough_review = json.loads(args.walkthrough_image_review.read_text(encoding="utf-8-sig"))
     e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
     validate_files(e)
     followup = verify_followup()
+    walkthrough = verify_walkthrough()
+    verify_outputs(walkthrough)
     failures = []
     totals = {"textMembers": 0, "archives": 0, "decodedCandidates": 0}
 
@@ -78,32 +114,27 @@ def main():
     for name in ["PRIVACY-REPORT.json", MANIFEST]:
         if (SITE / name).exists():
             text_check(name, (SITE / name).read_text(encoding="utf-8-sig"))
-    images = {row["file"]: row for row in review["images"]}
-    if set(images) != set(IMAGES) or not review["visualReviewComplete"]:
-        raise ValueError("Every current approved image needs hash-bound visual review.")
-    for name in IMAGES:
-        path = SITE / "examples/real-canvas" / name
-        if hashlib.sha256(path.read_bytes()).hexdigest() != images[name]["sha256"]:
-            raise ValueError("Image differs from reviewed bytes.")
-        with Image.open(path) as image:
-            if image.info:
-                failures.append({"kind": "image-metadata", "publicMember": name})
-        text_check(name + " OCR", images[name]["text"])
+    images = verify_image_review(review, "examples/real-canvas", IMAGES)
+    images.update(verify_image_review(walkthrough_review, WALKTHROUGH_PREFIX, WALKTHROUGH_IMAGES))
+    for name, row in images.items():
+        text_check(name + " OCR", row["text"])
     report = {
         "status": "PASS" if not failures else "REVIEW_REQUIRED",
-        "scope": "APPROVED_REAL_CANVAS_PUBLIC_TREE",
-        "publicRepositoryPaths": len(ALL), "screened": totals, "imagesReviewed": len(IMAGES),
+        "scope": "MATCHED_CANVAS_WALKTHROUGH_PUBLIC_TREE",
+        "publicRepositoryPaths": len(ALL), "screened": totals, "imagesReviewed": len(images),
+        "historicalImagesReviewed": len(IMAGES), "walkthroughImagesReviewed": len(WALKTHROUGH_IMAGES),
+        "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
         "restrictedContextMatches": sum(row["kind"] == "restricted-context" for row in failures),
         "bindingCredentialMetadataMatches": sum(row["kind"] != "restricted-context" for row in failures),
         "screenedFileSha256": {name: hashlib.sha256((SITE / name).read_bytes()).hexdigest()
                               for name in ALL if name not in {"PRIVACY-REPORT.json", MANIFEST}},
         "hashScope": "Exact current public files, not private acceptance records. Generated privacy/publication manifests are text-screened when present and excluded from this map to avoid circular hashes.",
         "privateTermsOrOcrPayloadsPublished": False,
-        "imageReview": "Normal site-author visual/privacy review of eight exact approved derivatives, assisted by offline OCR. Original-to-derivative pixel comparison is Test-reported, not independently repeated by the site author. Four images are user-provided, not TEST captures.",
-        "bodyPolicy": "All four historical TXT files and all eight PNGs match approved input bytes. The separately reviewed complete follow-up MAIN and identity-free measurements match their own public provenance pins.",
+        "imageReview": "Separate supplied private reviews pin all eight historical and all nine matched native image derivatives. The user visually approved the nine matched derivatives; the site author verified pixel masks/crops and offline OCR, not an independent complete visual review. OCR text is screened with the same private patterns; PNGs are decoded and metadata checked. This tool never creates review sign-offs.",
+        "bodyPolicy": "All four historical TXT files and eight historical PNGs match their unchanged pins. Separate no-email benchmarks retain their provenance. Every matched authoritative TXT/JSON and PNG matches its reviewed provenance; the full Markdown derivative roundtrips all report bytes.",
         "followUpReport": followup["files"][0],
         "excluded": ["Raw app/solution and private originals/diagnostics", "Mixed Inbox/autoreply images", "Installers, previous examples and previous QA/publication artifacts", "Restricted application evidence and private bindings"],
-        "historyPolicy": "Only a new clean repository/history may publish this exact current allowlist.",
+        "historyPolicy": "Only this exact reviewed allowlist is eligible. Private working directories and unrelated historical trees are never publication inputs.",
         "runtimeActionsPerformed": False,
     }
     (SITE / "PRIVACY-REPORT.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

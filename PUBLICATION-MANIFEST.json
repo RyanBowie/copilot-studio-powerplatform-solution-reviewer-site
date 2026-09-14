@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "3.0",
+  "schemaVersion": "4.0",
   "status": "READY_FOR_PARENT_PUBLICATION",
-  "scope": "APPROVED_REAL_CANVAS_PUBLIC_DERIVATIVES_ONLY",
+  "scope": "MATCHED_CANVAS_WALKTHROUGH_PUBLIC_DERIVATIVES_ONLY",
   "publicationPerformedBySiteAuthor": false,
   "runtimeActionsPerformed": false,
   "hosting": {
@@ -10,10 +10,51 @@
     "repositoryApiVerified": true,
     "pagesConfigured": true,
     "liveHttpVerified": true,
-    "statusDescription": "The public repository, configured Pages site and existing live HTTP content have been verified. Historical examples and separately measured follow-up results are distinguished."
+    "statusDescription": "Existing public hosting was verified previously. This matched walkthrough revision has not been published or live-verified by the site author."
   },
   "singleStatusSource": "content.json",
   "example": {
+    "kind": "REVIEWED_GENUINE_CANVAS_EMAIL_WALKTHROUGH",
+    "approvedPublicDerivatives": true,
+    "pagePath": "walkthrough.html",
+    "provenancePath": "examples/walkthrough-325/provenance.json",
+    "markdownPath": "examples/walkthrough-325/complete-review.md",
+    "mainPath": "examples/walkthrough-325/MAIN.txt",
+    "sourceDisplayName": "Data Entry Testing",
+    "revision": "3.3.2.5",
+    "outcome": "ReviewPartial",
+    "accepted": 4,
+    "selected": 5,
+    "unavailable": 1,
+    "acceptedPassIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "logicalAgentInvocations": 7,
+    "mainValid": true,
+    "screenLinesSupplied": 326,
+    "totalScreenLines": 326,
+    "latestScreenCitation": 285,
+    "allFiveSelectedSourcesComplete": true,
+    "email": {
+      "nativeSendStatus": "Succeeded",
+      "ownerInboxReceiptVerified": true,
+      "expectedReportLinkVerified": true,
+      "forwardedCorporateReceiptVerified": false,
+      "controlsRestored": true
+    },
+    "briefCaveat": "ReviewPartial: 4/5 assessments accepted, 1 unavailable; 326/326 screen lines supplied. Owner Inbox receipt and the matching protected-report link verified. Not an app pass rate.",
+    "mainMethod": "Deterministic assembly of native-flow-accepted canonical AI component records; no new inference or regrading.",
+    "combinedTarget": {
+      "achieved": true,
+      "scope": "ONE_MATCHED_RUN_ONLY",
+      "lastQuarterStartLine": 245,
+      "summary": "Bounded combined target achieved in this ONE matched run: 4/5 accepted, valid MAIN, all five selected original sources complete, and accepted C4 with a last-quarter citation (line 285 of 326; the last quarter starts at line 245). This does not demonstrate repeated at-least-4/5 performance or 90% reliability across different exports."
+    }
+  },
+  "historicalExample": {
     "kind": "REAL_EXPORTED_CLASSIC_CANVAS_APP",
     "approvedPublicDerivatives": true,
     "pagePath": "full-example.html",
@@ -37,6 +78,155 @@
     "sha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
     "bytes": 1374765
   },
+  "walkthroughProvenance": {
+    "schemaVersion": 1,
+    "kind": "REVIEWED_GENUINE_CANVAS_EMAIL_WALKTHROUGH",
+    "approvedPublicDerivatives": true,
+    "sourceDisplayName": "Data Entry Testing",
+    "revision": "3.3.2.5",
+    "outcome": "ReviewPartial",
+    "accepted": 4,
+    "selected": 5,
+    "unavailable": 1,
+    "acceptedPassIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "logicalAgentInvocations": 7,
+    "mainValid": true,
+    "screenLinesSupplied": 326,
+    "totalScreenLines": 326,
+    "latestScreenCitation": 285,
+    "allFiveSelectedSourcesComplete": true,
+    "email": {
+      "nativeSendStatus": "Succeeded",
+      "ownerInboxReceiptVerified": true,
+      "expectedReportLinkVerified": true,
+      "forwardedCorporateReceiptVerified": false,
+      "controlsRestored": true
+    },
+    "images": [
+      {
+        "file": "native-upload-menu.png",
+        "role": "uploadMenu",
+        "bytes": 74713,
+        "sha256": "4120013b7e7a8885f38de714312dc095375770b8ba6a92822d381885985fdb00",
+        "alt": "Native SharePoint upload menu for the matched genuine canvas solution.",
+        "caption": "Native capture before selection. Only eligible files directly in Incoming trigger review; folders do not."
+      },
+      {
+        "file": "native-upload-confirmed.png",
+        "role": "uploadedRow",
+        "bytes": 38567,
+        "sha256": "378e6a587417d8f8315f69ab3af260404ed8c4821219ac98721175a97f5c1f18",
+        "alt": "Confirmed native uploaded row for the matched genuine canvas solution.",
+        "caption": "Native capture after upload. Original export bytes and uploader identity were verified; the app was not imported or executed."
+      },
+      {
+        "file": "native-flow-run.png",
+        "role": "flowRun",
+        "bytes": 90933,
+        "sha256": "3bb1b9804a94dc1a4b6d409cb51021d3852f4945fe4aab960b9d04d5605dc0a7",
+        "alt": "Actual running file-created flow instance with its successful SharePoint trigger.",
+        "caption": "Actual run-history capture while processing this job, not a configuration mockup. The successful file-created trigger watches Incoming."
+      },
+      {
+        "file": "native-agent-handoff.png",
+        "role": "agentHandoff",
+        "bytes": 104670,
+        "sha256": "11b6b75cbb749ab0f325c83e126b1b30acd3c8e6bfc4f14aa61aead4858b414e",
+        "alt": "Successful native same-agent MAIN invocation in the matched flow run.",
+        "caption": "Actual InvokeSameAgent run result: Succeeded. This call assembles MAIN from accepted canonical records; it is not a second AI assessment."
+      },
+      {
+        "file": "native-main-opening.png",
+        "role": "mainOpening",
+        "bytes": 186584,
+        "sha256": "3399228a68474f1b29fc964291ebde7d3a4ffae8d224e62176bc4d2677fbf3c9",
+        "alt": "Matched complete MAIN opening showing four accepted source assessments and one unavailable.",
+        "caption": "User-provided native report viewport, matched by retained job/source content. Capture time is not established; privacy identifiers are masked."
+      },
+      {
+        "file": "native-component.png",
+        "role": "component",
+        "bytes": 128908,
+        "sha256": "4f1cda600e84ee34fa7b1f0dce7c6d1f1fdec43bb412639c27c84fecf9625f2d",
+        "alt": "Actual accepted canvas screen assessment with Power Fx observations and accessibility verification steps.",
+        "caption": "Native C4 report preview. NewForm and SubmitForm are observed; proposed accessibility checks remain NOT RUN. Source bindings are masked."
+      },
+      {
+        "file": "native-email-received.png",
+        "role": "email",
+        "bytes": 64040,
+        "sha256": "80b76446d13659a525f725e861d3d10bfaa82771f5a6ea21da6baadaa3d6e1d0",
+        "alt": "Matched notification body showing five supplied sources, four saved assessments and one unavailable.",
+        "caption": "User-provided native notification body. Original owner-Inbox receipt and its protected report link were independently verified. This cropped image does not itself show mailbox headers or the complete footer."
+      },
+      {
+        "file": "native-main-assessments.png",
+        "role": "mainAssessments",
+        "bytes": 220796,
+        "sha256": "5af02f24f842974b0ee081a6e90966c395f57e5385c53ad73d012158494a6c2f",
+        "alt": "Actual MAIN canvas assessment describing form controls, Power Fx operations and the data table.",
+        "caption": "Native MAIN viewport showing accepted C4 source observations and their citations. The complete report retains all other accepted assessments and unavailable records."
+      },
+      {
+        "file": "native-main-verification.png",
+        "role": "mainVerification",
+        "bytes": 232597,
+        "sha256": "1be96875e90cac47dd7484ad40bbd9c6c7ad5ea2c375c2537baded9acee9ad99",
+        "alt": "Actual MAIN next-step checks for dependencies and accessible labels, explicitly marked NOT RUN.",
+        "caption": "Native MAIN verification viewport. These are source-specific next steps, not executed tests or confirmed runtime defects."
+      }
+    ],
+    "reports": [
+      {
+        "file": "MAIN.txt",
+        "role": "main",
+        "bytes": 43727,
+        "sha256": "1ecee1dc3e277102a6f68a8305a5aabe067e87d5cbc6e01046e0e943ba46e4c7"
+      },
+      {
+        "file": "C1.txt",
+        "role": "component",
+        "bytes": 3287,
+        "sha256": "75ca5662737a3de8a6ed26e5b2ea4598d70fcc52d0c0628caeb99fc3970a8220"
+      },
+      {
+        "file": "C2.txt",
+        "role": "component",
+        "bytes": 4568,
+        "sha256": "2c859dcbb6430a883b533696cca542bb7e8fa09db29adf97be316cdbc47b60bd"
+      },
+      {
+        "file": "C3.txt",
+        "role": "component",
+        "bytes": 2759,
+        "sha256": "6335edf33050332c633f711d332f962af884d06031979653e81971b565f60fd6"
+      },
+      {
+        "file": "C4.txt",
+        "role": "component",
+        "bytes": 3665,
+        "sha256": "0aa1d6bbdcbe1664fefdaa5782f18ce8e484b8822c0500188b25babb9cc7ecea"
+      },
+      {
+        "file": "inventory.json",
+        "role": "inventory",
+        "bytes": 10442,
+        "sha256": "6a2eb942b46676b97681bf4aa7f81a78207ea856a69afcee84986247b9d32f10"
+      },
+      {
+        "file": "coverage.json",
+        "role": "coverage",
+        "bytes": 44968,
+        "sha256": "e752835c3c46957888c725d83d6ecbc7d54685a189c2720510786b38f2753edd"
+      }
+    ]
+  },
+  "walkthroughProvenanceSha256": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
   "followUp": {
     "revision": "3.3.2.5",
     "accepted": 3,
@@ -75,8 +265,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "24b707f5bae07798b4b4a50e5f7e8f35b87df50c3c5aa4b5d1892191498c976b",
-      "bytes": 46943,
+      "sha256": "323fcfe533923bb6e5eb89c8c7db4b2cce77eafc61e8dc53f15a6ea195a9cc16",
+      "bytes": 48970,
       "deployToPages": true
     },
     {
@@ -111,20 +301,20 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "4d8e6ed811d7495b687fb5c65102f8a26c0c9898e9d67509e53ce1b9e2c5f5a6",
-      "bytes": 125947,
+      "sha256": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
+      "bytes": 126247,
       "deployToPages": true
     },
     {
       "path": "content.json",
-      "sha256": "ba1509846ce5e257639fdf946e46dbd4f3db6c5473964ae7f4107acb806a14fa",
-      "bytes": 3016,
+      "sha256": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
+      "bytes": 5028,
       "deployToPages": true
     },
     {
       "path": "content.js",
-      "sha256": "2a8cb5a4e01a6a18b7233b6051bd7ee6a7be0688eb66ce0c56dae701dbbf030d",
-      "bytes": 3038,
+      "sha256": "c8863286000a5faef24bb8c32fbd4988270833a45c2c1e0fc0a0cc1884bf9c15",
+      "bytes": 5050,
       "deployToPages": true
     },
     {
@@ -135,8 +325,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "f82f10545a81b9744c735ad01c9508f4848e6821b5f21d45e84e67ea5c5eb551",
-      "bytes": 11743,
+      "sha256": "3c66e8bc8b05810bd7b480df953b5a233ef0a521fe2865af2338aa555e2376be",
+      "bytes": 15730,
       "deployToPages": true
     },
     {
@@ -165,8 +355,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "6f6908f51b67ce64ed132bec7463956f40c363fb71fbe5b2c11815699f33cb8b",
-      "bytes": 6744,
+      "sha256": "2631eb0a8c046804e6ac945f0f49a5e5b6a899ada537881c2013e2a16ccb8bde",
+      "bytes": 9642,
       "deployToPages": true
     },
     {
@@ -177,8 +367,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "e36f5f45dd2206d7c2738b327da0334f30f38ba3bc411f2b8172caaca36b17f8",
-      "bytes": 52675,
+      "sha256": "76179ea4c1d0d035d1c49c6262ff1d07f863e7901c890d3a4650ee21fdf1d97e",
+      "bytes": 52794,
       "deployToPages": true
     },
     {
@@ -284,6 +474,120 @@
       "deployToPages": true
     },
     {
+      "path": "walkthrough.html",
+      "sha256": "d41cdc71739c7c919bfe262c51b762ec9f2ff5dfc5db5dc8121b5f9847728726",
+      "bytes": 127941,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/provenance.json",
+      "sha256": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
+      "bytes": 6200,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/complete-review.md",
+      "sha256": "08e33bc40fc0a0d24ffe7b3f2cd69b6b9b7edcd07a28980ec7d0d846cea7ceca",
+      "bytes": 116126,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-upload-menu.png",
+      "sha256": "4120013b7e7a8885f38de714312dc095375770b8ba6a92822d381885985fdb00",
+      "bytes": 74713,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-upload-confirmed.png",
+      "sha256": "378e6a587417d8f8315f69ab3af260404ed8c4821219ac98721175a97f5c1f18",
+      "bytes": 38567,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-flow-run.png",
+      "sha256": "3bb1b9804a94dc1a4b6d409cb51021d3852f4945fe4aab960b9d04d5605dc0a7",
+      "bytes": 90933,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-agent-handoff.png",
+      "sha256": "11b6b75cbb749ab0f325c83e126b1b30acd3c8e6bfc4f14aa61aead4858b414e",
+      "bytes": 104670,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-main-opening.png",
+      "sha256": "3399228a68474f1b29fc964291ebde7d3a4ffae8d224e62176bc4d2677fbf3c9",
+      "bytes": 186584,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-component.png",
+      "sha256": "4f1cda600e84ee34fa7b1f0dce7c6d1f1fdec43bb412639c27c84fecf9625f2d",
+      "bytes": 128908,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-email-received.png",
+      "sha256": "80b76446d13659a525f725e861d3d10bfaa82771f5a6ea21da6baadaa3d6e1d0",
+      "bytes": 64040,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-main-assessments.png",
+      "sha256": "5af02f24f842974b0ee081a6e90966c395f57e5385c53ad73d012158494a6c2f",
+      "bytes": 220796,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/native-main-verification.png",
+      "sha256": "1be96875e90cac47dd7484ad40bbd9c6c7ad5ea2c375c2537baded9acee9ad99",
+      "bytes": 232597,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/MAIN.txt",
+      "sha256": "1ecee1dc3e277102a6f68a8305a5aabe067e87d5cbc6e01046e0e943ba46e4c7",
+      "bytes": 43727,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/C1.txt",
+      "sha256": "75ca5662737a3de8a6ed26e5b2ea4598d70fcc52d0c0628caeb99fc3970a8220",
+      "bytes": 3287,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/C2.txt",
+      "sha256": "2c859dcbb6430a883b533696cca542bb7e8fa09db29adf97be316cdbc47b60bd",
+      "bytes": 4568,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/C3.txt",
+      "sha256": "6335edf33050332c633f711d332f962af884d06031979653e81971b565f60fd6",
+      "bytes": 2759,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/C4.txt",
+      "sha256": "0aa1d6bbdcbe1664fefdaa5782f18ce8e484b8822c0500188b25babb9cc7ecea",
+      "bytes": 3665,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/inventory.json",
+      "sha256": "6a2eb942b46676b97681bf4aa7f81a78207ea856a69afcee84986247b9d32f10",
+      "bytes": 10442,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/walkthrough-325/coverage.json",
+      "sha256": "e752835c3c46957888c725d83d6ecbc7d54685a189c2720510786b38f2753edd",
+      "bytes": 44968,
+      "deployToPages": true
+    },
+    {
       "path": ".gitignore",
       "sha256": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
       "bytes": 77,
@@ -303,56 +607,56 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "debc38fceefd88a3fd3a7718ca3e43f4b086eeb8e779a2ea8cbb80d6a58d8c8f",
-      "bytes": 32813,
+      "sha256": "1a0aea2f4901af4e6464892835c4630269a1c5eb988922a5474919e9c74e8347",
+      "bytes": 60824,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "27fc252a704f5ac9acaaf697d7133157fbc2fd81826f7dbee817f46a60a32e21",
-      "bytes": 20476,
+      "sha256": "034fdbfff9ef6ac21a6b98aee0a5ca84d6c96df56a3902b19fd79558d189cdbb",
+      "bytes": 17919,
       "deployToPages": false
     },
     {
       "path": "tools/generate_content.py",
-      "sha256": "c3b0e4e176742a22fb6a64d029636d81e2a72ba79ad4bf5c726d92a7fc3c5457",
-      "bytes": 552,
+      "sha256": "57845bdc5c187576b50e70709d9fab9bd6964121253dab8fa8ad654c6e8188ac",
+      "bytes": 786,
       "deployToPages": false
     },
     {
       "path": "tools/prepare_real_example.py",
-      "sha256": "5fa754376b074bd8acccf008f979ee9bccff2f8e1c56866c03eb1086d53e3698",
-      "bytes": 16991,
+      "sha256": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
+      "bytes": 17298,
       "deployToPages": false
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "54e2a9c56660db70b2af9a28f75030be2fc267c1462ece9c69d4cd22d8e4bf2a",
-      "bytes": 1822,
+      "sha256": "f6cc2fb7e792054230533241ca6c916754287a6c29267c25ad845eb487ee9bf2",
+      "bytes": 2493,
       "deployToPages": false
     },
     {
       "path": "tools/check_public.py",
-      "sha256": "44ecfd98f3de7d3ac886c50f8c3c764aa68fd1ff83857b5be66d3f097ec8e238",
-      "bytes": 6747,
+      "sha256": "cb8887f5e54a83d6c6671a7693e539f21a982743ea16c9769fede68136fe3699",
+      "bytes": 9251,
       "deployToPages": false
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "031bb447a04b3ab8c642906b4ea5a67c9c4c155a2999d8a429890daa5067e628",
-      "bytes": 19644,
+      "sha256": "ed1e699194fde0bd65c453996ec923ccdcf54509e8c0807ebd24e42246602432",
+      "bytes": 29080,
       "deployToPages": false
     },
     {
       "path": "tools/make_manifest.py",
-      "sha256": "bc9c0c119e6f703ca6b53f1e7a1659bc5ff6b5c514a962573d7722c190009815",
-      "bytes": 4476,
+      "sha256": "238f1279246e5742d6ee6a6b6549db9c3e75fbeb09d12c69b9a6861de6f6b84d",
+      "bytes": 5814,
       "deployToPages": false
     },
     {
       "path": "tools/stage_site.py",
-      "sha256": "7fd8d3e91f645943e44b66fe89f80927c984bbc15dc4c6b7fa3440af60ccab0d",
-      "bytes": 2247,
+      "sha256": "9b3f62c12c63b2137b06e7fea4507be1d2f9c9caaf525164f489551ac8eb5534",
+      "bytes": 2751,
       "deployToPages": false
     },
     {
@@ -363,8 +667,20 @@
     },
     {
       "path": "tools/build_followup.py",
-      "sha256": "37ab7746bc009daee5f8437af85c76c8ccf0ad74993cc51374d78ef35205d856",
-      "bytes": 14574,
+      "sha256": "eddcde6f5c0bdd188a790dddcb636faf06e41f44b87feae897325e39f71137f7",
+      "bytes": 15024,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/build_walkthrough.py",
+      "sha256": "79fbb3d96ee6bc34c637d7a2a6cd7b2715149f220be7513e9c09ea12cc4fb3a6",
+      "bytes": 23276,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/test_walkthrough.py",
+      "sha256": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8",
+      "bytes": 17751,
       "deployToPages": false
     }
   ],
@@ -404,6 +720,25 @@
     "examples/real-canvas/real-canvas-coverage.txt",
     "examples/real-canvas/public-provenance.json",
     "examples/real-canvas/user-capture-provenance.v1.json",
+    "walkthrough.html",
+    "examples/walkthrough-325/provenance.json",
+    "examples/walkthrough-325/complete-review.md",
+    "examples/walkthrough-325/native-upload-menu.png",
+    "examples/walkthrough-325/native-upload-confirmed.png",
+    "examples/walkthrough-325/native-flow-run.png",
+    "examples/walkthrough-325/native-agent-handoff.png",
+    "examples/walkthrough-325/native-main-opening.png",
+    "examples/walkthrough-325/native-component.png",
+    "examples/walkthrough-325/native-email-received.png",
+    "examples/walkthrough-325/native-main-assessments.png",
+    "examples/walkthrough-325/native-main-verification.png",
+    "examples/walkthrough-325/MAIN.txt",
+    "examples/walkthrough-325/C1.txt",
+    "examples/walkthrough-325/C2.txt",
+    "examples/walkthrough-325/C3.txt",
+    "examples/walkthrough-325/C4.txt",
+    "examples/walkthrough-325/inventory.json",
+    "examples/walkthrough-325/coverage.json",
     ".gitignore",
     ".gitattributes",
     ".github/workflows/pages.yml",
@@ -418,6 +753,8 @@
     "tools/stage_site.py",
     "tools/serve_preview.py",
     "tools/build_followup.py",
+    "tools/build_walkthrough.py",
+    "tools/test_walkthrough.py",
     "PUBLICATION-MANIFEST.json"
   ],
   "exactDeploymentAllowlist": [
@@ -456,6 +793,25 @@
     "examples/real-canvas/real-canvas-coverage.txt",
     "examples/real-canvas/public-provenance.json",
     "examples/real-canvas/user-capture-provenance.v1.json",
+    "walkthrough.html",
+    "examples/walkthrough-325/provenance.json",
+    "examples/walkthrough-325/complete-review.md",
+    "examples/walkthrough-325/native-upload-menu.png",
+    "examples/walkthrough-325/native-upload-confirmed.png",
+    "examples/walkthrough-325/native-flow-run.png",
+    "examples/walkthrough-325/native-agent-handoff.png",
+    "examples/walkthrough-325/native-main-opening.png",
+    "examples/walkthrough-325/native-component.png",
+    "examples/walkthrough-325/native-email-received.png",
+    "examples/walkthrough-325/native-main-assessments.png",
+    "examples/walkthrough-325/native-main-verification.png",
+    "examples/walkthrough-325/MAIN.txt",
+    "examples/walkthrough-325/C1.txt",
+    "examples/walkthrough-325/C2.txt",
+    "examples/walkthrough-325/C3.txt",
+    "examples/walkthrough-325/C4.txt",
+    "examples/walkthrough-325/inventory.json",
+    "examples/walkthrough-325/coverage.json",
     "PUBLICATION-MANIFEST.json"
   ],
   "repositoryOnlyAllowlist": [
@@ -472,12 +828,14 @@
     "tools/make_manifest.py",
     "tools/stage_site.py",
     "tools/serve_preview.py",
-    "tools/build_followup.py"
+    "tools/build_followup.py",
+    "tools/build_walkthrough.py",
+    "tools/test_walkthrough.py"
   ],
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 288,
+    "checksPassed": 455,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },
@@ -486,5 +844,5 @@
     "sha256": null,
     "reason": "The separate final handoff SHA avoids a circular self-hash."
   },
-  "historyPolicy": "Use only this exact allowlist in a newly created clean repository/history. No previous snapshot, installer, example or QA is a publication input."
+  "historyPolicy": "Use only this exact reviewed allowlist. Private originals, previous working trees and unrelated publication/QA snapshots are excluded. The explicit historical fourteen-file evidence bundle is retained unchanged."
 }

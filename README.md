@@ -1,200 +1,270 @@
-# Solution Reviewer — actual real-canvas review walkthrough
+# Solution Reviewer — matched improved-run walkthrough
 
-Screenshot-first, static Clawpilot-themed public derivatives of one genuine
-classic canvas solution review. **Not a synthetic example.** No upload/chat
-backend, telemetry, remote fonts or tracking.
+A screenshot-first, static Clawpilot-themed site for the **original Data Entry
+Testing classic canvas solution**, not a code app or synthetic demo. The primary
+page, full report and email evidence all refer to one matched genuine native run
+on revision **3.3.2.5**. There is no upload/chat backend, telemetry, tracking,
+external font or runtime service on this website.
 
-## Six-step automatic journey
+**Generation is fail-closed.** The matched outcome, counts, invocation total,
+citation and receipt proof come only from reviewed terminal-run provenance.
+Missing inputs never fall back to the historical example, predict acceptance,
+manufacture screenshots or create review sign-offs. Existing hosting status
+does not mean this revision has been deployed or live-verified.
 
-1. Upload a trusted solution ZIP or canvas `.msapp` directly into Incoming.
-2. SharePoint detects the new file and starts the Power Automate review flow.
-   The configured **When a file is created (properties only)** trigger
-   (`GetOnNewFileItems`) polls `SolutionPackages/Incoming` every minute; this
-   is not an instant-delivery or latency guarantee. Enabled-intake, approval,
-   privacy and file-scope checks gate processing. After bounded extraction,
-   `ExecuteCopilotAsyncV2` supplies evidence to the published review agent
-   without a chat prompt.
-3. The agent reviews bounded evidence; six model calls occurred in this example.
-4. Inspect the actual saved MAIN/C4 reports and explicit coverage limits.
-5. View the guarded notification body and its protected-report link, with
-   delivery limitations retained.
-6. Open the full report: all three user-provided report screenshots show its
-   opening/scope, assessment/findings, and verification/omissions. A link opens
-   the complete redacted assessment, not just those viewport excerpts.
+## Primary six-stage journey
 
-Steps 2–3 are **configuration explainers, not flow-run screenshots or synthetic
-runs**. The agent does not independently monitor storage. Creating an empty
-folder does not start a review; files inside newly created subfolders are also
-outside the current direct-Incoming-file scope. This page change does not
-enable intake, approve another upload or run the agent.
-The report screenshots do not independently prove an email-link click.
+1. **Native upload menu and confirmed row.** The genuine original canvas solution
+   ZIP is uploaded directly to approved private Incoming storage.
+2. **Actual matching flow run.** SharePoint's **When a file is created
+   (properties only)** trigger (`GetOnNewFileItems`) polls
+   `SolutionPackages/Incoming` every minute, not instant delivery. Enabled-intake,
+   authorization and file-scope checks gate processing. Only eligible `.zip` /
+   `.msapp` files directly in Incoming qualify—not empty folders or files in
+   new subfolders.
+3. **Actual matching agent action.** `ExecuteCopilotAsyncV2` supplies evidence to
+   the standard Copilot Studio agent without a chat prompt. The agent does not
+   watch storage independently or execute the submitted app.
+4. **Saved MAIN and accepted component.** The matched report and accepted screen
+   assessment are shown in real native views; the complete files are linked.
+5. **Verified received email.** The matching owner Inbox message and expected
+   protected-report link are verified, not inferred from a send action or preview.
+6. **Native full-report views.** Assessment and verification/omission views lead
+   to the complete matching reader and Markdown/TXT downloads.
 
-## What the real run establishes
+Nine reviewed native screenshots are used, with honest captions about capture
+chronology, crops, masks and viewport limits. Their presentation order is not a
+claim of a continuous recording or an unrecorded click. Configuration explainers
+and the original notification-body image are not substitutes for current proof.
 
-**Partial: one of five selected assessments accepted, four unavailable, six
-actual model calls.** The complete available MAIN, sole accepted C4 assessment,
-inventory and coverage are provided. C4 covers only **80 of 326 screen lines**.
-Roles/customization and large data-source material are omitted or unassessed.
-Complete files are not complete application assessment.
+## Complete output and evidence boundaries
 
-Three embedded checker records are historical with unknown age; no current
-official checker ran. Retained “syntactically valid” wording is **not compilation
-or Power Fx semantic-parser proof**. Suggestions remain NOT RUN; the app, roles
-and workflow were not imported or executed. No production/runtime/accessibility/
-security or cross-tenant certification is claimed.
+[Full matched reader](walkthrough.html) ·
+[Full Markdown derivative](examples/walkthrough-325/complete-review.md) ·
+[Authoritative MAIN TXT](examples/walkthrough-325/MAIN.txt) ·
+[Matched provenance and public derivative hashes](examples/walkthrough-325/provenance.json)
 
-[Complete readable/printable output](full-example.html) ·
-[All 14 approved files](downloads/real-canvas-review-example.zip) ·
-[Input/published hashes and exact archive manifest](downloads/real-canvas-example-manifest.json)
+The complete MAIN retains all ten sections, canonical records, unavailable
+records, findings, strengths, verification items, omissions and full footer.
+Each accepted component TXT plus the full inventory and coverage JSON is also
+downloadable and fully readable in HTML **without JavaScript**.
 
-The four TXT files are byte-identical to the approved inputs, including BOM,
-quotes, privacy labels, all ten MAIN sections/footer/unavailable records, and
-the entire **58,939-byte coverage** appendix. Existing wording/replacement
-characters are not silently corrected. The HTML reader escapes text rather
-than interpreting report content as markup; all six text/provenance documents
-are readable without JavaScript and included by browser Print / Save as PDF.
+Markdown is a **presentation-only full derivative**, not new findings, a new
+assessment or a summary. Full source sections are fenced with collision-safe
+delimiters. Their UTF-8 bytes can be recovered exactly, including BOM, CRLF,
+literal markup, backticks and a missing final newline. TXT/JSON remains
+authoritative and is never rewritten. HTML escapes report markup and changes
+only browser-mandated newline representation; whole DOM/source equality is
+tested. No canonical record is shortened to fit a viewport.
 
-## Capture origin and delivery boundary
+All five selected original files were acquired completely. **326/326 screen
+lines supplied does not prove every line was semantically examined.** The
+denominator is five selected-source assessments, not every file in the solution;
+assessment acceptance is **not an app pass rate**. Unavailable assessments are
+validation outcomes, not confirmed application defects. In earlier benchmarks,
+C2/C5 remained unavailable because of evidence/response-validation failures.
 
-The leading journey uses actual native before-selection and confirmed-uploaded
-row images, native MAIN/C4 views and the **user-provided notification-body image**.
-The three further MAIN images were also supplied by the user—not captured by
-Test. Their capture times are unknown; analysis timestamps are not capture times.
-Correlation is limited exactly as the two provenance records describe.
+Component records are AI-generated. **MAIN is deterministic assembly of
+native-flow-accepted canonical records**, not another model inference, repaired
+failed response or regrade. Invocation totals are logical agent invocations,
+not internal model inference counts.
 
-**One guarded `SendEmailV2` succeeded, but original owner Inbox receipt and
-recipient containment remain unverified after observed forwarding/autoreply.**
-The notification body has no sender/recipient/mailbox/folder identity and is
-not verified Inbox receipt or a single-delivery guarantee. Mixed Inbox/autoreply
-images are excluded.
+Current official checker, compilation, source-app/role/workflow import and
+runtime/accessibility execution remain **NOT RUN**. Embedded checker records
+are historical; retained syntax/default/fallback wording is not compiler or
+runtime proof. No production, cross-tenant or whole-application certification
+is claimed. The **bounded combined target is achieved in ONE matched run only
+when its reviewed provenance establishes all of these together:** at least
+4/5 accepted, valid MAIN, all five selected original sources acquired completely,
+accepted C4 with complete screen input, and an accepted last-quarter screen
+citation. For 326 lines, that means **line 245 or later**, not line 244.
 
-All eight images retain the exact approved derivative bytes. Test reports pixel
-privacy review; the site author reviewed the approved derivatives visually and
-with offline OCR, not private originals. Only provenance approval/header and
-published-hash framing was updated. Report claims, source quotes and capture
-correlations were not rewritten.
+The homepage, reader, Markdown and generated `content.json` use the same
+conditional one-run statement. A 4/5 result is rendered as **4/5**, including
+the full accepted C2 report when C2 is accepted; it is never relabeled 3/5.
+Without every target condition, the combined target is **not established**,
+even if the acceptance count is four. The statement does not establish repeated
+at-least-4/5 performance or **90% reliability across different exports**.
+Missing source/citation measurements, Inbox proof or public approval cannot be
+replaced with predictions; the reviewed-input publication gate still applies.
 
-## Product reference and formatting options
+## Delivery proof is bounded
 
-The reviewer uses the standard Copilot Studio harness, not GitHub Copilot.
-**GPT-5 Reasoning Preview was selected for this example; it is not required.**
-Choose a supported model available in your Copilot Studio environment and
-evaluate grounded output, structured-response reliability, latency and cost.
-The selected preview model is not recommended for production; using another
-model does not automatically make this experimental reviewer production-ready.
-Historical report headers retain the model actually used.
+The reviewed matched-run contract requires native `SendEmailV2` success,
+verified owner Inbox receipt, the expected protected-report link and restored
+controls. Delivery is for the exact authorized source/version and verified demo
+owner, without Cc/Bcc or mail retry. The model cannot select recipients.
 
-Manual: consent topic → actual internal `CollectReviewEvidence` tool via
-`InvokeFlowTaskAction` → caller-owned OneDrive **Invoker** → source advice.
-Automation uses SharePoint file events, bounded native extraction, the same
-agent through `ExecuteCopilotAsyncV2`, protected reports and separately guarded
-`SendEmailV2`. Flow capabilities are not arbitrary model-controlled tools;
-the model cannot choose recipients or sharing.
+Existing forwarding keeps the original mailbox copy. **Forwarded corporate
+receipt is not established.** Mailbox settings are not changed. No exactly-once,
+all-client rendering or wider recipient-containment guarantee follows from
+these observations. The original historical run's unverified-Inbox caveat
+belongs to that historical evidence, not the primary improved walkthrough.
 
-Current runtime report output is TXT/JSON. This static reader and browser
-Print / Save as PDF are presentation options. Optional Word/PDF flow guidance
-is **not implemented or included**: a controlled template, private resources,
-explicit connections, applicable Premium licensing and policy checks are needed.
-Formatting cannot upgrade review status, broaden access, select recipients or
-retry sends. Do not weaken authentication, labels or sharing to permit conversion.
+## History remains intact and separate
 
-## Measured technical follow-up
+[Historical complete reader](full-example.html) ·
+[Historical exact 14-file archive](downloads/real-canvas-review-example.zip) ·
+[Historical input/published hashes](downloads/real-canvas-example-manifest.json)
 
-Revision **3.3.2.5 accepted 3/5 selected-source assessments in each of two
-unchanged-revision reviews**, with valid MAIN in both. This improves the historical
-20% assessment acceptance to 60%, but **the 4/5 combined target remains unmet**.
-Earlier revisions reached 4/5 with invalid MAIN; all 11 measured follow-ups,
-including 0/5 regressions, are retained in the comparison.
+The historical **1/5** example retains its four original approved TXT files,
+eight image derivatives and two published provenance records without rewriting
+their bytes. C4 had an **80/326-line** prefix and six model calls. The complete
+**58,939-byte coverage** appendix and original notification/capture limitations
+remain available. The historical archive's exact bytes and member hashes remain
+pinned; it contains reports/images/provenance, not an installable app.
 
-All five original selected files were acquired completely. The accepted screen
-assessment received **326/326 content lines**, with citations through line 285
-in both repeats. This is input completeness, not proof every line was examined.
-The manifest, app YAML and screen YAML were accepted; embedded checker and
-workflow assessments remained unavailable. Quote-length and serialized-value
-evidence failures still need improvement. They are not app defects.
+The **two no-email benchmark runs** on unchanged 3.3.2.5 are separate again:
+each accepted **3/5**, had valid MAIN, supplied 326 screen lines, and cited through
+line 285. They used 7 and 9 logical agent invocations. Neither supplies the new
+walkthrough's email or screenshots. The combined 4/5 target remained unmet in
+those two benchmarks; two runs of one export do not demonstrate 90% reliability
+across different exports.
 
-Component assessments remain AI-generated by the standard-harness agent.
-**MAIN is now deterministic assembly of flow-accepted canonical records**:
-an `OnActivity` / `type: Message` topic handles only `PSR_REVIEW_ONLY_V1`,
-parses the supplied envelope, retains all canonical records in ten sections,
-and sends the complete result. It performs no new inference or regrading.
-No invalid MAIN response or callback history is repaired or reused.
-Missing/no-source input and output above 60,000 characters are rejected.
+[Separate benchmark reader](follow-up.html) ·
+[Complete benchmark MAIN](examples/follow-up/complete-review.txt) ·
+[All 11 historical comparisons, including regressions](examples/follow-up/results.json) ·
+[Benchmark provenance](examples/follow-up/provenance.json)
 
-Small supported files can be supplied completely within 20,000 JSON-serialized
-characters and 400 line slots; otherwise the 4,000-character/80-line prefix
-remains. Existing file, total-byte, six-source, two-attempt-per-source and
-13-logical-invocation ceilings remain. Citation bounds match the acquisition
-window. Exact evidence, authentication, privacy and stop checks remain enforced.
-The manual Invoker evidence tool is unchanged and retains its own limits.
+Earlier 4/5 results with invalid MAIN and 0/5 regressions remain visible. Larger
+files/chunking, reliable original-path mapping and broader supported-export
+evaluation remain work to do. Failed and unsupported sources stay visible.
 
-The repeats used **7 and 9 logical agent invocations**, not those numbers of
-internal model inferences. GPT-5 Chat is configured; GPT-5 Reasoning is not
-required. Email was OFF. No submitted app, role or workflow was imported or
-executed; no current official checker, compiler or runtime/accessibility test ran.
+## Generic architecture, reference and formatting
 
-[Complete new assembled MAIN](follow-up.html) ·
-[Complete redacted TXT](examples/follow-up/complete-review.txt) ·
-[All measured comparisons](examples/follow-up/results.json) ·
-[Reviewed public-file hashes](examples/follow-up/provenance.json)
+The current **GPT5Chat** configuration uses the standard Copilot Studio harness,
+not the GitHub Copilot harness. **GPT-5 Reasoning is not required.** Choose a
+supported model available in your environment and evaluate grounded output,
+structured-response reliability, latency and cost. Historic headers retain the
+model actually used at the time; model choice does not confer readiness.
 
-The new reader preserves all ten sections, complete canonical records and the
-full footer. Private links and bindings are masked, not exposed as working
-downloads. Syntax/default/fallback wording remains report wording, not compiler
-or runtime proof. Browser Print / Save as PDF is supported; an automated Word/PDF
-formatting flow remains optional and unimplemented.
+Manual: consent topic → `CollectReviewEvidence` via `InvokeFlowTaskAction` →
+caller-owned OneDrive **Invoker** → source advice. Automation uses SharePoint
+events, bounded native extraction, the published agent, protected reports and
+separately guarded mail. Flow capabilities are not arbitrary model-controlled
+tools. Trusted internal exports are the limited scope, not hardened
+hostile-archive processing. No hosted Python/Azure worker is required.
 
-**Still open:** at least 4/5 plus valid MAIN, larger-file/chunk handling,
-original-path provenance and at least 90% completion across a declared repeated
-set of different supported exports. Two runs of one export do not establish
-that broader reliability. Failed and unsupported sources stay visible.
-The historical screenshots, four TXT files and 14-file ZIP remain unchanged.
+The generic setup, actual tool/topic reference and workflow architecture remain
+available on the homepage. A separate private document location and explicit
+connection/flow rebinding are required in another tenant; no refreshed installer
+or cross-tenant import/runtime acceptance is shipped.
 
-## Public scope and hosting
+Browser **Print / Save as PDF** is a presentation option, tested for full content.
+Automated DOCX/PDF generation is **not implemented**. Optional Word Online
+(Business) formatting needs a controlled supported template, private resources,
+explicit owner/service connections, Premium licensing and policy checks.
+Formatting cannot upgrade status, broaden access, change recipients or retry
+mail. Never weaken authentication, labels or sharing for conversion.
 
-Only the exact approved real-case derivatives and generic reference are eligible.
-No installer, raw app/solution, private originals, diagnostics, unrelated mailbox
-material, previous example, previous QA or previous publication history is included.
-Private historical material remains outside the public allowlists.
+## Required reviewed input contract
 
-The public repository and configured Pages hosting have been verified through
-the GitHub API and live HTTP content. Hosting status is recorded in `content.json`.
-Only explicitly allowlisted and privacy-screened files are published.
-Existing solution exports are not refreshed installers for this runtime, and no
-cross-tenant installation is claimed. A separate private document location and
-explicit connection/flow rebinding are still required for another tenant.
+The parent supplies `examples\walkthrough-325\provenance.json` and only its
+reviewed derivative files after the real run and private review. Schema version
+1 is strict: unknown keys, duplicate keys, path traversal, unlisted files,
+missing proof, wrong roles, altered bytes and PNG metadata fail validation.
+There are no private IDs, tenant URLs, mailbox addresses or raw-source
+fingerprints in public provenance.
 
-Publish only `_public-repository`, never the working directory. The manifest
-lists all repository/Pages paths and hashes; `PRIVACY-REPORT.json` binds scoped
-screening to the exact public bytes without publishing private screening terms.
-`.gitattributes` preserves exact bytes across Windows and Linux.
+Required top-level fields:
 
-## Local preparation
+- `schemaVersion`: integer 1.
+- `kind`: `REVIEWED_GENUINE_CANVAS_EMAIL_WALKTHROUGH`.
+- `approvedPublicDerivatives`, `mainValid`, `allFiveSelectedSourcesComplete`:
+  literal `true` **only after actual parent review/verification**.
+- `sourceDisplayName`: `Data Entry Testing`; `revision`: `3.3.2.5`;
+  `outcome`: actual terminal `ReviewPartial`.
+- `accepted`, `selected`, `unavailable`: actual integer counts,
+  `accepted >= 3`, `accepted + unavailable == selected == 5`.
+- `acceptedPassIds`: unique actual C1–C5 IDs, count matching `accepted`;
+  C4 must be accepted for this screen walkthrough.
+- `logicalAgentInvocations`: actual integer within the existing 13-call ceiling.
+- `screenLinesSupplied`, `totalScreenLines`: 326; `latestScreenCitation`: actual
+  integer between 1 and 326, not an anticipated citation.
+- `email`: `nativeSendStatus` is `Succeeded`;
+  `ownerInboxReceiptVerified`, `expectedReportLinkVerified`, `controlsRestored`
+  are literal verified `true`; `forwardedCorporateReceiptVerified` is `false`.
+- `images`: exactly the nine rows below, each with `file`, `role`, positive
+  `bytes`, lowercase SHA-256, safe plain-text `alt` and `caption`.
+- `reports`: each with `file`, `role`, positive `bytes` and lowercase SHA-256.
 
-Use available Python with Pillow, Playwright and pypdf for local QA only.
-No runtime dependency is installed or hosted by this website.
+| Image role | Required filename |
+| --- | --- |
+| uploadMenu | native-upload-menu.png |
+| uploadedRow | native-upload-confirmed.png |
+| flowRun | native-flow-run.png |
+| agentHandoff | native-agent-handoff.png |
+| mainOpening | native-main-opening.png |
+| component | native-component.png |
+| email | native-email-received.png |
+| mainAssessments | native-main-assessments.png |
+| mainVerification | native-main-verification.png |
+
+Reports: `MAIN.txt` (`main`), one `C1.txt`–`C5.txt` per actual accepted pass
+(`component`), `inventory.json` (`inventory`), `coverage.json` (`coverage`).
+For a reviewed 4/5 result with C1/C2/C3/C4 accepted, all four complete TXT files,
+including **C2.txt**, are required; a different actual accepted set must supply
+its corresponding complete approved TXT files. Never substitute
+reports from a benchmark run. `complete-review.md` is generated locally, not a
+parent input. A missing native screenshot is a blocker, not a placeholder slot.
+
+Private visual reviews remain under `_private-hold`, never the public input
+directory. `check_public.py` requires **two independent review files**:
+
+- `--image-review`: all eight historical image pins.
+- `--walkthrough-image-review`: all nine new image pins.
+
+Each has `visualReviewComplete` set to literal `true` by the actual reviewer,
+and `images` containing exactly one `file`, `sha256`, `text` record per image.
+`file` can be a basename or exact corresponding relative public path; `text`
+is reviewed offline OCR, including an explicit empty string when appropriate.
+The tool never supplies sign-offs itself. Both sets are decoded, checked for
+metadata and screened against the same supplied private patterns. OCR and
+restricted patterns are never published.
+
+## Local build and review — no publication
+
+Run from this `public-site` directory, using existing Python with Pillow,
+Playwright and pypdf. Tests create explicitly synthetic **private** fixtures
+under `_private-hold` and remove them; no public synthetic image is generated.
 
 ```powershell
-python .\tools\generate_content.py
-python .\tools\build_home.py
-python .\tools\prepare_real_example.py
-python .\tools\build_followup.py
-python .\tools\make_manifest.py
-python .\tools\serve_preview.py --base-path /preview/
+python tools\test_walkthrough.py
+python tools\generate_content.py
+python tools\build_home.py
+python tools\build_walkthrough.py
+python tools\prepare_real_example.py
+python tools\build_followup.py
+python tools\make_manifest.py
+python tools\serve_preview.py --base-path /preview/
 ```
 
-The example helper without input arguments verifies the current fourteen
-published files and rebuilds the deterministic archive/reader. First intake
-accepts only the separately supplied, exact parent-approved candidate.
-Private originals and review bookkeeping are not inputs.
+The first manifest intentionally remains `LOCAL_REVIEW_PENDING` until current
+QA and privacy pins match. In another local terminal, choose a **new** capture
+directory and the parent's actual private review/pattern files:
 
-Fresh QA verifies desktop/mobile themes, full-size keyboard image inspection,
-complete TXT/HTML roundtrips, local print completeness, every download and
-scoped privacy. QA captures and local PDFs remain private; public QA is a new
-summary, not inherited historical results. Parent-reviewed deployment configuration
-may be added separately; this preparation creates or invokes no GitHub workflow.
-After final review, `tools/stage_site.py --repository` produces the exact public
-repository copy; running `tools/stage_site.py` there produces `_site` with only
-the declared Pages files. The parent can publish that output through its chosen
-clean-history hosting configuration. `.nojekyll` prevents static-file rewriting
-when branch-based Pages hosting is used.
+```powershell
+python tools\qa_site.py --base-url http://127.0.0.1:4178/preview/ --capture-directory _private-hold\walkthrough-qa-01
+python tools\check_public.py --private-patterns _private-hold\private-patterns.json --image-review _private-hold\historical-image-review.json --walkthrough-image-review _private-hold\walkthrough-image-review.json
+python tools\make_manifest.py
+python tools\build_walkthrough.py --verify-only
+```
+
+QA covers primary matching images/counts/receipt, all historical and benchmark
+readers, complete DOM/text equality, lossless Markdown, real downloads, keyboard
+image inspection, mobile/light/dark layouts, no-JavaScript content, all anchors,
+actual browser PDF completeness and blocked nonpublic paths/external requests.
+All QA captures and PDFs remain private; a fresh summary binds all relevant
+current files, not just `content.json`.
+
+Only explicit public paths in `tools\public_inventory.py` may be screened or
+staged. The new component-report path set is selected from validated provenance,
+never directory globbing. No new archive is generated; the historical 14-file
+ZIP remains exact. `.gitattributes` preserves bytes across operating systems.
+
+After parent final review, `tools\stage_site.py --repository` can produce an
+exact repository copy, and `tools\stage_site.py` an exact `_site` tree. Both
+refuse existing targets and missing/stale approval, inputs or pins. They do not
+push or publish. The checked-in Pages workflow only stages that exact reviewed
+tree; missing matched-run evidence cannot be deployed through it. The parent
+alone owns publication, native runtime, email, screenshots and final review.

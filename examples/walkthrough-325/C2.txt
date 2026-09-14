@@ -1,0 +1,47 @@
+PUBLIC REDACTED DERIVATIVE - COMPLETE RECORDED OUTPUT
+Private identities, links and bindings are masked; bracketed labels are not source literals.
+Original report text and all sections/footer are retained apart from the declared redactions.
+AI recommendations are not executed tests or independently verified semantic conclusions.
+
+PSR_COMPONENT_REVIEW_V3
+Job: [PRIVATE IDENTIFIER 4]; pass: C2; actual extracted source: AppCheckerResult.sarif
+Contract: PSR_COMPONENT_V3; source-evidence checks passed. Not runtime/import/accessibility certification.
+
+Component assessment
+- The SARIF file shows that the embedded PowerApps app checker was run historically and reported two rule types: 'acc-ReadableScreenNameNeeded' and 'acc-AccessibleLabelNeeded' in multiple instances. [line 1]: {"$schema":"[PRIVATE LINK 2]","version":"2.1.0","runs":[{"results":[{"ruleId":"acc-ReadableScreenNameNeeded","ruleIndex":0,"message":{"id":"issue"},"locations":[{"physicalLocation":{"address":{"relativeAddress":0,"fullyQualifiedName":"Screen1"}},"logicalLocations":[{"fullyQualifiedName":"Screen1"}],"properties":{"module":"Screen1","type":"Screen1"}}],"properties":{"level":"Low"}},{"ruleId":"acc-AccessibleLabelNeeded","ruleIndex":1,"message":{"id":"issue"}
+Not assessed:
+- Actual accessibility compliance and runtime label presence: Only embedded historical checker results were provided. No live checker execution or full control source is available, so actual accessibility properties in the current app could not be verified.
+- Formula correctness and data delegation: The SARIF excerpt does not include any Power Fx formula content or delegation warnings, leaving functional logic unassessed.
+- Error handling and performance: The provided evidence is limited to accessibility results and does not cover performance or error-handling behaviors.
+
+Evidence-grounded findings
+No new static issues were confirmed because the provided source is a historical embedded checker SARIF report, not the actual control definitions. The observed issues are already recorded as stale checker evidence and cannot be re-validated from current app source in this context.
+
+Observed strengths
+The evidence is a minimal SARIF excerpt with accessibility rule IDs only and does not support identifying any robust strengths.
+
+Verification and not-assessed checks
+- VERIFICATION NEEDED / NOT RUN - Accessibility [source line 1]: "fullyQualifiedName":"Screen1.Form1.Name_DataCard1.DataCardValue1.AccessibleLabel"
+  Applicability: AccessibleLabel presence must be validated at runtime because historical SARIF cannot confirm current state.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: AccessibleLabel; observed serialization state: UNRESOLVED
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Open the app in Play mode or in the editor, select DataCardValue1, and check the AccessibleLabel property for a nonempty descriptive text.
+  Expected observation: The AccessibleLabel property should contain meaningful text that describes the element for screen reader users.
+- VERIFICATION NEEDED / NOT RUN - Accessibility [source line 1]: "fullyQualifiedName":"Screen1.Form1.'Created By_DataCard1'.DataCardValue3.AccessibleLabel"
+  Applicability: Historical SARIF indicates this was missing; confirm its current state.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: AccessibleLabel; observed serialization state: UNRESOLVED
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Inspect DataCardValue3 in the form and confirm that its AccessibleLabel is properly defined and descriptive.
+  Expected observation: AccessibleLabel should not be blank and should describe the control's purpose.
+- VERIFICATION NEEDED / NOT RUN - Screen name readability [source line 1]: "fullyQualifiedName":"Screen1"
+  Applicability: SARIF indicates 'acc-ReadableScreenNameNeeded'; actual screen name value at runtime must be verified.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: DisplayName; observed serialization state: UNRESOLVED
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Review Screen1's DisplayName or Title property to ensure it's descriptive of the screen content.
+  Expected observation: Screen name should provide a meaningful description according to accessibility guidance.
+
+Current official checker: NOT RUN. Historical checker evidence only if actually acquired.
+END_PSR_COMPONENT_REVIEW_V3

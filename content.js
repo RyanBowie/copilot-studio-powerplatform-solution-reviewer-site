@@ -1,9 +1,9 @@
 window.PSR_CONTENT = {
   "publication": {
     "approvedPublicPreview": true,
-    "scope": "Approved historical real-canvas derivatives, separately reviewed genuine follow-up MAIN/results, and generic product reference only.",
+    "scope": "Reviewed matched native canvas/email walkthrough, immutable historical evidence, separate no-email benchmarks, and generic reference only. Matched inputs are required before generation or publication.",
     "runtimeAcceptance": false,
-    "siteVisualReview": "Site author visually reviewed all eight approved derivatives; private originals were not inspected."
+    "siteVisualReview": "Historical eight-image review is retained separately. New nine-image hash-bound visual/privacy review is required; no new approval is inferred by a generator."
   },
   "hosting": {
     "repository": "RyanBowie/copilot-studio-powerplatform-solution-reviewer-site",
@@ -11,9 +11,50 @@ window.PSR_CONTENT = {
     "repositoryApiVerified": true,
     "pagesConfigured": true,
     "liveHttpVerified": true,
-    "statusDescription": "The public repository, configured Pages site and existing live HTTP content have been verified. Historical examples and separately measured follow-up results are distinguished."
+    "statusDescription": "Existing public hosting was verified previously. This matched walkthrough revision has not been published or live-verified by the site author."
   },
   "example": {
+    "kind": "REVIEWED_GENUINE_CANVAS_EMAIL_WALKTHROUGH",
+    "approvedPublicDerivatives": true,
+    "pagePath": "walkthrough.html",
+    "provenancePath": "examples/walkthrough-325/provenance.json",
+    "markdownPath": "examples/walkthrough-325/complete-review.md",
+    "mainPath": "examples/walkthrough-325/MAIN.txt",
+    "sourceDisplayName": "Data Entry Testing",
+    "revision": "3.3.2.5",
+    "outcome": "ReviewPartial",
+    "accepted": 4,
+    "selected": 5,
+    "unavailable": 1,
+    "acceptedPassIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "logicalAgentInvocations": 7,
+    "mainValid": true,
+    "screenLinesSupplied": 326,
+    "totalScreenLines": 326,
+    "latestScreenCitation": 285,
+    "allFiveSelectedSourcesComplete": true,
+    "email": {
+      "nativeSendStatus": "Succeeded",
+      "ownerInboxReceiptVerified": true,
+      "expectedReportLinkVerified": true,
+      "forwardedCorporateReceiptVerified": false,
+      "controlsRestored": true
+    },
+    "briefCaveat": "ReviewPartial: 4/5 assessments accepted, 1 unavailable; 326/326 screen lines supplied. Owner Inbox receipt and the matching protected-report link verified. Not an app pass rate.",
+    "mainMethod": "Deterministic assembly of native-flow-accepted canonical AI component records; no new inference or regrading.",
+    "combinedTarget": {
+      "achieved": true,
+      "scope": "ONE_MATCHED_RUN_ONLY",
+      "lastQuarterStartLine": 245,
+      "summary": "Bounded combined target achieved in this ONE matched run: 4/5 accepted, valid MAIN, all five selected original sources complete, and accepted C4 with a last-quarter citation (line 285 of 326; the last quarter starts at line 245). This does not demonstrate repeated at-least-4/5 performance or 90% reliability across different exports."
+    }
+  },
+  "historicalExample": {
     "kind": "REAL_EXPORTED_CLASSIC_CANVAS_APP",
     "approvedPublicDerivatives": true,
     "pagePath": "full-example.html",
@@ -48,6 +89,6 @@ window.PSR_CONTENT = {
   "downloads": {
     "installerIncluded": false,
     "exampleIncluded": true,
-    "status": "The historical approved report/capture bundle, separately reviewed complete follow-up MAIN/results and generic references are included. No app/solution package, installer, private originals, diagnostics or mailbox/autoreply images."
+    "status": "The matching full Markdown/HTML reader and authoritative TXT/JSON require reviewed walkthrough inputs. Historical report/capture bundle and separate no-email benchmark MAIN/results remain supported. No app/solution package, installer, private originals or unrelated mailbox material."
   }
 };

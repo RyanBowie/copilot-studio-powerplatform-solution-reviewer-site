@@ -1,0 +1,40 @@
+PUBLIC REDACTED DERIVATIVE - COMPLETE RECORDED OUTPUT
+Private identities, links and bindings are masked; bracketed labels are not source literals.
+Original report text and all sections/footer are retained apart from the declared redactions.
+AI recommendations are not executed tests or independently verified semantic conclusions.
+
+PSR_COMPONENT_REVIEW_V3
+Job: [PRIVATE IDENTIFIER 4]; pass: C1; actual extracted source: solution.xml
+Contract: PSR_COMPONENT_V3; source-evidence checks passed. Not runtime/import/accessibility certification.
+
+Component assessment
+- The root element specifies the solution export with versioning and schema attributes. [line 1]: <ImportExportXml version="9.2.26084.149" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="[PRIVATE LINK 1]" OrganizationVersion="9.2.26084.149" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26084.00149">
+- Solution UniqueName is clearly defined. [line 3]: <UniqueName>[PRIVATE SCHEMA 1]</UniqueName>
+- Solution version is set to 1.0.0.0. [line 8]: <Version>1.0.0.0</Version>
+- Solution is marked as unmanaged (0). [line 9]: <Managed>0</Managed>
+- RootComponents section lists included components such as tables and other objects. [line 79]: <RootComponents>
+- Solution manifest explicitly includes MissingDependencies section with required connection references. [line 88]: <MissingDependency>
+Not assessed:
+- Control and UI accessibility: The provided source is an XML solution manifest without control definitions or UI properties; accessibility configuration cannot be evaluated.
+- Power Fx formulas and error handling: No screen or formula code is present in the XML manifest excerpt.
+- Performance/delegation checks: No canvas app or expression logic is included for delegation analysis.
+- User interface responsiveness: The XML manifest does not contain layout definitions or screen containers.
+- Environment variable runtime values: Only manifest structure is shown; runtime evaluation of environment variable bindings is not possible.
+
+Evidence-grounded findings
+No defects were identified in the reviewed manifest excerpt; it only contains solution metadata and dependency declarations without direct evidence of misconfiguration.
+
+Observed strengths
+No explicit strengths observed beyond standard structural declarations; the XML follows typical Power Platform solution schema.
+
+Verification and not-assessed checks
+- VERIFICATION NEEDED / NOT RUN - Dependency validation [source line 88]: <MissingDependency>
+  Applicability: Non-control structural check; the XML manifests missing dependency references but runtime existence and binding cannot be verified statically.
+  Source subject (legacy controlType field): NON_CONTROL; declaration line: 0; 
+  Property: Required; observed serialization state: UNRESOLVED
+  Defect/impact/severity: NOT ESTABLISHED by this verification item.
+  Check: Ensure all listed connection references exist in the target environment and can resolve during solution import.
+  Expected observation: Missing dependencies should be resolved by adding or configuring the required connection references before import.
+
+Current official checker: NOT RUN. Historical checker evidence only if actually acquired.
+END_PSR_COMPONENT_REVIEW_V3

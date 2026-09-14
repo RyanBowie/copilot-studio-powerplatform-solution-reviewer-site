@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "kind": "REVIEWED_GENUINE_CANVAS_EMAIL_WALKTHROUGH",
+  "approvedPublicDerivatives": true,
+  "sourceDisplayName": "Data Entry Testing",
+  "revision": "3.3.2.5",
+  "outcome": "ReviewPartial",
+  "accepted": 4,
+  "selected": 5,
+  "unavailable": 1,
+  "acceptedPassIds": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "logicalAgentInvocations": 7,
+  "mainValid": true,
+  "screenLinesSupplied": 326,
+  "totalScreenLines": 326,
+  "latestScreenCitation": 285,
+  "allFiveSelectedSourcesComplete": true,
+  "email": {
+    "nativeSendStatus": "Succeeded",
+    "ownerInboxReceiptVerified": true,
+    "expectedReportLinkVerified": true,
+    "forwardedCorporateReceiptVerified": false,
+    "controlsRestored": true
+  },
+  "images": [
+    {
+      "file": "native-upload-menu.png",
+      "role": "uploadMenu",
+      "bytes": 74713,
+      "sha256": "4120013b7e7a8885f38de714312dc095375770b8ba6a92822d381885985fdb00",
+      "alt": "Native SharePoint upload menu for the matched genuine canvas solution.",
+      "caption": "Native capture before selection. Only eligible files directly in Incoming trigger review; folders do not."
+    },
+    {
+      "file": "native-upload-confirmed.png",
+      "role": "uploadedRow",
+      "bytes": 38567,
+      "sha256": "378e6a587417d8f8315f69ab3af260404ed8c4821219ac98721175a97f5c1f18",
+      "alt": "Confirmed native uploaded row for the matched genuine canvas solution.",
+      "caption": "Native capture after upload. Original export bytes and uploader identity were verified; the app was not imported or executed."
+    },
+    {
+      "file": "native-flow-run.png",
+      "role": "flowRun",
+      "bytes": 90933,
+      "sha256": "3bb1b9804a94dc1a4b6d409cb51021d3852f4945fe4aab960b9d04d5605dc0a7",
+      "alt": "Actual running file-created flow instance with its successful SharePoint trigger.",
+      "caption": "Actual run-history capture while processing this job, not a configuration mockup. The successful file-created trigger watches Incoming."
+    },
+    {
+      "file": "native-agent-handoff.png",
+      "role": "agentHandoff",
+      "bytes": 104670,
+      "sha256": "11b6b75cbb749ab0f325c83e126b1b30acd3c8e6bfc4f14aa61aead4858b414e",
+      "alt": "Successful native same-agent MAIN invocation in the matched flow run.",
+      "caption": "Actual InvokeSameAgent run result: Succeeded. This call assembles MAIN from accepted canonical records; it is not a second AI assessment."
+    },
+    {
+      "file": "native-main-opening.png",
+      "role": "mainOpening",
+      "bytes": 186584,
+      "sha256": "3399228a68474f1b29fc964291ebde7d3a4ffae8d224e62176bc4d2677fbf3c9",
+      "alt": "Matched complete MAIN opening showing four accepted source assessments and one unavailable.",
+      "caption": "User-provided native report viewport, matched by retained job/source content. Capture time is not established; privacy identifiers are masked."
+    },
+    {
+      "file": "native-component.png",
+      "role": "component",
+      "bytes": 128908,
+      "sha256": "4f1cda600e84ee34fa7b1f0dce7c6d1f1fdec43bb412639c27c84fecf9625f2d",
+      "alt": "Actual accepted canvas screen assessment with Power Fx observations and accessibility verification steps.",
+      "caption": "Native C4 report preview. NewForm and SubmitForm are observed; proposed accessibility checks remain NOT RUN. Source bindings are masked."
+    },
+    {
+      "file": "native-email-received.png",
+      "role": "email",
+      "bytes": 64040,
+      "sha256": "80b76446d13659a525f725e861d3d10bfaa82771f5a6ea21da6baadaa3d6e1d0",
+      "alt": "Matched notification body showing five supplied sources, four saved assessments and one unavailable.",
+      "caption": "User-provided native notification body. Original owner-Inbox receipt and its protected report link were independently verified. This cropped image does not itself show mailbox headers or the complete footer."
+    },
+    {
+      "file": "native-main-assessments.png",
+      "role": "mainAssessments",
+      "bytes": 220796,
+      "sha256": "5af02f24f842974b0ee081a6e90966c395f57e5385c53ad73d012158494a6c2f",
+      "alt": "Actual MAIN canvas assessment describing form controls, Power Fx operations and the data table.",
+      "caption": "Native MAIN viewport showing accepted C4 source observations and their citations. The complete report retains all other accepted assessments and unavailable records."
+    },
+    {
+      "file": "native-main-verification.png",
+      "role": "mainVerification",
+      "bytes": 232597,
+      "sha256": "1be96875e90cac47dd7484ad40bbd9c6c7ad5ea2c375c2537baded9acee9ad99",
+      "alt": "Actual MAIN next-step checks for dependencies and accessible labels, explicitly marked NOT RUN.",
+      "caption": "Native MAIN verification viewport. These are source-specific next steps, not executed tests or confirmed runtime defects."
+    }
+  ],
+  "reports": [
+    {
+      "file": "MAIN.txt",
+      "role": "main",
+      "bytes": 43727,
+      "sha256": "1ecee1dc3e277102a6f68a8305a5aabe067e87d5cbc6e01046e0e943ba46e4c7"
+    },
+    {
+      "file": "C1.txt",
+      "role": "component",
+      "bytes": 3287,
+      "sha256": "75ca5662737a3de8a6ed26e5b2ea4598d70fcc52d0c0628caeb99fc3970a8220"
+    },
+    {
+      "file": "C2.txt",
+      "role": "component",
+      "bytes": 4568,
+      "sha256": "2c859dcbb6430a883b533696cca542bb7e8fa09db29adf97be316cdbc47b60bd"
+    },
+    {
+      "file": "C3.txt",
+      "role": "component",
+      "bytes": 2759,
+      "sha256": "6335edf33050332c633f711d332f962af884d06031979653e81971b565f60fd6"
+    },
+    {
+      "file": "C4.txt",
+      "role": "component",
+      "bytes": 3665,
+      "sha256": "0aa1d6bbdcbe1664fefdaa5782f18ce8e484b8822c0500188b25babb9cc7ecea"
+    },
+    {
+      "file": "inventory.json",
+      "role": "inventory",
+      "bytes": 10442,
+      "sha256": "6a2eb942b46676b97681bf4aa7f81a78207ea856a69afcee84986247b9d32f10"
+    },
+    {
+      "file": "coverage.json",
+      "role": "coverage",
+      "bytes": 44968,
+      "sha256": "e752835c3c46957888c725d83d6ecbc7d54685a189c2720510786b38f2753edd"
+    }
+  ]
+}

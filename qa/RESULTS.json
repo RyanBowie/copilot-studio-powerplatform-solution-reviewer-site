@@ -1,12 +1,99 @@
 {
   "status": "PASS",
-  "scope": "APPROVED_REAL_CANVAS_LOCAL_SITE_QA",
+  "scope": "MATCHED_CANVAS_WALKTHROUGH_LOCAL_SITE_QA",
   "historicalQaInherited": false,
   "runtimeActionsPerformed": false,
   "capturesPublished": false,
-  "contentSourceSha256": "ba1509846ce5e257639fdf946e46dbd4f3db6c5473964ae7f4107acb806a14fa",
+  "contentSourceSha256": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
   "exampleBundleSha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
+  "walkthroughProvenanceSha256": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
+  "validatedFileSha256": {
+    "index.html": "323fcfe533923bb6e5eb89c8c7db4b2cce77eafc61e8dc53f15a6ea195a9cc16",
+    "site.css": "2d60528bdfff7dd360b2cb73453b93eaaa418fb2e61da3f8b0d1c7fb245617ef",
+    "layout.css": "f9398e43dd011f8a39a76e5cdbf91a707983f21f6cd0448230f434ed2d5c205b",
+    "site.js": "be58941bdcf9601f15534dcf0da5b2199950afa2309495440f1e7a2be118648d",
+    "example.css": "a3743faac9a44eb87c7123ad176e5a5ac8f39f2bcbcd82bc211b0fa52dd96e4b",
+    "example.js": "e1cacc4dd8aa43684edda297849aae6e10899f56c25ef6e1474a3a46d7de8a66",
+    "full-example.html": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
+    "content.json": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
+    "content.js": "c8863286000a5faef24bb8c32fbd4988270833a45c2c1e0fc0a0cc1884bf9c15",
+    "reference.js": "51b72aa4324277bc3cfc438afe1dd90cac64d29629fbb97585d3f81a27c83e92",
+    "README.md": "3c66e8bc8b05810bd7b480df953b5a233ef0a521fe2865af2338aa555e2376be",
+    "reference/agent-instructions.txt": "8d2c59b1571e05601b4c3152624e78b52c9ae26188f1f41cbf98219258ee28f3",
+    "reference/topic-tool-source.json": "51cbd9b03a4bc5ad27c4b37e2fc70b2d562ae279a6dbc2c4cdd80f8903c0d233",
+    "downloads/real-canvas-example-manifest.json": "7f728346eaa635d2dc2d418109d841bf5c1872d9b31fd0333c68fcddbe9effcc",
+    "downloads/real-canvas-review-example.zip": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "follow-up.html": "76179ea4c1d0d035d1c49c6262ff1d07f863e7901c890d3a4650ee21fdf1d97e",
+    "examples/follow-up/results.json": "cb16f6b409680d67b4ed776ace1e74de4927cf38c2c388ab684109f9bfec243c",
+    "examples/follow-up/complete-review.txt": "fab3a88488feda525294759614e7536de60d01212fe2ccfc7828acb765e13cc0",
+    "examples/follow-up/provenance.json": "e2c7a45b7a9fad2c1f367f34e69a681e68aa627425de01d4da960df91bbad3cd",
+    "examples/real-canvas/native-upload-menu-before-selection.png": "6fb6514387954829b0fc3d7e48f74c5fb01c25ee004e4150617809b4d096a22c",
+    "examples/real-canvas/native-upload-file-row-confirmed.png": "a6cd1d42493d1003192e1e57ec7dba192f3931b452e7cc787127dd4cf99a7e28",
+    "examples/real-canvas/actual-result-review-txt.png": "844599a6c0c1fadfe788efbb4600b4fd720d55154c4d3ee257e6a9ceb0fa661a",
+    "examples/real-canvas/actual-result-C4-txt.png": "d6269339210ef5492d072afd6c88534a1e397886e8980d6b23218000a44b5d8a",
+    "examples/real-canvas/user-provided-notification-body.png": "3ff2f36d1472c159afa5474c6a3629825fd8e1986bc73efe0c61ed1abf7216ce",
+    "examples/real-canvas/user-provided-main-opening.png": "8a7da1ba6bc03c7133175daa9aeec33c496f5612922ce2e63aa5a8b56a300666",
+    "examples/real-canvas/user-provided-main-assessment-findings.png": "edc5f60de026e315efa77593b35f7c153a699c35ffe6daf91f01998cedc823b0",
+    "examples/real-canvas/user-provided-main-verification-omissions.png": "8fb26cfa01f47039d9d38290df0a0cb2281abad4c1276808e3ee6e020d07711b",
+    "examples/real-canvas/real-canvas-MAIN.txt": "fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b",
+    "examples/real-canvas/real-canvas-C4.txt": "50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c",
+    "examples/real-canvas/real-canvas-inventory.txt": "4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4",
+    "examples/real-canvas/real-canvas-coverage.txt": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
+    "examples/real-canvas/public-provenance.json": "63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff",
+    "examples/real-canvas/user-capture-provenance.v1.json": "49d09e1ab46e79fc747c83471b182d30ab62740f4772de1cc81d835b0af64e79",
+    "walkthrough.html": "d41cdc71739c7c919bfe262c51b762ec9f2ff5dfc5db5dc8121b5f9847728726",
+    "examples/walkthrough-325/provenance.json": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
+    "examples/walkthrough-325/complete-review.md": "08e33bc40fc0a0d24ffe7b3f2cd69b6b9b7edcd07a28980ec7d0d846cea7ceca",
+    "examples/walkthrough-325/native-upload-menu.png": "4120013b7e7a8885f38de714312dc095375770b8ba6a92822d381885985fdb00",
+    "examples/walkthrough-325/native-upload-confirmed.png": "378e6a587417d8f8315f69ab3af260404ed8c4821219ac98721175a97f5c1f18",
+    "examples/walkthrough-325/native-flow-run.png": "3bb1b9804a94dc1a4b6d409cb51021d3852f4945fe4aab960b9d04d5605dc0a7",
+    "examples/walkthrough-325/native-agent-handoff.png": "11b6b75cbb749ab0f325c83e126b1b30acd3c8e6bfc4f14aa61aead4858b414e",
+    "examples/walkthrough-325/native-main-opening.png": "3399228a68474f1b29fc964291ebde7d3a4ffae8d224e62176bc4d2677fbf3c9",
+    "examples/walkthrough-325/native-component.png": "4f1cda600e84ee34fa7b1f0dce7c6d1f1fdec43bb412639c27c84fecf9625f2d",
+    "examples/walkthrough-325/native-email-received.png": "80b76446d13659a525f725e861d3d10bfaa82771f5a6ea21da6baadaa3d6e1d0",
+    "examples/walkthrough-325/native-main-assessments.png": "5af02f24f842974b0ee081a6e90966c395f57e5385c53ad73d012158494a6c2f",
+    "examples/walkthrough-325/native-main-verification.png": "1be96875e90cac47dd7484ad40bbd9c6c7ad5ea2c375c2537baded9acee9ad99",
+    "examples/walkthrough-325/MAIN.txt": "1ecee1dc3e277102a6f68a8305a5aabe067e87d5cbc6e01046e0e943ba46e4c7",
+    "examples/walkthrough-325/C1.txt": "75ca5662737a3de8a6ed26e5b2ea4598d70fcc52d0c0628caeb99fc3970a8220",
+    "examples/walkthrough-325/C2.txt": "2c859dcbb6430a883b533696cca542bb7e8fa09db29adf97be316cdbc47b60bd",
+    "examples/walkthrough-325/C3.txt": "6335edf33050332c633f711d332f962af884d06031979653e81971b565f60fd6",
+    "examples/walkthrough-325/C4.txt": "0aa1d6bbdcbe1664fefdaa5782f18ce8e484b8822c0500188b25babb9cc7ecea",
+    "examples/walkthrough-325/inventory.json": "6a2eb942b46676b97681bf4aa7f81a78207ea856a69afcee84986247b9d32f10",
+    "examples/walkthrough-325/coverage.json": "e752835c3c46957888c725d83d6ecbc7d54685a189c2720510786b38f2753edd",
+    ".gitignore": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
+    ".gitattributes": "80a9700138d64d1a6b2f986c40dbda698362329d4264d5345012f3881fd49ac4",
+    ".github/workflows/pages.yml": "1eb1850c8ce9b6085e39808ffa51c8d21bfc146bc217fe6e769ea2ef95f62180",
+    "tools/build_home.py": "034fdbfff9ef6ac21a6b98aee0a5ca84d6c96df56a3902b19fd79558d189cdbb",
+    "tools/generate_content.py": "57845bdc5c187576b50e70709d9fab9bd6964121253dab8fa8ad654c6e8188ac",
+    "tools/prepare_real_example.py": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
+    "tools/public_inventory.py": "f6cc2fb7e792054230533241ca6c916754287a6c29267c25ad845eb487ee9bf2",
+    "tools/check_public.py": "cb8887f5e54a83d6c6671a7693e539f21a982743ea16c9769fede68136fe3699",
+    "tools/qa_site.py": "ed1e699194fde0bd65c453996ec923ccdcf54509e8c0807ebd24e42246602432",
+    "tools/make_manifest.py": "238f1279246e5742d6ee6a6b6549db9c3e75fbeb09d12c69b9a6861de6f6b84d",
+    "tools/stage_site.py": "9b3f62c12c63b2137b06e7fea4507be1d2f9c9caaf525164f489551ac8eb5534",
+    "tools/serve_preview.py": "1251cef9e759cadc71bc93659cc38423277110e058f04140bef4038d3d4d9453",
+    "tools/build_followup.py": "eddcde6f5c0bdd188a790dddcb636faf06e41f44b87feae897325e39f71137f7",
+    "tools/build_walkthrough.py": "79fbb3d96ee6bc34c637d7a2a6cd7b2715149f220be7513e9c09ea12cc4fb3a6",
+    "tools/test_walkthrough.py": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8"
+  },
   "cases": [
+    {
+      "check": "Primary metrics are derived from actual reviewed matched-run provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Combined target requires >=4/5, valid MAIN, five complete sources, accepted C4 and a last-quarter citation",
+      "result": "PASS"
+    },
+    {
+      "check": "Full Markdown carries the same bounded one-run target statement",
+      "result": "PASS"
+    },
+    {
+      "check": "Full Markdown roundtrips every authoritative report byte, including footer, JSON, BOM and line endings",
+      "result": "PASS"
+    },
     {
       "check": "All fourteen approved published files verified; four complete TXT pins and eight image inputs unchanged",
       "result": "PASS"
@@ -40,7 +127,11 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: exact eight current real-review derivatives",
+      "check": "1440-light: exact nine matched native derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: all matched image roles in the agreed presentation order",
       "result": "PASS"
     },
     {
@@ -48,7 +139,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "check": "1440-light: step two uses the actual matched flow run",
       "result": "PASS"
     },
     {
@@ -60,23 +151,39 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: actual saved report and notification follow the agent",
+      "check": "1440-light: actual agent-action evidence replaces the historical configuration explainer",
       "result": "PASS"
     },
     {
-      "check": "1440-light: step six uses all three user report screenshots and links the complete report",
+      "check": "1440-light: matched output and received email follow the actual agent action",
       "result": "PASS"
     },
     {
-      "check": "1440-light: actual Partial/coverage/call metrics",
+      "check": "1440-light: step six uses the matched native assessment/verification views and full reader",
       "result": "PASS"
     },
     {
-      "check": "1440-light: selected example model is not presented as an architectural requirement",
+      "check": "1440-light: actual improved acceptance, complete-input and invocation metrics",
       "result": "PASS"
     },
     {
-      "check": "1440-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "check": "1440-light: primary combined-target claim is conditional and one-run only",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: current GPT5Chat is not confused with historical Reasoning",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: immutable historical example remains explicitly separate",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark target limitations are explicitly historical, with regressions retained",
       "result": "PASS"
     },
     {
@@ -88,11 +195,15 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: receipt caveat beside example",
+      "check": "1440-light: actual receipt and protected-report proof beside primary example",
       "result": "PASS"
     },
     {
-      "check": "1440-light: requested user-provided notification is the lead notification image",
+      "check": "1440-light: owner receipt does not imply corporate forwarding receipt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: both no-email benchmarks and all 11 historical comparisons remain distinct",
       "result": "PASS"
     },
     {
@@ -105,6 +216,58 @@
     },
     {
       "check": "1440-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader retains all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader agrees with conditional homepage/Markdown target metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reports have no clipping or height limits",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: complete matched DOM/source equality \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched source text is escaped and cannot create live links or markup",
       "result": "PASS"
     },
     {
@@ -160,7 +323,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: follow-up does not claim the target passed",
+      "check": "1440-light: benchmark reader scopes its unmet target to those historical runs",
       "result": "PASS"
     },
     {
@@ -176,7 +339,11 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: exact eight current real-review derivatives",
+      "check": "1440-dark: exact nine matched native derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: all matched image roles in the agreed presentation order",
       "result": "PASS"
     },
     {
@@ -184,7 +351,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: step two explains the trigger instead of showing a report or fabricated run capture",
+      "check": "1440-dark: step two uses the actual matched flow run",
       "result": "PASS"
     },
     {
@@ -196,23 +363,39 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: actual saved report and notification follow the agent",
+      "check": "1440-dark: actual agent-action evidence replaces the historical configuration explainer",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: step six uses all three user report screenshots and links the complete report",
+      "check": "1440-dark: matched output and received email follow the actual agent action",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: actual Partial/coverage/call metrics",
+      "check": "1440-dark: step six uses the matched native assessment/verification views and full reader",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: selected example model is not presented as an architectural requirement",
+      "check": "1440-dark: actual improved acceptance, complete-input and invocation metrics",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "check": "1440-dark: primary combined-target claim is conditional and one-run only",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: current GPT5Chat is not confused with historical Reasoning",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: immutable historical example remains explicitly separate",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark target limitations are explicitly historical, with regressions retained",
       "result": "PASS"
     },
     {
@@ -224,11 +407,15 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: receipt caveat beside example",
+      "check": "1440-dark: actual receipt and protected-report proof beside primary example",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: requested user-provided notification is the lead notification image",
+      "check": "1440-dark: owner receipt does not imply corporate forwarding receipt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: both no-email benchmarks and all 11 historical comparisons remain distinct",
       "result": "PASS"
     },
     {
@@ -241,6 +428,58 @@
     },
     {
       "check": "1440-dark: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader retains all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader agrees with conditional homepage/Markdown target metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reports have no clipping or height limits",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: complete matched DOM/source equality \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched source text is escaped and cannot create live links or markup",
       "result": "PASS"
     },
     {
@@ -296,7 +535,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: follow-up does not claim the target passed",
+      "check": "1440-dark: benchmark reader scopes its unmet target to those historical runs",
       "result": "PASS"
     },
     {
@@ -312,7 +551,11 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: exact eight current real-review derivatives",
+      "check": "390-light: exact nine matched native derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: all matched image roles in the agreed presentation order",
       "result": "PASS"
     },
     {
@@ -320,7 +563,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "check": "390-light: step two uses the actual matched flow run",
       "result": "PASS"
     },
     {
@@ -332,23 +575,39 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: actual saved report and notification follow the agent",
+      "check": "390-light: actual agent-action evidence replaces the historical configuration explainer",
       "result": "PASS"
     },
     {
-      "check": "390-light: step six uses all three user report screenshots and links the complete report",
+      "check": "390-light: matched output and received email follow the actual agent action",
       "result": "PASS"
     },
     {
-      "check": "390-light: actual Partial/coverage/call metrics",
+      "check": "390-light: step six uses the matched native assessment/verification views and full reader",
       "result": "PASS"
     },
     {
-      "check": "390-light: selected example model is not presented as an architectural requirement",
+      "check": "390-light: actual improved acceptance, complete-input and invocation metrics",
       "result": "PASS"
     },
     {
-      "check": "390-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "check": "390-light: primary combined-target claim is conditional and one-run only",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: current GPT5Chat is not confused with historical Reasoning",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: immutable historical example remains explicitly separate",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark target limitations are explicitly historical, with regressions retained",
       "result": "PASS"
     },
     {
@@ -360,11 +619,15 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: receipt caveat beside example",
+      "check": "390-light: actual receipt and protected-report proof beside primary example",
       "result": "PASS"
     },
     {
-      "check": "390-light: requested user-provided notification is the lead notification image",
+      "check": "390-light: owner receipt does not imply corporate forwarding receipt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: both no-email benchmarks and all 11 historical comparisons remain distinct",
       "result": "PASS"
     },
     {
@@ -377,6 +640,58 @@
     },
     {
       "check": "390-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader retains all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader agrees with conditional homepage/Markdown target metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reports have no clipping or height limits",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: complete matched DOM/source equality \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched source text is escaped and cannot create live links or markup",
       "result": "PASS"
     },
     {
@@ -432,7 +747,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: follow-up does not claim the target passed",
+      "check": "390-light: benchmark reader scopes its unmet target to those historical runs",
       "result": "PASS"
     },
     {
@@ -448,7 +763,11 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: exact eight current real-review derivatives",
+      "check": "390-dark: exact nine matched native derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: all matched image roles in the agreed presentation order",
       "result": "PASS"
     },
     {
@@ -456,7 +775,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: step two explains the trigger instead of showing a report or fabricated run capture",
+      "check": "390-dark: step two uses the actual matched flow run",
       "result": "PASS"
     },
     {
@@ -468,23 +787,39 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: actual saved report and notification follow the agent",
+      "check": "390-dark: actual agent-action evidence replaces the historical configuration explainer",
       "result": "PASS"
     },
     {
-      "check": "390-dark: step six uses all three user report screenshots and links the complete report",
+      "check": "390-dark: matched output and received email follow the actual agent action",
       "result": "PASS"
     },
     {
-      "check": "390-dark: actual Partial/coverage/call metrics",
+      "check": "390-dark: step six uses the matched native assessment/verification views and full reader",
       "result": "PASS"
     },
     {
-      "check": "390-dark: selected example model is not presented as an architectural requirement",
+      "check": "390-dark: actual improved acceptance, complete-input and invocation metrics",
       "result": "PASS"
     },
     {
-      "check": "390-dark: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "check": "390-dark: primary combined-target claim is conditional and one-run only",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: current GPT5Chat is not confused with historical Reasoning",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: immutable historical example remains explicitly separate",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark target limitations are explicitly historical, with regressions retained",
       "result": "PASS"
     },
     {
@@ -496,11 +831,15 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: receipt caveat beside example",
+      "check": "390-dark: actual receipt and protected-report proof beside primary example",
       "result": "PASS"
     },
     {
-      "check": "390-dark: requested user-provided notification is the lead notification image",
+      "check": "390-dark: owner receipt does not imply corporate forwarding receipt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: both no-email benchmarks and all 11 historical comparisons remain distinct",
       "result": "PASS"
     },
     {
@@ -513,6 +852,58 @@
     },
     {
       "check": "390-dark: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader retains all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader agrees with conditional homepage/Markdown target metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reports have no clipping or height limits",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: complete matched DOM/source equality \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched source text is escaped and cannot create live links or markup",
       "result": "PASS"
     },
     {
@@ -568,7 +959,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: follow-up does not claim the target passed",
+      "check": "390-dark: benchmark reader scopes its unmet target to those historical runs",
       "result": "PASS"
     },
     {
@@ -584,7 +975,11 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: exact eight current real-review derivatives",
+      "check": "320-light: exact nine matched native derivatives",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: all matched image roles in the agreed presentation order",
       "result": "PASS"
     },
     {
@@ -592,7 +987,7 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: step two explains the trigger instead of showing a report or fabricated run capture",
+      "check": "320-light: step two uses the actual matched flow run",
       "result": "PASS"
     },
     {
@@ -604,23 +999,39 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: actual saved report and notification follow the agent",
+      "check": "320-light: actual agent-action evidence replaces the historical configuration explainer",
       "result": "PASS"
     },
     {
-      "check": "320-light: step six uses all three user report screenshots and links the complete report",
+      "check": "320-light: matched output and received email follow the actual agent action",
       "result": "PASS"
     },
     {
-      "check": "320-light: actual Partial/coverage/call metrics",
+      "check": "320-light: step six uses the matched native assessment/verification views and full reader",
       "result": "PASS"
     },
     {
-      "check": "320-light: selected example model is not presented as an architectural requirement",
+      "check": "320-light: actual improved acceptance, complete-input and invocation metrics",
       "result": "PASS"
     },
     {
-      "check": "320-light: measured progress and still-unmet targets remain distinct, with regressions retained",
+      "check": "320-light: primary combined-target claim is conditional and one-run only",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: current GPT5Chat is not confused with historical Reasoning",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: no historical outcome, prefix coverage or unverified-receipt caveat in primary evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: immutable historical example remains explicitly separate",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark target limitations are explicitly historical, with regressions retained",
       "result": "PASS"
     },
     {
@@ -632,11 +1043,15 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: receipt caveat beside example",
+      "check": "320-light: actual receipt and protected-report proof beside primary example",
       "result": "PASS"
     },
     {
-      "check": "320-light: requested user-provided notification is the lead notification image",
+      "check": "320-light: owner receipt does not imply corporate forwarding receipt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: both no-email benchmarks and all 11 historical comparisons remain distinct",
       "result": "PASS"
     },
     {
@@ -649,6 +1064,58 @@
     },
     {
       "check": "320-light: first actual capture begins in initial viewport",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader no overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader retains all ten MAIN headings",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader agrees with conditional homepage/Markdown target metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reports have no clipping or height limits",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: complete matched DOM/source equality \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched source text is escaped and cannot create live links or markup",
       "result": "PASS"
     },
     {
@@ -704,7 +1171,7 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: follow-up does not claim the target passed",
+      "check": "320-light: benchmark reader scopes its unmet target to those historical runs",
       "result": "PASS"
     },
     {
@@ -812,6 +1279,18 @@
       "result": "PASS"
     },
     {
+      "check": "Keyboard real-image viewer 9",
+      "result": "PASS"
+    },
+    {
+      "check": "Uncropped actual-size inspection 9",
+      "result": "PASS"
+    },
+    {
+      "check": "Viewer returns keyboard focus 9",
+      "result": "PASS"
+    },
+    {
       "check": "Complete project instruction reference retained",
       "result": "PASS"
     },
@@ -825,6 +1304,110 @@
     },
     {
       "check": "Keyboard theme switch",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched keyboard download \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Browser receives exact complete Markdown derivative",
+      "result": "PASS"
+    },
+    {
+      "check": "Downloaded Markdown is lossless for every authoritative document",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-2",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-10",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c1",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c4",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c2",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-5",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c3",
       "result": "PASS"
     },
     {
@@ -1008,7 +1591,79 @@
       "result": "PASS"
     },
     {
-      "check": "Nonpublic/holding path blocked",
+      "check": "Declared current local resource: walkthrough.html",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/provenance.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/complete-review.md",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-upload-menu.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-upload-confirmed.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-flow-run.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-agent-handoff.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-main-opening.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-component.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-email-received.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-main-assessments.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/native-main-verification.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/walkthrough-325/coverage.json",
       "result": "PASS"
     },
     {
@@ -1024,7 +1679,11 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main",
+      "check": "Nonpublic/holding path blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-2",
       "result": "PASS"
     },
     {
@@ -1036,15 +1695,19 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-6",
+      "check": "Complete reader anchor #main-section-9",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #coverage",
+      "check": "Complete reader anchor #main-section-4",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #component",
+      "check": "Complete reader anchor #main-section-5",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-8",
       "result": "PASS"
     },
     {
@@ -1052,7 +1715,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #inventory",
+      "check": "Complete reader anchor #main",
       "result": "PASS"
     },
     {
@@ -1060,7 +1723,15 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-4",
+      "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
       "result": "PASS"
     },
     {
@@ -1072,19 +1743,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-5",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-2",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-8",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-9",
+      "check": "Complete reader anchor #component",
       "result": "PASS"
     },
     {
@@ -1117,6 +1776,86 @@
     },
     {
       "check": "Actual browser PDF contains complete text \u2014 user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "No-JavaScript homepage retains exact improved metrics and receipt proof",
+      "result": "PASS"
+    },
+    {
+      "check": "No-JavaScript homepage retains bounded target evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "No-JavaScript image inspection and main reader links",
+      "result": "PASS"
+    },
+    {
+      "check": "No-JavaScript reader retains the same bounded target evidence",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete matched report without JavaScript \u2014 coverage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader keyboard print wiring",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader light print palette from dark theme",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 MAIN.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 C1.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 C2.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 C3.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 C4.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 inventory.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual browser PDF retains full matched content \u2014 coverage.json",
       "result": "PASS"
     },
     {
@@ -1163,9 +1902,11 @@
   "externalRequests": [],
   "errors": [],
   "printValidation": {
-    "allSixDocumentsComplete": true,
-    "pages": 38,
+    "allSixHistoricalDocumentsComplete": true,
+    "historicalPages": 38,
     "publicPdfIncluded": false,
-    "runtimeFormatterExecuted": false
+    "runtimeFormatterExecuted": false,
+    "allMatchedDocumentsComplete": true,
+    "matchedPages": 55
   }
 }
