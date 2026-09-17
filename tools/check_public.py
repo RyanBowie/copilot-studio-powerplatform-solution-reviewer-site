@@ -1,18 +1,21 @@
 """Scope-bound public screening; private restriction patterns/visual records stay private."""
 import argparse
-import base64
 import hashlib
 import io
 import json
 import re
 from pathlib import Path
-from urllib.parse import unquote
 from zipfile import ZipFile
 from PIL import Image
 from public_inventory import ALL, IMAGES, WALKTHROUGH_IMAGES, MANIFEST
 from prepare_real_example import validate_files
 from build_followup import verify as verify_followup
 from build_walkthrough import verify as verify_walkthrough, verify_outputs, PROVENANCE as WALKTHROUGH_PROVENANCE, PREFIX as WALKTHROUGH_PREFIX
+from word_release import (
+    verify as verify_word_release, PATHS as WORD_PATHS, MANIFEST as WORD_MANIFEST,
+    IMAGE_PREFIX as WORD_PREFIX, IMAGE_NAMES as WORD_IMAGES, PRIVACY_SCOPE,
+    text_variants,
+)
 
 SITE = Path(__file__).resolve().parents[1]
 GENERIC = [
@@ -57,8 +60,9 @@ def main():
     parser.add_argument("--private-patterns", type=Path, required=True)
     parser.add_argument("--image-review", type=Path, required=True)
     parser.add_argument("--walkthrough-image-review", type=Path, required=True)
+    parser.add_argument("--word-image-review", type=Path, required=True)
     args = parser.parse_args()
-    for path in [args.private_patterns, args.image_review, args.walkthrough_image_review]:
+    for path in [args.private_patterns, args.image_review, args.walkthrough_image_review, args.word_image_review]:
         if not path.resolve().is_relative_to(SITE / "_private-hold") or not path.is_file():
             raise ValueError("Private screening inputs must be existing files under this site's _private-hold.")
     patterns = json.loads(args.private_patterns.read_text(encoding="utf-8-sig"))
@@ -66,6 +70,10 @@ def main():
         raise ValueError("A nonempty reviewed list of private restriction patterns is required.")
     review = json.loads(args.image_review.read_text(encoding="utf-8-sig"))
     walkthrough_review = json.loads(args.walkthrough_image_review.read_text(encoding="utf-8-sig"))
+    word_review = json.loads(args.word_image_review.read_text(encoding="utf-8-sig"))
+    word = verify_word_release(required=True)
+    structural = {value.lower() for value in word["structuralIdentifiers"]}
+    structural_members = word["structuralIdentifierMembers"]
     e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
     validate_files(e)
     followup = verify_followup()
@@ -76,36 +84,42 @@ def main():
 
     def text_check(label, value):
         totals["textMembers"] += 1
-        variants = [value, unquote(value)]
-        if "\\u" in value:
-            variants.append(re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), value))
-        for candidate in re.findall(r"(?<![A-Za-z0-9+/])[A-Za-z0-9+/]{40,}={0,2}", value):
-            if len(candidate) % 4 == 0:
-                try:
-                    decoded = base64.b64decode(candidate, validate=True).decode("utf-8")
-                    if decoded.isprintable():
-                        variants.append(decoded)
-                        totals["decodedCandidates"] += 1
-                except (ValueError, UnicodeDecodeError):
-                    pass
+        variants = text_variants(value)
+        totals["decodedCandidates"] += len(variants) - 2 - int("\\u" in value)
+        allowed = structural if label in {WORD_MANIFEST, MANIFEST} else set(structural_members.get(label, []))
         for text in variants:
             if any(re.search(pattern, text, re.I) for pattern in patterns):
                 failures.append({"kind": "restricted-context", "publicMember": label})
-            if any(re.search(pattern, text, re.I) for pattern in GENERIC):
+            generic_text = text
+            if allowed:
+                generic_text = re.sub(
+                    GENERIC[-1],
+                    lambda match: "[reviewed structural identifier]" if match.group().lower() in allowed else match.group(),
+                    text,
+                )
+            if any(re.search(pattern, generic_text, re.I) for pattern in GENERIC):
                 failures.append({"kind": "binding-credential-like", "publicMember": label})
 
     def inspect(label, data, depth=0):
         if depth > 4:
             raise ValueError("Unexpected archive nesting.")
-        if label.endswith(".zip"):
+        if label.lower().endswith((".zip", ".docx")):
             totals["archives"] += 1
             with ZipFile(io.BytesIO(data)) as archive:
                 if sum(row.file_size for row in archive.infolist()) > 50 * 1024 * 1024:
                     raise ValueError("Unexpected archive expansion.")
+                names = archive.namelist()
+                if len(names) != len(set(names)):
+                    raise ValueError("Duplicate archive members.")
                 for row in archive.infolist():
                     if not row.is_dir():
                         inspect(label + "::" + row.filename, archive.read(row.filename), depth + 1)
-        elif not label.endswith(".png"):
+        elif label.lower().endswith(".png"):
+            with Image.open(io.BytesIO(data)) as image:
+                image.load()
+                if image.info:
+                    text_check(label + " image metadata", json.dumps(image.info, default=str))
+        else:
             text_check(label, data.decode("utf-8-sig"))
 
     for name in ALL:
@@ -116,13 +130,18 @@ def main():
             text_check(name, (SITE / name).read_text(encoding="utf-8-sig"))
     images = verify_image_review(review, "examples/real-canvas", IMAGES)
     images.update(verify_image_review(walkthrough_review, WALKTHROUGH_PREFIX, WALKTHROUGH_IMAGES))
+    images.update(verify_image_review(word_review, WORD_PREFIX, WORD_IMAGES))
     for name, row in images.items():
         text_check(name + " OCR", row["text"])
     report = {
         "status": "PASS" if not failures else "REVIEW_REQUIRED",
-        "scope": "MATCHED_CANVAS_WALKTHROUGH_PUBLIC_TREE",
+        "scope": PRIVACY_SCOPE,
         "publicRepositoryPaths": len(ALL), "screened": totals, "imagesReviewed": len(images),
         "historicalImagesReviewed": len(IMAGES), "walkthroughImagesReviewed": len(WALKTHROUGH_IMAGES),
+        "wordImagesReviewed": len(WORD_IMAGES),
+        "wordReleaseSha256": hashlib.sha256((SITE / WORD_MANIFEST).read_bytes()).hexdigest(),
+        "reviewedStructuralIdentifiers": len(structural),
+        "structuralIdentifierPolicy": "Explicit reviewed component/document identifiers are permitted only in their exact reviewed archive/text members and release manifests. Private restriction patterns are never bypassed.",
         "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
         "restrictedContextMatches": sum(row["kind"] == "restricted-context" for row in failures),
         "bindingCredentialMetadataMatches": sum(row["kind"] != "restricted-context" for row in failures),
@@ -130,10 +149,10 @@ def main():
                               for name in ALL if name not in {"PRIVACY-REPORT.json", MANIFEST}},
         "hashScope": "Exact current public files, not private acceptance records. Generated privacy/publication manifests are text-screened when present and excluded from this map to avoid circular hashes.",
         "privateTermsOrOcrPayloadsPublished": False,
-        "imageReview": "Separate supplied private reviews pin all eight historical and all nine matched native image derivatives. The user visually approved the nine matched derivatives; the site author verified pixel masks/crops and offline OCR, not an independent complete visual review. OCR text is screened with the same private patterns; PNGs are decoded and metadata checked. This tool never creates review sign-offs.",
+        "imageReview": "Separate supplied hash-bound private reviews cover eight historical images, nine matched native derivatives and two locally rendered redacted Word-example pages. OCR is screened with private patterns; PNG pixels and metadata are checked. This tool never creates review sign-offs.",
         "bodyPolicy": "All four historical TXT files and eight historical PNGs match their unchanged pins. Separate no-email benchmarks retain their provenance. Every matched authoritative TXT/JSON and PNG matches its reviewed provenance; the full Markdown derivative roundtrips all report bytes.",
         "followUpReport": followup["files"][0],
-        "excluded": ["Raw app/solution and private originals/diagnostics", "Mixed Inbox/autoreply images", "Installers, previous examples and previous QA/publication artifacts", "Restricted application evidence and private bindings"],
+        "excluded": ["Raw connected solution exports and private originals/diagnostics", "Mixed Inbox/autoreply images", "Unreviewed installers and unrelated QA/publication artifacts", "Restricted application evidence and private bindings"],
         "historyPolicy": "Only this exact reviewed allowlist is eligible. Private working directories and unrelated historical trees are never publication inputs.",
         "runtimeActionsPerformed": False,
     }

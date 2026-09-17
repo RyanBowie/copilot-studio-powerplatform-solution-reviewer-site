@@ -6,17 +6,20 @@ import shutil
 from pathlib import Path, PurePosixPath
 from public_inventory import ALL, DEPLOY, MANIFEST, LOCAL_DIRECTORIES
 from build_walkthrough import verify as verify_walkthrough, verify_outputs, primary_content
+from word_release import verify as verify_word_release, PATHS as WORD_PATHS, PUBLICATION_SCOPE
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument("--repository", action="store_true")
+parser.add_argument("--output", type=Path, help="New private staging directory, for --repository only.")
 args = parser.parse_args()
 m = json.loads((SITE / MANIFEST).read_text(encoding="utf-8"))
 walkthrough = verify_walkthrough()
+word = verify_word_release(required=True)
 verify_outputs(walkthrough)
 if m["example"] != primary_content(walkthrough):
     raise SystemExit("Manifest does not describe the verified matched walkthrough.")
-if m["status"] != "READY_FOR_PARENT_PUBLICATION" or m["scope"] != "MATCHED_CANVAS_WALKTHROUGH_PUBLIC_DERIVATIVES_ONLY":
+if m["status"] != "READY_FOR_PARENT_PUBLICATION" or m["scope"] != PUBLICATION_SCOPE or m.get("wordOutputRelease") != word:
     raise SystemExit("Current real-example privacy/QA approval is required.")
 if set(m["exactPublicRepositoryAllowlist"]) != set(ALL) or set(m["exactDeploymentAllowlist"]) != set(DEPLOY + [MANIFEST]):
     raise SystemExit("Explicit current inventory differs.")
@@ -34,9 +37,17 @@ for row in m["files"]:
         raise SystemExit("Unsafe public path.")
     if hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
         raise SystemExit("File pin mismatch: " + name)
-    if path.suffix.lower() == ".zip" and (name != m["approvedArchive"]["path"] or row["sha256"] != m["approvedArchive"]["sha256"]):
-        raise SystemExit("Only the exact approved real-example archive may be staged.")
+    approved_archives = {
+        m["approvedArchive"]["path"]: m["approvedArchive"]["sha256"],
+        WORD_PATHS["bundle"]: word["files"]["bundle"]["sha256"],
+    }
+    if path.suffix.lower() == ".zip" and approved_archives.get(name) != row["sha256"]:
+        raise SystemExit("Only exact reviewed evidence and Word distribution archives may be staged.")
 target = SITE / ("_public-repository" if args.repository else "_site")
+if args.output:
+    target = (SITE / args.output).resolve()
+    if not args.repository or not target.is_relative_to((SITE / "_private-hold").resolve()):
+        raise SystemExit("Custom staging must be a new repository directory under _private-hold.")
 if target.exists():
     raise SystemExit("Staging already exists; inspect rather than overwrite.")
 selected = ALL if args.repository else DEPLOY + [MANIFEST]

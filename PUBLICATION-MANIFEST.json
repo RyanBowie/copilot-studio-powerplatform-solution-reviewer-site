@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "4.0",
+  "schemaVersion": "5.0",
   "status": "READY_FOR_PARENT_PUBLICATION",
-  "scope": "MATCHED_CANVAS_WALKTHROUGH_PUBLIC_DERIVATIVES_ONLY",
+  "scope": "WORD_RELEASE_AND_MATCHED_WALKTHROUGH_APPROVED_ASSETS",
   "publicationPerformedBySiteAuthor": false,
   "runtimeActionsPerformed": false,
   "hosting": {
@@ -262,11 +262,197 @@
       }
     ]
   },
+  "wordOutputRelease": {
+    "schemaVersion": 1,
+    "kind": "REVIEWED_WORD_OUTPUT_CONFIGURABLE_RELEASE",
+    "distributionVersion": "3.3.2.6",
+    "layoutVersion": "4.3.1",
+    "approvedPublicDerivatives": true,
+    "packageKind": "PORTABLE_DERIVED_CONFIGURE_BEFORE_IMPORT",
+    "evidence": {
+      "fixture": "synthetic",
+      "formatOnlyRegeneration": true,
+      "nativeGenerationVerified": true,
+      "wordWebPages": 2,
+      "desktopWordPages": 2,
+      "reviewContentPreserved": true,
+      "requesterReadGrantVerified": true,
+      "separateLeastPrivilegeAccountTested": false,
+      "publishedDemoAgentUpdated": false,
+      "automaticWordRunVerified": false,
+      "crossTenantInstallationVerified": false,
+      "wordOutlineHeadings": false
+    },
+    "files": {
+      "bundle": {
+        "path": "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+        "bytes": 202396,
+        "sha256": "26540297fcd6590845f4b1f32ab7a7278233a74c420c8c9843d6075e237cc849"
+      },
+      "template": {
+        "path": "downloads/current-review-v4.3.1.web.template.docx",
+        "bytes": 11106,
+        "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065"
+      },
+      "setup": {
+        "path": "downloads/WORD-OUTPUT-SETUP.md",
+        "bytes": 13358,
+        "sha256": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39"
+      },
+      "example": {
+        "path": "examples/word-output/review-example.docx",
+        "bytes": 12513,
+        "sha256": "f1915c05440a6c98bf8d6718169aa918dcea1540bc2b5b3b3427260a038f16ab"
+      },
+      "page1": {
+        "path": "examples/word-output/report-page-1.png",
+        "bytes": 174719,
+        "sha256": "961e40a90278ccc3558dff52cd2b5cd2ffaf4ed8e5f1cda87de5d00446fc3f3c"
+      },
+      "page2": {
+        "path": "examples/word-output/report-page-2.png",
+        "bytes": 157149,
+        "sha256": "53e666d38f0d3bd246dacd8005f1bda0e4dbea6a3f429c597ea9e6d65dbf7e98"
+      }
+    },
+    "bundleMembers": {
+      ".gitignore": {
+        "bytes": 151,
+        "sha256": "a3f9ee7c046c13135c5d64f7a4007e22a3ac166b141a602e499e6871192ce5a2"
+      },
+      "README.md": {
+        "bytes": 13358,
+        "sha256": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39"
+      },
+      "CHANGELOG.md": {
+        "bytes": 2140,
+        "sha256": "62ab4d5b6b4d1bb7ed98f27e16ce3f41dd377744a563f6076720f219a744754d"
+      },
+      "configuration.py": {
+        "bytes": 8809,
+        "sha256": "bc492ae8d6cadb15e8c28b5663874960a3cedcd722ed30934179da3aa11f220f"
+      },
+      "install.py": {
+        "bytes": 29280,
+        "sha256": "0ee797a155982822bb3f0b1247be25a1a67e0988b602211443e6262adc67e54e"
+      },
+      "resource_setup.py": {
+        "bytes": 14501,
+        "sha256": "fa3f32989566290efc8564a4ec97974e6a8be342dffad7eeed07b5b39674fe8b"
+      },
+      "target_api.py": {
+        "bytes": 13218,
+        "sha256": "b3acbc7582ad14aa23f43cee7137d99d4ff21e2721d5df36b1c99706055b7eb8"
+      },
+      "word_setup.py": {
+        "bytes": 5243,
+        "sha256": "bba482cd0201379c3a062aba6098179d45cc0dea8aa1c61bf045100f6d918cb9"
+      },
+      "target.example.json": {
+        "bytes": 1176,
+        "sha256": "6e11def7140c0ec01f5a04646183d380a4fefd7f840dfe4f30920765992836e4"
+      },
+      "sharepoint-schema.json": {
+        "bytes": 1177,
+        "sha256": "6841713262159ca6febc764027a2d2c5e265aa5ac2e3818516debaeb8bfe1b2f"
+      },
+      "requirements.txt": {
+        "bytes": 18,
+        "sha256": "f2def2384a56ae40e72c734b642cd0ef97f8fe420b1f1ab6cd63757e0eedb410"
+      },
+      "kernel-selector.json": {
+        "bytes": 3782,
+        "sha256": "5aea9bebd04911dba7746a0080e2925cf44b6c668691e5b23dbafd04b7229bc9"
+      },
+      "reviewer.settings.template.json": {
+        "bytes": 782,
+        "sha256": "8bc3c8d767e22c26fdeab4895caa5a205177c4c50f289ef354be30fbbc59098e"
+      },
+      "automation.settings.template.json": {
+        "bytes": 1143,
+        "sha256": "a30e42b1695dde6f74d1a233697b43c786d65433a7b95376839198a0ab794ae8"
+      },
+      "install-manifest.json": {
+        "bytes": 19456,
+        "sha256": "d0c052a891a857d6c8593cb8550efb2187cd10e0f5c6b92e7a3d7bff9a27d1c2"
+      },
+      "VALIDATION.json": {
+        "bytes": 2591,
+        "sha256": "4e3ff5346cca1d54af940fe30156b5fdf5b9eacfe828b4783b619ce3d3090f52"
+      },
+      "current-review-v4.3.1.web.template.docx": {
+        "bytes": 11106,
+        "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065"
+      },
+      "psr_PowerPlatformSolutionReviewer.portable.template.zip": {
+        "bytes": 87911,
+        "sha256": "b24130d77803a27570f326cbeb86040c854db028a0e59aaed685f58cb6a2ff96"
+      },
+      "psr_PowerPlatformSolutionAutomation.portable.template.zip": {
+        "bytes": 75013,
+        "sha256": "e1807a258cd39ac49cbc27deaaad921667a0be4e28b47f3020f41361011e9811"
+      },
+      "FILES.json": {
+        "bytes": 3367,
+        "sha256": "c4c1e3ed3b4be2dfceec22429e60e1be7202fd5eb602547e81d6ad1cfd522642"
+      }
+    },
+    "structuralIdentifiers": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "41d42054-d4cb-4e90-b922-2b16b37fe379",
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "structuralIdentifierMembers": {
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::install-manifest.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::customizations.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::solution.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-Collectevidence-ABF4D574-ADAE-F111-AAAC-7CED8D9AA818.json": [
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-CurrentreviewWordren-0EF45BEC-B8B1-F111-AAAB-7C1E5264FAA2.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Assets/botcomponent_workflowset.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CollectReviewEvidence/data": [
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CreateCurrentReviewWord/data": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.topic.EndofConversation/data": [
+        "41d42054-d4cb-4e90-b922-2b16b37fe379"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::customizations.xml": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::solution.xml": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-SharePointautomaticr-7BDC877A-BAAE-F111-AAAC-7CED8D9AA818.json": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ]
+    }
+  },
+  "wordReleaseSha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
   "files": [
     {
       "path": "index.html",
-      "sha256": "323fcfe533923bb6e5eb89c8c7db4b2cce77eafc61e8dc53f15a6ea195a9cc16",
-      "bytes": 48970,
+      "sha256": "7a14fbf39c50b8405dae23644572879d166628f12ff2c6c59e7365a1e231efd5",
+      "bytes": 209714,
       "deployToPages": true
     },
     {
@@ -277,8 +463,8 @@
     },
     {
       "path": "layout.css",
-      "sha256": "f9398e43dd011f8a39a76e5cdbf91a707983f21f6cd0448230f434ed2d5c205b",
-      "bytes": 2219,
+      "sha256": "25499fe6998db3f5cf099e485b0223844d54587adf946ca0d087dc702b44cfaf",
+      "bytes": 2768,
       "deployToPages": true
     },
     {
@@ -307,38 +493,38 @@
     },
     {
       "path": "content.json",
-      "sha256": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
-      "bytes": 5028,
+      "sha256": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
+      "bytes": 6870,
       "deployToPages": true
     },
     {
       "path": "content.js",
-      "sha256": "c8863286000a5faef24bb8c32fbd4988270833a45c2c1e0fc0a0cc1884bf9c15",
-      "bytes": 5050,
+      "sha256": "166ee2ac94c0e814a553a5a99294a135873c0da271c6ff5a63d6369a8e94bb91",
+      "bytes": 6892,
       "deployToPages": true
     },
     {
       "path": "reference.js",
-      "sha256": "51b72aa4324277bc3cfc438afe1dd90cac64d29629fbb97585d3f81a27c83e92",
-      "bytes": 32130,
+      "sha256": "7c208ba85a05549592f12f2fdb2c80316845c82415cf6b247b101d9c4cd6a3c6",
+      "bytes": 137037,
       "deployToPages": true
     },
     {
       "path": "README.md",
-      "sha256": "3c66e8bc8b05810bd7b480df953b5a233ef0a521fe2865af2338aa555e2376be",
-      "bytes": 15730,
+      "sha256": "860ab70942c7c2e3496592001cc4764fc8b4ca2936dad60b1dd3a10cf98b7e50",
+      "bytes": 19114,
       "deployToPages": true
     },
     {
       "path": "reference/agent-instructions.txt",
-      "sha256": "8d2c59b1571e05601b4c3152624e78b52c9ae26188f1f41cbf98219258ee28f3",
-      "bytes": 11698,
+      "sha256": "9c317616ef1a002ab4fd363a62acf75912712aeffe1f63a967000ffe194368c7",
+      "bytes": 16214,
       "deployToPages": true
     },
     {
       "path": "reference/topic-tool-source.json",
-      "sha256": "51cbd9b03a4bc5ad27c4b37e2fc70b2d562ae279a6dbc2c4cdd80f8903c0d233",
-      "bytes": 19435,
+      "sha256": "e34c11022b4e7c77847a5548fdda8dd58f16280210610301970d910b33ead31a",
+      "bytes": 117598,
       "deployToPages": true
     },
     {
@@ -355,8 +541,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "2631eb0a8c046804e6ac945f0f49a5e5b6a899ada537881c2013e2a16ccb8bde",
-      "bytes": 9642,
+      "sha256": "c8acad959d953b9ed680e95a0561f93164ff1796b0959bd9ed0de038ee9a17d4",
+      "bytes": 10947,
       "deployToPages": true
     },
     {
@@ -367,8 +553,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "76179ea4c1d0d035d1c49c6262ff1d07f863e7901c890d3a4650ee21fdf1d97e",
-      "bytes": 52794,
+      "sha256": "5ab3d407dff996898542c76c2677ceadfe1b9f9bd438443bfedcc4aababc3ed9",
+      "bytes": 52885,
       "deployToPages": true
     },
     {
@@ -475,8 +661,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "d41cdc71739c7c919bfe262c51b762ec9f2ff5dfc5db5dc8121b5f9847728726",
-      "bytes": 127941,
+      "sha256": "0db7754f1197ff43dc0f5406606e97f11002d17f7eb8b9fd1395826a1e84b129",
+      "bytes": 128072,
       "deployToPages": true
     },
     {
@@ -588,6 +774,48 @@
       "deployToPages": true
     },
     {
+      "path": "downloads/word-output-release.json",
+      "sha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
+      "bytes": 8152,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+      "sha256": "26540297fcd6590845f4b1f32ab7a7278233a74c420c8c9843d6075e237cc849",
+      "bytes": 202396,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/current-review-v4.3.1.web.template.docx",
+      "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065",
+      "bytes": 11106,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/WORD-OUTPUT-SETUP.md",
+      "sha256": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39",
+      "bytes": 13358,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/word-output/review-example.docx",
+      "sha256": "f1915c05440a6c98bf8d6718169aa918dcea1540bc2b5b3b3427260a038f16ab",
+      "bytes": 12513,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/word-output/report-page-1.png",
+      "sha256": "961e40a90278ccc3558dff52cd2b5cd2ffaf4ed8e5f1cda87de5d00446fc3f3c",
+      "bytes": 174719,
+      "deployToPages": true
+    },
+    {
+      "path": "examples/word-output/report-page-2.png",
+      "sha256": "53e666d38f0d3bd246dacd8005f1bda0e4dbea6a3f429c597ea9e6d65dbf7e98",
+      "bytes": 157149,
+      "deployToPages": true
+    },
+    {
       "path": ".gitignore",
       "sha256": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
       "bytes": 77,
@@ -607,20 +835,20 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "1a0aea2f4901af4e6464892835c4630269a1c5eb988922a5474919e9c74e8347",
-      "bytes": 60824,
+      "sha256": "3a2cab072e2e8ac1c288d9b169f23f160f14fd4d1be64efd37614b435f43f943",
+      "bytes": 64732,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "034fdbfff9ef6ac21a6b98aee0a5ca84d6c96df56a3902b19fd79558d189cdbb",
-      "bytes": 17919,
+      "sha256": "47072bcb596a326dbec5770914d4317c9cb64d7a5de0c4812ee74b45bd6c295d",
+      "bytes": 25840,
       "deployToPages": false
     },
     {
       "path": "tools/generate_content.py",
-      "sha256": "57845bdc5c187576b50e70709d9fab9bd6964121253dab8fa8ad654c6e8188ac",
-      "bytes": 786,
+      "sha256": "f52df6ddd61dc44155c0b48bec19fa7da5006ead6e770991926e9a859e659a58",
+      "bytes": 1416,
       "deployToPages": false
     },
     {
@@ -631,32 +859,32 @@
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "f6cc2fb7e792054230533241ca6c916754287a6c29267c25ad845eb487ee9bf2",
-      "bytes": 2493,
+      "sha256": "102911bcd517ab61841a8f1aec96bc60d196cc469aa1a98e5acf86eabcda9c4f",
+      "bytes": 2619,
       "deployToPages": false
     },
     {
       "path": "tools/check_public.py",
-      "sha256": "cb8887f5e54a83d6c6671a7693e539f21a982743ea16c9769fede68136fe3699",
-      "bytes": 9251,
+      "sha256": "178e3a972596abd38d5bde0304fc386b27a9ed975104c7489a14f4be097b2df1",
+      "bytes": 10454,
       "deployToPages": false
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "ed1e699194fde0bd65c453996ec923ccdcf54509e8c0807ebd24e42246602432",
-      "bytes": 29080,
+      "sha256": "eda6d9c30899da3744caa19315fbfedb23d304363f4c463a5903a30694e94199",
+      "bytes": 31731,
       "deployToPages": false
     },
     {
       "path": "tools/make_manifest.py",
-      "sha256": "238f1279246e5742d6ee6a6b6549db9c3e75fbeb09d12c69b9a6861de6f6b84d",
-      "bytes": 5814,
+      "sha256": "479fb06204dcada72d4c0d065605cd51c40c4eca15e6f91149c8dc8717bb0390",
+      "bytes": 6259,
       "deployToPages": false
     },
     {
       "path": "tools/stage_site.py",
-      "sha256": "9b3f62c12c63b2137b06e7fea4507be1d2f9c9caaf525164f489551ac8eb5534",
-      "bytes": 2751,
+      "sha256": "0a9e656551dc61d512db12e0d629c92c78ae5d24465e90a4d160551a63895fe2",
+      "bytes": 3396,
       "deployToPages": false
     },
     {
@@ -667,20 +895,32 @@
     },
     {
       "path": "tools/build_followup.py",
-      "sha256": "eddcde6f5c0bdd188a790dddcb636faf06e41f44b87feae897325e39f71137f7",
-      "bytes": 15024,
+      "sha256": "d277ae5b33fde87975e43e48fea5b48ebdb476b3115a7439971944aa941142ee",
+      "bytes": 15115,
       "deployToPages": false
     },
     {
       "path": "tools/build_walkthrough.py",
-      "sha256": "79fbb3d96ee6bc34c637d7a2a6cd7b2715149f220be7513e9c09ea12cc4fb3a6",
-      "bytes": 23276,
+      "sha256": "3f4f491ff4abd4e5e6c9b1582b2998719aa867130c4f9f0e945aebc5c668806e",
+      "bytes": 23407,
       "deployToPages": false
     },
     {
       "path": "tools/test_walkthrough.py",
       "sha256": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8",
       "bytes": 17751,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/word_release.py",
+      "sha256": "9ca9d3f1859a5b75885256d9050ca0ffd2f86c90cd9587a72c077eae09cab2b3",
+      "bytes": 15653,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/test_word_release.py",
+      "sha256": "ba248401c9e4c99fec7016d3d69f508ee30b34b85e831a8cc0d25c91f404827b",
+      "bytes": 9211,
       "deployToPages": false
     }
   ],
@@ -739,6 +979,13 @@
     "examples/walkthrough-325/C4.txt",
     "examples/walkthrough-325/inventory.json",
     "examples/walkthrough-325/coverage.json",
+    "downloads/word-output-release.json",
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+    "downloads/current-review-v4.3.1.web.template.docx",
+    "downloads/WORD-OUTPUT-SETUP.md",
+    "examples/word-output/review-example.docx",
+    "examples/word-output/report-page-1.png",
+    "examples/word-output/report-page-2.png",
     ".gitignore",
     ".gitattributes",
     ".github/workflows/pages.yml",
@@ -755,6 +1002,8 @@
     "tools/build_followup.py",
     "tools/build_walkthrough.py",
     "tools/test_walkthrough.py",
+    "tools/word_release.py",
+    "tools/test_word_release.py",
     "PUBLICATION-MANIFEST.json"
   ],
   "exactDeploymentAllowlist": [
@@ -812,6 +1061,13 @@
     "examples/walkthrough-325/C4.txt",
     "examples/walkthrough-325/inventory.json",
     "examples/walkthrough-325/coverage.json",
+    "downloads/word-output-release.json",
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+    "downloads/current-review-v4.3.1.web.template.docx",
+    "downloads/WORD-OUTPUT-SETUP.md",
+    "examples/word-output/review-example.docx",
+    "examples/word-output/report-page-1.png",
+    "examples/word-output/report-page-2.png",
     "PUBLICATION-MANIFEST.json"
   ],
   "repositoryOnlyAllowlist": [
@@ -830,12 +1086,14 @@
     "tools/serve_preview.py",
     "tools/build_followup.py",
     "tools/build_walkthrough.py",
-    "tools/test_walkthrough.py"
+    "tools/test_walkthrough.py",
+    "tools/word_release.py",
+    "tools/test_word_release.py"
   ],
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 455,
+    "checksPassed": 474,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

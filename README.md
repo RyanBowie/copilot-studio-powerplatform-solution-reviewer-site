@@ -1,9 +1,10 @@
-# Solution Reviewer — matched improved-run walkthrough
+# Solution Reviewer — Word output and solution download
 
-A screenshot-first, static Clawpilot-themed site for the **original Data Entry
-Testing classic canvas solution**, not a code app or synthetic demo. The primary
-page, full report and email evidence all refer to one matched genuine native run
-on revision **3.3.2.5**. There is no upload/chat backend, telemetry, tracking,
+A static Clawpilot-themed site with a **Word-enabled 3.3.2.6 configurable
+solution distribution**, a redacted native Word example, and the unchanged
+**Data Entry Testing** real-canvas walkthrough on revision **3.3.2.5**.
+The new Word example is a separate synthetic format-only test, not a Word
+version of that historical 4/5 assessment. There is no upload/chat backend, telemetry, tracking,
 external font or runtime service on this website.
 
 **Generation is fail-closed.** The matched outcome, counts, invocation total,
@@ -12,7 +13,45 @@ Missing inputs never fall back to the historical example, predict acceptance,
 manufacture screenshots or create review sign-offs. Existing hosting status
 does not mean this revision has been deployed or live-verified.
 
-## Primary six-stage journey
+## Word output and the downloadable solution
+
+[Word-enabled solution bundle](downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip) ·
+[Setup instructions](downloads/WORD-OUTPUT-SETUP.md) ·
+[Word template](downloads/current-review-v4.3.1.web.template.docx) ·
+[Redacted Word example](examples/word-output/review-example.docx) ·
+[Release hashes](downloads/word-output-release.json)
+
+The **existing reviewer**, not a separate agent, formats its finalized review
+using Word Online (Business), saves a run-specific DOCX beneath the existing
+`SolutionPackages\Results\solution-<safe-filename>` folder, grants the established
+requester Read on that report, then returns its real URL. No separate private
+Word-output storage is required. Source collection stays caller Invoker;
+output connectors use explicit configured owner/service bindings. Original
+TXT/JSON audit evidence and existing email policy are retained.
+
+The native synthetic-fixture regeneration preserved the review content and
+rendered as **two pages in Word for web and desktop Word**. The public example
+is a privacy-redacted derivative of that actual native output. Its two preview
+images are local renderings of the derivative, not fabricated native captures.
+The requester was also the existing site owner; this is not separate
+least-privilege-account evidence. Visual headings do not provide Word
+Heading 1/outline semantics.
+
+The bundle contains real reviewer and automation solution templates, the
+matching generic Word template and target-configuration tooling. **Configure
+and repack before import.** Neither the outer bundle nor the unconfigured
+`*.portable.template.zip` files are direct import inputs. Use your own
+connections, storage, requester policy and actually discovered Word template
+schema. Word Online (Business) licensing and policy approval are required.
+
+Fresh native exports contain the reviewer's current Word-enabled draft.
+The automatic Word definition is an explicitly derived, local-only candidate
+over the exported automatic baseline. **The demo's published agent and
+automatic flow were not updated with Word output.** No native automatic Word
+run, cross-tenant installation or production readiness is claimed by this
+download; target import and activation need their own acceptance.
+
+## Historical real-canvas six-stage journey
 
 1. **Native upload menu and confirmed row.** The genuine original canvas solution
    ZIP is uploaded directly to approved private Incoming storage.
@@ -145,15 +184,17 @@ separately guarded mail. Flow capabilities are not arbitrary model-controlled
 tools. Trusted internal exports are the limited scope, not hardened
 hostile-archive processing. No hosted Python/Azure worker is required.
 
-The generic setup, actual tool/topic reference and workflow architecture remain
-available on the homepage. A separate private document location and explicit
-connection/flow rebinding are required in another tenant; no refreshed installer
-or cross-tenant import/runtime acceptance is shipped.
+The setup, tool/topic reference and workflow architecture remain available on
+the homepage. The new distribution adds the deterministic presentation topic
+and existing reviewer's Word tool. All target connections and flow/template
+bindings require explicit configuration; the demo's private locations and
+connection instances are not shipped as working defaults.
 
 Browser **Print / Save as PDF** is a presentation option, tested for full content.
-Automated DOCX/PDF generation is **not implemented**. Optional Word Online
-(Business) formatting needs a controlled supported template, private resources,
-explicit owner/service connections, Premium licensing and policy checks.
+Native DOCX output is implemented in the existing reviewer draft/helper.
+Automated PDF generation is **not implemented**. Word Online (Business)
+formatting uses a controlled supported template, the existing Results folder,
+explicit owner/service connections, licensing and policy checks.
 Formatting cannot upgrade status, broaden access, change recipients or retry
 mail. Never weaken authentication, labels or sharing for conversion.
 
@@ -209,16 +250,17 @@ reports from a benchmark run. `complete-review.md` is generated locally, not a
 parent input. A missing native screenshot is a blocker, not a placeholder slot.
 
 Private visual reviews remain under `_private-hold`, never the public input
-directory. `check_public.py` requires **two independent review files**:
+directory. `check_public.py` requires **three separate hash-bound review files**:
 
 - `--image-review`: all eight historical image pins.
 - `--walkthrough-image-review`: all nine new image pins.
+- `--word-image-review`: both locally rendered redacted Word page pins.
 
 Each has `visualReviewComplete` set to literal `true` by the actual reviewer,
 and `images` containing exactly one `file`, `sha256`, `text` record per image.
 `file` can be a basename or exact corresponding relative public path; `text`
 is reviewed offline OCR, including an explicit empty string when appropriate.
-The tool never supplies sign-offs itself. Both sets are decoded, checked for
+The tool never supplies sign-offs itself. All sets are decoded, checked for
 metadata and screened against the same supplied private patterns. OCR and
 restricted patterns are never published.
 
@@ -226,10 +268,13 @@ restricted patterns are never published.
 
 Run from this `public-site` directory, using existing Python with Pillow,
 Playwright and pypdf. Tests create explicitly synthetic **private** fixtures
-under `_private-hold` and remove them; no public synthetic image is generated.
+under `_private-hold` and remove them. Unit fixtures never become public
+evidence; the separately reviewed public synthetic Word example has its own
+native provenance and explicit scope.
 
 ```powershell
 python tools\test_walkthrough.py
+python tools\test_word_release.py
 python tools\generate_content.py
 python tools\build_home.py
 python tools\build_walkthrough.py
@@ -245,7 +290,7 @@ directory and the parent's actual private review/pattern files:
 
 ```powershell
 python tools\qa_site.py --base-url http://127.0.0.1:4178/preview/ --capture-directory _private-hold\walkthrough-qa-01
-python tools\check_public.py --private-patterns _private-hold\private-patterns.json --image-review _private-hold\historical-image-review.json --walkthrough-image-review _private-hold\walkthrough-image-review.json
+python tools\check_public.py --private-patterns _private-hold\private-patterns.json --image-review _private-hold\historical-image-review.json --walkthrough-image-review _private-hold\walkthrough-image-review.json --word-image-review _private-hold\word-image-review.json
 python tools\make_manifest.py
 python tools\build_walkthrough.py --verify-only
 ```
@@ -259,8 +304,12 @@ current files, not just `content.json`.
 
 Only explicit public paths in `tools\public_inventory.py` may be screened or
 staged. The new component-report path set is selected from validated provenance,
-never directory globbing. No new archive is generated; the historical 14-file
-ZIP remains exact. `.gitattributes` preserves bytes across operating systems.
+never directory globbing. The historical 14-file ZIP remains exact. The new
+Word bundle and both DOCX downloads are recursively inspected, with exact
+asset/member hashes and an explicit reviewed structural-identifier inventory.
+Necessary component/document IDs are allowed only within the reviewed release
+contexts, never globally; private restriction patterns remain enforced.
+`.gitattributes` preserves bytes across operating systems.
 
 After parent final review, `tools\stage_site.py --repository` can produce an
 exact repository copy, and `tools\stage_site.py` an exact `_site` tree. Both
@@ -268,3 +317,7 @@ refuse existing targets and missing/stale approval, inputs or pins. They do not
 push or publish. The checked-in Pages workflow only stages that exact reviewed
 tree; missing matched-run evidence cannot be deployed through it. The parent
 alone owns publication, native runtime, email, screenshots and final review.
+For a new isolated repository stage, use
+`python tools\stage_site.py --repository --output _private-hold\word-release-stage`.
+The new Word manifest is mandatory for publication; old installer-exclusion
+flags cannot substitute for the actual reviewed solution files.

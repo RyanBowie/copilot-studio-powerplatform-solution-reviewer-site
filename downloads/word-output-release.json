@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "kind": "REVIEWED_WORD_OUTPUT_CONFIGURABLE_RELEASE",
+  "distributionVersion": "3.3.2.6",
+  "layoutVersion": "4.3.1",
+  "approvedPublicDerivatives": true,
+  "packageKind": "PORTABLE_DERIVED_CONFIGURE_BEFORE_IMPORT",
+  "evidence": {
+    "fixture": "synthetic",
+    "formatOnlyRegeneration": true,
+    "nativeGenerationVerified": true,
+    "wordWebPages": 2,
+    "desktopWordPages": 2,
+    "reviewContentPreserved": true,
+    "requesterReadGrantVerified": true,
+    "separateLeastPrivilegeAccountTested": false,
+    "publishedDemoAgentUpdated": false,
+    "automaticWordRunVerified": false,
+    "crossTenantInstallationVerified": false,
+    "wordOutlineHeadings": false
+  },
+  "files": {
+    "bundle": {
+      "path": "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+      "bytes": 202396,
+      "sha256": "26540297fcd6590845f4b1f32ab7a7278233a74c420c8c9843d6075e237cc849"
+    },
+    "template": {
+      "path": "downloads/current-review-v4.3.1.web.template.docx",
+      "bytes": 11106,
+      "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065"
+    },
+    "setup": {
+      "path": "downloads/WORD-OUTPUT-SETUP.md",
+      "bytes": 13358,
+      "sha256": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39"
+    },
+    "example": {
+      "path": "examples/word-output/review-example.docx",
+      "bytes": 12513,
+      "sha256": "f1915c05440a6c98bf8d6718169aa918dcea1540bc2b5b3b3427260a038f16ab"
+    },
+    "page1": {
+      "path": "examples/word-output/report-page-1.png",
+      "bytes": 174719,
+      "sha256": "961e40a90278ccc3558dff52cd2b5cd2ffaf4ed8e5f1cda87de5d00446fc3f3c"
+    },
+    "page2": {
+      "path": "examples/word-output/report-page-2.png",
+      "bytes": 157149,
+      "sha256": "53e666d38f0d3bd246dacd8005f1bda0e4dbea6a3f429c597ea9e6d65dbf7e98"
+    }
+  },
+  "bundleMembers": {
+    ".gitignore": {
+      "bytes": 151,
+      "sha256": "a3f9ee7c046c13135c5d64f7a4007e22a3ac166b141a602e499e6871192ce5a2"
+    },
+    "README.md": {
+      "bytes": 13358,
+      "sha256": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39"
+    },
+    "CHANGELOG.md": {
+      "bytes": 2140,
+      "sha256": "62ab4d5b6b4d1bb7ed98f27e16ce3f41dd377744a563f6076720f219a744754d"
+    },
+    "configuration.py": {
+      "bytes": 8809,
+      "sha256": "bc492ae8d6cadb15e8c28b5663874960a3cedcd722ed30934179da3aa11f220f"
+    },
+    "install.py": {
+      "bytes": 29280,
+      "sha256": "0ee797a155982822bb3f0b1247be25a1a67e0988b602211443e6262adc67e54e"
+    },
+    "resource_setup.py": {
+      "bytes": 14501,
+      "sha256": "fa3f32989566290efc8564a4ec97974e6a8be342dffad7eeed07b5b39674fe8b"
+    },
+    "target_api.py": {
+      "bytes": 13218,
+      "sha256": "b3acbc7582ad14aa23f43cee7137d99d4ff21e2721d5df36b1c99706055b7eb8"
+    },
+    "word_setup.py": {
+      "bytes": 5243,
+      "sha256": "bba482cd0201379c3a062aba6098179d45cc0dea8aa1c61bf045100f6d918cb9"
+    },
+    "target.example.json": {
+      "bytes": 1176,
+      "sha256": "6e11def7140c0ec01f5a04646183d380a4fefd7f840dfe4f30920765992836e4"
+    },
+    "sharepoint-schema.json": {
+      "bytes": 1177,
+      "sha256": "6841713262159ca6febc764027a2d2c5e265aa5ac2e3818516debaeb8bfe1b2f"
+    },
+    "requirements.txt": {
+      "bytes": 18,
+      "sha256": "f2def2384a56ae40e72c734b642cd0ef97f8fe420b1f1ab6cd63757e0eedb410"
+    },
+    "kernel-selector.json": {
+      "bytes": 3782,
+      "sha256": "5aea9bebd04911dba7746a0080e2925cf44b6c668691e5b23dbafd04b7229bc9"
+    },
+    "reviewer.settings.template.json": {
+      "bytes": 782,
+      "sha256": "8bc3c8d767e22c26fdeab4895caa5a205177c4c50f289ef354be30fbbc59098e"
+    },
+    "automation.settings.template.json": {
+      "bytes": 1143,
+      "sha256": "a30e42b1695dde6f74d1a233697b43c786d65433a7b95376839198a0ab794ae8"
+    },
+    "install-manifest.json": {
+      "bytes": 19456,
+      "sha256": "d0c052a891a857d6c8593cb8550efb2187cd10e0f5c6b92e7a3d7bff9a27d1c2"
+    },
+    "VALIDATION.json": {
+      "bytes": 2591,
+      "sha256": "4e3ff5346cca1d54af940fe30156b5fdf5b9eacfe828b4783b619ce3d3090f52"
+    },
+    "current-review-v4.3.1.web.template.docx": {
+      "bytes": 11106,
+      "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065"
+    },
+    "psr_PowerPlatformSolutionReviewer.portable.template.zip": {
+      "bytes": 87911,
+      "sha256": "b24130d77803a27570f326cbeb86040c854db028a0e59aaed685f58cb6a2ff96"
+    },
+    "psr_PowerPlatformSolutionAutomation.portable.template.zip": {
+      "bytes": 75013,
+      "sha256": "e1807a258cd39ac49cbc27deaaad921667a0be4e28b47f3020f41361011e9811"
+    },
+    "FILES.json": {
+      "bytes": 3367,
+      "sha256": "c4c1e3ed3b4be2dfceec22429e60e1be7202fd5eb602547e81d6ad1cfd522642"
+    }
+  },
+  "structuralIdentifiers": [
+    "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+    "41d42054-d4cb-4e90-b922-2b16b37fe379",
+    "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+    "abf4d574-adae-f111-aaac-7ced8d9aa818"
+  ],
+  "structuralIdentifierMembers": {
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::install-manifest.json": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::customizations.xml": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::solution.xml": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-Collectevidence-ABF4D574-ADAE-F111-AAAC-7CED8D9AA818.json": [
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-CurrentreviewWordren-0EF45BEC-B8B1-F111-AAAB-7C1E5264FAA2.json": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::Assets/botcomponent_workflowset.xml": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CollectReviewEvidence/data": [
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CreateCurrentReviewWord/data": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionReviewer.portable.template.zip::botcomponents/psr_PowerPlatformSolutionReviewer.topic.EndofConversation/data": [
+      "41d42054-d4cb-4e90-b922-2b16b37fe379"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::customizations.xml": [
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::solution.xml": [
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+    ],
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip::psr_PowerPlatformSolutionAutomation.portable.template.zip::Workflows/PowerPlatformSolutionReviewer-SharePointautomaticr-7BDC877A-BAAE-F111-AAAC-7CED8D9AA818.json": [
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+    ]
+  }
+}

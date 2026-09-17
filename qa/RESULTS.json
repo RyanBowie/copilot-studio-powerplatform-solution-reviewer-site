@@ -1,30 +1,31 @@
 {
   "status": "PASS",
-  "scope": "MATCHED_CANVAS_WALKTHROUGH_LOCAL_SITE_QA",
+  "scope": "WORD_RELEASE_AND_MATCHED_WALKTHROUGH_LOCAL_QA",
   "historicalQaInherited": false,
   "runtimeActionsPerformed": false,
   "capturesPublished": false,
-  "contentSourceSha256": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
+  "contentSourceSha256": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
   "exampleBundleSha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
   "walkthroughProvenanceSha256": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
+  "wordReleaseSha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
   "validatedFileSha256": {
-    "index.html": "323fcfe533923bb6e5eb89c8c7db4b2cce77eafc61e8dc53f15a6ea195a9cc16",
+    "index.html": "7a14fbf39c50b8405dae23644572879d166628f12ff2c6c59e7365a1e231efd5",
     "site.css": "2d60528bdfff7dd360b2cb73453b93eaaa418fb2e61da3f8b0d1c7fb245617ef",
-    "layout.css": "f9398e43dd011f8a39a76e5cdbf91a707983f21f6cd0448230f434ed2d5c205b",
+    "layout.css": "25499fe6998db3f5cf099e485b0223844d54587adf946ca0d087dc702b44cfaf",
     "site.js": "be58941bdcf9601f15534dcf0da5b2199950afa2309495440f1e7a2be118648d",
     "example.css": "a3743faac9a44eb87c7123ad176e5a5ac8f39f2bcbcd82bc211b0fa52dd96e4b",
     "example.js": "e1cacc4dd8aa43684edda297849aae6e10899f56c25ef6e1474a3a46d7de8a66",
     "full-example.html": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
-    "content.json": "921671659f8a401fa2aa8727b13e49b4b390f1bedc4ac84896e1da3a2050ee21",
-    "content.js": "c8863286000a5faef24bb8c32fbd4988270833a45c2c1e0fc0a0cc1884bf9c15",
-    "reference.js": "51b72aa4324277bc3cfc438afe1dd90cac64d29629fbb97585d3f81a27c83e92",
-    "README.md": "3c66e8bc8b05810bd7b480df953b5a233ef0a521fe2865af2338aa555e2376be",
-    "reference/agent-instructions.txt": "8d2c59b1571e05601b4c3152624e78b52c9ae26188f1f41cbf98219258ee28f3",
-    "reference/topic-tool-source.json": "51cbd9b03a4bc5ad27c4b37e2fc70b2d562ae279a6dbc2c4cdd80f8903c0d233",
+    "content.json": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
+    "content.js": "166ee2ac94c0e814a553a5a99294a135873c0da271c6ff5a63d6369a8e94bb91",
+    "reference.js": "7c208ba85a05549592f12f2fdb2c80316845c82415cf6b247b101d9c4cd6a3c6",
+    "README.md": "860ab70942c7c2e3496592001cc4764fc8b4ca2936dad60b1dd3a10cf98b7e50",
+    "reference/agent-instructions.txt": "9c317616ef1a002ab4fd363a62acf75912712aeffe1f63a967000ffe194368c7",
+    "reference/topic-tool-source.json": "e34c11022b4e7c77847a5548fdda8dd58f16280210610301970d910b33ead31a",
     "downloads/real-canvas-example-manifest.json": "7f728346eaa635d2dc2d418109d841bf5c1872d9b31fd0333c68fcddbe9effcc",
     "downloads/real-canvas-review-example.zip": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "follow-up.html": "76179ea4c1d0d035d1c49c6262ff1d07f863e7901c890d3a4650ee21fdf1d97e",
+    "follow-up.html": "5ab3d407dff996898542c76c2677ceadfe1b9f9bd438443bfedcc4aababc3ed9",
     "examples/follow-up/results.json": "cb16f6b409680d67b4ed776ace1e74de4927cf38c2c388ab684109f9bfec243c",
     "examples/follow-up/complete-review.txt": "fab3a88488feda525294759614e7536de60d01212fe2ccfc7828acb765e13cc0",
     "examples/follow-up/provenance.json": "e2c7a45b7a9fad2c1f367f34e69a681e68aa627425de01d4da960df91bbad3cd",
@@ -42,7 +43,7 @@
     "examples/real-canvas/real-canvas-coverage.txt": "26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e",
     "examples/real-canvas/public-provenance.json": "63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff",
     "examples/real-canvas/user-capture-provenance.v1.json": "49d09e1ab46e79fc747c83471b182d30ab62740f4772de1cc81d835b0af64e79",
-    "walkthrough.html": "d41cdc71739c7c919bfe262c51b762ec9f2ff5dfc5db5dc8121b5f9847728726",
+    "walkthrough.html": "0db7754f1197ff43dc0f5406606e97f11002d17f7eb8b9fd1395826a1e84b129",
     "examples/walkthrough-325/provenance.json": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
     "examples/walkthrough-325/complete-review.md": "08e33bc40fc0a0d24ffe7b3f2cd69b6b9b7edcd07a28980ec7d0d846cea7ceca",
     "examples/walkthrough-325/native-upload-menu.png": "4120013b7e7a8885f38de714312dc095375770b8ba6a92822d381885985fdb00",
@@ -61,21 +62,30 @@
     "examples/walkthrough-325/C4.txt": "0aa1d6bbdcbe1664fefdaa5782f18ce8e484b8822c0500188b25babb9cc7ecea",
     "examples/walkthrough-325/inventory.json": "6a2eb942b46676b97681bf4aa7f81a78207ea856a69afcee84986247b9d32f10",
     "examples/walkthrough-325/coverage.json": "e752835c3c46957888c725d83d6ecbc7d54685a189c2720510786b38f2753edd",
+    "downloads/word-output-release.json": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
+    "downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip": "26540297fcd6590845f4b1f32ab7a7278233a74c420c8c9843d6075e237cc849",
+    "downloads/current-review-v4.3.1.web.template.docx": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065",
+    "downloads/WORD-OUTPUT-SETUP.md": "5d769ee43ef1404f4d667ef4b7d67afca5db859e85ee73582963d401dba45c39",
+    "examples/word-output/review-example.docx": "f1915c05440a6c98bf8d6718169aa918dcea1540bc2b5b3b3427260a038f16ab",
+    "examples/word-output/report-page-1.png": "961e40a90278ccc3558dff52cd2b5cd2ffaf4ed8e5f1cda87de5d00446fc3f3c",
+    "examples/word-output/report-page-2.png": "53e666d38f0d3bd246dacd8005f1bda0e4dbea6a3f429c597ea9e6d65dbf7e98",
     ".gitignore": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
     ".gitattributes": "80a9700138d64d1a6b2f986c40dbda698362329d4264d5345012f3881fd49ac4",
     ".github/workflows/pages.yml": "1eb1850c8ce9b6085e39808ffa51c8d21bfc146bc217fe6e769ea2ef95f62180",
-    "tools/build_home.py": "034fdbfff9ef6ac21a6b98aee0a5ca84d6c96df56a3902b19fd79558d189cdbb",
-    "tools/generate_content.py": "57845bdc5c187576b50e70709d9fab9bd6964121253dab8fa8ad654c6e8188ac",
+    "tools/build_home.py": "47072bcb596a326dbec5770914d4317c9cb64d7a5de0c4812ee74b45bd6c295d",
+    "tools/generate_content.py": "f52df6ddd61dc44155c0b48bec19fa7da5006ead6e770991926e9a859e659a58",
     "tools/prepare_real_example.py": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
-    "tools/public_inventory.py": "f6cc2fb7e792054230533241ca6c916754287a6c29267c25ad845eb487ee9bf2",
-    "tools/check_public.py": "cb8887f5e54a83d6c6671a7693e539f21a982743ea16c9769fede68136fe3699",
-    "tools/qa_site.py": "ed1e699194fde0bd65c453996ec923ccdcf54509e8c0807ebd24e42246602432",
-    "tools/make_manifest.py": "238f1279246e5742d6ee6a6b6549db9c3e75fbeb09d12c69b9a6861de6f6b84d",
-    "tools/stage_site.py": "9b3f62c12c63b2137b06e7fea4507be1d2f9c9caaf525164f489551ac8eb5534",
+    "tools/public_inventory.py": "102911bcd517ab61841a8f1aec96bc60d196cc469aa1a98e5acf86eabcda9c4f",
+    "tools/check_public.py": "178e3a972596abd38d5bde0304fc386b27a9ed975104c7489a14f4be097b2df1",
+    "tools/qa_site.py": "eda6d9c30899da3744caa19315fbfedb23d304363f4c463a5903a30694e94199",
+    "tools/make_manifest.py": "479fb06204dcada72d4c0d065605cd51c40c4eca15e6f91149c8dc8717bb0390",
+    "tools/stage_site.py": "0a9e656551dc61d512db12e0d629c92c78ae5d24465e90a4d160551a63895fe2",
     "tools/serve_preview.py": "1251cef9e759cadc71bc93659cc38423277110e058f04140bef4038d3d4d9453",
-    "tools/build_followup.py": "eddcde6f5c0bdd188a790dddcb636faf06e41f44b87feae897325e39f71137f7",
-    "tools/build_walkthrough.py": "79fbb3d96ee6bc34c637d7a2a6cd7b2715149f220be7513e9c09ea12cc4fb3a6",
-    "tools/test_walkthrough.py": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8"
+    "tools/build_followup.py": "d277ae5b33fde87975e43e48fea5b48ebdb476b3115a7439971944aa941142ee",
+    "tools/build_walkthrough.py": "3f4f491ff4abd4e5e6c9b1582b2998719aa867130c4f9f0e945aebc5c668806e",
+    "tools/test_walkthrough.py": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8",
+    "tools/word_release.py": "9ca9d3f1859a5b75885256d9050ca0ffd2f86c90cd9587a72c077eae09cab2b3",
+    "tools/test_word_release.py": "ba248401c9e4c99fec7016d3d69f508ee30b34b85e831a8cc0d25c91f404827b"
   },
   "cases": [
     {
@@ -103,7 +113,11 @@
       "result": "PASS"
     },
     {
-      "check": "Installer remains excluded",
+      "check": "Word-enabled distribution and public example match the complete reviewed release",
+      "result": "PASS"
+    },
+    {
+      "check": "Downloadable topic/tool reference includes the actual Word-enabled sources",
       "result": "PASS"
     },
     {
@@ -123,7 +137,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: actual journey followed immediately by complete-output entry",
+      "check": "1440-light: Word release leads; unchanged real journey still precedes its complete report",
       "result": "PASS"
     },
     {
@@ -207,15 +221,15 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: only the approved real-example ZIP",
+      "check": "1440-light: only the two reviewed evidence/distribution ZIPs",
       "result": "PASS"
     },
     {
-      "check": "1440-light: full output link above fold",
+      "check": "1440-light: Word solution download navigation above fold",
       "result": "PASS"
     },
     {
-      "check": "1440-light: first actual capture begins in initial viewport",
+      "check": "1440-light: Word-output headline begins in the initial viewport",
       "result": "PASS"
     },
     {
@@ -335,7 +349,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: actual journey followed immediately by complete-output entry",
+      "check": "1440-dark: Word release leads; unchanged real journey still precedes its complete report",
       "result": "PASS"
     },
     {
@@ -419,15 +433,15 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: only the approved real-example ZIP",
+      "check": "1440-dark: only the two reviewed evidence/distribution ZIPs",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: full output link above fold",
+      "check": "1440-dark: Word solution download navigation above fold",
       "result": "PASS"
     },
     {
-      "check": "1440-dark: first actual capture begins in initial viewport",
+      "check": "1440-dark: Word-output headline begins in the initial viewport",
       "result": "PASS"
     },
     {
@@ -547,7 +561,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: actual journey followed immediately by complete-output entry",
+      "check": "390-light: Word release leads; unchanged real journey still precedes its complete report",
       "result": "PASS"
     },
     {
@@ -631,15 +645,15 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: only the approved real-example ZIP",
+      "check": "390-light: only the two reviewed evidence/distribution ZIPs",
       "result": "PASS"
     },
     {
-      "check": "390-light: full output link above fold",
+      "check": "390-light: Word solution download navigation above fold",
       "result": "PASS"
     },
     {
-      "check": "390-light: first actual capture begins in initial viewport",
+      "check": "390-light: Word-output headline begins in the initial viewport",
       "result": "PASS"
     },
     {
@@ -759,7 +773,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: actual journey followed immediately by complete-output entry",
+      "check": "390-dark: Word release leads; unchanged real journey still precedes its complete report",
       "result": "PASS"
     },
     {
@@ -843,15 +857,15 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: only the approved real-example ZIP",
+      "check": "390-dark: only the two reviewed evidence/distribution ZIPs",
       "result": "PASS"
     },
     {
-      "check": "390-dark: full output link above fold",
+      "check": "390-dark: Word solution download navigation above fold",
       "result": "PASS"
     },
     {
-      "check": "390-dark: first actual capture begins in initial viewport",
+      "check": "390-dark: Word-output headline begins in the initial viewport",
       "result": "PASS"
     },
     {
@@ -971,7 +985,7 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: actual journey followed immediately by complete-output entry",
+      "check": "320-light: Word release leads; unchanged real journey still precedes its complete report",
       "result": "PASS"
     },
     {
@@ -1055,15 +1069,15 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: only the approved real-example ZIP",
+      "check": "320-light: only the two reviewed evidence/distribution ZIPs",
       "result": "PASS"
     },
     {
-      "check": "320-light: full output link above fold",
+      "check": "320-light: Word solution download navigation above fold",
       "result": "PASS"
     },
     {
-      "check": "320-light: first actual capture begins in initial viewport",
+      "check": "320-light: Word-output headline begins in the initial viewport",
       "result": "PASS"
     },
     {
@@ -1291,7 +1305,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete project instruction reference retained",
+      "check": "Complete current Word-enabled project instruction reference retained",
       "result": "PASS"
     },
     {
@@ -1299,7 +1313,43 @@
       "result": "PASS"
     },
     {
-      "check": "Optional document formatter not passed off as implemented",
+      "check": "Implemented Word output is distinct from unimplemented automated PDF",
+      "result": "PASS"
+    },
+    {
+      "check": "Word output and real solution download are prominent",
+      "result": "PASS"
+    },
+    {
+      "check": "Word proof preserves fixture, recipient and installation limitations",
+      "result": "PASS"
+    },
+    {
+      "check": "Both public Word pages are visible without pretending they are native captures",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: bundle",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: template",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: setup",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: example",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: page1",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual Word-release download matches its reviewed hash: page2",
       "result": "PASS"
     },
     {
@@ -1343,39 +1393,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-2",
-      "result": "PASS"
-    },
-    {
       "check": "Matched reader anchor #main-section-10",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-9",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-4",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c1",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-8",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c4",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c2",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-1",
       "result": "PASS"
     },
     {
@@ -1383,7 +1401,11 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-3",
+      "check": "Matched reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-4",
       "result": "PASS"
     },
     {
@@ -1391,7 +1413,11 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #inventory",
+      "check": "Matched reader anchor #c3",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c1",
       "result": "PASS"
     },
     {
@@ -1399,7 +1425,15 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-7",
+      "check": "Matched reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-9",
       "result": "PASS"
     },
     {
@@ -1407,7 +1441,23 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #c3",
+      "check": "Matched reader anchor #main-section-2",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c2",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c4",
       "result": "PASS"
     },
     {
@@ -1667,7 +1717,31 @@
       "result": "PASS"
     },
     {
-      "check": "Nonpublic/holding path blocked",
+      "check": "Declared current local resource: downloads/word-output-release.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/current-review-v4.3.1.web.template.docx",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/WORD-OUTPUT-SETUP.md",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/word-output/review-example.docx",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/word-output/report-page-1.png",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: examples/word-output/report-page-2.png",
       "result": "PASS"
     },
     {
@@ -1683,11 +1757,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-2",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #user-provenance",
+      "check": "Nonpublic/holding path blocked",
       "result": "PASS"
     },
     {
@@ -1695,43 +1765,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-9",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-4",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-5",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-8",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-1",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #main",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-3",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-6",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #inventory",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #coverage",
       "result": "PASS"
     },
     {
@@ -1739,11 +1773,55 @@
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #main-section-2",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #provenance",
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #main-section-5",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #component",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #inventory",
       "result": "PASS"
     },
     {
@@ -1788,6 +1866,14 @@
     },
     {
       "check": "No-JavaScript image inspection and main reader links",
+      "result": "PASS"
+    },
+    {
+      "check": "Word example and configure-before-import bundle are accessible without JavaScript",
+      "result": "PASS"
+    },
+    {
+      "check": "No-JavaScript source blocks match the complete current reference downloads",
       "result": "PASS"
     },
     {

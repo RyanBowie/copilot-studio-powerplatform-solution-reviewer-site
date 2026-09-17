@@ -27,3 +27,22 @@
 @media (max-width: 760px) {
   .awaiting-capture { min-height: 160px; padding: 24px; }
 }
+.word-release h1 {
+  max-width: 26ch;
+  font-size: clamp(2.4rem, 4.8vw, 4.25rem);
+  line-height: 1.08;
+}
+.word-pages { margin-top: 2rem; align-items: start; }
+.word-page { margin: 0; }
+.word-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 36rem;
+  object-fit: contain;
+  background: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  border-radius: 0.625rem;
+}
+.word-page figcaption { margin-top: 0.5rem; color: var(--cp-text-muted); }
+.word-checksum { display: block; overflow-wrap: anywhere; }

@@ -6,6 +6,7 @@ import re
 
 from build_followup import coverage_section
 from build_walkthrough import SITE, PREFIX, PROVENANCE, MARKDOWN, PASS_IDS, verify, png_dimensions, primary_content, combined_target
+from word_release import verify as verify_word_release, section as word_section, formats_section, PATHS
 
 
 def build(p, site=SITE):
@@ -13,6 +14,9 @@ def build(p, site=SITE):
     old = (site / "index.html").read_text(encoding="utf-8")
     head = old.split("<body>")[0]
     head = re.sub(r"<title>.*?</title>", f'<title>Matched {p["accepted"]}/5 canvas review · Power Platform Solution Reviewer</title>', head, flags=re.S)
+    release = verify_word_release(site)
+    if release:
+        head = re.sub(r"<title>.*?</title>", "<title>Word reports and solution download · Power Platform Solution Reviewer</title>", head, flags=re.S)
 
     def section(name):
         match = re.search(r'<section\b[^>]*\bid="' + name + r'"[^>]*>.*?</section>', old, re.S)
@@ -74,8 +78,81 @@ def build(p, site=SITE):
     formats = section("report-formats").replace("TXT/JSON today.", "TXT/JSON authority. Full Markdown reader.")
     if "The complete Markdown and HTML reader" not in formats:
         formats = formats.replace("The reader supports browser Print / Save as PDF.", "The complete Markdown and HTML reader preserve authoritative TXT/JSON content. The reader supports browser Print / Save as PDF.")
+    setup = section("setup")
+    workflows = section("workflows")
+    if release:
+        page = page.replace(
+            '<main id="main">',
+            '<main id="main">' + word_section(release, hero=True),
+            1,
+        ).replace(
+            '<h1 id="top">A real upload.<br><span>A review you can inspect.</span></h1>',
+            '<h2 id="walkthrough-title">A real upload.<br><span>A review you can inspect.</span></h2>',
+        ).replace(
+            'id="showcase" aria-labelledby="top"', 'id="showcase" aria-labelledby="walkthrough-title"',
+        ).replace(
+            '<small>Matched improved run · experimental</small>', '<small>Word output · experimental</small>',
+        ).replace(
+            '<nav aria-label="Main navigation">',
+            '<nav aria-label="Main navigation"><a href="#word-output">Word output</a><a href="#solution-download">Download</a>',
+        ).replace('<a href="#full-example">Full report</a>', "")
+        formats = formats_section()
+        setup = setup.replace(
+            '<strong>No installer is included in this public preview.</strong> The outline below is generic operator guidance. Obtain separately approved source and packages; target installation and activation require their own authorization and validation.',
+            f'<strong>A configure-before-import Word solution bundle is included.</strong> <a href="{PATHS["setup"]}">Follow its complete setup instructions</a> to produce target-specific solution ZIPs. The outer bundle and unconfigured templates are not direct import inputs; no cross-tenant installation is claimed.',
+        ).replace("Bind the five target connections", "Bind the six target connections").replace(
+            "SharePoint, OneDrive for Business, Office 365 Users, Microsoft Copilot Studio and Office 365 Outlook.",
+            "SharePoint, OneDrive for Business, Office 365 Users, Microsoft Copilot Studio, Office 365 Outlook and Word Online (Business).",
+        )
+        if 'id="word-template-setup"' not in setup:
+            setup = setup.replace(
+                "<li><h3>Configure and import the reviewer</h3>",
+                f'<li id="word-template-setup"><h3>Upload and bind the Word template</h3><p>Use the exact <a href="{PATHS["template"]}">included template</a> in the configured output service user\'s supported template storage. Discover its actual file/drive and Word control schema; do not copy demo IDs or guess field keys. Configure the existing Results destination. Word reports use a solution-filename folder and report-item-only requester Read, not a separate private Word-output folder.</p></li><li><h3>Configure and import the reviewer</h3>',
+            )
+        reference = reference.replace(
+            "<strong>Actual registered tool:</strong>", "<strong>Evidence tool:</strong>",
+        ).replace(
+            "Rules 3.3.1 instruction text, pinned to its recorded publication.",
+            "Word-enabled reviewer draft instruction reference, with target-specific bindings omitted.",
+        ).replace(
+            "Links do not grant access.",
+            "Email links do not themselves grant access. Word delivery separately grants Read on the generated report before returning its link.",
+        ).replace(
+            "current collector evidence JSON → generated detailed interactive answer.",
+            "current collector evidence JSON → finalized detailed review → formatted Word report and requester-accessible link.",
+        ).replace(
+            "COMPONENT passes then MAIN.", "AI COMPONENT passes, then deterministic MAIN assembly.",
+        ).replace(
+            "Leading <code>PSR_COMPONENT_INPUT_V3</code> or <code>PSR_REVIEW_ONLY_V1</code>.",
+            "Leading <code>PSR_REVIEW_ONLY_V1</code>. Component assessment requests remain with the primary generative agent.",
+        ).replace(
+            "Supplied evidence text ≤60,100 characters. Prefixes route data; the external flow enforces identity.",
+            "Supplied acquisition metadata and flow-accepted canonical component records, within the topic's current bounds. Prefixes are not authentication.",
+        ).replace(
+            "<code>ResponseContract</code> + <code>result</code>. COMPONENT → one <code>PSR_COMPONENT_V3</code> JSON object. MAIN → ten-section synthesis.",
+            "Deterministic ten-section MAIN assembly. No new model generation or regrading of accepted component assessments in this topic.",
+        )
+        if 'id="word-format-topic"' not in reference:
+            reference = reference.replace('<div class="topic-grid">', '''<div class="topic-grid">
+<article class="card topic-card" id="word-format-topic"><p class="mono">topics\\FormatCurrentReviewPresentation.mcs.yml</p><h4>Format current review presentation</h4><dl><dt>Trigger</dt><dd>Internal Word-delivery route after the review is finalized; not a new assessment.</dd><dt>Inputs</dt><dd>The complete current review and its established context.</dd><dt>Output</dt><dd>Deterministic <code>PSR_PRESENTATION_READER_V4_3</code> presentation JSON for the supported Word controls.</dd><dt>Guards</dt><dd>Retains exact source meaning; the helper validates the model and source before creating the report. No model-selected recipients.</dd></dl></article>''', 1)
+        for identifier, filename in (
+                ("instructions-source", "agent-instructions.txt"),
+                ("topics-source", "topic-tool-source.json")):
+            text = (site / "reference" / filename).read_text(encoding="utf-8")
+            reference, count = re.subn(
+                r'(<(pre|code)\b[^>]*\bid="' + identifier + r'"[^>]*>).*?(</\2>)',
+                lambda match: match[1] + html.escape(text) + match[3],
+                reference, flags=re.S,
+            )
+            if count != 1:
+                raise ValueError("Expected one complete no-JavaScript reference block: " + identifier)
+        if 'id="word-tool-reference"' not in reference:
+            reference = reference.replace("</tbody>", '''<tr id="word-tool-reference"><th scope="row">Existing reviewer Word tool</th><td><code>CreateCurrentReviewWord</code> / <code>InvokeFlowTaskAction</code>, called after the current review is finalized. The internal <code>FormatCurrentReviewPresentation</code> topic creates its deterministic presentation model.</td><td>Topic-only tool, exact-source validation, configured owner/service output connections. Source acquisition remains caller Invoker. No separate agent or new assessment.</td></tr>
+<tr><th scope="row">Word Online (Business) and report delivery</th><td><code>CreateFileItem</code> populates the supported Word template; SharePoint saves the real DOCX, grants report-item Read to the established requester, and returns its URL.</td><td>Rebind the actual target template schema and connections. Unique report filenames preserve earlier runs. The public example proves one synthetic format-only run, not automatic Word delivery or target installation.</td></tr></tbody>''', 1)
+        if 'id="word-workflow-extension"' not in workflows:
+            workflows = workflows.replace("</section>", '<div class="wrap"><p class="notice" id="word-workflow-extension"><strong>Word-enabled delivery extension:</strong> finalized review &rarr; deterministic presentation &rarr; Word template &rarr; existing Results/solution-filename folder &rarr; requester report Read &rarr; usable link. The earlier real-solution screenshots are unchanged historical evidence; the new native Word proof is a separate synthetic test.</p></div></section>')
     footer = '''</main><footer class="wrap site-footer"><p><strong>Power Platform Solution Reviewer</strong><br>Experimental community PoC; no Microsoft endorsement.</p><p>No uploads, chat backend, telemetry or external fonts.<br><a href="README.md">Site notes</a> · <a href="#top">Back to top ↑</a></p><p id="hosting-note"></p></footer><dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title"><div class="viewer-toolbar"><h2 id="image-viewer-title">Reviewed matched native image</h2><div><button class="small-button" id="viewer-zoom" type="button" aria-pressed="false">Actual size</button><button class="small-button" id="viewer-close" type="button" autofocus>Close ×</button></div></div><p class="caption" id="viewer-caption"></p><div class="viewer-canvas" id="viewer-canvas" tabindex="0" role="region" aria-label="Scrollable full-resolution reviewed image"></div><p class="caption">Unchanged reviewed derivative. <a id="viewer-file" download>Download full-size image</a></p></dialog><div id="copy-status" class="visually-hidden" role="status" aria-live="polite"></div></body></html>'''
-    return head + page + review_scope + history + coverage_section() + formats + section("workflows") + reference + section("setup") + boundaries + footer
+    return head + page + review_scope + history + coverage_section() + formats + workflows + reference + setup + boundaries + footer
 
 
 def main():

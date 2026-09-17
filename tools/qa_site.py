@@ -22,6 +22,7 @@ from build_walkthrough import (
     normalized_text, extract_markdown, primary_content, combined_target, PREFIX as WALKTHROUGH_PREFIX,
     PROVENANCE as WALKTHROUGH_PROVENANCE, MARKDOWN, IMAGE_ROLES,
 )
+from word_release import verify as verify_word_release, summary as word_summary, MANIFEST as WORD_MANIFEST, PATHS as WORD_PATHS, QA_SCOPE
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -32,6 +33,7 @@ captures = args.capture_directory.resolve()
 if urlparse(args.base_url).hostname != "127.0.0.1" or not captures.is_relative_to(SITE / "_private-hold"):
     raise SystemExit("Only a local preview and owned private capture directory are allowed.")
 walkthrough = verify_walkthrough()
+word = verify_word_release(required=True)
 verify_outputs(walkthrough)
 walkthrough_rows = walkthrough_documents(walkthrough)
 target_status = combined_target(walkthrough)
@@ -54,11 +56,12 @@ os.environ["TEMP"] = os.environ["TMP"] = str(storage)
 tempfile.tempdir = str(storage)
 c = json.loads((SITE / "content.json").read_text(encoding="utf-8"))
 e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
-result = {"status": "PENDING", "scope": "MATCHED_CANVAS_WALKTHROUGH_LOCAL_SITE_QA",
+result = {"status": "PENDING", "scope": QA_SCOPE,
           "historicalQaInherited": False, "runtimeActionsPerformed": False, "capturesPublished": False,
           "contentSourceSha256": hashlib.sha256((SITE / "content.json").read_bytes()).hexdigest(),
           "exampleBundleSha256": e["bundle"]["sha256"],
           "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
+          "wordReleaseSha256": hashlib.sha256((SITE / WORD_MANIFEST).read_bytes()).hexdigest(),
           "validatedFileSha256": {name: hashlib.sha256((SITE / name).read_bytes()).hexdigest()
                                  for name in ALL if name not in {"qa/RESULTS.json", "PRIVACY-REPORT.json", MANIFEST}},
           "cases": [], "externalRequests": [], "errors": []}
@@ -97,7 +100,13 @@ try:
           "Full Markdown roundtrips every authoritative report byte, including footer, JSON, BOM and line endings")
     check(True, "All fourteen approved published files verified; four complete TXT pins and eight image inputs unchanged")
     check((SITE / "examples/real-canvas/real-canvas-coverage.txt").stat().st_size == 58939, "Full 58,939-byte coverage retained")
-    check(not c["downloads"]["installerIncluded"], "Installer remains excluded")
+    check(c["downloads"]["installerIncluded"] and c.get("wordOutput") == word_summary(word),
+          "Word-enabled distribution and public example match the complete reviewed release")
+    reference = json.loads((SITE / "reference/topic-tool-source.json").read_text(encoding="utf-8"))
+    reference_text = json.dumps(reference)
+    check(all(value in reference_text for value in
+              ("CreateCurrentReviewWord", "FormatCurrentReviewPresentation", "PSR_PRESENTATION_READER_V4_3")),
+          "Downloadable topic/tool reference includes the actual Word-enabled sources")
     check(c["hosting"]["liveHttpVerified"] and c["hosting"]["repositoryApiVerified"] and c["hosting"]["pagesConfigured"], "Verified existing public hosting replaces stale planned-state flags")
     escaped = render_text('<script>untrusted()</script>\nA & B <tag>\n', "main")
     check("<script>" not in escaped and "&lt;script&gt;" in escaped, "Report source is escaped, not executable markup")
@@ -118,7 +127,7 @@ try:
             page.goto(args.base_url + "?scoutTheme=" + theme, wait_until="networkidle")
             check(page.locator("html").get_attribute("data-theme") == theme, label + ": homepage theme")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": homepage no overflow")
-            check(page.locator("main > section").evaluate_all("(nodes)=>nodes.slice(0,2).map(n=>n.id).join(',')") == "showcase,full-example", label + ": actual journey followed immediately by complete-output entry")
+            check(page.locator("main > section").evaluate_all("(nodes)=>nodes.slice(0,3).map(n=>n.id).join(',')") == "word-output,showcase,full-example", label + ": Word release leads; unchanged real journey still precedes its complete report")
             check(page.locator("figure.screenshot img").count() == 9, label + ": exact nine matched native derivatives")
             check(page.locator("figure.screenshot").evaluate_all("(nodes)=>nodes.map(n=>n.dataset.imageRole)") == list(IMAGE_ROLES), label + ": all matched image roles in the agreed presentation order")
             check(page.locator(".journey-number").all_text_contents() == ["01", "02", "03", "04", "05", "06"], label + ": upload, trigger, agent, results, email and open report are six ordered stages")
@@ -145,10 +154,13 @@ try:
             check("Owner Inbox receipt and the matching protected-report link verified" in page.locator("#example-caveat").text_content(), label + ": actual receipt and protected-report proof beside primary example")
             check("Forwarded corporate receipt is not established" in page.locator("#delivery-boundary").text_content(), label + ": owner receipt does not imply corporate forwarding receipt")
             check("no-email" in improvement.text_content() and improvement.locator("tbody tr").count() == 11, label + ": both no-email benchmarks and all 11 historical comparisons remain distinct")
-            check(set(page.locator('a[href$=".zip"]').evaluate_all("(nodes)=>nodes.map(n=>n.getAttribute('href'))")) == {e["bundle"]["path"]}, label + ": only the approved real-example ZIP")
-            box = page.locator("[data-full-example-link]").bounding_box()
-            check(box["y"] + box["height"] < height, label + ": full output link above fold")
-            check(page.locator(".screenshot-journey img").first.bounding_box()["y"] < height - 24, label + ": first actual capture begins in initial viewport")
+            check(set(page.locator('a[href$=".zip"]').evaluate_all("(nodes)=>nodes.map(n=>n.getAttribute('href'))"))
+                  == {e["bundle"]["path"], WORD_PATHS["bundle"]},
+                  label + ": only the two reviewed evidence/distribution ZIPs")
+            box = page.locator('nav a[href="#solution-download"]').bounding_box()
+            check(box["y"] + box["height"] < height, label + ": Word solution download navigation above fold")
+            check(page.locator("#word-output h1").bounding_box()["y"] < height - 24,
+                  label + ": Word-output headline begins in the initial viewport")
             page.evaluate("async()=>{for(const i of document.images){i.loading='eager';await i.decode();}}")
             page.evaluate("scrollTo(0,0)")
             if width != 320:
@@ -202,9 +214,24 @@ try:
             check(page.evaluate("document.activeElement.getAttribute('href')") == href, "Viewer returns keyboard focus " + str(index + 1))
         page.locator("#instructions-details summary").focus()
         page.keyboard.press("Enter")
-        check(page.locator("#instructions-source").text_content().startswith("Power Platform Solution Reviewer"), "Complete project instruction reference retained")
+        check(page.locator("#instructions-source").text_content()
+              == (SITE / "reference/agent-instructions.txt").read_bytes().decode("utf-8"),
+              "Complete current Word-enabled project instruction reference retained")
         check(all(word in page.locator("#reference").text_content() for word in ["CollectReviewEvidence", "TaskDialog", "Invoker", "InvokeFlowTaskAction"]), "Actual tool and connection configuration retained")
-        check("not implemented" in page.locator("#report-formats").text_content(), "Optional document formatter not passed off as implemented")
+        check("Native Word output" in page.locator("#report-formats").text_content()
+              and "Automated PDF output" in page.locator("#report-formats").text_content(),
+              "Implemented Word output is distinct from unimplemented automated PDF")
+        check(page.locator("#word-output").count() == 1 and page.locator("#solution-download").count() == 1,
+              "Word output and real solution download are prominent")
+        check(all(value in page.locator("#word-proof-boundary").text_content()
+                  for value in ("synthetic", "site owner", "not", "cross-tenant")),
+              "Word proof preserves fixture, recipient and installation limitations")
+        check(page.locator("#word-output .word-page").count() == 2,
+              "Both public Word pages are visible without pretending they are native captures")
+        for role, row in word["files"].items():
+            response = context.request.get(urljoin(args.base_url, row["path"]))
+            check(response.status == 200 and hashlib.sha256(response.body()).hexdigest() == row["sha256"],
+                  "Actual Word-release download matches its reviewed hash: " + role)
         page.locator("#theme-toggle").focus()
         current = page.locator("html").get_attribute("data-theme")
         page.keyboard.press("Enter")
@@ -278,6 +305,12 @@ try:
         check(plain.locator("#example-caveat").text_content() == primary_content(walkthrough)["briefCaveat"], "No-JavaScript homepage retains exact improved metrics and receipt proof")
         check(plain.locator("#combined-target").text_content() == combined_target(walkthrough)["summary"], "No-JavaScript homepage retains bounded target evidence")
         check(plain.locator("figure.screenshot a.image-link").count() == 9 and plain.locator('[data-full-example-link]').get_attribute("href") == "walkthrough.html", "No-JavaScript image inspection and main reader links")
+        check(plain.locator('#solution-download a[download]').get_attribute("href") == WORD_PATHS["bundle"]
+              and plain.locator('#word-output a[href="' + WORD_PATHS["example"] + '"]').count() == 1,
+              "Word example and configure-before-import bundle are accessible without JavaScript")
+        check(plain.locator("#instructions-source").text_content() == (SITE / "reference/agent-instructions.txt").read_text(encoding="utf-8")
+              and json.loads(plain.locator("#topics-source").text_content()) == reference,
+              "No-JavaScript source blocks match the complete current reference downloads")
         plain.goto(urljoin(args.base_url, "walkthrough.html"), wait_until="networkidle")
         check(plain.locator("#combined-target").text_content() == combined_target(walkthrough)["summary"], "No-JavaScript reader retains the same bounded target evidence")
         for row in walkthrough_rows:
