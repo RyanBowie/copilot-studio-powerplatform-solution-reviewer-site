@@ -10,16 +10,16 @@
   "wordReleaseSha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
   "validatedFileSha256": {
     "index.html": "7a14fbf39c50b8405dae23644572879d166628f12ff2c6c59e7365a1e231efd5",
-    "site.css": "2d60528bdfff7dd360b2cb73453b93eaaa418fb2e61da3f8b0d1c7fb245617ef",
-    "layout.css": "25499fe6998db3f5cf099e485b0223844d54587adf946ca0d087dc702b44cfaf",
+    "site.css": "6f2abfb8d73b19ed4e5cffa0063512f173b4bacee4987c7487b54c337e16f5ed",
+    "layout.css": "6db936867ffa12a39a37ea41c26b76a34e40af62e53b7283fa5c92e30676c114",
     "site.js": "be58941bdcf9601f15534dcf0da5b2199950afa2309495440f1e7a2be118648d",
-    "example.css": "a3743faac9a44eb87c7123ad176e5a5ac8f39f2bcbcd82bc211b0fa52dd96e4b",
+    "example.css": "a806269d7f6453c68435433c392dd33a6e07a194810c1932441c54c4a559572f",
     "example.js": "e1cacc4dd8aa43684edda297849aae6e10899f56c25ef6e1474a3a46d7de8a66",
     "full-example.html": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
     "content.json": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
     "content.js": "166ee2ac94c0e814a553a5a99294a135873c0da271c6ff5a63d6369a8e94bb91",
     "reference.js": "7c208ba85a05549592f12f2fdb2c80316845c82415cf6b247b101d9c4cd6a3c6",
-    "README.md": "860ab70942c7c2e3496592001cc4764fc8b4ca2936dad60b1dd3a10cf98b7e50",
+    "README.md": "a8ec8b345a7ae913861a17634262e728aaade0b40d8ddac35be799dadeecdac1",
     "reference/agent-instructions.txt": "9c317616ef1a002ab4fd363a62acf75912712aeffe1f63a967000ffe194368c7",
     "reference/topic-tool-source.json": "e34c11022b4e7c77847a5548fdda8dd58f16280210610301970d910b33ead31a",
     "downloads/real-canvas-example-manifest.json": "7f728346eaa635d2dc2d418109d841bf5c1872d9b31fd0333c68fcddbe9effcc",
@@ -77,7 +77,7 @@
     "tools/prepare_real_example.py": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
     "tools/public_inventory.py": "102911bcd517ab61841a8f1aec96bc60d196cc469aa1a98e5acf86eabcda9c4f",
     "tools/check_public.py": "178e3a972596abd38d5bde0304fc386b27a9ed975104c7489a14f4be097b2df1",
-    "tools/qa_site.py": "eda6d9c30899da3744caa19315fbfedb23d304363f4c463a5903a30694e94199",
+    "tools/qa_site.py": "af4f0c4d7420d721c55033337e90b56089180c836165cc8420d8c4f0efd11229",
     "tools/make_manifest.py": "479fb06204dcada72d4c0d065605cd51c40c4eca15e6f91149c8dc8717bb0390",
     "tools/stage_site.py": "0a9e656551dc61d512db12e0d629c92c78ae5d24465e90a4d160551a63895fe2",
     "tools/serve_preview.py": "1251cef9e759cadc71bc93659cc38423277110e058f04140bef4038d3d4d9453",
@@ -126,6 +126,38 @@
     },
     {
       "check": "Report source is escaped, not executable markup",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: homepage: theme has no horizontal overflow",
       "result": "PASS"
     },
     {
@@ -233,6 +265,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: matched reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: matched reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-light: matched reader theme",
       "result": "PASS"
     },
@@ -285,6 +349,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: historical reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: historical reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-light: reader no overflow",
       "result": "PASS"
     },
@@ -325,6 +421,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-light: benchmark reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-light: benchmark reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-light: follow-up reader no overflow",
       "result": "PASS"
     },
@@ -338,6 +466,38 @@
     },
     {
       "check": "1440-light: benchmark reader scopes its unmet target to those historical runs",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: homepage: theme has no horizontal overflow",
       "result": "PASS"
     },
     {
@@ -445,6 +605,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-dark: matched reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: matched reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-dark: matched reader theme",
       "result": "PASS"
     },
@@ -497,6 +689,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-dark: historical reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: historical reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-dark: reader no overflow",
       "result": "PASS"
     },
@@ -537,6 +761,38 @@
       "result": "PASS"
     },
     {
+      "check": "1440-dark: benchmark reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "1440-dark: benchmark reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "1440-dark: follow-up reader no overflow",
       "result": "PASS"
     },
@@ -550,6 +806,38 @@
     },
     {
       "check": "1440-dark: benchmark reader scopes its unmet target to those historical runs",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: homepage: theme has no horizontal overflow",
       "result": "PASS"
     },
     {
@@ -657,6 +945,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: matched reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: matched reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: matched reader theme",
       "result": "PASS"
     },
@@ -709,6 +1029,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: historical reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: historical reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: reader no overflow",
       "result": "PASS"
     },
@@ -749,6 +1101,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-light: benchmark reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-light: benchmark reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-light: follow-up reader no overflow",
       "result": "PASS"
     },
@@ -762,6 +1146,38 @@
     },
     {
       "check": "390-light: benchmark reader scopes its unmet target to those historical runs",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: homepage: theme has no horizontal overflow",
       "result": "PASS"
     },
     {
@@ -869,6 +1285,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: matched reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: matched reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: matched reader theme",
       "result": "PASS"
     },
@@ -921,6 +1369,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: historical reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: historical reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: reader no overflow",
       "result": "PASS"
     },
@@ -961,6 +1441,38 @@
       "result": "PASS"
     },
     {
+      "check": "390-dark: benchmark reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "390-dark: benchmark reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "390-dark: follow-up reader no overflow",
       "result": "PASS"
     },
@@ -974,6 +1486,38 @@
     },
     {
       "check": "390-dark: benchmark reader scopes its unmet target to those historical runs",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: homepage: theme has no horizontal overflow",
       "result": "PASS"
     },
     {
@@ -1081,6 +1625,38 @@
       "result": "PASS"
     },
     {
+      "check": "320-light: matched reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: matched reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "320-light: matched reader theme",
       "result": "PASS"
     },
@@ -1133,6 +1709,38 @@
       "result": "PASS"
     },
     {
+      "check": "320-light: historical reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: historical reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "320-light: reader no overflow",
       "result": "PASS"
     },
@@ -1173,6 +1781,38 @@
       "result": "PASS"
     },
     {
+      "check": "320-light: benchmark reader: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "320-light: benchmark reader: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
       "check": "320-light: follow-up reader no overflow",
       "result": "PASS"
     },
@@ -1186,6 +1826,854 @@
     },
     {
       "check": "320-light: benchmark reader scopes its unmet target to those historical runs",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides light system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: system dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: URL overrides dark system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: keyboard toggle from light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "index.html: readable solid hero in forced colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides light system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: system dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: URL overrides dark system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: keyboard toggle from light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "walkthrough.html: readable solid hero in forced colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides light system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: system dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: URL overrides dark system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: keyboard toggle from light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "full-example.html: readable solid hero in forced colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides light system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: system dark: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: URL overrides dark system: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: visible keyboard theme focus",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: effective benchmark palette, including semantic status colors",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: lightweight editorial hero typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: blue-purple-magenta hero text, including nested spans",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: benchmark body typography",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: neutral surface header",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: evidence images are not recolored",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: keyboard toggle from light: theme has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: toggle accessible label follows selected theme",
+      "result": "PASS"
+    },
+    {
+      "check": "follow-up.html: readable solid hero in forced colors",
       "result": "PASS"
     },
     {
@@ -1393,15 +2881,11 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-10",
-      "result": "PASS"
-    },
-    {
       "check": "Matched reader anchor #main",
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-7",
+      "check": "Matched reader anchor #main-section-5",
       "result": "PASS"
     },
     {
@@ -1409,23 +2893,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-6",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c3",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c1",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #coverage",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-3",
+      "check": "Matched reader anchor #c2",
       "result": "PASS"
     },
     {
@@ -1433,11 +2901,27 @@
       "result": "PASS"
     },
     {
+      "check": "Matched reader anchor #c1",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c3",
+      "result": "PASS"
+    },
+    {
       "check": "Matched reader anchor #main-section-9",
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-5",
+      "check": "Matched reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c4",
       "result": "PASS"
     },
     {
@@ -1449,7 +2933,11 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #c2",
+      "check": "Matched reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-10",
       "result": "PASS"
     },
     {
@@ -1457,7 +2945,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #c4",
+      "check": "Matched reader anchor #coverage",
       "result": "PASS"
     },
     {
@@ -1761,19 +3249,11 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-10",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #main",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-7",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-2",
+      "check": "Complete reader anchor #main-section-5",
       "result": "PASS"
     },
     {
@@ -1781,19 +3261,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #user-provenance",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-6",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #coverage",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-3",
+      "check": "Complete reader anchor #component",
       "result": "PASS"
     },
     {
@@ -1805,15 +3273,19 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #provenance",
+      "check": "Complete reader anchor #main-section-7",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-5",
+      "check": "Complete reader anchor #main-section-3",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #component",
+      "check": "Complete reader anchor #user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-2",
       "result": "PASS"
     },
     {
@@ -1821,7 +3293,23 @@
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #main-section-6",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-10",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #inventory",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #coverage",
       "result": "PASS"
     },
     {

@@ -1,8 +1,67 @@
+/* The benchmark palette layers over each page's original Clawpilot foundation.
+   Screen-only overrides preserve the readers' existing light print palette. */
+@media screen {
+  :root {
+    --cp-bg: #f2f2f8;
+    --cp-bg-elevated: #f8f7fc;
+    --cp-surface: #ffffff;
+    --cp-surface-soft: #f2f2f8;
+    --cp-border: #e3dfed;
+    --cp-border-strong: #9285aa;
+    --cp-text: #102631;
+    --cp-text-muted: #52637a;
+    --cp-text-soft: #667287;
+    --cp-accent: #7653ae;
+    --cp-accent-hover: #58378b;
+    --cp-accent-soft: #eee8f7;
+    --cp-accent-fg: #ffffff;
+    --cp-link: #066bc7;
+    --cp-success: #207346;
+    --cp-danger: #b4233e;
+    --cp-warning: #8c6208;
+    --cp-chart-blue: #0877dd;
+    --cp-chart-indigo: #5364ba;
+    --cp-chart-purple: #7653ae;
+    --cp-chart-violet: #9651bb;
+    --cp-chart-magenta: #b535c3;
+    --cp-chart-track: #e8e3f0;
+    --cp-transparent: transparent;
+    --cp-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    --cp-highlight: rgba(118, 83, 174, 0.12);
+  }
+  html[data-theme="dark"] {
+    --cp-bg: #171717;
+    --cp-bg-elevated: #222222;
+    --cp-surface: #1f1f1f;
+    --cp-surface-soft: #262626;
+    --cp-border: #3b3b3b;
+    --cp-border-strong: #858585;
+    --cp-text: #f2f2f2;
+    --cp-text-muted: #bdbdbd;
+    --cp-text-soft: #aaaaaa;
+    --cp-accent: #c3a0ef;
+    --cp-accent-hover: #debeff;
+    --cp-accent-soft: #2b2b2b;
+    --cp-accent-fg: #181818;
+    --cp-link: #80baff;
+    --cp-chart-blue: #69aeff;
+    --cp-chart-indigo: #98a5ff;
+    --cp-chart-purple: #bc98ed;
+    --cp-chart-violet: #d097ee;
+    --cp-chart-magenta: #ed8fea;
+    --cp-chart-track: #3b3b3b;
+    --cp-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+    --cp-overlay: rgba(23, 23, 23, 0.88);
+    --cp-panel: var(--cp-surface);
+    --cp-panel-strong: var(--cp-surface);
+    --cp-highlight: rgba(195, 160, 239, 0.16);
+  }
+}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; font-size: 16px; }
-a { color: var(--cp-accent); text-underline-offset: 4px; }
+body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.65; font-size: 16px; }
+a { color: var(--cp-link); text-underline-offset: 4px; }
 a:hover { color: var(--cp-accent-hover); }
 button { font: inherit; }
 button, a { -webkit-tap-highlight-color: var(--cp-highlight); }
@@ -10,16 +69,19 @@ button, a { -webkit-tap-highlight-color: var(--cp-highlight); }
 h1, h2, h3, h4, p, figure { margin: 0; }
 h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.03em; }
 p + p { margin-top: 16px; }
-h1 { font-size: clamp(2.8rem, 5.5vw, 5.25rem); font-weight: 650; letter-spacing: -.055em; }
-h2 { font-size: clamp(2rem, 3.4vw, 3rem); font-weight: 650; }
-h3 { font-size: 1.4rem; font-weight: 650; }
-h4 { font-size: 1.1rem; font-weight: 650; }
+h1 { font-size: clamp(2.25rem, 5vw, 4rem); font-weight: 450; line-height: 1.12; letter-spacing: -.035em; color: var(--cp-chart-blue); }
+@supports (background-clip: text) {
+  h1 { background: linear-gradient(105deg, var(--cp-chart-blue), var(--cp-chart-purple) 56%, var(--cp-chart-magenta)); background-clip: text; color: var(--cp-transparent); }
+}
+h2 { font-size: clamp(2rem, 3.4vw, 3rem); font-weight: 600; }
+h3 { font-size: 1.4rem; font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
 code, pre, .mono { font-family: Consolas, "Courier New", Courier, monospace; font-size: .88em; overflow-wrap: anywhere; }
 code { color: var(--cp-text); background: var(--cp-surface-soft); padding: 1px 4px; border-radius: 4px; }
 img { display: block; max-width: 100%; height: auto; }
 button { cursor: pointer; }
 .wrap { width: min(1280px, calc(100% - 80px)); margin-inline: auto; }
-.site-header { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 40px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg); }
+.site-header { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 40px; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface); }
 .brand { display: flex; gap: 12px; align-items: center; text-decoration: none; color: var(--cp-text); font-weight: 650; line-height: 1.3; white-space: nowrap; }
 .brand-mark { width: 40px; height: 44px; border-radius: 10px; display: grid; place-items: center; font-size: 24px; color: var(--cp-accent); background: var(--cp-accent-soft); font-family: Consolas, "Courier New", Courier, monospace; }
 .brand small { display: block; color: var(--cp-text-soft); font-size: 11px; font-weight: 400; margin-top: 4px; }
@@ -33,8 +95,7 @@ nav a:hover { text-decoration: underline; }
 .showcase { padding-block: 44px 36px; }
 .showcase-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
 .showcase .eyebrow { margin-bottom: 16px; }
-.showcase h1 { font-size: clamp(2rem, 3.6vw, 3.2rem); letter-spacing: -.045em; line-height: 1.12; }
-.showcase h1 span { color: var(--cp-accent); }
+.showcase h1 { font-size: clamp(2rem, 3.6vw, 3.2rem); }
 .showcase-pitch > p:first-child { font-size: 17px; color: var(--cp-text-soft); }
 .showcase-pitch .actions { margin-top: 20px; }
 .showcase-caution { margin-top: 16px; font-size: 12px; color: var(--cp-text-soft); }
@@ -275,6 +336,7 @@ pre code { background: var(--cp-surface-soft); padding: 0; }
   .showcase h1 { font-size: 27px; }
 }
 @media print {
+  h1 { background: none; color: var(--cp-text); }
   .site-header, .theme-button, .actions, .small-button, .skip-link, .image-viewer { display: none; }
   .wrap { width: 100%; }
   .showcase-intro, .snapshot, .experience-row, .download-grid, .example-entry { display: block; }
@@ -282,4 +344,7 @@ pre code { background: var(--cp-surface-soft); padding: 0; }
   .section { padding-block: 24px; }
   .table-wrap { overflow: visible; }
   .table-wrap table { min-width: 0; }
+}
+@media (forced-colors: active) {
+  h1 { background: none; color: var(--cp-text); }
 }

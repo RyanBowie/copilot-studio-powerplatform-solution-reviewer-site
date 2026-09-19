@@ -88,6 +88,61 @@ def compact(value):
     return re.sub(r"\s+", "", unicodedata.normalize("NFKC", value))
 
 
+LIGHT_PALETTE = dict(zip(
+    ("bg", "bg-elevated", "surface", "surface-soft", "border", "border-strong",
+     "text", "text-muted", "text-soft", "accent", "accent-hover", "accent-soft",
+     "accent-fg", "link", "success", "danger", "warning", "chart-blue",
+     "chart-indigo", "chart-purple", "chart-violet", "chart-magenta", "chart-track"),
+    ("#f2f2f8", "#f8f7fc", "#ffffff", "#f2f2f8", "#e3dfed", "#9285aa",
+     "#102631", "#52637a", "#667287", "#7653ae", "#58378b", "#eee8f7",
+     "#ffffff", "#066bc7", "#207346", "#b4233e", "#8c6208", "#0877dd",
+     "#5364ba", "#7653ae", "#9651bb", "#b535c3", "#e8e3f0"),
+    strict=True,
+))
+DARK_PALETTE = dict(zip(
+    LIGHT_PALETTE,
+    ("#171717", "#222222", "#1f1f1f", "#262626", "#3b3b3b", "#858585",
+     "#f2f2f2", "#bdbdbd", "#aaaaaa", "#c3a0ef", "#debeff", "#2b2b2b",
+     "#181818", "#80baff", "#4ade80", "#f87171", "#fbbf24", "#69aeff",
+     "#98a5ff", "#bc98ed", "#d097ee", "#ed8fea", "#3b3b3b"),
+    strict=True,
+))
+
+
+def check_theme(page, theme, label):
+    expected = LIGHT_PALETTE if theme == "light" else DARK_PALETTE
+    actual = page.evaluate("""names => {
+      const root = getComputedStyle(document.documentElement);
+      return Object.fromEntries(names.map(name => [name, root.getPropertyValue('--cp-' + name).trim()]));
+    }""", list(expected))
+    check(actual == expected, label + ": effective benchmark palette, including semantic status colors")
+    check(page.locator("html").get_attribute("data-theme") == theme, label + ": selected theme")
+    style = page.locator("h1").evaluate("""node => {
+      const title = getComputedStyle(node), body = getComputedStyle(document.body);
+      return {weight: title.fontWeight, size: parseFloat(title.fontSize),
+        line: parseFloat(title.lineHeight), spacing: parseFloat(title.letterSpacing),
+        gradient: title.backgroundImage, color: title.color,
+        spansInherit: [...node.querySelectorAll('span')].every(n => getComputedStyle(n).color === title.color),
+        bodySize: body.fontSize, bodyLine: body.lineHeight, font: body.fontFamily};
+    }""")
+    check(style["weight"] == "450" and abs(style["line"] / style["size"] - 1.12) < .001
+          and abs(style["spacing"] / style["size"] + .035) < .001,
+          label + ": lightweight editorial hero typography")
+    rgb = lambda value: "rgb(" + ", ".join(str(int(value[i:i + 2], 16)) for i in (1, 3, 5)) + ")"
+    check(style["gradient"] == "linear-gradient(105deg, " + rgb(expected["chart-blue"]) + ", "
+          + rgb(expected["chart-purple"]) + " 56%, " + rgb(expected["chart-magenta"]) + ")"
+          and style["color"] == "rgba(0, 0, 0, 0)" and style["spansInherit"],
+          label + ": blue-purple-magenta hero text, including nested spans")
+    check(style["bodySize"] == "16px" and style["bodyLine"] == "26.4px"
+          and style["font"].startswith('"Segoe UI", Aptos, Calibri'),
+          label + ": benchmark body typography")
+    check(page.locator(".site-header").evaluate("n => getComputedStyle(n).backgroundColor") == rgb(expected["surface"]),
+          label + ": neutral surface header")
+    check(page.locator("img").evaluate_all("(nodes) => nodes.every(n => getComputedStyle(n).filter === 'none' && getComputedStyle(n).opacity === '1')"),
+          label + ": evidence images are not recolored")
+    check(page.evaluate("document.documentElement.scrollWidth <= innerWidth"), label + ": theme has no horizontal overflow")
+
+
 try:
     validate_files(e)
     verify_followup()
@@ -125,6 +180,7 @@ try:
             label = f"{width}-{theme}"
             page.set_viewport_size({"width": width, "height": height})
             page.goto(args.base_url + "?scoutTheme=" + theme, wait_until="networkidle")
+            check_theme(page, theme, label + ": homepage")
             check(page.locator("html").get_attribute("data-theme") == theme, label + ": homepage theme")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": homepage no overflow")
             check(page.locator("main > section").evaluate_all("(nodes)=>nodes.slice(0,3).map(n=>n.id).join(',')") == "word-output,showcase,full-example", label + ": Word release leads; unchanged real journey still precedes its complete report")
@@ -166,6 +222,7 @@ try:
             if width != 320:
                 capture(page, "home-" + label + ".png")
             page.goto(urljoin(args.base_url, "walkthrough.html?scoutTheme=" + theme), wait_until="networkidle")
+            check_theme(page, theme, label + ": matched reader")
             check(page.locator("html").get_attribute("data-theme") == theme, label + ": matched reader theme")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": matched reader no overflow")
             check(page.locator("#main .report-text h3").count() == 10, label + ": matched reader retains all ten MAIN headings")
@@ -179,6 +236,7 @@ try:
             if width != 320:
                 capture(page, "walkthrough-" + label + ".png")
             page.goto(urljoin(args.base_url, "full-example.html?scoutTheme=" + theme), wait_until="networkidle")
+            check_theme(page, theme, label + ": historical reader")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": reader no overflow")
             check(page.locator("#main .report-text h3").count() == 10, label + ": all MAIN headings")
             check(page.locator(".report-text pre").evaluate_all("(nodes)=>nodes.every(n=>getComputedStyle(n).maxHeight==='none'&&getComputedStyle(n).overflowY==='visible')"), label + ": no clipped or height-limited report")
@@ -188,12 +246,33 @@ try:
             if width != 320:
                 capture(page, "reader-" + label + ".png")
             page.goto(urljoin(args.base_url, "follow-up.html?scoutTheme=" + theme), wait_until="networkidle")
+            check_theme(page, theme, label + ": benchmark reader")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": follow-up reader no overflow")
             check(page.locator("#main .report-text h3").count() == 10, label + ": follow-up has all ten MAIN headings")
             check(page.locator("[data-followup-text]").text_content() == (SITE / "examples/follow-up/complete-review.txt").read_text(encoding="utf-8"), label + ": complete follow-up text retained with HTML newline normalization only")
             check("4/5 combined target remained unmet in these two historical no-email benchmark runs" in page.locator(".example-lead").text_content(), label + ": benchmark reader scopes its unmet target to those historical runs")
             if width != 320:
                 capture(page, "followup-" + label + ".png")
+
+        for name in ("index.html", "walkthrough.html", "full-example.html", "follow-up.html"):
+            for system_theme in ("light", "dark"):
+                page.emulate_media(color_scheme=system_theme)
+                page.goto(urljoin(args.base_url, name), wait_until="networkidle")
+                check_theme(page, system_theme, name + ": system " + system_theme)
+                opposite = "dark" if system_theme == "light" else "light"
+                page.goto(urljoin(args.base_url, name + "?scoutTheme=" + opposite), wait_until="networkidle")
+                check_theme(page, opposite, name + ": URL overrides " + system_theme + " system")
+                page.locator("#theme-toggle").focus()
+                check(page.locator("#theme-toggle").evaluate("n => getComputedStyle(n).outlineWidth") == "3px",
+                      name + ": visible keyboard theme focus")
+                page.keyboard.press("Enter")
+                check_theme(page, system_theme, name + ": keyboard toggle from " + opposite)
+                check(page.locator("#theme-toggle").get_attribute("aria-label") == "Switch to " + opposite + " theme",
+                      name + ": toggle accessible label follows selected theme")
+            page.emulate_media(forced_colors="active")
+            check(page.locator("h1").evaluate("n => getComputedStyle(n).backgroundImage === 'none' && getComputedStyle(n).color !== 'rgba(0, 0, 0, 0)'"),
+                  name + ": readable solid hero in forced colors")
+            page.emulate_media(forced_colors="none", color_scheme="light")
 
         page.goto(args.base_url, wait_until="networkidle")
         page.keyboard.press("Tab")

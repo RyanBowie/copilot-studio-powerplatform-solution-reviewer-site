@@ -1,6 +1,5 @@
 .example-intro { padding-block: 48px 40px; }
 .example-intro h1 { font-size: clamp(2.25rem, 4.1vw, 3.6rem); line-height: 1.12; }
-.example-intro h1 span { color: var(--cp-accent); }
 .example-lead { max-width: 900px; margin-top: 24px; font-size: 18px; color: var(--cp-text-soft); }
 .example-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding-block: 24px; margin-block: 24px; border-block: 1px solid var(--cp-border); }
 .example-facts strong { display: block; font-size: 27px; color: var(--cp-accent); letter-spacing: -.035em; line-height: 1.2; }

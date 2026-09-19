@@ -7,6 +7,14 @@ The new Word example is a separate synthetic format-only test, not a Word
 version of that historical 4/5 assessment. There is no upload/chat backend, telemetry, tracking,
 external font or runtime service on this website.
 
+All four public HTML pages share the benchmark's purple/neutral screen palette
+through `site.css`, layered over the original Clawpilot `--cp-*` variables.
+The existing `?scoutTheme=light` / `?scoutTheme=dark` override, system-preference
+detection and per-page toggle remain unchanged. Hero titles use the benchmark's
+blue-to-purple-to-magenta text gradient, with solid print and forced-color
+fallbacks. Screenshots, report content and release packages are not restyled
+or regenerated. The readers retain their existing light print palette.
+
 **Generation is fail-closed.** The matched outcome, counts, invocation total,
 citation and receipt proof come only from reviewed terminal-run provenance.
 Missing inputs never fall back to the historical example, predict acceptance,

@@ -457,14 +457,14 @@
     },
     {
       "path": "site.css",
-      "sha256": "2d60528bdfff7dd360b2cb73453b93eaaa418fb2e61da3f8b0d1c7fb245617ef",
-      "bytes": 21872,
+      "sha256": "6f2abfb8d73b19ed4e5cffa0063512f173b4bacee4987c7487b54c337e16f5ed",
+      "bytes": 24060,
       "deployToPages": true
     },
     {
       "path": "layout.css",
-      "sha256": "25499fe6998db3f5cf099e485b0223844d54587adf946ca0d087dc702b44cfaf",
-      "bytes": 2768,
+      "sha256": "6db936867ffa12a39a37ea41c26b76a34e40af62e53b7283fa5c92e30676c114",
+      "bytes": 2766,
       "deployToPages": true
     },
     {
@@ -475,8 +475,8 @@
     },
     {
       "path": "example.css",
-      "sha256": "a3743faac9a44eb87c7123ad176e5a5ac8f39f2bcbcd82bc211b0fa52dd96e4b",
-      "bytes": 5038,
+      "sha256": "a806269d7f6453c68435433c392dd33a6e07a194810c1932441c54c4a559572f",
+      "bytes": 4985,
       "deployToPages": true
     },
     {
@@ -511,8 +511,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "860ab70942c7c2e3496592001cc4764fc8b4ca2936dad60b1dd3a10cf98b7e50",
-      "bytes": 19114,
+      "sha256": "a8ec8b345a7ae913861a17634262e728aaade0b40d8ddac35be799dadeecdac1",
+      "bytes": 19663,
       "deployToPages": true
     },
     {
@@ -541,7 +541,7 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "c8acad959d953b9ed680e95a0561f93164ff1796b0959bd9ed0de038ee9a17d4",
+      "sha256": "1c2b0649ded7f7b76a71ae038f8165f58089b3658d2aec190689db6d94472799",
       "bytes": 10947,
       "deployToPages": true
     },
@@ -835,8 +835,8 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "3a2cab072e2e8ac1c288d9b169f23f160f14fd4d1be64efd37614b435f43f943",
-      "bytes": 64732,
+      "sha256": "59dab891bcda015d8bb77fc5c4c66a9d3abaa9da00fde0fc05f6143d3f5987b9",
+      "bytes": 111713,
       "deployToPages": false
     },
     {
@@ -871,8 +871,8 @@
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "eda6d9c30899da3744caa19315fbfedb23d304363f4c463a5903a30694e94199",
-      "bytes": 31731,
+      "sha256": "af4f0c4d7420d721c55033337e90b56089180c836165cc8420d8c4f0efd11229",
+      "bytes": 37079,
       "deployToPages": false
     },
     {
@@ -1093,7 +1093,7 @@
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 474,
+    "checksPassed": 846,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

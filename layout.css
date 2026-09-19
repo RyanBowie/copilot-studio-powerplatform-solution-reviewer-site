@@ -29,8 +29,8 @@
 }
 .word-release h1 {
   max-width: 26ch;
-  font-size: clamp(2.4rem, 4.8vw, 4.25rem);
-  line-height: 1.08;
+  font-size: clamp(2.25rem, 4.8vw, 4rem);
+  line-height: 1.12;
 }
 .word-pages { margin-top: 2rem; align-items: start; }
 .word-page { margin: 0; }
