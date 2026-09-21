@@ -267,7 +267,7 @@ try:
             for system_theme in ("light", "dark"):
                 page.emulate_media(color_scheme=system_theme)
                 page.goto(urljoin(args.base_url, name), wait_until="networkidle")
-                check_theme(page, system_theme, name + ": system " + system_theme)
+                check_theme(page, "dark", name + ": dark default with " + system_theme + " system")
                 opposite = "dark" if system_theme == "light" else "light"
                 page.goto(urljoin(args.base_url, name + "?scoutTheme=" + opposite), wait_until="networkidle")
                 check_theme(page, opposite, name + ": URL overrides " + system_theme + " system")

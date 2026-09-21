@@ -175,7 +175,7 @@ def reader(m):
         navigation.append(f'<li><a href="#{kind}">{html.escape(title)}</a></li>')
         if kind == "main":
             main_nav = [f'<li><a href="#main-section-{number}">{html.escape(title)}</a></li>' for number, title in re.findall(r"^(10|[1-9])\. (.+)$", value, re.M)]
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historical real canvas review · original 1/5 Partial</title>
+    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historical real canvas review · original 1/5 Partial</title>
 <script>{script}</script><style>{style}
 @media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>

@@ -105,7 +105,7 @@ def reader():
         f'<li><a href="#main-section-{number}">{html.escape(title)}</a></li>'
         for number, title in re.findall(r"^(10|[1-9])\. (.+)$", value, re.M)
     )
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Measured follow-up · Complete canonical MAIN</title>
+    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Measured follow-up · Complete canonical MAIN</title>
 <script>{script}</script><style>{style}
 @media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>

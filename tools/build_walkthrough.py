@@ -278,7 +278,7 @@ def reader(p, site=SITE):
     accepted = ", ".join(p["acceptedPassIds"])
     unavailable = ", ".join(item for item in PASS_IDS if item not in p["acceptedPassIds"]) or "none selected"
     target = combined_target(p)
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer">
+    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer">
 <script>{script}</script><title>Matched canvas walkthrough · complete {p["accepted"]}/5 review</title><style>{style}
 @media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style><link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
 <body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Matched improved-run report</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Screenshot journey</a><a href="index.html#history">Historical evidence</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>

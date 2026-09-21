@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "4c617d14e38f7f15368676fcc1583e2d79589ba8905029d49fe00b081a75c8b4",
-      "bytes": 209066,
+      "sha256": "755e4db5dd896742e5be2c0123c23c454fde078a2115de24e806b4c5b68a9a17",
+      "bytes": 209027,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
-      "bytes": 126247,
+      "sha256": "23f50907474034971c94f67b9167e92ecc88d5ac6844a9f23cb8520b9d3d77a6",
+      "bytes": 126208,
       "deployToPages": true
     },
     {
@@ -1144,8 +1144,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "c807847b2186ececf68abbe1be522a426aa569c415ddf11d3298f9f60c35dc72",
-      "bytes": 24268,
+      "sha256": "25559e98538ee39caf6dd4e41f443391387c7b81dad612502d8ce50286c915ff",
+      "bytes": 24287,
       "deployToPages": true
     },
     {
@@ -1174,7 +1174,7 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "a61697cc9769edb858fcb8cbdb770fe882a2074db8c2a57b1602c235ed31b7d4",
+      "sha256": "e64e1e62f2d3d1ef21b8d4aac687a089bbf848de62176f7d31928c72e311ec7f",
       "bytes": 12003,
       "deployToPages": true
     },
@@ -1186,8 +1186,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "5ab3d407dff996898542c76c2677ceadfe1b9f9bd438443bfedcc4aababc3ed9",
-      "bytes": 52885,
+      "sha256": "b78c2e68085842cfb4b2afab1cba1aea3c97a86fbb26fb8d4ab8a67f087050c6",
+      "bytes": 52109,
       "deployToPages": true
     },
     {
@@ -1294,8 +1294,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "0db7754f1197ff43dc0f5406606e97f11002d17f7eb8b9fd1395826a1e84b129",
-      "bytes": 128072,
+      "sha256": "39e883eb21204c809c4cd28001ade5a340446c8c17b4d652427de25c47057914",
+      "bytes": 128033,
       "deployToPages": true
     },
     {
@@ -1498,8 +1498,8 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "7a73110ddc090e49340ae7308931429f0d05adfcb0286e67973e1f86a2e0297f",
-      "bytes": 114371,
+      "sha256": "c66421fc6e503e02e4a6b580369d2d0749f3f92efcf8ead8f7199a7c04d8d01e",
+      "bytes": 115523,
       "deployToPages": false
     },
     {
@@ -1516,8 +1516,8 @@
     },
     {
       "path": "tools/prepare_real_example.py",
-      "sha256": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
-      "bytes": 17298,
+      "sha256": "82f3f1bd255d835ce757ed910ae109c7ee991b7e835e771f2e870a110f951179",
+      "bytes": 17316,
       "deployToPages": false
     },
     {
@@ -1534,8 +1534,8 @@
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "1e80eb7d43152df6063af6cbb99842543925a296bfd6cf0c0ba2a179c02e099d",
-      "bytes": 38777,
+      "sha256": "66b533f55689d127e2836715b31a4d82d4cea62381fa27f38a36ce55dd78b9f2",
+      "bytes": 38794,
       "deployToPages": false
     },
     {
@@ -1558,14 +1558,14 @@
     },
     {
       "path": "tools/build_followup.py",
-      "sha256": "d277ae5b33fde87975e43e48fea5b48ebdb476b3115a7439971944aa941142ee",
-      "bytes": 15115,
+      "sha256": "d2cc14d01037bf299073a8fdb568ccd359e5dc1f7627bf81b8ee5c164f31a8f3",
+      "bytes": 15133,
       "deployToPages": false
     },
     {
       "path": "tools/build_walkthrough.py",
-      "sha256": "3f4f491ff4abd4e5e6c9b1582b2998719aa867130c4f9f0e945aebc5c668806e",
-      "bytes": 23407,
+      "sha256": "dc250738bb252586eedbe77d4a7695cf3a3b53e35d7c13666ff19e2fd6b51856",
+      "bytes": 23425,
       "deployToPages": false
     },
     {
