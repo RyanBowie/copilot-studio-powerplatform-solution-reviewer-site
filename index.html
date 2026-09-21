@@ -77,7 +77,7 @@
 <body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Word output · experimental</small></span></a><nav aria-label="Main navigation"><a href="#word-output">Word output</a><a href="#solution-download">Download</a><a href="#showcase">Screenshot journey</a><a href="#reference">Tools &amp; topics</a><a href="#setup">Setup</a><a href="#history">History</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
 <main id="main"><section class="section wrap word-release" id="word-output" aria-labelledby="top">
-<div class="section-heading"><p class="eyebrow">New &middot; Word output and solution bundle 3.3.2.6</p>
+<div class="section-heading"><p class="eyebrow">New &middot; Word output and unmanaged solutions 3.3.2.7</p>
 <h1 id="top">Readable Word reports.<br>The same solution reviewer.</h1>
 <p>The existing reviewer can turn its completed assessment into a formatted <code>.docx</code>,
 save it beneath <code>Results/solution-&lt;filename&gt;/</code>, and grant the established
@@ -95,22 +95,25 @@ Original TXT/JSON audits were retained; formatting did not reassess the package.
 The images below render that derivative locally, not native browser screenshots.
 This synthetic fixture is separate from the historical Data Entry Testing 4/5 walkthrough.</p>
 </article><article class="card" id="solution-download">
-<span class="tag">Configure before import &middot; derived distribution</span>
-<h3>Install the Word-enabled components.</h3>
-<p>The bundle contains reviewer and automation solution templates, the matching Word template,
-target configuration tooling, connection settings and setup instructions. It is not a
-ready-bound export of the demo tenant.</p>
-<div class="actions"><a class="button primary" href="downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip" download>Download solution bundle 3.3.2.6</a>
-<a class="button secondary" href="downloads/WORD-OUTPUT-SETUP.md">Setup and release notes</a></div>
-<p><strong>Configure and repack first.</strong> Do not import this outer bundle or the
-unconfigured <code>*.portable.template.zip</code> files directly.</p>
-<p class="fine-print">Word Online (Business) licensing and policy approval are required.
-Rebind your own connections, output destination and the template's actual discovered schema.
-Target installation and activation need their own validation.</p>
-<details><summary>Download integrity</summary><p class="fine-print">Bundle SHA-256</p>
-<code class="word-checksum">26540297fcd6590845f4b1f32ab7a7278233a74c420c8c9843d6075e237cc849</code>
-<p><a href="downloads/word-output-release.json">All public asset and archive-member hashes</a></p></details>
-</article></div>
+<span class="tag">Unmanaged solutions &middot; import, then configure</span>
+<h3>Import the actual reviewer and automation.</h3>
+<p>These are separate Power Platform solution ZIPs, not an outer bundle or
+substitution templates. Import the reviewer first, then automation, with activation
+disabled. Both retain their complete implementation; setup does not enable intake or email.</p>
+<div class="actions"><a class="button primary" href="downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip" download>1. Reviewer solution 3.3.2.7</a>
+<a class="button primary" href="downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip" download>2. Automation solution 3.3.2.7</a>
+<a class="button secondary" href="downloads/SOLUTION-IMPORT-SETUP.md">Import and setup instructions</a>
+<a class="button secondary" href="downloads/solution-reviewer-setup-3.3.2.7.zip" download>Setup resources (not a solution)</a></div>
+<p><strong>Import is not activation.</strong> Configure your own approved connections,
+private storage, authentication and exact Word template/schema afterward. Publication,
+manual enablement, authorized smoke checks and automatic intake acceptance are separate steps.</p>
+<p class="fine-print">Both exact ZIPs imported in one same-tenant sandbox with unchanged workflow definitions, flows stopped and the agent unpublished. No target setup, automatic Word run,
+cross-tenant installation or separate least-privilege requester test is established.</p>
+<details><summary>Download integrity and acceptance boundaries</summary>
+<p><a href="downloads/solution-import-release.json">Exact solution/member hashes and import evidence</a></p>
+<p class="fine-print">Reviewer SHA-256</p><code class="word-checksum">a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96</code>
+<p class="fine-print">Automation SHA-256</p><code class="word-checksum">acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94</code>
+</details></article></div>
 <div class="word-pages two-up"><figure class="word-page"><a href="examples/word-output/report-page-1.png" aria-label="Inspect page 1 of the redacted Word example"><img src="examples/word-output/report-page-1.png" alt="Page 1 of the privacy-redacted synthetic review Word example" loading="lazy"></a><figcaption>Page 1 &middot; local rendering of the redacted Word derivative.</figcaption></figure><figure class="word-page"><a href="examples/word-output/report-page-2.png" aria-label="Inspect page 2 of the redacted Word example"><img src="examples/word-output/report-page-2.png" alt="Page 2 of the privacy-redacted synthetic review Word example" loading="lazy"></a><figcaption>Page 2 &middot; local rendering of the redacted Word derivative.</figcaption></figure></div>
 <p class="notice" id="word-proof-boundary"><strong>What this establishes:</strong> native, format-only
 Word generation and requester report access for one synthetic review. The requester was also
@@ -1742,22 +1745,46 @@ not uploader impersonation. Sharing and tenant policy changes are outside the wo
 </code></pre></div></details>
       </div>
     </section><section class="section setup-section" id="setup" aria-labelledby="setup-title">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">04 / Installation and reconnection</p><h2 id="setup-title">Configure first.<br>Enable deliberately.</h2><p>A solution ZIP does not carry your SharePoint library, lists, permissions or working target connections. This is a nonproduction installation outline—not authorization to operate a tenant.</p></div>
-        <div class="notice"><strong>A configure-before-import Word solution bundle is included.</strong> <a href="downloads/WORD-OUTPUT-SETUP.md">Follow its complete setup instructions</a> to produce target-specific solution ZIPs. The outer bundle and unconfigured templates are not direct import inputs; no cross-tenant installation is claimed.</div>
-        <ol class="setup-steps">
-          <li><h3>Approve the target and its identity</h3><p>Use an authorized nonproduction Dataverse environment, a dedicated private SharePoint site and the intended owner/service user. Check model availability, Copilot Studio/Power Automate licensing and capacity, Exchange, OneDrive, regional/preview terms and DLP. Do not broaden tenant access to bypass a failing route.</p></li>
-          <li><h3>Prove the owner’s own default OneDrive</h3><p>Existing approved Graph metadata must establish self identity, default-drive ownership and the physical Inbox correspondence. An accessible foreign drive or shared shortcut is not sufficient—even with Full Control. Unavailable proof is a stop, not permission to request broad grants.</p></li>
-          <li><h3>Bind the six target connections</h3><p>SharePoint, OneDrive for Business, Office 365 Users, Microsoft Copilot Studio, Office 365 Outlook and Word Online (Business). Verify account, tenant, environment and connection state. Keep the manual tool’s separate reference in <strong>Invoker</strong> mode; automation connections use the declared owner.</p></li>
-          <li id="word-template-setup"><h3>Upload and bind the Word template</h3><p>Use the exact <a href="downloads/current-review-v4.3.1.web.template.docx">included template</a> in the configured output service user's supported template storage. Discover its actual file/drive and Word control schema; do not copy demo IDs or guess field keys. Configure the existing Results destination. Word reports use a solution-filename folder and report-item-only requester Read, not a separate private Word-output folder.</p></li><li><h3>Configure and import the reviewer</h3><p>Use complete approved configuration helpers to build a <code>*.target.zip</code> plus connection-reference settings. Import the reviewer first, initially unpublished/disabled. Verify the actual imported bot, Integrated/Always/GroupMembership authentication, model and tool. Do not overwrite unrelated same-name components.</p></li>
-          <li><h3>Create and verify external resources</h3><p>Private versioned library: <code>Incoming</code>, <code>Results</code>, <code>Working</code>. Versioned <code>ReviewJobs</code> with indexed, unique <code>PSRJobKey</code>. A marked control row whose actual ID/type is discovered—not assumed. Private physical OneDrive Inbox with an installation marker. Existing unrelated resources are not adopted.</p></li>
-          <li><h3>Publish the actual imported agent; configure automation</h3><p>Review Studio’s native model/evaluation advisories and arrange appropriate authorized evaluations; none are claimed here. Deliberately enable the verified Invoker collector and publish the imported agent. Discover its actual target identity via <code>ListCopilots</code>, configure/repack automation, and import it disabled. Recheck all bindings, privacy and publication.</p></li>
-          <li><h3>Validate before explicit activation</h3><p>Run only an authorized owner-scoped synthetic no-email test. Approve the exact uploaded identity/version, observe the created-file trigger, and inspect MAIN, selected-source assessments, coverage, source integrity and private ACLs. A succeeded flow is insufficient. Enable ongoing automation only after acceptance; authorize email separately.</p></li>
-        </ol>
-        <div class="config-strip"><div><span>Flow default</span><strong>Disabled</strong></div><div><span>Control default</span><strong>Disabled / no email</strong></div><div><span>Activation latch</span><strong>psrDeploymentReady = false</strong></div><div><span>Credentials shipped</span><strong>None</strong></div></div>
-        <p class="fine-print"><code>psrDeploymentReady</code> is a Boolean WDL workflow parameter—not a Dataverse environment variable. Rebinding connections alone cannot enable the template. Local packaging helpers are installation tooling, not a hosted Python runtime.</p>
-      </div>
-    </section><section class="section wrap" id="boundaries"><div class="section-heading"><p class="eyebrow">Evidence boundaries</p><h2>More accepted. Still bounded.</h2></div><div class="two-up">
+<div class="wrap"><div class="section-heading"><p class="eyebrow">04 / Import and setup</p>
+<h2 id="setup-title">Import first.<br>Enable deliberately.</h2>
+<p>A solution import installs components, not working connections, private SharePoint
+resources or a OneDrive template. It is not permission to run the agent or automation.</p></div>
+<div class="notice"><strong>Import the reviewer, then automation, with activation disabled.</strong>
+<a href="downloads/SOLUTION-IMPORT-SETUP.md">Follow the complete import, setup and troubleshooting instructions.</a>
+Do not overwrite an existing installation or import the supplementary setup archive as a solution.</div>
+<ol class="setup-steps">
+<li><h3>Approve and check a clean target</h3><p>Use an explicitly authorized nonproduction
+Dataverse environment. Check existing component collisions, licensing, capacity, model
+availability and DLP. Never rely on an implicit CLI environment or overwrite unrelated components.</p></li>
+<li><h3>Import both actual solution ZIPs</h3><p>Import reviewer first, then automation.
+Leave plugin/flow activation off and do not publish the agent. Verify all components,
+connection references and native configuration definitions. Stop on missing dependencies,
+unexpected activation or a binding requirement outside your authorization.</p></li>
+<li><h3>Verify the owner and configure connections</h3><p>Bind your own approved SharePoint,
+OneDrive for Business, Office 365 Users, Microsoft Copilot Studio, Office 365 Outlook and
+Word Online (Business) connections. Preserve the manual collector's <strong>Invoker</strong>
+identity and separate verified owner/service output connections. No maker fallback.</p></li>
+<li><h3>Configure private resources and authentication</h3><p>Use the post-import setup
+contract to verify imported ownership, the owner's physical default drive, private storage,
+jobs/control schemas and native configuration. Never adopt unrelated resources or broaden
+permissions to make setup pass. Reconfigure authenticated agent access and verify its model.</p></li>
+<li id="word-template-setup"><h3>Verify the exact Word template and schema</h3><p>Upload the
+unchanged included template only with authorization. Discover its real drive/file and
+Word control schema; a mismatch is a stop, not permission to remove Word output.
+Reports stay beneath Results in a solution-filename folder, with requester Read on the
+report item only. Source and audit permissions do not broaden.</p></li>
+<li><h3>Accept before explicit publication or enablement</h3><p>Setup finishes stopped,
+unpublished and without source authorization. Separately approve publication/manual
+enablement and harmless no-email smoke checks. Automatic intake needs exact-source/version
+authorization and full report, coverage, privacy and Word-output acceptance. Email is
+a further explicit authorization, never an installation side effect.</p></li></ol>
+<div class="config-strip"><div><span>Flow default</span><strong>Stopped</strong></div>
+<div><span>Control default</span><strong>Disabled / no email</strong></div>
+<div><span>Agent default</span><strong>Unpublished</strong></div>
+<div><span>Credentials shipped</span><strong>None</strong></div></div>
+<p class="fine-print">Native import acceptance is separate from setup, target Word-schema
+compatibility, runtime correctness and cross-tenant verification. Local setup tooling is
+not a hosted Python service.</p></div></section><section class="section wrap" id="boundaries"><div class="section-heading"><p class="eyebrow">Evidence boundaries</p><h2>More accepted. Still bounded.</h2></div><div class="two-up">
 <article class="card"><h3>Complete input is not complete assessment.</h3><p>4/5 selected-source assessments were accepted; 1 remain unavailable. Accepted: C1, C2, C3, C4. Unavailable: C5. Failed validation is not an app defect. The earlier C2/C5 checker/workflow assessments were unavailable because of response/evidence-validation issues, not confirmed defects in the app.</p><p><a href="#combined-target">The bounded combined-target result above applies to this one matched run only.</a> At least 90% reliability across a declared repeated set of different exports remains unproven. <a href="#coverage-improvements">All 11 historical follow-ups and regressions</a> remain available.</p></article>
 <article class="card"><h3>Report wording is not tool execution.</h3><p>All 326 screen lines were supplied; citation bounds do not prove every line was semantically examined. Five selected files are not the whole solution. Larger-file handling and original-path provenance remain limitations.</p><p>Retained syntax/default/fallback claims are not compilation or Power Fx semantic-parser proof. Embedded checker records are historical, not a new official checker run. Suggested verifications remain NOT RUN; no app, role or workflow import/execution or runtime/accessibility certification is implied.</p></article>
 <article class="card" id="delivery-boundary"><h3>Received in the owner Inbox.</h3><p>Native <code>SendEmailV2</code> succeeded for the exact authorized source/version and verified demo owner. Owner Inbox receipt and the matching protected-report link were verified. No Cc/Bcc or email retry was used; controls were restored.</p><p>Existing forwarding keeps the original mailbox copy. Forwarded corporate receipt is not established; mailbox settings were not changed. No exactly-once, recipient-containment-beyond-this-proof or all-client rendering guarantee is made. The model cannot choose recipients.</p></article>

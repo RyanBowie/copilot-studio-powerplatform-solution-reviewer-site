@@ -7,6 +7,7 @@ import re
 from build_followup import coverage_section
 from build_walkthrough import SITE, PREFIX, PROVENANCE, MARKDOWN, PASS_IDS, verify, png_dimensions, primary_content, combined_target
 from word_release import verify as verify_word_release, section as word_section, formats_section, PATHS
+from solution_release import verify as verify_solutions, setup_section as import_setup_section
 
 
 def build(p, site=SITE):
@@ -15,6 +16,7 @@ def build(p, site=SITE):
     head = old.split("<body>")[0]
     head = re.sub(r"<title>.*?</title>", f'<title>Matched {p["accepted"]}/5 canvas review · Power Platform Solution Reviewer</title>', head, flags=re.S)
     release = verify_word_release(site)
+    solutions = verify_solutions(site)
     if release:
         head = re.sub(r"<title>.*?</title>", "<title>Word reports and solution download · Power Platform Solution Reviewer</title>", head, flags=re.S)
 
@@ -83,7 +85,7 @@ def build(p, site=SITE):
     if release:
         page = page.replace(
             '<main id="main">',
-            '<main id="main">' + word_section(release, hero=True),
+            '<main id="main">' + word_section(release, hero=True, solutions=solutions),
             1,
         ).replace(
             '<h1 id="top">A real upload.<br><span>A review you can inspect.</span></h1>',
@@ -109,6 +111,8 @@ def build(p, site=SITE):
                 "<li><h3>Configure and import the reviewer</h3>",
                 f'<li id="word-template-setup"><h3>Upload and bind the Word template</h3><p>Use the exact <a href="{PATHS["template"]}">included template</a> in the configured output service user\'s supported template storage. Discover its actual file/drive and Word control schema; do not copy demo IDs or guess field keys. Configure the existing Results destination. Word reports use a solution-filename folder and report-item-only requester Read, not a separate private Word-output folder.</p></li><li><h3>Configure and import the reviewer</h3>',
             )
+        if solutions:
+            setup = import_setup_section(solutions)
         reference = reference.replace(
             "<strong>Actual registered tool:</strong>", "<strong>Evidence tool:</strong>",
         ).replace(

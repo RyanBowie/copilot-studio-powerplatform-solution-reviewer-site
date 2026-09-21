@@ -4,22 +4,23 @@
   "historicalQaInherited": false,
   "runtimeActionsPerformed": false,
   "capturesPublished": false,
-  "contentSourceSha256": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
+  "contentSourceSha256": "57252b6d669770c111983f2b5c7ca796c01c85f1c3180d05057b386984ddfd04",
   "exampleBundleSha256": "670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f",
   "walkthroughProvenanceSha256": "a6ec10f61bc4666e13980e50e25b52b183ffd8095baf90b20bb8cc9fae9b9b9e",
   "wordReleaseSha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
+  "solutionImportReleaseSha256": "fd4f1cd3b8e96020f90ad5632faf7d993307000c028208761612cc38ef5ffb62",
   "validatedFileSha256": {
-    "index.html": "7a14fbf39c50b8405dae23644572879d166628f12ff2c6c59e7365a1e231efd5",
+    "index.html": "4c617d14e38f7f15368676fcc1583e2d79589ba8905029d49fe00b081a75c8b4",
     "site.css": "6f2abfb8d73b19ed4e5cffa0063512f173b4bacee4987c7487b54c337e16f5ed",
     "layout.css": "6db936867ffa12a39a37ea41c26b76a34e40af62e53b7283fa5c92e30676c114",
     "site.js": "be58941bdcf9601f15534dcf0da5b2199950afa2309495440f1e7a2be118648d",
     "example.css": "a806269d7f6453c68435433c392dd33a6e07a194810c1932441c54c4a559572f",
     "example.js": "e1cacc4dd8aa43684edda297849aae6e10899f56c25ef6e1474a3a46d7de8a66",
     "full-example.html": "d853eadaaf9ba4299d38e100748604887176694ce33a60bbb97fecf83712d90e",
-    "content.json": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
-    "content.js": "166ee2ac94c0e814a553a5a99294a135873c0da271c6ff5a63d6369a8e94bb91",
+    "content.json": "57252b6d669770c111983f2b5c7ca796c01c85f1c3180d05057b386984ddfd04",
+    "content.js": "f60d8cf9a412c18c84cb5d78347d93b8198de716b7bcf68d2259a0dc1bf6f002",
     "reference.js": "7c208ba85a05549592f12f2fdb2c80316845c82415cf6b247b101d9c4cd6a3c6",
-    "README.md": "a8ec8b345a7ae913861a17634262e728aaade0b40d8ddac35be799dadeecdac1",
+    "README.md": "c807847b2186ececf68abbe1be522a426aa569c415ddf11d3298f9f60c35dc72",
     "reference/agent-instructions.txt": "9c317616ef1a002ab4fd363a62acf75912712aeffe1f63a967000ffe194368c7",
     "reference/topic-tool-source.json": "e34c11022b4e7c77847a5548fdda8dd58f16280210610301970d910b33ead31a",
     "downloads/real-canvas-example-manifest.json": "7f728346eaa635d2dc2d418109d841bf5c1872d9b31fd0333c68fcddbe9effcc",
@@ -69,23 +70,31 @@
     "examples/word-output/review-example.docx": "f1915c05440a6c98bf8d6718169aa918dcea1540bc2b5b3b3427260a038f16ab",
     "examples/word-output/report-page-1.png": "961e40a90278ccc3558dff52cd2b5cd2ffaf4ed8e5f1cda87de5d00446fc3f3c",
     "examples/word-output/report-page-2.png": "53e666d38f0d3bd246dacd8005f1bda0e4dbea6a3f429c597ea9e6d65dbf7e98",
+    "downloads/solution-import-release.json": "fd4f1cd3b8e96020f90ad5632faf7d993307000c028208761612cc38ef5ffb62",
+    "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip": "a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96",
+    "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip": "acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94",
+    "downloads/solution-reviewer-setup-3.3.2.7.zip": "d7bd0d277c950e43ae478fe6c10d1e7b1afb6b41432e5373f0db691162742a68",
+    "downloads/SOLUTION-IMPORT-SETUP.md": "10a3d7f821b8bdce7129c98f34949d4091b561f5a5875b463553bb2a9ccd2341",
     ".gitignore": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
     ".gitattributes": "80a9700138d64d1a6b2f986c40dbda698362329d4264d5345012f3881fd49ac4",
     ".github/workflows/pages.yml": "1eb1850c8ce9b6085e39808ffa51c8d21bfc146bc217fe6e769ea2ef95f62180",
-    "tools/build_home.py": "47072bcb596a326dbec5770914d4317c9cb64d7a5de0c4812ee74b45bd6c295d",
-    "tools/generate_content.py": "f52df6ddd61dc44155c0b48bec19fa7da5006ead6e770991926e9a859e659a58",
+    "tools/build_home.py": "ce0551e41725421243e960ea666f872382e8a236d1ce02dba7e0c1ce3b5a64d3",
+    "tools/generate_content.py": "7c3eab9d3b12e1ea150e28acac6f7ebd811774fe120e4ba0360c29bc4524456b",
     "tools/prepare_real_example.py": "c3c6eaac297ed000ae8ac77fa7ed270ad0f0af548c165e7fe482a04d29ab8216",
-    "tools/public_inventory.py": "102911bcd517ab61841a8f1aec96bc60d196cc469aa1a98e5acf86eabcda9c4f",
-    "tools/check_public.py": "178e3a972596abd38d5bde0304fc386b27a9ed975104c7489a14f4be097b2df1",
-    "tools/qa_site.py": "af4f0c4d7420d721c55033337e90b56089180c836165cc8420d8c4f0efd11229",
-    "tools/make_manifest.py": "479fb06204dcada72d4c0d065605cd51c40c4eca15e6f91149c8dc8717bb0390",
-    "tools/stage_site.py": "0a9e656551dc61d512db12e0d629c92c78ae5d24465e90a4d160551a63895fe2",
+    "tools/public_inventory.py": "639c87c13010d2fdd7401d0e3add646aaf8e5b4f38ff823637e0d4514e5a792d",
+    "tools/check_public.py": "b4f8337085fe0baa54174888de9aa429faefad9f392e275779f0a0e5d1f95d45",
+    "tools/qa_site.py": "1e80eb7d43152df6063af6cbb99842543925a296bfd6cf0c0ba2a179c02e099d",
+    "tools/make_manifest.py": "9f71e2419d205497164142caf65191e9065496d8c62649b8a3dd88ccdabc12ac",
+    "tools/stage_site.py": "728a3ed7e9e9a447cc4b2366407ea27d73f2248f1e76fa949bc848481340412e",
     "tools/serve_preview.py": "1251cef9e759cadc71bc93659cc38423277110e058f04140bef4038d3d4d9453",
     "tools/build_followup.py": "d277ae5b33fde87975e43e48fea5b48ebdb476b3115a7439971944aa941142ee",
     "tools/build_walkthrough.py": "3f4f491ff4abd4e5e6c9b1582b2998719aa867130c4f9f0e945aebc5c668806e",
     "tools/test_walkthrough.py": "96b61f7a5d9cf2d1aae96311ef1239a49a116ce56c8fe725a62b3b9128f321b8",
-    "tools/word_release.py": "9ca9d3f1859a5b75885256d9050ca0ffd2f86c90cd9587a72c077eae09cab2b3",
-    "tools/test_word_release.py": "ba248401c9e4c99fec7016d3d69f508ee30b34b85e831a8cc0d25c91f404827b"
+    "tools/word_release.py": "bee32c0af650661edbe214e52ff0c92a3a23eaebacd6967b54e5cf1a314a1b06",
+    "tools/test_word_release.py": "ba248401c9e4c99fec7016d3d69f508ee30b34b85e831a8cc0d25c91f404827b",
+    "tools/solution_release.py": "5633d71dc5a13b6488fb1b98d3e9364f98d13d81177ddc1f5a165400c0612d7e",
+    "tools/test_solution_release.py": "8e1b980abd49850571738292802631994ce1d7fa3c87a23ef3ba9a6881a77d54",
+    "tools/prepare_solution_release.py": "f6fd8dd82100c3b8ef2a4ac0efe06d4a4e218cf96987872f2ca95ee75ddefabf"
   },
   "cases": [
     {
@@ -253,7 +262,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-light: only the two reviewed evidence/distribution ZIPs",
+      "check": "1440-light: only the exact evidence and declared solution/resource ZIPs",
       "result": "PASS"
     },
     {
@@ -593,7 +602,7 @@
       "result": "PASS"
     },
     {
-      "check": "1440-dark: only the two reviewed evidence/distribution ZIPs",
+      "check": "1440-dark: only the exact evidence and declared solution/resource ZIPs",
       "result": "PASS"
     },
     {
@@ -933,7 +942,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-light: only the two reviewed evidence/distribution ZIPs",
+      "check": "390-light: only the exact evidence and declared solution/resource ZIPs",
       "result": "PASS"
     },
     {
@@ -1273,7 +1282,7 @@
       "result": "PASS"
     },
     {
-      "check": "390-dark: only the two reviewed evidence/distribution ZIPs",
+      "check": "390-dark: only the exact evidence and declared solution/resource ZIPs",
       "result": "PASS"
     },
     {
@@ -1613,7 +1622,7 @@
       "result": "PASS"
     },
     {
-      "check": "320-light: only the two reviewed evidence/distribution ZIPs",
+      "check": "320-light: only the exact evidence and declared solution/resource ZIPs",
       "result": "PASS"
     },
     {
@@ -2841,6 +2850,34 @@
       "result": "PASS"
     },
     {
+      "check": "Actual import-first download matches its exact hash: reviewer",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual import-first download matches its exact hash: automation",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual import-first download matches its exact hash: support",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual import-first download matches its exact hash: setup",
+      "result": "PASS"
+    },
+    {
+      "check": "Direct unmanaged solution is a primary download: reviewer",
+      "result": "PASS"
+    },
+    {
+      "check": "Direct unmanaged solution is a primary download: automation",
+      "result": "PASS"
+    },
+    {
+      "check": "Setup order is import-first, not pre-import substitution",
+      "result": "PASS"
+    },
+    {
       "check": "Keyboard theme switch",
       "result": "PASS"
     },
@@ -2881,7 +2918,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main",
+      "check": "Matched reader anchor #main-section-2",
       "result": "PASS"
     },
     {
@@ -2889,11 +2926,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-4",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c2",
+      "check": "Matched reader anchor #main-section-10",
       "result": "PASS"
     },
     {
@@ -2901,19 +2934,7 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #c1",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #c3",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-9",
-      "result": "PASS"
-    },
-    {
-      "check": "Matched reader anchor #main-section-7",
+      "check": "Matched reader anchor #inventory",
       "result": "PASS"
     },
     {
@@ -2921,11 +2942,11 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #c4",
+      "check": "Matched reader anchor #main-section-6",
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-2",
+      "check": "Matched reader anchor #main-section-4",
       "result": "PASS"
     },
     {
@@ -2933,19 +2954,35 @@
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-6",
+      "check": "Matched reader anchor #main-section-7",
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #main-section-10",
+      "check": "Matched reader anchor #main",
       "result": "PASS"
     },
     {
-      "check": "Matched reader anchor #inventory",
+      "check": "Matched reader anchor #c2",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c3",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c4",
       "result": "PASS"
     },
     {
       "check": "Matched reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
+      "check": "Matched reader anchor #c1",
       "result": "PASS"
     },
     {
@@ -3233,7 +3270,23 @@
       "result": "PASS"
     },
     {
-      "check": "Nonpublic/holding path blocked",
+      "check": "Declared current local resource: downloads/solution-import-release.json",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/solution-reviewer-setup-3.3.2.7.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Declared current local resource: downloads/SOLUTION-IMPORT-SETUP.md",
       "result": "PASS"
     },
     {
@@ -3249,15 +3302,7 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-5",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-4",
+      "check": "Nonpublic/holding path blocked",
       "result": "PASS"
     },
     {
@@ -3265,39 +3310,11 @@
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-8",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-9",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-7",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-3",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #user-provenance",
-      "result": "PASS"
-    },
-    {
       "check": "Complete reader anchor #main-section-2",
       "result": "PASS"
     },
     {
-      "check": "Complete reader anchor #main-section-1",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #main-section-6",
-      "result": "PASS"
-    },
-    {
-      "check": "Complete reader anchor #provenance",
+      "check": "Complete reader anchor #main-section-5",
       "result": "PASS"
     },
     {
@@ -3305,11 +3322,51 @@
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #main-section-8",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #inventory",
       "result": "PASS"
     },
     {
+      "check": "Complete reader anchor #user-provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-3",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-4",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-1",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-7",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main",
+      "result": "PASS"
+    },
+    {
       "check": "Complete reader anchor #coverage",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #provenance",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-9",
+      "result": "PASS"
+    },
+    {
+      "check": "Complete reader anchor #main-section-6",
       "result": "PASS"
     },
     {
@@ -3357,7 +3414,7 @@
       "result": "PASS"
     },
     {
-      "check": "Word example and configure-before-import bundle are accessible without JavaScript",
+      "check": "Word example and exact declared solution/resource downloads are accessible without JavaScript",
       "result": "PASS"
     },
     {

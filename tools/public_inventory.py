@@ -1,6 +1,7 @@
 """Explicit historical and reviewed matched-run paths; no wildcard publication."""
 from build_walkthrough import SITE, PREFIX, PROVENANCE as WALKTHROUGH_PROVENANCE, MARKDOWN, READER, IMAGE_ROLES, verify
 from word_release import PUBLIC_PATHS as WORD_PATHS
+from solution_release import public_paths as solution_paths
 
 WALKTHROUGH_IMAGES = list(IMAGE_ROLES.values())
 # Missing input declares paths only, never an outcome. All publication tools verify first.
@@ -23,7 +24,7 @@ DEPLOY = [
     "examples/follow-up/provenance.json",
 ] + ["examples/real-canvas/" + name for name in IMAGES + REPORTS + PROVENANCE] + [
     READER, WALKTHROUGH_PROVENANCE, MARKDOWN,
-] + [PREFIX + "/" + name for name in WALKTHROUGH_IMAGES + WALKTHROUGH_REPORTS] + WORD_PATHS
+] + [PREFIX + "/" + name for name in WALKTHROUGH_IMAGES + WALKTHROUGH_REPORTS] + WORD_PATHS + solution_paths()
 REPOSITORY_ONLY = [
     ".gitignore", ".gitattributes", ".github/workflows/pages.yml", "qa/RESULTS.json",
     "tools/build_home.py", "tools/generate_content.py", "tools/prepare_real_example.py",
@@ -31,6 +32,8 @@ REPOSITORY_ONLY = [
     "tools/make_manifest.py", "tools/stage_site.py", "tools/serve_preview.py",
     "tools/build_followup.py", "tools/build_walkthrough.py", "tools/test_walkthrough.py",
     "tools/word_release.py", "tools/test_word_release.py",
+    "tools/solution_release.py", "tools/test_solution_release.py",
+    "tools/prepare_solution_release.py",
 ]
 MANIFEST = "PUBLICATION-MANIFEST.json"
 ALL = DEPLOY + REPOSITORY_ONLY + [MANIFEST]

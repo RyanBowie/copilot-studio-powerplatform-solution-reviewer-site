@@ -9,11 +9,15 @@ from build_followup import verify as verify_followup
 from build_walkthrough import verify as verify_walkthrough, verify_outputs, primary_content, PROVENANCE as WALKTHROUGH_PROVENANCE
 from build_home import build as build_home
 from word_release import verify as verify_word_release, summary as word_summary, MANIFEST as WORD_MANIFEST, QA_SCOPE, PRIVACY_SCOPE, PUBLICATION_SCOPE
+from solution_release import verify as verify_solutions, summary as solution_summary, MANIFEST as SOLUTION_MANIFEST
 
 SITE = Path(__file__).resolve().parents[1]
 c = json.loads((SITE / "content.json").read_text(encoding="utf-8"))
 walkthrough = verify_walkthrough()
 word = verify_word_release(required=True)
+solutions = verify_solutions(required="solutionImport" in c)
+if solutions and c.get("solutionImport") != solution_summary(solutions):
+    raise ValueError("Regenerate the current import-first release summary.")
 verify_outputs(walkthrough)
 if c["example"] != primary_content(walkthrough):
     raise ValueError("Primary content differs from reviewed matched-run evidence.")
@@ -57,6 +61,8 @@ qa_pins = {name: hashlib.sha256((SITE / name).read_bytes()).hexdigest()
            for name in ALL if name not in {"qa/RESULTS.json", "PRIVACY-REPORT.json", MANIFEST}}
 word_pin = hashlib.sha256((SITE / WORD_MANIFEST).read_bytes()).hexdigest()
 ready = (qa.get("status") == "PASS" and qa.get("scope") == QA_SCOPE
+         and (solutions is None or (solutions["approvedPublicDistribution"] is True
+                                   and solutions["evidence"]["sameTenantSandboxImportVerified"] is True))
          and qa.get("contentSourceSha256") == hashlib.sha256((SITE / "content.json").read_bytes()).hexdigest()
          and qa.get("exampleBundleSha256") == e["bundle"]["sha256"]
          and qa.get("walkthroughProvenanceSha256") == walkthrough_pin
@@ -70,12 +76,14 @@ ready = (qa.get("status") == "PASS" and qa.get("scope") == QA_SCOPE
 m = {
     "schemaVersion": "5.0", "status": "READY_FOR_PARENT_PUBLICATION" if ready else "LOCAL_REVIEW_PENDING",
     "scope": PUBLICATION_SCOPE,
-    "publicationPerformedBySiteAuthor": False, "runtimeActionsPerformed": False,
+    "publicationPerformedByManifestGenerator": False, "runtimeActionsPerformed": False,
     "hosting": c["hosting"], "singleStatusSource": "content.json",
     "example": c["example"], "historicalExample": c["historicalExample"], "approvedArchive": e["bundle"],
     "walkthroughProvenance": walkthrough, "walkthroughProvenanceSha256": walkthrough_pin,
     "followUp": c["followUp"], "followUpProvenance": followup,
     "wordOutputRelease": word, "wordReleaseSha256": word_pin,
+    "solutionImportRelease": solutions,
+    "solutionImportReleaseSha256": hashlib.sha256((SITE / SOLUTION_MANIFEST).read_bytes()).hexdigest() if solutions else None,
     "files": files, "exactPublicRepositoryAllowlist": ALL,
     "exactDeploymentAllowlist": DEPLOY + [MANIFEST], "repositoryOnlyAllowlist": REPOSITORY_ONLY,
     "privacyReport": "PRIVACY-REPORT.json",

@@ -23,6 +23,7 @@ from build_walkthrough import (
     PROVENANCE as WALKTHROUGH_PROVENANCE, MARKDOWN, IMAGE_ROLES,
 )
 from word_release import verify as verify_word_release, summary as word_summary, MANIFEST as WORD_MANIFEST, PATHS as WORD_PATHS, QA_SCOPE
+from solution_release import verify as verify_solutions, MANIFEST as SOLUTION_MANIFEST, PATHS as SOLUTION_PATHS
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -34,6 +35,7 @@ if urlparse(args.base_url).hostname != "127.0.0.1" or not captures.is_relative_t
     raise SystemExit("Only a local preview and owned private capture directory are allowed.")
 walkthrough = verify_walkthrough()
 word = verify_word_release(required=True)
+solutions = verify_solutions()
 verify_outputs(walkthrough)
 walkthrough_rows = walkthrough_documents(walkthrough)
 target_status = combined_target(walkthrough)
@@ -62,6 +64,7 @@ result = {"status": "PENDING", "scope": QA_SCOPE,
           "exampleBundleSha256": e["bundle"]["sha256"],
           "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
           "wordReleaseSha256": hashlib.sha256((SITE / WORD_MANIFEST).read_bytes()).hexdigest(),
+          "solutionImportReleaseSha256": hashlib.sha256((SITE / SOLUTION_MANIFEST).read_bytes()).hexdigest() if solutions else None,
           "validatedFileSha256": {name: hashlib.sha256((SITE / name).read_bytes()).hexdigest()
                                  for name in ALL if name not in {"qa/RESULTS.json", "PRIVACY-REPORT.json", MANIFEST}},
           "cases": [], "externalRequests": [], "errors": []}
@@ -210,9 +213,15 @@ try:
             check("Owner Inbox receipt and the matching protected-report link verified" in page.locator("#example-caveat").text_content(), label + ": actual receipt and protected-report proof beside primary example")
             check("Forwarded corporate receipt is not established" in page.locator("#delivery-boundary").text_content(), label + ": owner receipt does not imply corporate forwarding receipt")
             check("no-email" in improvement.text_content() and improvement.locator("tbody tr").count() == 11, label + ": both no-email benchmarks and all 11 historical comparisons remain distinct")
+            expected_zips = {e["bundle"]["path"]}
+            if solutions:
+                expected_zips.update(row["path"] for row in solutions["files"].values()
+                                     if row["path"].endswith(".zip"))
+            else:
+                expected_zips.add(WORD_PATHS["bundle"])
             check(set(page.locator('a[href$=".zip"]').evaluate_all("(nodes)=>nodes.map(n=>n.getAttribute('href'))"))
-                  == {e["bundle"]["path"], WORD_PATHS["bundle"]},
-                  label + ": only the two reviewed evidence/distribution ZIPs")
+                  == expected_zips,
+                  label + ": only the exact evidence and declared solution/resource ZIPs")
             box = page.locator('nav a[href="#solution-download"]').bounding_box()
             check(box["y"] + box["height"] < height, label + ": Word solution download navigation above fold")
             check(page.locator("#word-output h1").bounding_box()["y"] < height - 24,
@@ -311,6 +320,17 @@ try:
             response = context.request.get(urljoin(args.base_url, row["path"]))
             check(response.status == 200 and hashlib.sha256(response.body()).hexdigest() == row["sha256"],
                   "Actual Word-release download matches its reviewed hash: " + role)
+        if solutions:
+            for role, row in solutions["files"].items():
+                response = context.request.get(urljoin(args.base_url, row["path"]))
+                check(response.status == 200 and hashlib.sha256(response.body()).hexdigest() == row["sha256"],
+                      "Actual import-first download matches its exact hash: " + role)
+            for role in ("reviewer", "automation"):
+                check(page.locator('#solution-download a.button.primary[href="' + SOLUTION_PATHS[role] + '"]').count() == 1,
+                      "Direct unmanaged solution is a primary download: " + role)
+            check("Import first." in page.locator("#setup-title").text_content()
+                  and "*.target.zip" not in page.locator("#setup").text_content(),
+                  "Setup order is import-first, not pre-import substitution")
         page.locator("#theme-toggle").focus()
         current = page.locator("html").get_attribute("data-theme")
         page.keyboard.press("Enter")
@@ -384,9 +404,12 @@ try:
         check(plain.locator("#example-caveat").text_content() == primary_content(walkthrough)["briefCaveat"], "No-JavaScript homepage retains exact improved metrics and receipt proof")
         check(plain.locator("#combined-target").text_content() == combined_target(walkthrough)["summary"], "No-JavaScript homepage retains bounded target evidence")
         check(plain.locator("figure.screenshot a.image-link").count() == 9 and plain.locator('[data-full-example-link]').get_attribute("href") == "walkthrough.html", "No-JavaScript image inspection and main reader links")
-        check(plain.locator('#solution-download a[download]').get_attribute("href") == WORD_PATHS["bundle"]
+        expected_downloads = ({SOLUTION_PATHS[role] for role in ("reviewer", "automation", "support")}
+                              if solutions else {WORD_PATHS["bundle"]})
+        check(set(plain.locator('#solution-download a[download]').evaluate_all(
+                  "(nodes)=>nodes.map(n=>n.getAttribute('href'))")) == expected_downloads
               and plain.locator('#word-output a[href="' + WORD_PATHS["example"] + '"]').count() == 1,
-              "Word example and configure-before-import bundle are accessible without JavaScript")
+              "Word example and exact declared solution/resource downloads are accessible without JavaScript")
         check(plain.locator("#instructions-source").text_content() == (SITE / "reference/agent-instructions.txt").read_text(encoding="utf-8")
               and json.loads(plain.locator("#topics-source").text_content()) == reference,
               "No-JavaScript source blocks match the complete current reference downloads")

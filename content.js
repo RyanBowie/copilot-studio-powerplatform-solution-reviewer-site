@@ -1,7 +1,7 @@
 window.PSR_CONTENT = {
   "publication": {
     "approvedPublicPreview": true,
-    "scope": "Reviewed Word-output release and redacted synthetic format example, alongside unchanged matched real-canvas/email walkthrough and historical evidence.",
+    "scope": "Reviewed import-first solutions with unchanged historical Word fixture and walkthrough evidence.",
     "runtimeAcceptance": false,
     "siteVisualReview": "Historical eight-image review is retained separately. New nine-image hash-bound visual/privacy review is required; no new approval is inferred by a generator."
   },
@@ -89,7 +89,7 @@ window.PSR_CONTENT = {
   "downloads": {
     "installerIncluded": true,
     "exampleIncluded": true,
-    "status": "Reviewed Word-output configure-before-import solution bundle, matching template and redacted example. Historical TXT/JSON/Markdown evidence is retained unchanged. No credentials or working demo bindings are shipped."
+    "status": "Separate unmanaged reviewer and automation solution ZIPs for import-first setup; the setup archive is supplementary, not an import input. Native import evidence does not establish setup, automatic Word runtime or cross-tenant acceptance."
   },
   "wordOutput": {
     "manifestPath": "downloads/word-output-release.json",
@@ -142,5 +142,40 @@ window.PSR_CONTENT = {
       "wordOutlineHeadings": false
     },
     "packageKind": "PORTABLE_DERIVED_CONFIGURE_BEFORE_IMPORT"
+  },
+  "solutionImport": {
+    "manifestPath": "downloads/solution-import-release.json",
+    "version": "3.3.2.7",
+    "files": {
+      "reviewer": {
+        "path": "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+        "bytes": 92168,
+        "sha256": "a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96"
+      },
+      "automation": {
+        "path": "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+        "bytes": 87458,
+        "sha256": "acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94"
+      },
+      "support": {
+        "path": "downloads/solution-reviewer-setup-3.3.2.7.zip",
+        "bytes": 176979,
+        "sha256": "d7bd0d277c950e43ae478fe6c10d1e7b1afb6b41432e5373f0db691162742a68"
+      },
+      "setup": {
+        "path": "downloads/SOLUTION-IMPORT-SETUP.md",
+        "bytes": 17200,
+        "sha256": "10a3d7f821b8bdce7129c98f34949d4091b561f5a5875b463553bb2a9ccd2341"
+      }
+    },
+    "evidence": {
+      "sameTenantSandboxImportVerified": true,
+      "automaticWordRuntimeVerified": false,
+      "crossTenantInstallationVerified": false,
+      "separateLeastPrivilegeRequesterVerified": false,
+      "publishedDemoAgentChanged": false,
+      "setupOrActivationPerformed": false
+    },
+    "approvedPublicDistribution": true
   }
 };
