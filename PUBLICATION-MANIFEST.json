@@ -2,7 +2,7 @@
   "schemaVersion": "5.0",
   "status": "READY_FOR_PARENT_PUBLICATION",
   "scope": "WORD_RELEASE_AND_MATCHED_WALKTHROUGH_APPROVED_ASSETS",
-  "publicationPerformedBySiteAuthor": false,
+  "publicationPerformedByManifestGenerator": false,
   "runtimeActionsPerformed": false,
   "hosting": {
     "repository": "RyanBowie/copilot-studio-powerplatform-solution-reviewer-site",
@@ -448,11 +448,644 @@
     }
   },
   "wordReleaseSha256": "6a006ee70c3009d6437ef1b6344b0730815f53285e3af45e0cc9493a6be7ea35",
+  "solutionImportRelease": {
+    "schemaVersion": 1,
+    "kind": "IMPORT_FIRST_UNMANAGED_SOLUTION_RELEASE",
+    "version": "3.3.2.7",
+    "approvedPublicDistribution": true,
+    "evidence": {
+      "sameTenantSandboxImportVerified": true,
+      "automaticWordRuntimeVerified": false,
+      "crossTenantInstallationVerified": false,
+      "separateLeastPrivilegeRequesterVerified": false,
+      "publishedDemoAgentChanged": false,
+      "setupOrActivationPerformed": false
+    },
+    "files": {
+      "reviewer": {
+        "path": "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+        "bytes": 92168,
+        "sha256": "a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96"
+      },
+      "automation": {
+        "path": "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+        "bytes": 87458,
+        "sha256": "acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94"
+      },
+      "support": {
+        "path": "downloads/solution-reviewer-setup-3.3.2.7.zip",
+        "bytes": 176979,
+        "sha256": "d7bd0d277c950e43ae478fe6c10d1e7b1afb6b41432e5373f0db691162742a68"
+      },
+      "setup": {
+        "path": "downloads/SOLUTION-IMPORT-SETUP.md",
+        "bytes": 17200,
+        "sha256": "10a3d7f821b8bdce7129c98f34949d4091b561f5a5875b463553bb2a9ccd2341"
+      }
+    },
+    "archiveMembers": {
+      "reviewer": {
+        "Assets/botcomponent_workflowset.xml": {
+          "bytes": 1039,
+          "sha256": "a891a065776fb2559f81bb13b6ee2bc00107898c87c794a0b0acc3b55e255aa0"
+        },
+        "Workflows/PowerPlatformSolutionReviewer-Collectevidence-ABF4D574-ADAE-F111-AAAC-7CED8D9AA818.json": {
+          "bytes": 167125,
+          "sha256": "3dba4e0e6e6bd13eaefd0d68eed3ca3e55656fee4f099ef74d99fa6f4291e322"
+        },
+        "Workflows/PowerPlatformSolutionReviewer-CurrentreviewWordren-0EF45BEC-B8B1-F111-AAAB-7C1E5264FAA2.json": {
+          "bytes": 25559,
+          "sha256": "d46c7543d8b5e820d9d8d2ebb3e06e1da9de77d077f919c85eba7930bb5664d6"
+        },
+        "[Content_Types].xml": {
+          "bytes": 2867,
+          "sha256": "e15d53b932e346e4972f42b342f370998fe9399ab5060f40bae1e1d11609e6cc"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.action.CollectReviewEvidence/botcomponent.xml": {
+          "bytes": 415,
+          "sha256": "7907bbba73951eae0dbe977b9d3f6062059a56b0deca9eda17d633ad20e0602f"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.action.CollectReviewEvidence/data": {
+          "bytes": 880,
+          "sha256": "265c80ed505bdbb0b9bca662c9749fed57097e45b1968705e4edf9f85dc3685d"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.action.CreateCurrentReviewWord/botcomponent.xml": {
+          "bytes": 421,
+          "sha256": "bc50ebe469864f01b83bf159b185c8b900fb74c8604463ee35875f3b66bfdf19"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.action.CreateCurrentReviewWord/data": {
+          "bytes": 1897,
+          "sha256": "6b005ce4144a1e3e15794e445fb1e8361086ae2c15421554774abd48b2948e97"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.gpt.default/botcomponent.xml": {
+          "bytes": 371,
+          "sha256": "0722066b8b2d26e476c0067383d5e2770cd177ca64a0bda0a24ca34490c9caae"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.gpt.default/data": {
+          "bytes": 16445,
+          "sha256": "754b2942053d2c023196b8e5119b10acec1e056cca35b88f6eac32f77badfea7"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ConversationStart/botcomponent.xml": {
+          "bytes": 588,
+          "sha256": "0f0ce238781ba6a2ba5a45d3047ecbb1b1f7733980f5c594c3f36b7ca0e2c1fe"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ConversationStart/data": {
+          "bytes": 322,
+          "sha256": "89672ca40a93c9451c07fb2c27d4d9bdd8fd8e062fc7f19a766373fb0d27ef58"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.EndofConversation/botcomponent.xml": {
+          "bytes": 527,
+          "sha256": "c642d455c43aa7cd3b9c719823b670fa7e144ebb6f6026b41115462841eab921"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.EndofConversation/data": {
+          "bytes": 2002,
+          "sha256": "e8057683df763af2e32d01c70eef90f98b43c7312dd33b9e7e01644dcf622b16"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Escalate/botcomponent.xml": {
+          "bytes": 647,
+          "sha256": "164b1b685216fd262de46fe7a508fda51edf4aa08c09a38dbe91db6190583bdd"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Escalate/data": {
+          "bytes": 1955,
+          "sha256": "977cf8ddeeab090606f77fe1afb23e5eea86278311a0eb8bd0fe89ac82acc4ac"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Fallback/botcomponent.xml": {
+          "bytes": 468,
+          "sha256": "e84a62a87050fb0f8f6538d90c7d1e7fc5ac40c07bbb72227f55dbb02cb95ae9"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Fallback/data": {
+          "bytes": 1035,
+          "sha256": "37461d61d1e5bc5dae1a44f610c253939c4f61d400e08392a7ba460423217bb7"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.FormatCurrentReviewPresentation/botcomponent.xml": {
+          "bytes": 427,
+          "sha256": "4bdee24d665c8d778e1b6b54757c5bdf03341f30da18e0c02969ff168567b9d4"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.FormatCurrentReviewPresentation/data": {
+          "bytes": 16172,
+          "sha256": "082f33b79d3dcd7cf49082ba58761c4d546ee15cba99251acf2b07f92fdb529d"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Goodbye/botcomponent.xml": {
+          "bytes": 655,
+          "sha256": "2d1022c7b6a41661df21d5c781753f097cfc874b8c62d2c89a907cf4f4a003ba"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Goodbye/data": {
+          "bytes": 992,
+          "sha256": "54df9c10c9b641965e0cf278bb7a11af7d0b21913f57ad43adbf9106a1ed8438"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Greeting/botcomponent.xml": {
+          "bytes": 435,
+          "sha256": "b4c2054a2993f31836977c71d766b41cf459801051074a19162ca1f1daa8f8fd"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Greeting/data": {
+          "bytes": 516,
+          "sha256": "170c2a08b746c1f5e33ddbd2bded9f82db16a2d28f0964e7d126080ef5465da5"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.MultipleTopicsMatched/botcomponent.xml": {
+          "bytes": 551,
+          "sha256": "43e53e402d146e3861abc090cc78463d8e24e2ced07399223c3abea02bf1ef98"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.MultipleTopicsMatched/data": {
+          "bytes": 1207,
+          "sha256": "2c9ff66dfc3fc72c5f68f6c3f2a31ec090098bd4cb16fb83d9ec2a5578154c51"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.OnError/botcomponent.xml": {
+          "bytes": 513,
+          "sha256": "6cec07742a3cbe2ef4a041bbfb26ad48993c80e4381daf6a86a9985ea0c34bc2"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.OnError/data": {
+          "bytes": 1328,
+          "sha256": "78cd3095777b3a34bf5a9b7fd87fabe91cff504958df1ea3d531aa5147efae8d"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ResetConversation/botcomponent.xml": {
+          "bytes": 368,
+          "sha256": "e570708c31c652a8905db2d4a8754d9183e0a27a430c8d07f64417f464f50558"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ResetConversation/data": {
+          "bytes": 409,
+          "sha256": "7431c4ac635e5d004b0e53f5a1900aad3757392f6dce94d534afb7e9d300ad1e"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ReviewSuppliedAutomationEvidence/botcomponent.xml": {
+          "bytes": 429,
+          "sha256": "aafb3e045f0226ea3a1fe26beb2b4ae1d6bf0e1985171aef81154a2c681308f4"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ReviewSuppliedAutomationEvidence/data": {
+          "bytes": 7489,
+          "sha256": "b101d0ebd9045902a523fd0c3b49df55c547215d10b242634a1cbf7c34658147"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ReviewTrustedExport/botcomponent.xml": {
+          "bytes": 402,
+          "sha256": "5750d9b1d0555734275651f41f07cfe2794231bfeed04baf4bcf0d3ad21bedb5"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ReviewTrustedExport/data": {
+          "bytes": 38335,
+          "sha256": "1373231ffba262dacded61d0a2224d2ff1dd8ac094b0d110381c1a4fb4901ffb"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Search/botcomponent.xml": {
+          "bytes": 442,
+          "sha256": "eb27c9b647acd5b8e0b3228505523c42b28df8aa9c076f0bdce3a17e9589b0f9"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Search/data": {
+          "bytes": 600,
+          "sha256": "f095e01ed6cb35d1e9d6655ddef5da1bf49fa8f94fa65ffbd684f20b1d3a5ab9"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Signin/botcomponent.xml": {
+          "bytes": 475,
+          "sha256": "92528334afad5e122a87f5987723f8f245de93a386b7aa6cb487e2e3f42bc003"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.Signin/data": {
+          "bytes": 498,
+          "sha256": "79697da1f7a3833661990f57d40fc75387dd18a51006dd453b0ad8ee1ba79da8"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.StartOver/botcomponent.xml": {
+          "bytes": 352,
+          "sha256": "0a0621af7e3b4850a7698d6c1ee20d5f73907e6cb77c7f6df7d4b2c83129d064"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.StartOver/data": {
+          "bytes": 860,
+          "sha256": "d17af6a6caff251efe88877a561a55201f9b0d83d67d67ec506281f575957bd5"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ThankYou/botcomponent.xml": {
+          "bytes": 430,
+          "sha256": "5f95913988db8896f6bba90b1ae310d1f93284d55bbc9e11f57ecf0da6b82054"
+        },
+        "botcomponents/psr_PowerPlatformSolutionReviewer.topic.ThankYou/data": {
+          "bytes": 330,
+          "sha256": "8edf4f2029d3c63bb91ac9a4371781eead76395ef35b8ec1f852725e7fa54500"
+        },
+        "bots/psr_PowerPlatformSolutionReviewer/bot.xml": {
+          "bytes": 19877,
+          "sha256": "7fa7183b423479c49f890ab9b944b98cfc982c0b88de5efbc6218347a30bbdd7"
+        },
+        "bots/psr_PowerPlatformSolutionReviewer/configuration.json": {
+          "bytes": 547,
+          "sha256": "3df8da3a378c420ede0ea32358c9579dd2a9f375b79b782a2294313335ab187a"
+        },
+        "customizations.xml": {
+          "bytes": 6723,
+          "sha256": "cfbe3912bdb075f62cd0669c9d77dda5c40ea89f999bee118a39acddc2b519f4"
+        },
+        "environmentvariabledefinitions/psr_INSTALLATION_ID/environmentvariabledefinition.xml": {
+          "bytes": 670,
+          "sha256": "14cdeabc7b49c4a64d67a78b9560360904dd3aa3f1dc75856285dd97da80955c"
+        },
+        "environmentvariabledefinitions/psr_LIBRARY_ID/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "cf1ed7554933db9523440d16ed053ef732f01cc7bd78c040d45363238123f35b"
+        },
+        "environmentvariabledefinitions/psr_LIBRARY_SITE_REL/environmentvariabledefinition.xml": {
+          "bytes": 671,
+          "sha256": "c82fca564912534475ee49c502164d18795de41f32e73c44a96b7381398d9968"
+        },
+        "environmentvariabledefinitions/psr_RESULTS_REL/environmentvariabledefinition.xml": {
+          "bytes": 646,
+          "sha256": "81d47f22d17d72dcc38f64987a3bc3db2d5ca9358eac0eaba4a9695195622286"
+        },
+        "environmentvariabledefinitions/psr_SITE_URL/environmentvariabledefinition.xml": {
+          "bytes": 631,
+          "sha256": "b26f9673016d04021a5ac0b3003675045e279f59bd2859af700c0441abcd88fe"
+        },
+        "environmentvariabledefinitions/psr_SP_ORIGIN/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "36ba364b77784a2b3359e15b65b849e5d956ea2f7a6401dfdba512c4cf242914"
+        },
+        "environmentvariabledefinitions/psr_WORD_DRIVE/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "c5216afe96a192d8941f05271fff0d3bfce95aa9abff26e56571ec122f6290fd"
+        },
+        "environmentvariabledefinitions/psr_WORD_FILE/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "f4050cb0afb1f7923039b0fe0aa65a9b38be04c5a0158cb6e8452d2fb961243f"
+        },
+        "solution.xml": {
+          "bytes": 4500,
+          "sha256": "c9cabd80c4a111792c3a8bd92a29b8c4676e37c90ba7403d50c36b60ff5f2a55"
+        }
+      },
+      "automation": {
+        "Workflows/PowerPlatformSolutionReviewer-SharePointautomaticr-7BDC877A-BAAE-F111-AAAC-7CED8D9AA818.json": {
+          "bytes": 708053,
+          "sha256": "f72df69b614ef224c41aefcd65dd86eae9f7b1ef2dee37f66207111c4a4214fc"
+        },
+        "[Content_Types].xml": {
+          "bytes": 258,
+          "sha256": "282c0ebf9166f570a73192cb78a21d2046fc12fd51830665b375e1122a9de305"
+        },
+        "customizations.xml": {
+          "bytes": 6571,
+          "sha256": "fe0682f305dca2c5ea22a68c2c1e946117b251ebc694ab91cb5ebd38c702d542"
+        },
+        "environmentvariabledefinitions/psr_AGENT_ID/environmentvariabledefinition.xml": {
+          "bytes": 631,
+          "sha256": "6310cf81472a9d3423faffd9f33277e195261ae3ac6094fc9dd4b516acc25f02"
+        },
+        "environmentvariabledefinitions/psr_AGENT_PICKER/environmentvariabledefinition.xml": {
+          "bytes": 651,
+          "sha256": "68f55377d356ec36fef591cc19efb61067b10f2f953f40a9f3e2f48c13df56e3"
+        },
+        "environmentvariabledefinitions/psr_AGENT_PUBLISHED_UTC/environmentvariabledefinition.xml": {
+          "bytes": 686,
+          "sha256": "c0461554801a525b806fac96ffeae854ab5e9df6849b211c78f616a40e4c60e5"
+        },
+        "environmentvariabledefinitions/psr_CONTROL_ID/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "da633fb07dfba3eaf6e9b6eba7e5c025e1df83cab98f131885ea4ff958fa040d"
+        },
+        "environmentvariabledefinitions/psr_CONTROL_ITEM_ID/environmentvariabledefinition.xml": {
+          "bytes": 666,
+          "sha256": "e822a7044cccfaae2b564c9ba0260d6f081e9eff2e01b4ad713a1931f2835d79"
+        },
+        "environmentvariabledefinitions/psr_ENVIRONMENT_ID/environmentvariabledefinition.xml": {
+          "bytes": 661,
+          "sha256": "0c1a1c0b976cb2dab336997a45aaadfc12f7e77a03f505cd840db73ec26c5bbc"
+        },
+        "environmentvariabledefinitions/psr_INCOMING_REL/environmentvariabledefinition.xml": {
+          "bytes": 651,
+          "sha256": "8440f9b18aacb065f8cfbc14a86645d506f3fa9bd944eeddc3a1d0759437fbec"
+        },
+        "environmentvariabledefinitions/psr_JOBS_ENTITY/environmentvariabledefinition.xml": {
+          "bytes": 646,
+          "sha256": "7df155e28641a14417b1f220ecfe39f54089c49e25a65931562f8a3522493583"
+        },
+        "environmentvariabledefinitions/psr_JOBS_ID/environmentvariabledefinition.xml": {
+          "bytes": 626,
+          "sha256": "c3f3b0e1133d5881cb94d2bc25e3dfd1c1f95f56a6928a8ac8d372eb01b30e8b"
+        },
+        "environmentvariabledefinitions/psr_LIBRARY_ID/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "cf1ed7554933db9523440d16ed053ef732f01cc7bd78c040d45363238123f35b"
+        },
+        "environmentvariabledefinitions/psr_LIBRARY_SITE_REL/environmentvariabledefinition.xml": {
+          "bytes": 671,
+          "sha256": "c82fca564912534475ee49c502164d18795de41f32e73c44a96b7381398d9968"
+        },
+        "environmentvariabledefinitions/psr_OWNER_MAIL/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "e614051b9fe21bd17090d9c09a67ee5fce28b44b78a7ed25fccd9a4e73dd4692"
+        },
+        "environmentvariabledefinitions/psr_OWNER_OID/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "28caa1742f8cf1edbc658bd8800663e7950e0de933eddf4f7076a5a9a7f3e127"
+        },
+        "environmentvariabledefinitions/psr_OWNER_SP_EMAIL/environmentvariabledefinition.xml": {
+          "bytes": 661,
+          "sha256": "aa5e4c3014c3f5acd4b291e8f244960681e9e2c3c6d1d2638be420c2e19a7722"
+        },
+        "environmentvariabledefinitions/psr_OWNER_SP_ID/environmentvariabledefinition.xml": {
+          "bytes": 646,
+          "sha256": "c8d819fb3d3f62209d4bd7023b6745988e0b3a55b035f90253a7d8d4d5082ce8"
+        },
+        "environmentvariabledefinitions/psr_OWNER_SP_LOGIN/environmentvariabledefinition.xml": {
+          "bytes": 661,
+          "sha256": "b29d3b64ca9e7ff1fc200407c4095d6a27d0fac4902c62e57ce05cfec986f6e5"
+        },
+        "environmentvariabledefinitions/psr_OWNER_UPN/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "de1dff3a815e40fddcc048545bfd2bcc412aefacbcc0dd0ed055300bfe6f8257"
+        },
+        "environmentvariabledefinitions/psr_RESULTS_REL/environmentvariabledefinition.xml": {
+          "bytes": 646,
+          "sha256": "81d47f22d17d72dcc38f64987a3bc3db2d5ca9358eac0eaba4a9695195622286"
+        },
+        "environmentvariabledefinitions/psr_SITE_ID/environmentvariabledefinition.xml": {
+          "bytes": 626,
+          "sha256": "bf237d32433dd2937da55c32a0bd8bb85c18a2166db4a4a7b5cfcfbc77b5e054"
+        },
+        "environmentvariabledefinitions/psr_SITE_URL/environmentvariabledefinition.xml": {
+          "bytes": 631,
+          "sha256": "b26f9673016d04021a5ac0b3003675045e279f59bd2859af700c0441abcd88fe"
+        },
+        "environmentvariabledefinitions/psr_SP_ORIGIN/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "36ba364b77784a2b3359e15b65b849e5d956ea2f7a6401dfdba512c4cf242914"
+        },
+        "environmentvariabledefinitions/psr_WORD_DRIVE/environmentvariabledefinition.xml": {
+          "bytes": 641,
+          "sha256": "c5216afe96a192d8941f05271fff0d3bfce95aa9abff26e56571ec122f6290fd"
+        },
+        "environmentvariabledefinitions/psr_WORD_FILE/environmentvariabledefinition.xml": {
+          "bytes": 636,
+          "sha256": "f4050cb0afb1f7923039b0fe0aa65a9b38be04c5a0158cb6e8452d2fb961243f"
+        },
+        "solution.xml": {
+          "bytes": 5590,
+          "sha256": "f34d7ece24cf5b14f615b60daafbaed924513ce8f71f31c5a84d60df2365c261"
+        }
+      },
+      "support": {
+        ".gitignore": {
+          "bytes": 82,
+          "sha256": "d36fe3bc75640f4364c3084ee154b89d03a8ee881fa6d2c180dfab8fa987769d"
+        },
+        "FILES.json": {
+          "bytes": 5958,
+          "sha256": "e6105ce05c8cf8f5765017c49a36e0922fb97de5569bb10cc0bd3bef6da33ce2"
+        },
+        "INSTALL.md": {
+          "bytes": 17200,
+          "sha256": "10a3d7f821b8bdce7129c98f34949d4091b561f5a5875b463553bb2a9ccd2341"
+        },
+        "OFFLINE-VALIDATION.json": {
+          "bytes": 50840,
+          "sha256": "603d93c20f3005b4d75a5568ae9d1a3af899dfb4862e24084412c76d5d76b066"
+        },
+        "PUBLIC-SUPPORT-POLICY.json": {
+          "bytes": 1226,
+          "sha256": "0b1ef053fcbf982ad23781430bd6d5bfd4f69b039cf40ec7596792ec0e8a092f"
+        },
+        "XML-SHAPE-REVISION.json": {
+          "bytes": 4233,
+          "sha256": "611ed67a8f05a14b01c9260700948d7e61ab5a02e1acf75fad2908f401697585"
+        },
+        "action-equivalence-report.json": {
+          "bytes": 397765,
+          "sha256": "38952f24958daa24bfc26fb235a911165be0f8475216d585e28a8c622bb2abee"
+        },
+        "automation.settings.json": {
+          "bytes": 13347,
+          "sha256": "72eadbfb559320e42661d0355c8d71f92d8ec1a371a4d6e8ba64e3fcc9c335b6"
+        },
+        "builder/BUILD.md": {
+          "bytes": 6255,
+          "sha256": "093302b475cb898c52354b976c64022edffea9d5ff9b0d006e58da50e4b56582"
+        },
+        "builder/build_public_support.py": {
+          "bytes": 7516,
+          "sha256": "f1ab87aa9795b05e89c4f9210e056928255ff0df89430f5cbb6f51ac1092c5c6"
+        },
+        "builder/build_release.py": {
+          "bytes": 33261,
+          "sha256": "f38e850b5f53ace4bca1bac8033423500aa457004c528003640fde447896d857"
+        },
+        "builder/expression_equivalence.py": {
+          "bytes": 8986,
+          "sha256": "239af57f890a4550045d8eb9acb709ca242e4c465b2772d69bcf7ae915362683"
+        },
+        "builder/package_setup.py": {
+          "bytes": 7337,
+          "sha256": "96bd92770a2f7ec58dcc5948d2df60521da6557b3373d28ee46aa4780a188ab7"
+        },
+        "component-inventory.json": {
+          "bytes": 10333,
+          "sha256": "db114c5bb827fc81811b735259b56e3604392bbba89afec879cf12ace2b483f4"
+        },
+        "configuration.py": {
+          "bytes": 7855,
+          "sha256": "e0cfbac773cadb0108e7c720ccddb5663f0387fdcbdbde2e6b53eef91b06cac7"
+        },
+        "connection-inventory.json": {
+          "bytes": 1765,
+          "sha256": "255da36d1bdfaff4efc937ff4882a39c28120caa998074b8d439b3bda15ace03"
+        },
+        "current-review-v4.3.1.web.template.docx": {
+          "bytes": 11106,
+          "sha256": "498ee9eb6d1fbd9df4fa719a873fa57237fdbf224fcb6c62c77c96881bac3065"
+        },
+        "environment-variable-inventory.json": {
+          "bytes": 4324,
+          "sha256": "d452d9f80502607f2ec2243efac7e7d8220d5e3db179a8086a15e22568baa366"
+        },
+        "expression-equivalence-report.json": {
+          "bytes": 67880,
+          "sha256": "b0dc20f0d5f392bf48296e42e43b54e3bffef794522c5df7b40cf5d68e7265c2"
+        },
+        "guid-inventory.json": {
+          "bytes": 1937,
+          "sha256": "c6497e0ed4839f7c32b0e717336531cc81fdd4b32c321cf2217329afbc8072ee"
+        },
+        "install.py": {
+          "bytes": 30082,
+          "sha256": "5117900f56445465c021731d51aa771b3da9a029f23b131461ecbba0ec0f6b7e"
+        },
+        "kernel-selector.json": {
+          "bytes": 3782,
+          "sha256": "5aea9bebd04911dba7746a0080e2925cf44b6c668691e5b23dbafd04b7229bc9"
+        },
+        "native-byte-provenance.json": {
+          "bytes": 46564,
+          "sha256": "c88fcdb742a7d057e62b59d1e5db1642a27aa6e90b588a4cab9b5bbc2d7c8d9c"
+        },
+        "release-manifest.json": {
+          "bytes": 23278,
+          "sha256": "10aa1175cfb47e76a1af1416bde91f5e0121d383b52642776cff86c08e3957c9"
+        },
+        "release-manifest.schema.json": {
+          "bytes": 2715,
+          "sha256": "2b554e0766a1f23e845cb08efb43a2b7c0003da5de26f299ec125dbc37abd20f"
+        },
+        "release.py": {
+          "bytes": 22378,
+          "sha256": "51231b22042a0d17e39a2052a4ce86550cdd4b39ac03d187ef8c4d549492e964"
+        },
+        "reproducibility-report.json": {
+          "bytes": 570,
+          "sha256": "f6c95d0c156a4ab68cd9ce8a778c55f3a13088dfa511b6156e5a1861bd123804"
+        },
+        "requirements.txt": {
+          "bytes": 16,
+          "sha256": "3511b03c402b6669c1dbfa10ed53e74f95874b6f388fb37cf23a559af184f0b4"
+        },
+        "resource_setup.py": {
+          "bytes": 17335,
+          "sha256": "feca63224809cfd72bf8933e27fef139f202dca4bcea91d5bc0e219bfdd503b9"
+        },
+        "reviewer.settings.json": {
+          "bytes": 5039,
+          "sha256": "fd05adcae542448d69e989a75cced2817919d4f28a4a3b50cd9d1bc722f4e1a1"
+        },
+        "sharepoint-schema.json": {
+          "bytes": 1177,
+          "sha256": "6841713262159ca6febc764027a2d2c5e265aa5ac2e3818516debaeb8bfe1b2f"
+        },
+        "support-integration-tests.json": {
+          "bytes": 8633,
+          "sha256": "11393e929e6ef9082e425b5dc9f26f170f2ad257136e725a60f6c4ded6b82121"
+        },
+        "target.example.json": {
+          "bytes": 793,
+          "sha256": "62a7f8aec9a4fe4d4c21fb0b035f51b06510c78a5ff7b3cbabb113933d60ff76"
+        },
+        "target_api.py": {
+          "bytes": 17195,
+          "sha256": "b5ae5ac53d4c5e4d60e696e9c5ec3c40f060f648ceaf03153ebe2e0f9f48fa88"
+        },
+        "transformed-byte-report.json": {
+          "bytes": 31122,
+          "sha256": "ef6fd2dc5415891602ffc6880afdfbb19e3316a99f621ff49b379cdb1b6f0ef1"
+        },
+        "verify_release.py": {
+          "bytes": 939,
+          "sha256": "9bc6c5842dcc6935ec5af8a2fe811ef0c31b8a1b73267f2b04c6a9138444385a"
+        },
+        "word-schema-inventory.json": {
+          "bytes": 2565,
+          "sha256": "3b4feeab15227daf462ca4b371810ee4c8436a7de82a127595b4ff533c7f109f"
+        },
+        "word_setup.py": {
+          "bytes": 4980,
+          "sha256": "8aae5b12417a8acf5ee1a084c47afa6e48e43f8bcce39862cef999f2a19952a7"
+        }
+      }
+    },
+    "structuralIdentifiers": [
+      "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+      "41d42054-d4cb-4e90-b922-2b16b37fe379",
+      "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+      "abf4d574-adae-f111-aaac-7ced8d9aa818"
+    ],
+    "structuralIdentifierMembers": {
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::Assets/botcomponent_workflowset.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::Workflows/PowerPlatformSolutionReviewer-Collectevidence-ABF4D574-ADAE-F111-AAAC-7CED8D9AA818.json": [
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::Workflows/PowerPlatformSolutionReviewer-CurrentreviewWordren-0EF45BEC-B8B1-F111-AAAB-7C1E5264FAA2.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CollectReviewEvidence/data": [
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::botcomponents/psr_PowerPlatformSolutionReviewer.action.CreateCurrentReviewWord/data": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::botcomponents/psr_PowerPlatformSolutionReviewer.topic.EndofConversation/data": [
+        "41d42054-d4cb-4e90-b922-2b16b37fe379"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::customizations.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip::solution.xml": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip::Workflows/PowerPlatformSolutionReviewer-SharePointautomaticr-7BDC877A-BAAE-F111-AAAC-7CED8D9AA818.json": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip::customizations.xml": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip::solution.xml": [
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-setup-3.3.2.7.zip::OFFLINE-VALIDATION.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-setup-3.3.2.7.zip::guid-inventory.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "41d42054-d4cb-4e90-b922-2b16b37fe379",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-setup-3.3.2.7.zip::native-byte-provenance.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-setup-3.3.2.7.zip::release-manifest.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ],
+      "downloads/solution-reviewer-setup-3.3.2.7.zip::transformed-byte-report.json": [
+        "0ef45bec-b8b1-f111-aaab-7c1e5264faa2",
+        "7bdc877a-baae-f111-aaac-7ced8d9aa818",
+        "abf4d574-adae-f111-aaac-7ced8d9aa818"
+      ]
+    },
+    "nativeImports": [
+      {
+        "role": "reviewer",
+        "status": "Succeeded",
+        "sha256": "a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96",
+        "agentUnpublished": true,
+        "componentClosureVerified": true,
+        "emptyConfigurationVerified": true,
+        "flowsStopped": true,
+        "identityBoundariesVerified": true,
+        "nativeChannelConfigurationAbsent": true,
+        "unboundReferencesVerified": true,
+        "workflowDefinitionsVerified": true
+      },
+      {
+        "role": "automation",
+        "status": "Succeeded",
+        "sha256": "acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94",
+        "agentUnpublished": true,
+        "componentClosureVerified": true,
+        "emptyConfigurationVerified": true,
+        "flowsStopped": true,
+        "identityBoundariesVerified": true,
+        "nativeChannelConfigurationAbsent": true,
+        "unboundReferencesVerified": true,
+        "workflowDefinitionsVerified": true
+      }
+    ],
+    "source": {
+      "historicalDistributionVersion": "3.3.2.6",
+      "nativeReviewerArchiveSha256": "6ffe125f8459b2ec343cf1a31a8f2e41e0cad8d72a5be46b83daa2c565d39c50",
+      "nativeAutomationArchiveSha256": "7eccd5c7c64ea7472de908f7e97ea7d08ba03a4bc1742a956f74993914d735b3",
+      "automaticOverlaySha256": "acea5101fb52bf4a00af86ba51c5e14631b142b9c6177ae72b19da2c10b428b6",
+      "automaticOverlayNativeRuntimeAccepted": false
+    },
+    "localScreening": {
+      "expandedParts": 145,
+      "privateSourcePatterns": 23,
+      "privateSourceMatches": 0,
+      "targetBindingMatches": 0,
+      "parentPublicSafetyApproval": true
+    }
+  },
+  "solutionImportReleaseSha256": "fd4f1cd3b8e96020f90ad5632faf7d993307000c028208761612cc38ef5ffb62",
   "files": [
     {
       "path": "index.html",
-      "sha256": "7a14fbf39c50b8405dae23644572879d166628f12ff2c6c59e7365a1e231efd5",
-      "bytes": 209714,
+      "sha256": "4c617d14e38f7f15368676fcc1583e2d79589ba8905029d49fe00b081a75c8b4",
+      "bytes": 209066,
       "deployToPages": true
     },
     {
@@ -493,14 +1126,14 @@
     },
     {
       "path": "content.json",
-      "sha256": "8b4f4f7147a91174cb29f17ef7612cd7186bd5f54fbdd61ec84a744680c0357c",
-      "bytes": 6870,
+      "sha256": "57252b6d669770c111983f2b5c7ca796c01c85f1c3180d05057b386984ddfd04",
+      "bytes": 8195,
       "deployToPages": true
     },
     {
       "path": "content.js",
-      "sha256": "166ee2ac94c0e814a553a5a99294a135873c0da271c6ff5a63d6369a8e94bb91",
-      "bytes": 6892,
+      "sha256": "f60d8cf9a412c18c84cb5d78347d93b8198de716b7bcf68d2259a0dc1bf6f002",
+      "bytes": 8217,
       "deployToPages": true
     },
     {
@@ -511,8 +1144,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "a8ec8b345a7ae913861a17634262e728aaade0b40d8ddac35be799dadeecdac1",
-      "bytes": 19663,
+      "sha256": "c807847b2186ececf68abbe1be522a426aa569c415ddf11d3298f9f60c35dc72",
+      "bytes": 24268,
       "deployToPages": true
     },
     {
@@ -541,8 +1174,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "1c2b0649ded7f7b76a71ae038f8165f58089b3658d2aec190689db6d94472799",
-      "bytes": 10947,
+      "sha256": "a61697cc9769edb858fcb8cbdb770fe882a2074db8c2a57b1602c235ed31b7d4",
+      "bytes": 12003,
       "deployToPages": true
     },
     {
@@ -816,6 +1449,36 @@
       "deployToPages": true
     },
     {
+      "path": "downloads/solution-import-release.json",
+      "sha256": "fd4f1cd3b8e96020f90ad5632faf7d993307000c028208761612cc38ef5ffb62",
+      "bytes": 28718,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+      "sha256": "a6dab2f3905d9396da93d3814c6a690569efa2185485c0b41e14fde5e1370e96",
+      "bytes": 92168,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+      "sha256": "acb4905c8d55da94af016fb4aa9994a6090ffac592ab0a1ad9cbdb9249673b94",
+      "bytes": 87458,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/solution-reviewer-setup-3.3.2.7.zip",
+      "sha256": "d7bd0d277c950e43ae478fe6c10d1e7b1afb6b41432e5373f0db691162742a68",
+      "bytes": 176979,
+      "deployToPages": true
+    },
+    {
+      "path": "downloads/SOLUTION-IMPORT-SETUP.md",
+      "sha256": "10a3d7f821b8bdce7129c98f34949d4091b561f5a5875b463553bb2a9ccd2341",
+      "bytes": 17200,
+      "deployToPages": true
+    },
+    {
       "path": ".gitignore",
       "sha256": "eb98ee1a296e82f824d47ace00f36446d20aa07fd0e71e0ebe255ea9369095cf",
       "bytes": 77,
@@ -835,20 +1498,20 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "59dab891bcda015d8bb77fc5c4c66a9d3abaa9da00fde0fc05f6143d3f5987b9",
-      "bytes": 111713,
+      "sha256": "7a73110ddc090e49340ae7308931429f0d05adfcb0286e67973e1f86a2e0297f",
+      "bytes": 114371,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "47072bcb596a326dbec5770914d4317c9cb64d7a5de0c4812ee74b45bd6c295d",
-      "bytes": 25840,
+      "sha256": "ce0551e41725421243e960ea666f872382e8a236d1ce02dba7e0c1ce3b5a64d3",
+      "bytes": 26073,
       "deployToPages": false
     },
     {
       "path": "tools/generate_content.py",
-      "sha256": "f52df6ddd61dc44155c0b48bec19fa7da5006ead6e770991926e9a859e659a58",
-      "bytes": 1416,
+      "sha256": "7c3eab9d3b12e1ea150e28acac6f7ebd811774fe120e4ba0360c29bc4524456b",
+      "bytes": 2359,
       "deployToPages": false
     },
     {
@@ -859,32 +1522,32 @@
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "102911bcd517ab61841a8f1aec96bc60d196cc469aa1a98e5acf86eabcda9c4f",
-      "bytes": 2619,
+      "sha256": "639c87c13010d2fdd7401d0e3add646aaf8e5b4f38ff823637e0d4514e5a792d",
+      "bytes": 2809,
       "deployToPages": false
     },
     {
       "path": "tools/check_public.py",
-      "sha256": "178e3a972596abd38d5bde0304fc386b27a9ed975104c7489a14f4be097b2df1",
-      "bytes": 10454,
+      "sha256": "b4f8337085fe0baa54174888de9aa429faefad9f392e275779f0a0e5d1f95d45",
+      "bytes": 11131,
       "deployToPages": false
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "af4f0c4d7420d721c55033337e90b56089180c836165cc8420d8c4f0efd11229",
-      "bytes": 37079,
+      "sha256": "1e80eb7d43152df6063af6cbb99842543925a296bfd6cf0c0ba2a179c02e099d",
+      "bytes": 38777,
       "deployToPages": false
     },
     {
       "path": "tools/make_manifest.py",
-      "sha256": "479fb06204dcada72d4c0d065605cd51c40c4eca15e6f91149c8dc8717bb0390",
-      "bytes": 6259,
+      "sha256": "9f71e2419d205497164142caf65191e9065496d8c62649b8a3dd88ccdabc12ac",
+      "bytes": 6958,
       "deployToPages": false
     },
     {
       "path": "tools/stage_site.py",
-      "sha256": "0a9e656551dc61d512db12e0d629c92c78ae5d24465e90a4d160551a63895fe2",
-      "bytes": 3396,
+      "sha256": "728a3ed7e9e9a447cc4b2366407ea27d73f2248f1e76fa949bc848481340412e",
+      "bytes": 3906,
       "deployToPages": false
     },
     {
@@ -913,14 +1576,32 @@
     },
     {
       "path": "tools/word_release.py",
-      "sha256": "9ca9d3f1859a5b75885256d9050ca0ffd2f86c90cd9587a72c077eae09cab2b3",
-      "bytes": 15653,
+      "sha256": "bee32c0af650661edbe214e52ff0c92a3a23eaebacd6967b54e5cf1a314a1b06",
+      "bytes": 16157,
       "deployToPages": false
     },
     {
       "path": "tools/test_word_release.py",
       "sha256": "ba248401c9e4c99fec7016d3d69f508ee30b34b85e831a8cc0d25c91f404827b",
       "bytes": 9211,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/solution_release.py",
+      "sha256": "5633d71dc5a13b6488fb1b98d3e9364f98d13d81177ddc1f5a165400c0612d7e",
+      "bytes": 18757,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/test_solution_release.py",
+      "sha256": "8e1b980abd49850571738292802631994ce1d7fa3c87a23ef3ba9a6881a77d54",
+      "bytes": 18781,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/prepare_solution_release.py",
+      "sha256": "f6fd8dd82100c3b8ef2a4ac0efe06d4a4e218cf96987872f2ca95ee75ddefabf",
+      "bytes": 6524,
       "deployToPages": false
     }
   ],
@@ -986,6 +1667,11 @@
     "examples/word-output/review-example.docx",
     "examples/word-output/report-page-1.png",
     "examples/word-output/report-page-2.png",
+    "downloads/solution-import-release.json",
+    "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+    "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+    "downloads/solution-reviewer-setup-3.3.2.7.zip",
+    "downloads/SOLUTION-IMPORT-SETUP.md",
     ".gitignore",
     ".gitattributes",
     ".github/workflows/pages.yml",
@@ -1004,6 +1690,9 @@
     "tools/test_walkthrough.py",
     "tools/word_release.py",
     "tools/test_word_release.py",
+    "tools/solution_release.py",
+    "tools/test_solution_release.py",
+    "tools/prepare_solution_release.py",
     "PUBLICATION-MANIFEST.json"
   ],
   "exactDeploymentAllowlist": [
@@ -1068,6 +1757,11 @@
     "examples/word-output/review-example.docx",
     "examples/word-output/report-page-1.png",
     "examples/word-output/report-page-2.png",
+    "downloads/solution-import-release.json",
+    "downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip",
+    "downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip",
+    "downloads/solution-reviewer-setup-3.3.2.7.zip",
+    "downloads/SOLUTION-IMPORT-SETUP.md",
     "PUBLICATION-MANIFEST.json"
   ],
   "repositoryOnlyAllowlist": [
@@ -1088,12 +1782,15 @@
     "tools/build_walkthrough.py",
     "tools/test_walkthrough.py",
     "tools/word_release.py",
-    "tools/test_word_release.py"
+    "tools/test_word_release.py",
+    "tools/solution_release.py",
+    "tools/test_solution_release.py",
+    "tools/prepare_solution_release.py"
   ],
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 846,
+    "checksPassed": 858,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

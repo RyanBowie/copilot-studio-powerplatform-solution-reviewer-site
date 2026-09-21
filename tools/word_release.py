@@ -77,7 +77,7 @@ def text_variants(value):
     return variants
 
 
-def identifier_members(contents):
+def identifier_members(contents, paths=PATHS, roles=("bundle", "template", "example", "setup")):
     inventory = {}
 
     def inspect(label, data, depth=0):
@@ -92,8 +92,8 @@ def identifier_members(contents):
             if identifiers:
                 inventory[label] = identifiers
 
-    for role in ("bundle", "template", "example", "setup"):
-        inspect(PATHS[role], contents[role])
+    for role in roles:
+        inspect(paths[role], contents[role])
     return inventory
 
 
@@ -204,7 +204,7 @@ def summary(release):
     }
 
 
-def section(release, hero=False):
+def section(release, hero=False, solutions=None):
     if release is None:
         return ""
     files = release["files"]
@@ -217,7 +217,7 @@ def section(release, hero=False):
         for number, role in enumerate(("page1", "page2"), 1)
     )
     heading, identifier = ("h1", "top") if hero else ("h2", "word-title")
-    return f'''<section class="section wrap word-release" id="word-output" aria-labelledby="{identifier}">
+    rendered = f'''<section class="section wrap word-release" id="word-output" aria-labelledby="{identifier}">
 <div class="section-heading"><p class="eyebrow">New &middot; Word output and solution bundle {VERSION}</p>
 <{heading} id="{identifier}">Readable Word reports.<br>The same solution reviewer.</{heading}>
 <p>The existing reviewer can turn its completed assessment into a formatted <code>.docx</code>,
@@ -261,6 +261,15 @@ released with Word output. The automatic candidate is included in the derived bu
 has no native Word-run acceptance. No cross-tenant installation, broad reliability,
 source-app execution or production certification is claimed. Headings have visual formatting,
 not Word Heading 1/outline semantics.</p></section>'''
+    if solutions:
+        from solution_release import card, VERSION as solution_version
+        rendered = re.sub(r'<article class="card" id="solution-download">.*?</article>',
+                          lambda _: card(solutions), rendered, flags=re.S)
+        rendered = rendered.replace(
+            f"Word output and solution bundle {VERSION}",
+            f"Word output and unmanaged solutions {solution_version}",
+        )
+    return rendered
 
 
 def formats_section():

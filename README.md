@@ -1,7 +1,8 @@
 # Solution Reviewer — Word output and solution download
 
-A static Clawpilot-themed site with a **Word-enabled 3.3.2.6 configurable
-solution distribution**, a redacted native Word example, and the unchanged
+A static Clawpilot-themed site with **directly importable 3.3.2.7 unmanaged
+reviewer and automation solutions**, separate post-import setup resources,
+a redacted native Word example, and the unchanged
 **Data Entry Testing** real-canvas walkthrough on revision **3.3.2.5**.
 The new Word example is a separate synthetic format-only test, not a Word
 version of that historical 4/5 assessment. There is no upload/chat backend, telemetry, tracking,
@@ -21,10 +22,68 @@ Missing inputs never fall back to the historical example, predict acceptance,
 manufacture screenshots or create review sign-offs. Existing hosting status
 does not mean this revision has been deployed or live-verified.
 
-## Word output and the downloadable solution
+## Importable solutions and setup
 
-[Word-enabled solution bundle](downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip) ·
-[Setup instructions](downloads/WORD-OUTPUT-SETUP.md) ·
+| Import order | Direct Power Platform import input | Retained implementation |
+| --- | --- | --- |
+| 1 | [Reviewer 3.3.2.7](downloads/psr_PowerPlatformSolutionReviewer_3_3_2_7_unmanaged.zip) | Existing agent, all 19 components, 225-action collector, 21-action Word helper |
+| 2 | [Automation 3.3.2.7](downloads/psr_PowerPlatformSolutionAutomation_3_3_2_7_unmanaged.zip) | Complete 500-action automatic-review implementation |
+
+[Import and setup instructions](downloads/SOLUTION-IMPORT-SETUP.md) ·
+[Setup resources ZIP](downloads/solution-reviewer-setup-3.3.2.7.zip) ·
+[Exact file/member hashes and native import evidence](downloads/solution-import-release.json)
+
+These are genuine unmanaged solution ZIPs, **not portable substitution
+templates or an outer bundle**. They derive from the pinned native reviewer
+and automation exports, with the complete historical automatic Word overlay
+retained. Ordinary target settings are now 24 unconfigured native environment
+variables; eight logical connection references ship unbound. No private
+tenant bindings, credentials, connection instances or working demo defaults
+are included. The source hashes are recorded in the release manifest.
+
+1. Import the reviewer first, then automation into an explicitly authorized
+   clean target. Disable workflow activation and agent publication; do not
+   overwrite unrelated components. Verify the complete imported contents.
+2. Keep both unchanged solution ZIPs beside `release-manifest.json` from the
+   extracted setup resources. That archive is **not** a solution import input.
+   Install its declared dependency with `python -m pip install -r requirements.txt`.
+3. Follow the setup instructions to verify the target owner and existing
+   connections, approve private storage, upload the exact unchanged Word
+   template separately, and verify its real schema. Configure native values
+   using the post-import helper's explicit `--apply` and
+   `--confirm-environment` gates. Setup ends stopped/unpublished, readiness
+   false, control Disabled and email false.
+4. Publication, manual enablement and smoke checks, automatic exact-source
+   acceptance, ongoing activation and any narrow email authorization are
+   **separate deliberate steps**, not installation side effects. Preserve
+   caller Invoker collection, explicit owner/service output and requester-only
+   report-item Read; no maker fallback or broader sharing.
+
+**Native import-only acceptance, 2026-09-21:** both exact ZIPs imported once
+into one same-tenant sandbox. Fresh read-only verification passed 274 required
+checks and 18 additional integrity checks: complete workflow definitions and
+all 19 agent component bodies matched exactly; memberships were 38/30; all
+three flows remained stopped, the agent unpublished, eight references unbound,
+and 24 definitions empty with zero current-value records. No setup, template
+upload, binding, activation, publication, runtime invocation or email was performed.
+This is **not configured Word, automatic runtime, cross-tenant, or separate
+least-privilege requester acceptance**.
+
+An initial local comparison incorrectly decoded UTF-8 receipts as Windows-1252.
+The original failed comparison is preserved privately and explicitly superseded.
+Raw authenticated responses, independently parsed using strict UTF-8 in Node
+and Python, confirmed full exact definition equality without text normalization,
+target repair, package changes or reimport.
+
+**Distribution approved:** parent safety review and user authorization cover
+these exact release artifacts. The publication gate requires both exact native
+definition/state acceptance and that separate approval. GitHub Pages deployment
+and live-download verification are separate from native runtime acceptance.
+
+## Word output and historical distribution
+
+[Historical 3.3.2.6 configurable bundle](downloads/solution-reviewer-word-output-3.3.2.6.bundle.zip) ·
+[Historical configure-before-import instructions](downloads/WORD-OUTPUT-SETUP.md) ·
 [Word template](downloads/current-review-v4.3.1.web.template.docx) ·
 [Redacted Word example](examples/word-output/review-example.docx) ·
 [Release hashes](downloads/word-output-release.json)
@@ -45,14 +104,15 @@ The requester was also the existing site owner; this is not separate
 least-privilege-account evidence. Visual headings do not provide Word
 Heading 1/outline semantics.
 
-The bundle contains real reviewer and automation solution templates, the
+The historical 3.3.2.6 bundle contains real reviewer and automation solution templates, the
 matching generic Word template and target-configuration tooling. **Configure
-and repack before import.** Neither the outer bundle nor the unconfigured
+and repack before import applies only to that historical distribution**, not
+the direct 3.3.2.7 ZIPs above. Neither the old outer bundle nor the unconfigured
 `*.portable.template.zip` files are direct import inputs. Use your own
 connections, storage, requester policy and actually discovered Word template
 schema. Word Online (Business) licensing and policy approval are required.
 
-Fresh native exports contain the reviewer's current Word-enabled draft.
+The pinned native exports contain the reviewer's Word-enabled draft.
 The automatic Word definition is an explicitly derived, local-only candidate
 over the exported automatic baseline. **The demo's published agent and
 automatic flow were not updated with Word output.** No native automatic Word
@@ -184,6 +244,9 @@ not the GitHub Copilot harness. **GPT-5 Reasoning is not required.** Choose a
 supported model available in your environment and evaluate grounded output,
 structured-response reliability, latency and cost. Historic headers retain the
 model actually used at the time; model choice does not confer readiness.
+The canonical 3.3.2.7 packages and setup specifically pin **GPT5Chat**. A model
+change is a new revision requiring fresh verification, not permission to bypass
+the target availability or canonical-definition checks.
 
 Manual: consent topic → `CollectReviewEvidence` via `InvokeFlowTaskAction` →
 caller-owned OneDrive **Invoker** → source advice. Automation uses SharePoint
@@ -281,8 +344,7 @@ evidence; the separately reviewed public synthetic Word example has its own
 native provenance and explicit scope.
 
 ```powershell
-python tools\test_walkthrough.py
-python tools\test_word_release.py
+python -m unittest discover -s tools -p 'test_*.py'
 python tools\generate_content.py
 python tools\build_home.py
 python tools\build_walkthrough.py
@@ -313,7 +375,8 @@ current files, not just `content.json`.
 Only explicit public paths in `tools\public_inventory.py` may be screened or
 staged. The new component-report path set is selected from validated provenance,
 never directory globbing. The historical 14-file ZIP remains exact. The new
-Word bundle and both DOCX downloads are recursively inspected, with exact
+Word bundle, both DOCX downloads, direct solution ZIPs and supplementary setup
+archive are recursively inspected, with exact
 asset/member hashes and an explicit reviewed structural-identifier inventory.
 Necessary component/document IDs are allowed only within the reviewed release
 contexts, never globally; private restriction patterns remain enforced.
@@ -329,3 +392,7 @@ For a new isolated repository stage, use
 `python tools\stage_site.py --repository --output _private-hold\word-release-stage`.
 The new Word manifest is mandatory for publication; old installer-exclusion
 flags cannot substitute for the actual reviewed solution files.
+The import-first manifest additionally pins both real ZIPs and sanitized
+artifact-specific native receipts. Successful import jobs or matching action
+counts alone do not satisfy its exact-definition gate. Parent permission to
+distribute new downloads remains separate from the reviewed historical evidence.

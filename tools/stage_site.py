@@ -7,6 +7,7 @@ from pathlib import Path, PurePosixPath
 from public_inventory import ALL, DEPLOY, MANIFEST, LOCAL_DIRECTORIES
 from build_walkthrough import verify as verify_walkthrough, verify_outputs, primary_content
 from word_release import verify as verify_word_release, PATHS as WORD_PATHS, PUBLICATION_SCOPE
+from solution_release import verify as verify_solutions
 
 SITE = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -16,6 +17,9 @@ args = parser.parse_args()
 m = json.loads((SITE / MANIFEST).read_text(encoding="utf-8"))
 walkthrough = verify_walkthrough()
 word = verify_word_release(required=True)
+solutions = verify_solutions(required=m.get("solutionImportRelease") is not None, publication=True)
+if m.get("solutionImportRelease") != solutions:
+    raise SystemExit("Current approved import-first release differs from the publication manifest.")
 verify_outputs(walkthrough)
 if m["example"] != primary_content(walkthrough):
     raise SystemExit("Manifest does not describe the verified matched walkthrough.")
@@ -41,8 +45,13 @@ for row in m["files"]:
         m["approvedArchive"]["path"]: m["approvedArchive"]["sha256"],
         WORD_PATHS["bundle"]: word["files"]["bundle"]["sha256"],
     }
+    if solutions:
+        approved_archives.update({
+            row["path"]: row["sha256"] for row in solutions["files"].values()
+            if row["path"].endswith(".zip")
+        })
     if path.suffix.lower() == ".zip" and approved_archives.get(name) != row["sha256"]:
-        raise SystemExit("Only exact reviewed evidence and Word distribution archives may be staged.")
+        raise SystemExit("Only exact reviewed evidence, Word and import-first solution archives may be staged.")
 target = SITE / ("_public-repository" if args.repository else "_site")
 if args.output:
     target = (SITE / args.output).resolve()

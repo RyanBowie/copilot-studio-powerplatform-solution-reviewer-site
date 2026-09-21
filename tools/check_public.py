@@ -16,6 +16,7 @@ from word_release import (
     IMAGE_PREFIX as WORD_PREFIX, IMAGE_NAMES as WORD_IMAGES, PRIVACY_SCOPE,
     text_variants,
 )
+from solution_release import verify as verify_solutions, MANIFEST as SOLUTION_MANIFEST
 
 SITE = Path(__file__).resolve().parents[1]
 GENERIC = [
@@ -27,6 +28,11 @@ GENERIC = [
     r"(?i)Bearer\s+[A-Za-z0-9._~-]{12,}",
     r"\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b",
 ]
+
+
+def binding_screen_text(value):
+    return re.sub(r"""(["'])EnvironmentVariableDefinitionId@odata\.bind\1(?=\s*:)""",
+                  r'\1[Dataverse relationship annotation]\1', value)
 
 
 def verify_image_review(review, prefix, names, site=SITE):
@@ -74,6 +80,10 @@ def main():
     word = verify_word_release(required=True)
     structural = {value.lower() for value in word["structuralIdentifiers"]}
     structural_members = word["structuralIdentifierMembers"]
+    solutions = verify_solutions()
+    if solutions:
+        structural.update(solutions["structuralIdentifiers"])
+        structural_members = {**structural_members, **solutions["structuralIdentifierMembers"]}
     e = json.loads((SITE / "downloads/real-canvas-example-manifest.json").read_text(encoding="utf-8"))
     validate_files(e)
     followup = verify_followup()
@@ -86,16 +96,16 @@ def main():
         totals["textMembers"] += 1
         variants = text_variants(value)
         totals["decodedCandidates"] += len(variants) - 2 - int("\\u" in value)
-        allowed = structural if label in {WORD_MANIFEST, MANIFEST} else set(structural_members.get(label, []))
+        allowed = structural if label in {WORD_MANIFEST, SOLUTION_MANIFEST, MANIFEST} else set(structural_members.get(label, []))
         for text in variants:
             if any(re.search(pattern, text, re.I) for pattern in patterns):
                 failures.append({"kind": "restricted-context", "publicMember": label})
-            generic_text = text
+            generic_text = binding_screen_text(text)
             if allowed:
                 generic_text = re.sub(
                     GENERIC[-1],
                     lambda match: "[reviewed structural identifier]" if match.group().lower() in allowed else match.group(),
-                    text,
+                    generic_text,
                 )
             if any(re.search(pattern, generic_text, re.I) for pattern in GENERIC):
                 failures.append({"kind": "binding-credential-like", "publicMember": label})
@@ -140,6 +150,7 @@ def main():
         "historicalImagesReviewed": len(IMAGES), "walkthroughImagesReviewed": len(WALKTHROUGH_IMAGES),
         "wordImagesReviewed": len(WORD_IMAGES),
         "wordReleaseSha256": hashlib.sha256((SITE / WORD_MANIFEST).read_bytes()).hexdigest(),
+        "solutionImportReleaseSha256": hashlib.sha256((SITE / SOLUTION_MANIFEST).read_bytes()).hexdigest() if solutions else None,
         "reviewedStructuralIdentifiers": len(structural),
         "structuralIdentifierPolicy": "Explicit reviewed component/document identifiers are permitted only in their exact reviewed archive/text members and release manifests. Private restriction patterns are never bypassed.",
         "walkthroughProvenanceSha256": hashlib.sha256((SITE / WALKTHROUGH_PROVENANCE).read_bytes()).hexdigest(),
