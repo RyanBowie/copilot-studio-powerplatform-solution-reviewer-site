@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "755e4db5dd896742e5be2c0123c23c454fde078a2115de24e806b4c5b68a9a17",
-      "bytes": 209027,
+      "sha256": "692ed7861cdfb7081185b09f1d3dcbb21971ab3c5205f05497c7c0d949fd9a09",
+      "bytes": 232621,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "23f50907474034971c94f67b9167e92ecc88d5ac6844a9f23cb8520b9d3d77a6",
-      "bytes": 126208,
+      "sha256": "6d20e6e645811124a09731933477d2e3d74c52801c985f650c32255f08ee6acc",
+      "bytes": 140793,
       "deployToPages": true
     },
     {
@@ -1144,8 +1144,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "25559e98538ee39caf6dd4e41f443391387c7b81dad612502d8ce50286c915ff",
-      "bytes": 24287,
+      "sha256": "4b6f954aa140c766a31df0d62f579c93b1887b95e3619b97bab1e4707c1fe4ad",
+      "bytes": 24653,
       "deployToPages": true
     },
     {
@@ -1174,8 +1174,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "e64e1e62f2d3d1ef21b8d4aac687a089bbf848de62176f7d31928c72e311ec7f",
-      "bytes": 12003,
+      "sha256": "052b89b7940a0c903e7a518ab88126b1a8d648385a15c27fae3754f193c12c51",
+      "bytes": 12352,
       "deployToPages": true
     },
     {
@@ -1186,8 +1186,26 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "b78c2e68085842cfb4b2afab1cba1aea3c97a86fbb26fb8d4ab8a67f087050c6",
-      "bytes": 52109,
+      "sha256": "ceeb9098084cf14baff0de63890c47801b29555afdaf1fe9b2cbfe72183bdc33",
+      "bytes": 67279,
+      "deployToPages": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "42c6008454ce9f6612f08016e760926fde1d3c0fd65af70eb9442575fb3c7136",
+      "bytes": 1087,
+      "deployToPages": true
+    },
+    {
+      "path": "og.html",
+      "sha256": "c691c3d64390e1020cb56a855b286d0a7d8c7327d0151e54bd985b1488f3b417",
+      "bytes": 4249,
+      "deployToPages": true
+    },
+    {
+      "path": "og.png",
+      "sha256": "52ed9c455b0d0e0df0cc0b73a6d93885ac9d83761fdd137afcd4c8cd8a9e777a",
+      "bytes": 183108,
       "deployToPages": true
     },
     {
@@ -1294,8 +1312,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "39e883eb21204c809c4cd28001ade5a340446c8c17b4d652427de25c47057914",
-      "bytes": 128033,
+      "sha256": "003440f036a2d4d06baea382bca6b0b5bcaa07f949f3c7f1b5d1da3462e93864",
+      "bytes": 142552,
       "deployToPages": true
     },
     {
@@ -1498,14 +1516,20 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "c66421fc6e503e02e4a6b580369d2d0749f3f92efcf8ead8f7199a7c04d8d01e",
-      "bytes": 115523,
+      "sha256": "b3fcea5055b73f57aa8faba163819ac8a71e2795dce80942ca8739b207563eca",
+      "bytes": 119697,
       "deployToPages": false
     },
     {
       "path": "tools/build_home.py",
-      "sha256": "ce0551e41725421243e960ea666f872382e8a236d1ce02dba7e0c1ce3b5a64d3",
-      "bytes": 26073,
+      "sha256": "fa9f289c50c61040f82f22ebcfc6374a0d23dee72eec718310f0ff43ea2700fe",
+      "bytes": 27762,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/design_layer.py",
+      "sha256": "601014ad925db70b1f1f5fa541675ea70868be41f1718aa571b061ad5bff1e04",
+      "bytes": 26535,
       "deployToPages": false
     },
     {
@@ -1516,14 +1540,14 @@
     },
     {
       "path": "tools/prepare_real_example.py",
-      "sha256": "82f3f1bd255d835ce757ed910ae109c7ee991b7e835e771f2e870a110f951179",
-      "bytes": 17316,
+      "sha256": "27eb560fca98ccdfdd3062589f6e41b49de80a274ba1373c6328ab5f700cb3e2",
+      "bytes": 17517,
       "deployToPages": false
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "639c87c13010d2fdd7401d0e3add646aaf8e5b4f38ff823637e0d4514e5a792d",
-      "bytes": 2809,
+      "sha256": "cd8920009ea6ab52861ec509903a171c57bc9db9d71c2250c53a85a7ed932430",
+      "bytes": 2866,
       "deployToPages": false
     },
     {
@@ -1534,8 +1558,8 @@
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "66b533f55689d127e2836715b31a4d82d4cea62381fa27f38a36ce55dd78b9f2",
-      "bytes": 38794,
+      "sha256": "53dc1f765776a5207bf3ca701e762340c7537d62678f4029ec866184b09a4f1c",
+      "bytes": 40436,
       "deployToPages": false
     },
     {
@@ -1558,14 +1582,14 @@
     },
     {
       "path": "tools/build_followup.py",
-      "sha256": "d2cc14d01037bf299073a8fdb568ccd359e5dc1f7627bf81b8ee5c164f31a8f3",
-      "bytes": 15133,
+      "sha256": "481007288ec6c5ff8abaac5b51d18ddaa6f77c0278c6fea5b696378c7a9f48f5",
+      "bytes": 15362,
       "deployToPages": false
     },
     {
       "path": "tools/build_walkthrough.py",
-      "sha256": "dc250738bb252586eedbe77d4a7695cf3a3b53e35d7c13666ff19e2fd6b51856",
-      "bytes": 23425,
+      "sha256": "27dc4be50ba3cef16b2796d5e5cb57b6af1c5188055facaf6ec77d2d3095b0f8",
+      "bytes": 23613,
       "deployToPages": false
     },
     {
@@ -1576,8 +1600,8 @@
     },
     {
       "path": "tools/word_release.py",
-      "sha256": "bee32c0af650661edbe214e52ff0c92a3a23eaebacd6967b54e5cf1a314a1b06",
-      "bytes": 16157,
+      "sha256": "fb512d5b808062f973b1616c0ae63cd998861c5cd56241ec89dcf1aa178b879a",
+      "bytes": 16469,
       "deployToPages": false
     },
     {
@@ -1624,6 +1648,9 @@
     "PRIVACY-REPORT.json",
     ".nojekyll",
     "follow-up.html",
+    "LICENSE",
+    "og.html",
+    "og.png",
     "examples/follow-up/results.json",
     "examples/follow-up/complete-review.txt",
     "examples/follow-up/provenance.json",
@@ -1677,6 +1704,7 @@
     ".github/workflows/pages.yml",
     "qa/RESULTS.json",
     "tools/build_home.py",
+    "tools/design_layer.py",
     "tools/generate_content.py",
     "tools/prepare_real_example.py",
     "tools/public_inventory.py",
@@ -1714,6 +1742,9 @@
     "PRIVACY-REPORT.json",
     ".nojekyll",
     "follow-up.html",
+    "LICENSE",
+    "og.html",
+    "og.png",
     "examples/follow-up/results.json",
     "examples/follow-up/complete-review.txt",
     "examples/follow-up/provenance.json",
@@ -1770,6 +1801,7 @@
     ".github/workflows/pages.yml",
     "qa/RESULTS.json",
     "tools/build_home.py",
+    "tools/design_layer.py",
     "tools/generate_content.py",
     "tools/prepare_real_example.py",
     "tools/public_inventory.py",
@@ -1790,7 +1822,7 @@
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 858,
+    "checksPassed": 898,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

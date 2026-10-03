@@ -8,12 +8,27 @@ from build_followup import coverage_section
 from build_walkthrough import SITE, PREFIX, PROVENANCE, MARKDOWN, PASS_IDS, verify, png_dimensions, primary_content, combined_target
 from word_release import verify as verify_word_release, section as word_section, formats_section, PATHS
 from solution_release import verify as verify_solutions, setup_section as import_setup_section
+from design_layer import (
+    THEME_SCRIPT, architecture_diagram, chips, community_notice, design_js,
+    downloads_section, footer as design_footer, head_extras, html_entities, style_block, toc_card,
+)
 
 
 def build(p, site=SITE):
     site = Path(site)
     old = (site / "index.html").read_text(encoding="utf-8")
     head = old.split("<body>")[0]
+    head = re.sub(r'<html lang="[^"]+" data-theme="dark">', '<html lang="en-GB" data-theme="dark">', head)
+    head = re.sub(r'<script>\s*\(\(\) => \{.*?document\.documentElement\.setAttribute\("data-theme", theme\);\s*\}\)\(\);\s*</script>', THEME_SCRIPT.strip(), head, flags=re.S)
+    head = re.sub(r'<style>.*?</style>', style_block(), head, flags=re.S)
+    if '<!-- dl-meta:start -->' in head:
+        head = re.sub(r'<!-- dl-meta:start -->.*?<!-- dl-meta:end -->', head_extras().strip(), head, flags=re.S)
+    else:
+        head = head.replace('<meta name="referrer" content="no-referrer">', '<meta name="referrer" content="no-referrer">' + head_extras(), 1)
+    if '<!-- design-layer-js:start -->' in head:
+        head = re.sub(r'<!-- design-layer-js:start -->.*?<!-- design-layer-js:end -->', design_js().strip(), head, flags=re.S)
+    else:
+        head = head.replace('<link rel="stylesheet" href="site.css">', design_js() + '\n  <link rel="stylesheet" href="site.css">', 1)
     head = re.sub(r"<title>.*?</title>", f'<title>Matched {p["accepted"]}/5 canvas review · Power Platform Solution Reviewer</title>', head, flags=re.S)
     release = verify_word_release(site)
     solutions = verify_solutions(site)
@@ -62,8 +77,9 @@ def build(p, site=SITE):
         stage(6, "NATIVE FULL REPORT VIEWS", "Open the full report", figure("mainAssessments") + figure("mainVerification"),
               '<a href="walkthrough.html">Open the complete matching report →</a> All ten MAIN sections, canonical records, unavailable assessments, omissions and the full footer are available in the reader and Markdown/TXT downloads. Screenshots are real native viewports; presentation order is not a claim of continuous capture or an unrecorded click.', "report-captures"),
     ]
-    page = f'''<body><a class="skip-link" href="#main">Skip to content</a>
+    page = f'''<body><div id="dl-progress" aria-hidden="true"></div><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Matched improved run · experimental</small></span></a><nav aria-label="Main navigation"><a href="#showcase">Screenshot journey</a><a href="#full-example">Full report</a><a href="#reference">Tools &amp; topics</a><a href="#setup">Setup</a><a href="#history">History</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
+{chips()}
 <main id="main"><section class="showcase wrap" id="showcase" aria-labelledby="top"><div class="showcase-intro"><div><p class="eyebrow">Data Entry Testing · {p["revision"]}</p><h1 id="top">A real upload.<br><span>A review you can inspect.</span></h1></div><div class="showcase-pitch"><p>Upload → flow → agent → report → received email. One matched native run.</p><div class="actions"><a class="button primary" data-full-example-link href="walkthrough.html">Read the full {p["accepted"]}/5 report →</a><a class="button secondary" href="{MARKDOWN}" download>Full Markdown ↓</a></div><p class="showcase-caution"><strong>{p["outcome"]} · {p["accepted"]}/5 accepted, {p["unavailable"]} unavailable.</strong> Not an app pass rate.</p></div></div>
 <p class="journey-note"><strong>Nine reviewed native views of the same upload, review and received email.</strong> Captions retain capture order, crops and limits.</p>
 <div class="screenshot-journey">{''.join(stages)}</div><p class="notice showcase-review-note"><span id="example-caveat">{html.escape(primary_content(p)["briefCaveat"])}</span> <a href="#coverage-improvements">Separate benchmarks and remaining targets →</a></p></section>
@@ -155,8 +171,15 @@ def build(p, site=SITE):
 <tr><th scope="row">Word Online (Business) and report delivery</th><td><code>CreateFileItem</code> populates the supported Word template; SharePoint saves the real DOCX, grants report-item Read to the established requester, and returns its URL.</td><td>Rebind the actual target template schema and connections. Unique report filenames preserve earlier runs. The public example proves one synthetic format-only run, not automatic Word delivery or target installation.</td></tr></tbody>''', 1)
         if 'id="word-workflow-extension"' not in workflows:
             workflows = workflows.replace("</section>", '<div class="wrap"><p class="notice" id="word-workflow-extension"><strong>Word-enabled delivery extension:</strong> finalized review &rarr; deterministic presentation &rarr; Word template &rarr; existing Results/solution-filename folder &rarr; requester report Read &rarr; usable link. The earlier real-solution screenshots are unchanged historical evidence; the new native Word proof is a separate synthetic test.</p></div></section>')
-    footer = '''</main><footer class="wrap site-footer"><p><strong>Power Platform Solution Reviewer</strong><br>Experimental community PoC; no Microsoft endorsement.</p><p>No uploads, chat backend, telemetry or external fonts.<br><a href="README.md">Site notes</a> · <a href="#top">Back to top ↑</a></p><p id="hosting-note"></p></footer><dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title"><div class="viewer-toolbar"><h2 id="image-viewer-title">Reviewed matched native image</h2><div><button class="small-button" id="viewer-zoom" type="button" aria-pressed="false">Actual size</button><button class="small-button" id="viewer-close" type="button" autofocus>Close ×</button></div></div><p class="caption" id="viewer-caption"></p><div class="viewer-canvas" id="viewer-canvas" tabindex="0" role="region" aria-label="Scrollable full-resolution reviewed image"></div><p class="caption">Unchanged reviewed derivative. <a id="viewer-file" download>Download full-size image</a></p></dialog><div id="copy-status" class="visually-hidden" role="status" aria-live="polite"></div></body></html>'''
-    return head + page + review_scope + history + coverage_section() + formats + workflows + reference + setup + boundaries + footer
+    additions = community_notice() + toc_card() + downloads_section(site, solutions=bool(solutions)) + architecture_diagram()
+    if 'id="word-output"' in page:
+        page = page.replace('</section><section class="showcase wrap" id="showcase"', '</section>' + additions + '<section class="showcase wrap" id="showcase"', 1)
+    else:
+        page = page.replace('<main id="main">', '<main id="main">' + additions, 1)
+    page = page.replace('class="section wrap" id="review-scope"', 'class="section wrap dl-reveal" id="review-scope"')
+    page = page.replace('class="section full-example-section"', 'class="section full-example-section dl-reveal"')
+    footer = '''</main>''' + design_footer('<p id="hosting-note" class="hosting-note"></p>') + '''<dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title"><div class="viewer-toolbar"><h2 id="image-viewer-title">Reviewed matched native image</h2><div><button class="small-button" id="viewer-zoom" type="button" aria-pressed="false">Actual size</button><button class="small-button" id="viewer-close" type="button" autofocus>Close</button></div></div><p class="caption" id="viewer-caption"></p><div class="viewer-canvas" id="viewer-canvas" tabindex="0" role="region" aria-label="Scrollable full-resolution reviewed image"></div><p class="caption">Unchanged reviewed derivative. <a id="viewer-file" download>Download full-size image</a></p></dialog><div id="copy-status" class="visually-hidden" role="status" aria-live="polite"></div></body></html>'''
+    return html_entities(head + page + review_scope + history + coverage_section() + formats + workflows + reference + setup + boundaries + footer)
 
 
 def main():

@@ -110,6 +110,13 @@ DARK_PALETTE = dict(zip(
      "#98a5ff", "#bc98ed", "#d097ee", "#ed8fea", "#3b3b3b"),
     strict=True,
 ))
+HOME_SECTION_ORDER = ",".join((
+    "word-output", "read-this-first", "contents", "downloads", "architecture",
+    "showcase", "full-example",
+    "",  # unnamed wrapper around the #image-provenance details
+    "review-scope", "history", "coverage-improvements",
+    "report-formats", "workflows", "reference", "setup", "boundaries",
+))
 
 
 def check_theme(page, theme, label):
@@ -186,7 +193,19 @@ try:
             check_theme(page, theme, label + ": homepage")
             check(page.locator("html").get_attribute("data-theme") == theme, label + ": homepage theme")
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": homepage no overflow")
-            check(page.locator("main > section").evaluate_all("(nodes)=>nodes.slice(0,3).map(n=>n.id).join(',')") == "word-output,showcase,full-example", label + ": Word release leads; unchanged real journey still precedes its complete report")
+            check(page.locator("main > section").evaluate_all("(nodes)=>nodes.map(n=>n.id).join(',')") == HOME_SECTION_ORDER, label + ": Word release leads; unchanged real journey still precedes its complete report")
+            check(page.locator(".community-notice").count() == 1, label + ": community notice present")
+            check(page.locator("main + section#more-projects").count() == 1, label + ": community projects band follows main")
+            check(page.locator(".dl-series-card").count() == 6, label + ": six project series cards")
+            for node in page.locator(".dl-reveal").all():
+                node.scroll_into_view_if_needed()
+                page.wait_for_timeout(50)
+            check(page.locator(".dl-reveal").evaluate_all("nodes => nodes.every(n => n.classList.contains('dl-in'))"), label + ": design reveal reached")
+            page.evaluate("window.scrollTo(0, document.scrollingElement.scrollHeight)")
+            page.wait_for_timeout(100)
+            check(page.locator("#dl-progress").evaluate("n => getComputedStyle(n).transform !== 'none'"), label + ": scroll progress updated")
+            check(not page.evaluate("() => [...document.querySelectorAll('a[href^=\"#\"]')].map(a=>a.getAttribute('href')).filter(h=>h !== '#' && !document.getElementById(h.slice(1)))"), label + ": in-page anchors resolve")
+            page.evaluate("window.scrollTo(0, 0)")
             check(page.locator("figure.screenshot img").count() == 9, label + ": exact nine matched native derivatives")
             check(page.locator("figure.screenshot").evaluate_all("(nodes)=>nodes.map(n=>n.dataset.imageRole)") == list(IMAGE_ROLES), label + ": all matched image roles in the agreed presentation order")
             check(page.locator(".journey-number").all_text_contents() == ["01", "02", "03", "04", "05", "06"], label + ": upload, trigger, agent, results, email and open report are six ordered stages")
@@ -338,6 +357,7 @@ try:
         page.locator("[data-full-example-link]").focus()
         page.keyboard.press("Enter")
         page.wait_for_url("**/walkthrough.html")
+        check(urlparse(page.url).path.endswith("/walkthrough.html"), "Keyboard full-report link opens matched walkthrough reader")
         for row in walkthrough_rows:
             page.locator('.document-header a[href="' + WALKTHROUGH_PREFIX + "/" + row["file"] + '"]').focus()
             with page.expect_download() as event:

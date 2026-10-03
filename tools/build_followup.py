@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 
 from prepare_real_example import render_text
+from design_layer import html_entities, chips, community_notice, design_js, footer as design_footer, head_extras
 
 SITE = Path(__file__).resolve().parents[1]
 PREFIX = "examples/follow-up"
@@ -99,28 +100,29 @@ def reader():
     index = (SITE / "index.html").read_text(encoding="utf-8")
     script = re.search(r"<script>(.*?)</script>", index, re.S).group(1)
     style = re.search(r"<style>(.*?)</style>", index, re.S).group(1)
-    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1)
+    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1).replace("--cp-text: #102631;", "--cp-text: #242424;")
     row = provenance["files"][0]
     navigation = "".join(
         f'<li><a href="#main-section-{number}">{html.escape(title)}</a></li>'
         for number, title in re.findall(r"^(10|[1-9])\. (.+)$", value, re.M)
     )
-    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Measured follow-up · Complete canonical MAIN</title>
+    return html_entities(f'''<!doctype html><html lang="en-GB" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head_extras()}<title>Measured follow-up · Complete canonical MAIN</title>
 <script>{script}</script><style>{style}
-@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>
+@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>{design_js()}
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
-<body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a>
+<body class="example-reader"><div id="dl-progress" aria-hidden="true"></div><a class="skip-link" href="#main">Skip to the complete MAIN report</a>
 <header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Measured genuine follow-up</small></span></a><nav aria-label="Reader navigation"><a href="index.html#coverage-improvements">Measured results</a><a href="full-example.html">Historical example</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
-<main class="wrap"><section class="example-intro"><p class="eyebrow">Historical no-email benchmark · not the matched email walkthrough</p><h1>Complete source supplied.<br><span>Partial assessment retained.</span></h1>
+{chips([("top", "Overview"), ("read-this-first", "Read this first"), ("main", "Details"), ("more-projects", "More projects")])}
+<main class="wrap"><!-- dl-hero:start --><section class="example-intro"><p class="eyebrow">Historical no-email benchmark · not the matched email walkthrough</p><h1 id="top">Complete source supplied.<br><span>Partial assessment retained.</span></h1>
 <p class="example-lead">Revision {html.escape(latest["revision"])} accepted {latest["accepted"]}/5 selected-source assessments, with a valid assembled MAIN. Both unchanged-revision benchmark runs accepted 3/5. The 4/5 combined target remained unmet in these two historical no-email benchmark runs, not a verdict on the new matched walkthrough.</p>
 <div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the complete MAIN ↓</a><a class="button secondary" href="{PREFIX}/complete-review.txt" download>Complete MAIN (.txt) ↓</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
 <div class="example-facts"><div><strong>{latest["accepted"]} / 5</strong><span>accepted · two unavailable</span></div><div><strong>326 / 326</strong><span>screen content lines supplied to an accepted assessment</span></div><div><strong>{latest["logicalAgentInvocations"]}</strong><span>logical agent invocations in this run</span></div><div><strong>Partial</strong><span>not whole-app certification</span></div></div>
 <p class="example-boundary"><strong>AI assessments; deterministic MAIN assembly.</strong> All supplied canonical observations, findings, strengths, verification items, unavailable records, inventory and omissions are retained below. MAIN does not invent or regrade findings and is not a second AI assessment.</p>
 <p class="example-boundary"><strong>Not exhaustive semantic coverage.</strong> Full source was supplied; this does not prove every line was examined. The denominator is five selected files, not the whole solution. SARIF and workflow assessments remained unavailable. No current checker, compilation, import or runtime/accessibility tests ran. Retained syntax/default/fallback wording is not compiler or runtime proof.</p>
 <p class="fine-print">This is the complete redacted assembled MAIN, including its footer. All canonical records supplied to MAIN are included; private links to separate original artifacts are masked, not public downloads. The complete original export and protected diagnostics are not published. Historical images and email evidence are unchanged; email was OFF for these follow-ups.</p>
-<p class="fine-print">These historical runs used TXT/JSON, not Word. <a href="index.html#word-output">The new Word output and solution bundle</a> have separate proof. Browser Print / Save as PDF is a presentation option; automated PDF output is not implemented. <a href="{PREFIX}/provenance.json">Reviewed public-file hashes</a> · <a href="{PREFIX}/results.json">Every measured comparison</a>.</p></section>
+<p class="fine-print">These historical runs used TXT/JSON, not Word. <a href="index.html#word-output">The new Word output and solution bundle</a> have separate proof. Browser Print / Save as PDF is a presentation option; automated PDF output is not implemented. <a href="{PREFIX}/provenance.json">Reviewed public-file hashes</a> · <a href="{PREFIX}/results.json">Every measured comparison</a>.</p></section><!-- dl-hero:end -->{community_notice()}
 <div class="report-layout"><aside class="example-toc" aria-label="Complete report contents"><p class="eyebrow">All ten MAIN sections</p><details open><summary>MAIN sections</summary><ol class="main-section-links">{navigation}</ol></details></aside><div class="report-documents"><section class="example-document" id="main" aria-labelledby="main-title"><header class="document-header"><div><p class="eyebrow">Complete reviewed public derivative</p><h2 id="main-title">Assembled MAIN and full footer</h2></div><a class="small-button" href="{PREFIX}/complete-review.txt" download>Download TXT ↓</a></header><p class="document-pin">{row["bytes"]:,} bytes · SHA-256 <code>{row["sha256"]}</code></p><div class="report-text" data-followup-text>{render_text(value, "main")}</div></section></div></div></main>
-<footer class="wrap site-footer"><p><strong>Measured improvement, not complete success.</strong><br>Same-source repetition is not broad-export reliability.</p><p><a href="index.html#coverage-improvements">Back to the full comparison</a></p></footer></body></html>'''
+{design_footer()}</body></html>''')
 
 
 def main():

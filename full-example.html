@@ -1,102 +1,273 @@
-<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historical real canvas review · original 1/5 Partial</title>
+<!doctype html><html lang="en-GB" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- dl-meta:start -->
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="data:,">
+<meta property="og:title" content="Power Platform Solution Reviewer">
+<meta property="og:description" content="A Copilot Studio agent that reviews Power Platform solutions, with a real canvas-app walkthrough, detailed output, Word report output and setup guidance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/">
+<meta property="og:image" content="https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Power Platform Solution Reviewer documentation with downloads, architecture and setup guidance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Power Platform Solution Reviewer">
+<meta name="twitter:description" content="A Copilot Studio agent that reviews Power Platform solutions, with a real canvas-app walkthrough, detailed output and setup guidance.">
+<meta name="twitter:image" content="https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/og.png">
+<!-- dl-meta:end -->
+<title>Historical real canvas review &middot; original 1/5 Partial</title>
 <script>
   (() => {
     const param = new URLSearchParams(window.location.search).get("scoutTheme");
     const theme = param === "light" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", theme);
   })();
-  </script><style>
-    :root {
-      color-scheme: light;
-      --cp-bg: #f7f4ef;
-      --cp-bg-elevated: #fcfbf8;
-      --cp-surface: #ffffff;
-      --cp-surface-soft: #f5f5f5;
-      --cp-border: #dedede;
-      --cp-border-strong: #919191;
-      --cp-text: #242424;
-      --cp-text-muted: #5c5c5c;
-      --cp-text-soft: #6f6f6f;
-      --cp-accent: #b11f4b;
-      --cp-accent-hover: #9a1a41;
-      --cp-accent-soft: rgba(177, 31, 75, 0.08);
-      --cp-accent-fg: #ffffff;
-      --cp-success: #16a34a;
-      --cp-danger: #dc2626;
-      --cp-warning: #f59e0b;
-      --cp-link: #0078d4;
-      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
-      --cp-overlay: rgba(255, 255, 255, 0.8);
-      --cp-panel: rgba(255, 255, 255, 0.86);
-      --cp-panel-strong: rgba(255, 255, 255, 0.96);
-      --cp-sheen: rgba(255, 255, 255, 0.55);
-      --cp-highlight: rgba(177, 31, 75, 0.12);
-    }
-    html[data-theme="dark"] {
-      color-scheme: dark;
-      --cp-bg: #3d3b3a;
-      --cp-bg-elevated: #343231;
-      --cp-surface: #292929;
-      --cp-surface-soft: #2e2e2e;
-      --cp-border: #474747;
-      --cp-border-strong: #5f5f5f;
-      --cp-text: #dedede;
-      --cp-text-muted: #919191;
-      --cp-text-soft: #b0b0b0;
-      --cp-accent: #fd8ea1;
-      --cp-accent-hover: #fb7b91;
-      --cp-accent-soft: rgba(253, 142, 161, 0.14);
-      --cp-accent-fg: #1a1a1a;
-      --cp-success: #4ade80;
-      --cp-danger: #f87171;
-      --cp-warning: #fbbf24;
-      --cp-link: #4da6ff;
-      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
-      --cp-overlay: rgba(41, 41, 41, 0.88);
-      --cp-panel: rgba(41, 41, 41, 0.72);
-      --cp-panel-strong: rgba(41, 41, 41, 0.96);
-      --cp-sheen: rgba(255, 255, 255, 0.04);
-      --cp-highlight: rgba(253, 142, 161, 0.12);
-    }
-  
+</script><style>
+
+:root {
+  color-scheme: light;
+  --cp-bg: #f2f2f8;
+  --cp-bg-elevated: #f8f7fc;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f2f2f8;
+  --cp-border: #e3dfed;
+  --cp-border-strong: #9285aa;
+  --cp-text: #102631;
+  --cp-text-muted: #52637a;
+  --cp-text-soft: #667287;
+  --cp-accent: #7653ae;
+  --cp-accent-hover: #58378b;
+  --cp-accent-soft: #eee8f7;
+  --cp-accent-fg: #ffffff;
+  --cp-success: #207346;
+  --cp-danger: #b4233e;
+  --cp-warning: #8c6208;
+  --cp-link: #066bc7;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(118, 83, 174, 0.12);
+  --cp-chart-blue: #0877dd;
+  --cp-chart-indigo: #5364ba;
+  --cp-chart-purple: #7653ae;
+  --cp-chart-violet: #9651bb;
+  --cp-chart-magenta: #b535c3;
+  --cp-chart-track: #e8e3f0;
+  --cp-transparent: transparent;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #171717;
+  --cp-bg-elevated: #222222;
+  --cp-surface: #1f1f1f;
+  --cp-surface-soft: #262626;
+  --cp-border: #3b3b3b;
+  --cp-border-strong: #858585;
+  --cp-text: #f2f2f2;
+  --cp-text-muted: #bdbdbd;
+  --cp-text-soft: #aaaaaa;
+  --cp-accent: #c3a0ef;
+  --cp-accent-hover: #debeff;
+  --cp-accent-soft: #2b2b2b;
+  --cp-accent-fg: #181818;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #80baff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(31, 31, 31, 0.88);
+  --cp-panel: rgba(31, 31, 31, 0.72);
+  --cp-panel-strong: rgba(31, 31, 31, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(195, 160, 239, 0.12);
+  --cp-chart-blue: #69aeff;
+  --cp-chart-indigo: #98a5ff;
+  --cp-chart-purple: #bc98ed;
+  --cp-chart-violet: #d097ee;
+  --cp-chart-magenta: #ed8fea;
+  --cp-chart-track: #3b3b3b;
+  --cp-transparent: transparent;
+}
+@media print {
+  html[data-theme="dark"] {
+    color-scheme: light;
+    --cp-bg: #f2f2f8;
+    --cp-bg-elevated: #f8f7fc;
+    --cp-surface: #ffffff;
+    --cp-surface-soft: #f2f2f8;
+    --cp-border: #e3dfed;
+    --cp-border-strong: #9285aa;
+    --cp-text: #242424;
+    --cp-text-muted: #52637a;
+    --cp-text-soft: #667287;
+    --cp-accent: #7653ae;
+    --cp-accent-hover: #58378b;
+    --cp-accent-soft: #eee8f7;
+    --cp-accent-fg: #ffffff;
+    --cp-success: #207346;
+    --cp-danger: #b4233e;
+    --cp-warning: #8c6208;
+    --cp-link: #066bc7;
+    --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+    --cp-overlay: rgba(255, 255, 255, 0.8);
+    --cp-panel: rgba(255, 255, 255, 0.86);
+    --cp-panel-strong: rgba(255, 255, 255, 0.96);
+    --cp-sheen: rgba(255, 255, 255, 0.55);
+    --cp-highlight: rgba(118, 83, 174, 0.12);
+    --cp-chart-blue: #0877dd;
+    --cp-chart-indigo: #5364ba;
+    --cp-chart-purple: #7653ae;
+    --cp-chart-violet: #9651bb;
+    --cp-chart-magenta: #b535c3;
+    --cp-chart-track: #e8e3f0;
+    --cp-transparent: transparent;
+  }
+}
+
+/* design-layer:start */
+#dl-progress { position: fixed; inset: 0 auto auto 0; z-index: 80; width: 100%; height: 0.25rem; transform-origin: left center; transform: scaleX(0); background: var(--cp-accent); }
+html.dl-motion .dl-reveal { opacity: 1; transform: none; transition: opacity .55s ease, transform .55s ease; }
+html.dl-motion .dl-reveal.dl-in { opacity: 1; transform: translateY(0); }
+.dl-shell { position: relative; overflow: clip; }
+.dl-shell::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 80% 12%, var(--cp-highlight), var(--cp-transparent) 36%); }
+.dl-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .95fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; padding-block: clamp(3rem, 8vw, 7rem) clamp(2rem, 5vw, 4rem); }
+.dl-hero h1 { position: relative; max-width: 12ch; }
+@supports (background-clip: text) { .dl-hero h1, .example-intro h1 { background: linear-gradient(105deg, var(--cp-chart-blue), var(--cp-chart-purple) 56%, var(--cp-chart-magenta)); background-clip: text; color: var(--cp-transparent); } }
+.dl-hero h1::after { content: ""; display: block; width: min(8rem, 42%); height: .25rem; margin-top: 1rem; border-radius: 999px; background: var(--cp-accent); transform-origin: left center; animation: dl-grow .9s ease-out both; }
+@keyframes dl-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.dl-kicker, .pill { display: inline-flex; align-items: center; gap: .5rem; color: var(--cp-accent); font-size: .76rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.dl-lede { max-width: 68ch; color: var(--cp-text-muted); font-size: clamp(1.05rem, 2vw, 1.25rem); }
+.dl-facts { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; margin: 1.5rem 0 0; list-style: none; }
+.dl-facts li { border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 999px; padding: .45rem .8rem; color: var(--cp-text-muted); font-size: .9rem; }
+.dl-facts strong { color: var(--cp-text); }
+.dl-diagram, .dl-arch { border: 1px solid var(--cp-border); background: var(--cp-panel); border-radius: 1rem; padding: 1rem; box-shadow: var(--cp-shadow); }
+.dl-diagram svg, .dl-arch svg { display: block; width: 100%; height: auto; }
+.dl-node, .dl-box { fill: var(--cp-surface); stroke: var(--cp-border-strong); stroke-width: 1.5; }
+.dl-node-accent { fill: var(--cp-accent-soft); stroke: var(--cp-accent); }
+.dl-path { fill: none; stroke: var(--cp-chart-purple); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 8 10; animation: dl-flow 1.6s linear infinite; }
+.dl-hot { stroke: var(--cp-chart-blue); stroke-width: 4; }
+@keyframes dl-flow { to { stroke-dashoffset: -36; } }
+.dl-svg-label { fill: var(--cp-text); font: 700 13px Consolas, "Courier New", Courier, monospace; }
+.dl-svg-note { fill: var(--cp-text-muted); font: 11px "Segoe UI", sans-serif; }
+.dl-chips { position: sticky; top: 0; z-index: 45; display: flex; gap: .5rem; overflow-x: auto; padding: .65rem max(1rem, calc((100vw - 1280px) / 2)); border-block: 1px solid var(--cp-border); background: var(--cp-panel-strong); }
+.dl-chips a { flex: none; padding: .35rem .75rem; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface); color: var(--cp-text); text-decoration: none; font-size: .85rem; }
+.dl-chips a:hover, .dl-chips a[aria-current="true"] { border-color: var(--cp-accent); color: var(--cp-accent); }
+.dl-toc-card { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: start; }
+.dl-toc-card ol { columns: 2; gap: 2rem; margin: 0; }
+.community-notice { border-left-color: var(--cp-accent); }
+.downloads-grid { display: grid; gap: 1rem; }
+.download-row { display: grid; grid-template-columns: minmax(12rem, 1fr) minmax(12rem, 1.1fr) 7rem 5rem; gap: 1rem; align-items: start; padding: 1rem; border: 1px solid var(--cp-border); border-radius: .75rem; background: var(--cp-surface); }
+.download-row strong { display: block; }
+.download-row span { display: block; color: var(--cp-text-muted); font-size: .88rem; }
+.stepper { counter-reset: step; list-style: none; padding: 0; display: grid; gap: 1rem; }
+.stepper li { counter-increment: step; position: relative; padding: 1.25rem 1.25rem 1.25rem 4.25rem; border: 1px solid var(--cp-border); border-radius: .9rem; background: var(--cp-surface); }
+.stepper li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 1rem; top: 1rem; display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .55rem; background: var(--cp-accent-soft); color: var(--cp-accent); font: 700 .9rem Consolas, "Courier New", Courier, monospace; }
+.dl-series { margin-block: 3rem; padding-block: 2rem; border-block: 1px solid var(--cp-border); }
+.dl-series-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.dl-series-card { display: flex; flex-direction: column; min-height: 13rem; padding: 1.1rem; border: 1px solid var(--cp-border); border-radius: 1rem; background: var(--cp-surface); text-decoration: none; color: var(--cp-text); }
+.dl-series-card[aria-current="page"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+.dl-series-card small { color: var(--cp-accent); text-transform: uppercase; letter-spacing: .08em; font-weight: 750; }
+.dl-series-card span { margin-top: auto; color: var(--cp-link); font-weight: 650; }
+.dl-series-card p { color: var(--cp-text-muted); font-size: .92rem; }
+@media (max-width: 900px) { .dl-hero, .dl-toc-card { grid-template-columns: 1fr; } .dl-series-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .download-row { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .dl-series-grid { grid-template-columns: 1fr; } .dl-chips { top: 0; } .dl-hero { padding-block-start: 2rem; } }
+@media print { #dl-progress, .dl-chips, .theme-button, .image-viewer { display: none !important; } .dl-reveal { opacity: 1 !important; transform: none !important; } .dl-path { animation: none !important; } h1, .dl-hero h1, .example-intro h1 { background: none !important; color: var(--cp-text) !important; -webkit-text-fill-color: currentColor !important; } }
+@media (forced-colors: active) { #dl-progress { forced-color-adjust: none; background: Highlight; } h1, .dl-hero h1 { color: CanvasText !important; -webkit-text-fill-color: CanvasText !important; } }
+@media (prefers-reduced-motion: reduce) { .dl-path, .dl-hero h1::after { animation: none !important; } html.dl-motion .dl-reveal { opacity: 1; transform: none; transition: none; } }
+/* design-layer:end */
+
 @media print { :root, html[data-theme="dark"] {
-      color-scheme: light;
-      --cp-bg: #f7f4ef;
-      --cp-bg-elevated: #fcfbf8;
-      --cp-surface: #ffffff;
-      --cp-surface-soft: #f5f5f5;
-      --cp-border: #dedede;
-      --cp-border-strong: #919191;
-      --cp-text: #242424;
-      --cp-text-muted: #5c5c5c;
-      --cp-text-soft: #6f6f6f;
-      --cp-accent: #b11f4b;
-      --cp-accent-hover: #9a1a41;
-      --cp-accent-soft: rgba(177, 31, 75, 0.08);
-      --cp-accent-fg: #ffffff;
-      --cp-success: #16a34a;
-      --cp-danger: #dc2626;
-      --cp-warning: #f59e0b;
-      --cp-link: #0078d4;
-      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
-      --cp-overlay: rgba(255, 255, 255, 0.8);
-      --cp-panel: rgba(255, 255, 255, 0.86);
-      --cp-panel-strong: rgba(255, 255, 255, 0.96);
-      --cp-sheen: rgba(255, 255, 255, 0.55);
-      --cp-highlight: rgba(177, 31, 75, 0.12);
-    } }</style>
+  color-scheme: light;
+  --cp-bg: #f2f2f8;
+  --cp-bg-elevated: #f8f7fc;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f2f2f8;
+  --cp-border: #e3dfed;
+  --cp-border-strong: #9285aa;
+  --cp-text: #242424;
+  --cp-text-muted: #52637a;
+  --cp-text-soft: #667287;
+  --cp-accent: #7653ae;
+  --cp-accent-hover: #58378b;
+  --cp-accent-soft: #eee8f7;
+  --cp-accent-fg: #ffffff;
+  --cp-success: #207346;
+  --cp-danger: #b4233e;
+  --cp-warning: #8c6208;
+  --cp-link: #066bc7;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(118, 83, 174, 0.12);
+  --cp-chart-blue: #0877dd;
+  --cp-chart-indigo: #5364ba;
+  --cp-chart-purple: #7653ae;
+  --cp-chart-violet: #9651bb;
+  --cp-chart-magenta: #b535c3;
+  --cp-chart-track: #e8e3f0;
+  --cp-transparent: transparent;
+} }</style>
+<!-- design-layer-js:start -->
+<script>
+(() => {
+  const start = () => {
+  const root = document.documentElement;
+  root.classList.add("js");
+  const motion = matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  if (motion) root.classList.add("dl-motion");
+  const progress = document.getElementById("dl-progress");
+  const updateProgress = () => {
+    if (!progress) return;
+    const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    progress.style.transform = "scaleX(" + Math.min(1, scrollY / max).toFixed(4) + ")";
+  };
+  addEventListener("scroll", updateProgress, { passive: true });
+  addEventListener("resize", updateProgress);
+  updateProgress();
+  if (motion && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("dl-in"); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll(".dl-reveal").forEach(node => observer.observe(node));
+  } else {
+    document.querySelectorAll(".dl-reveal").forEach(node => node.classList.add("dl-in"));
+  }
+  const anchors = [...document.querySelectorAll(".dl-chips a[href^='#'], .dl-toc-card a[href^='#']")];
+  const sections = anchors.map(a => document.getElementById(a.getAttribute("href").slice(1))).filter(Boolean);
+  const mark = () => {
+    let current = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top < innerHeight * 0.35) current = section;
+    anchors.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + current.id ? "true" : "false"));
+  };
+  addEventListener("scroll", mark, { passive: true });
+  mark();
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, { once: true });
+  } else {
+    start();
+  }
+})();
+</script>
+<!-- design-layer-js:end -->
+
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
-<body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Actual real-canvas review</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Actual journey</a><a href="index.html#boundaries">Evidence boundaries</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
-<main class="wrap"><section class="example-intro"><p class="eyebrow">Historical original 1/5 review · not the improved matched email walkthrough</p><h1>The original available record.<br><span>A historical Partial assessment.</span></h1><p class="example-boundary"><a href="walkthrough.html">Read the current matched improved-run report →</a> · <a href="index.html#history">Historical evidence context</a>. The original report, image and provenance bytes below are unchanged.</p>
+<body class="example-reader"><div id="dl-progress" aria-hidden="true"></div><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Actual real-canvas review</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Actual journey</a><a href="index.html#boundaries">Evidence boundaries</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
+<nav class="dl-chips" aria-label="Page sections"><a href="#top">Overview</a><a href="#read-this-first">Read this first</a><a href="#main">Details</a><a href="#more-projects">More projects</a></nav>
+<main class="wrap"><!-- dl-hero:start --><section class="example-intro"><p class="eyebrow">Historical original 1/5 review &middot; not the improved matched email walkthrough</p><h1 id="top">The original available record.<br><span>A historical Partial assessment.</span></h1><p class="example-boundary"><a href="walkthrough.html">Read the current matched improved-run report &rarr;</a> &middot; <a href="index.html#history">Historical evidence context</a>. The original report, image and provenance bytes below are unchanged.</p>
 <p class="example-lead">All ten MAIN sections and footer, the sole accepted C4 report, complete inventory and complete coverage. Four unavailable assessments are not fabricated or filled in.</p>
-<div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the MAIN assessment ↓</a><a class="button secondary" href="examples/real-canvas/real-canvas-MAIN.txt" download>Complete MAIN (.txt) ↓</a><a class="button secondary" href="downloads/real-canvas-review-example.zip" download>All 14 files (.zip) ↓</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
-<div class="example-facts"><div><strong>1 / 5</strong><span>selected assessments accepted · four unavailable</span></div><div><strong>80 / 326</strong><span>screen lines covered by accepted C4</span></div><div><strong>6</strong><span>actual model calls · not phase-record count</span></div><div><strong>Partial</strong><span>not full application assessment</span></div></div>
-<p class="example-boundary"><strong>Complete files ≠ complete coverage.</strong> Roles/customization and large data-source material were omitted or outside scope. Three embedded checker records have unknown age; no current checker ran. Retained “syntactically valid” wording is not compiler or Power Fx semantic-parser proof. No source application, roles or workflow were imported or executed.</p>
+<div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the MAIN assessment &darr;</a><a class="button secondary" href="examples/real-canvas/real-canvas-MAIN.txt" download>Complete MAIN (.txt) &darr;</a><a class="button secondary" href="downloads/real-canvas-review-example.zip" download>All 14 files (.zip) &darr;</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
+<div class="example-facts"><div><strong>1 / 5</strong><span>selected assessments accepted &middot; four unavailable</span></div><div><strong>80 / 326</strong><span>screen lines covered by accepted C4</span></div><div><strong>6</strong><span>actual model calls &middot; not phase-record count</span></div><div><strong>Partial</strong><span>not full application assessment</span></div></div>
+<p class="example-boundary"><strong>Complete files &ne; complete coverage.</strong> Roles/customization and large data-source material were omitted or outside scope. Three embedded checker records have unknown age; no current checker ran. Retained &ldquo;syntactically valid&rdquo; wording is not compiler or Power Fx semantic-parser proof. No source application, roles or workflow were imported or executed.</p>
 <p class="example-boundary"><strong>Notification is not verified Inbox receipt.</strong> One guarded SendEmailV2 succeeded. Original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. The user-provided body image shows no mailbox/recipient headers and does not guarantee single delivery.</p>
 <p class="fine-print">All four TXT payloads are byte-identical to the approved redacted inputs, including the complete 58,939-byte coverage file. Bracketed privacy labels are not original source literals or working links. Existing replacement characters/wording are retained, not silently corrected. Every file below is visible and printable without JavaScript.</p>
-<p class="fine-print">ZIP SHA-256: <code class="example-bundle-sha">670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f</code> · <a href="downloads/real-canvas-example-manifest.json">Input/published pins and exact archive manifest</a>. The ZIP contains reports, eight approved images and two provenance records—not the app or an installer.</p>
-<p class="fine-print">Current report output is TXT/JSON. This static reader and browser Print / Save as PDF are presentation options, not a deployed document-generation flow. <a href="index.html#report-formats">Optional protected Word/PDF guidance</a>.</p></section>
-<div class="report-layout"><aside class="example-toc" aria-label="Complete record contents"><p class="eyebrow">Read every available file</p><ol><li><a href="#main">MAIN · all ten sections, footer and unavailable records</a></li><li><a href="#component">C4 · complete accepted screen assessment</a></li><li><a href="#inventory">Complete retained inventory</a></li><li><a href="#coverage">Complete retained coverage · no fields omitted</a></li><li><a href="#provenance">Native-capture and report provenance</a></li><li><a href="#user-provenance">User-provided capture provenance and correlation limits</a></li></ol><details open><summary>MAIN sections</summary><ol class="main-section-links"><li><a href="#main-section-1">Executive summary and readiness</a></li><li><a href="#main-section-2">Provenance and methodology</a></li><li><a href="#main-section-3">Inventory and coverage</a></li><li><a href="#main-section-4">Per-component assessment</a></li><li><a href="#main-section-5">Evidence-grounded findings</a></li><li><a href="#main-section-6">Historical checker evidence</a></li><li><a href="#main-section-7">Remediation backlog</a></li><li><a href="#main-section-8">Observed strengths</a></li><li><a href="#main-section-9">Runtime/manual checks NOT RUN</a></li><li><a href="#main-section-10">Omissions and next actions</a></li></ol></details><p class="fine-print">C1/C2/C3/C5 are unavailable. Their records remain in MAIN and coverage; no report is invented.</p></aside><div class="report-documents"><section class="example-document" id="main" aria-labelledby="main-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="main-title">MAIN · all ten sections, footer and unavailable records</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-MAIN.txt" download>Download .txt ↓</a></header><p class="document-pin">16,883 bytes · SHA-256 <code>fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b</code></p><div class="report-text" data-example-text="main"><pre><span aria-hidden="true"></span>Power Platform Solution Reviewer - AUTHORITATIVE DETAILED REPORT BUNDLE
+<p class="fine-print">ZIP SHA-256: <code class="example-bundle-sha">670c275ef6a5e9715cf3dc37a4647708e42124acdca3ff10f6724efef5e0577f</code> &middot; <a href="downloads/real-canvas-example-manifest.json">Input/published pins and exact archive manifest</a>. The ZIP contains reports, eight approved images and two provenance records&mdash;not the app or an installer.</p>
+<p class="fine-print">Current report output is TXT/JSON. This static reader and browser Print / Save as PDF are presentation options, not a deployed document-generation flow. <a href="index.html#report-formats">Optional protected Word/PDF guidance</a>.</p></section><!-- dl-hero:end --><section class="section wrap community-notice dl-reveal" id="read-this-first"><p class="pill">Community project. This is not a Microsoft product.</p><div class="notice"><p><strong>Read this first.</strong> This community project is shared as-is under the MIT licence. It is not a Microsoft product, is not supported by Microsoft, and has no SLA or warranty.</p><p>Test in a non-production environment first. Get your organisation's approvals before importing any solution into an environment that holds real data, and assess the security, operational and support responsibilities yourself.</p></div></section>
+<div class="report-layout"><aside class="example-toc" aria-label="Complete record contents"><p class="eyebrow">Read every available file</p><ol><li><a href="#main">MAIN &middot; all ten sections, footer and unavailable records</a></li><li><a href="#component">C4 &middot; complete accepted screen assessment</a></li><li><a href="#inventory">Complete retained inventory</a></li><li><a href="#coverage">Complete retained coverage &middot; no fields omitted</a></li><li><a href="#provenance">Native-capture and report provenance</a></li><li><a href="#user-provenance">User-provided capture provenance and correlation limits</a></li></ol><details open><summary>MAIN sections</summary><ol class="main-section-links"><li><a href="#main-section-1">Executive summary and readiness</a></li><li><a href="#main-section-2">Provenance and methodology</a></li><li><a href="#main-section-3">Inventory and coverage</a></li><li><a href="#main-section-4">Per-component assessment</a></li><li><a href="#main-section-5">Evidence-grounded findings</a></li><li><a href="#main-section-6">Historical checker evidence</a></li><li><a href="#main-section-7">Remediation backlog</a></li><li><a href="#main-section-8">Observed strengths</a></li><li><a href="#main-section-9">Runtime/manual checks NOT RUN</a></li><li><a href="#main-section-10">Omissions and next actions</a></li></ol></details><p class="fine-print">C1/C2/C3/C5 are unavailable. Their records remain in MAIN and coverage; no report is invented.</p></aside><div class="report-documents"><section class="example-document" id="main" aria-labelledby="main-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="main-title">MAIN &middot; all ten sections, footer and unavailable records</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-MAIN.txt" download>Download .txt &darr;</a></header><p class="document-pin">16,883 bytes &middot; SHA-256 <code>fa6e929b395b090041cbec0924a61b4fecb977ecc5bfe5211df02c28b0d19b8b</code></p><div class="report-text" data-example-text="main"><pre><span aria-hidden="true"></span>Power Platform Solution Reviewer - AUTHORITATIVE DETAILED REPORT BUNDLE
 Agent: [PRIVATE IDENTIFIER 2]; configured model: GPT5Reasoning; standard harness
 Outcome: ReviewPartial; analysis time UTC: 2026-09-13T20:05:28.5739946Z
 Input: [PRIVATE UPLOAD NAME 1]; SharePoint file identity: [PRIVATE IDENTIFIER 3]
@@ -114,14 +285,14 @@ Current official checker: NOT RUN.
 </pre><h3 id="main-section-1">1. Executive summary and readiness
 </h3><pre><span aria-hidden="true"></span>- Provisional readiness: Not established. The review is PARTIAL_OR_LIMITED due to excerpt-only source returns, unsupported content exclusions, and degraded path provenance for the nested canvas app.
 - What we did see showed syntactically valid bindings and no static failures in the visible canvas excerpt. No supported defects were confirmed from source.
-- Blockers/unknowns: Large/unsupported files were not reviewed (for example, customizations.xml over budget), the canvas app’s source coverage is incomplete, and no current checker execution evidence was acquired. Release readiness cannot be determined from this limited evidence.
+- Blockers/unknowns: Large/unsupported files were not reviewed (for example, customizations.xml over budget), the canvas app&rsquo;s source coverage is incomplete, and no current checker execution evidence was acquired. Release readiness cannot be determined from this limited evidence.
 
 </pre><h3 id="main-section-2">2. Provenance and methodology
 </h3><pre><span aria-hidden="true"></span>- Package: [PRIVATE UPLOAD NAME 1]; sourceLocation: /sites/[PRIVATE SITE NAME 1]/SolutionPackages/Incoming; sourceSnapshot: uniqueId [PRIVATE IDENTIFIER 3], etag "{[PRIVATE IDENTIFIER 3]},1", version 1.0.
 - Analysis context time (UTC): 2026-09-13T19:53:44.7934106Z. Review rules version: 3.3.1. Model: configured GPT-5. Parser: Native UTF-8 decoding, SARIF JSON parsing, and bounded solution.xml RootComponent XML/XPath metadata extraction only; no Power Fx semantic execution.
 - Authentication: Scoped automation maker/service connections; not uploader impersonation. Interactive OneDrive intake remains Invoker.
 - Extraction/limits: Connector extraction only with bounded continuation; per-file excerpt limit 4,000 characters and 80 lines; total excerpt budget 12,000 characters. Some sources are excerpt-only and others excluded due to size or unsupported type. Returned paths are extracted-path identifiers, not proof of original archive hierarchy preservation.
-- Retention: Original SharePoint file unchanged. Extracted copies persisted in the service owner’s OneDrive job folder (/PSRAuto-[PRIVATE IDENTIFIER 1]). The GUID-prefixed staged archive targeted for best-effort cleanup. Reports retained in the private SharePoint Results folder.
+- Retention: Original SharePoint file unchanged. Extracted copies persisted in the service owner&rsquo;s OneDrive job folder (/PSRAuto-[PRIVATE IDENTIFIER 1]). The GUID-prefixed staged archive targeted for best-effort cleanup. Reports retained in the private SharePoint Results folder.
 
 </pre><h3 id="main-section-3">3. Inventory and coverage
 </h3><pre><span aria-hidden="true"></span>- Container packages returned (2):
@@ -141,32 +312,32 @@ Current official checker: NOT RUN.
 
 </pre><h3 id="main-section-4">4. Per-component assessment
 </h3><pre><span aria-hidden="true"></span>Accepted detailed component report(s):
-- passId C4 — sourcePath: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/Screen1.pa.yaml (complete=false; 80-line excerpt)
-  - Accessibility: A Label control’s Text is bound to Parent.DisplayName (line 52), establishing a visible caption for the Name data card label. No serialized AccessibleLabel properties are shown in the excerpt for text inputs; absence in the excerpt is not a defect. Screen-reader behavior and accessible names require runtime verification.
+- passId C4 &mdash; sourcePath: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/Screen1.pa.yaml (complete=false; 80-line excerpt)
+  - Accessibility: A Label control&rsquo;s Text is bound to Parent.DisplayName (line 52), establishing a visible caption for the Name data card label. No serialized AccessibleLabel properties are shown in the excerpt for text inputs; absence in the excerpt is not a defect. Screen-reader behavior and accessible names require runtime verification.
   - Formulas/correctness: Form1 DataSource explicitly references '[PRIVATE TABLE NAME 1]' (line 20); Default for the Name field uses ThisItem.Name (line 34); Required=true (line 37); Update=DataCardValue1.Text (line 38). These bindings are syntactically valid in the excerpt.
   - Data/delegation/performance: Defaults('[PRIVATE TABLE NAME 1]') is used to seed Item (line 22). Delegation/volume behavior not assessed from this static excerpt.
-  - Responsive UX: Fixed Width/Height/X/Y values appear (lines 21, 23–25, 39–41). No scaling/layout formulas evidenced beyond this single screen; responsiveness not assessed.
+  - Responsive UX: Fixed Width/Height/X/Y values appear (lines 21, 23&ndash;25, 39&ndash;41). No scaling/layout formulas evidenced beyond this single screen; responsiveness not assessed.
   - Error handling: DataCardValue1.BorderColor switches to red on error (line 61), indicating visual validation feedback. Submit/OnFailure logic not visible; unassessed.
   - Connections/configuration: The referenced data source name is visible, but connection references and permissions are evaluated outside canvas source verification; runtime access must be validated.
   - ALM/dependencies: Outside the excerpt scope.
   - Not assessed due to absent evidence: Additional screens/components, navigation, submit logic, retry/error handling patterns, performance optimizations, theming/accessibility contrast, and environment-specific dependency configuration.
 
 Failed detailed component report preparations (no accepted assessment produced; pipeline issue, not a package defect):
-- passId C1 — solution.xml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
-- passId C2 — AppCheckerResult.sarif (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
-- passId C3 — App.pa.yaml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: RESPONSE_ENVELOPE_INVALID, NOT_INVOKED).
-- passId C5 — [PRIVATE WORKFLOW PATH 1] (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+- passId C1 &mdash; solution.xml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+- passId C2 &mdash; AppCheckerResult.sarif (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
+- passId C3 &mdash; App.pa.yaml (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: RESPONSE_ENVELOPE_INVALID, NOT_INVOKED).
+- passId C5 &mdash; [PRIVATE WORKFLOW PATH 1] (DETAILED_COMPONENT_REPORT_UNAVAILABLE; validationIssues: MODEL_RESPONSE_INVALID, NOT_INVOKED).
 
 </pre><h3 id="main-section-5">5. Evidence-grounded findings
 </h3><pre><span aria-hidden="true"></span>- No supported defects were identified in the accepted component excerpt. The visible properties and bindings are syntactically valid with no static failures evidenced in source.
 - Static source observations from passId C4 (quotes include line numbers and extracted path):
-  - Line 12: "LoadingSpinnerColor: =RGBA(56, 96, 178, 1)" — explicit spinner color assignment in Screen1.pa.yaml.
-  - Line 20: "DataSource: ='[PRIVATE TABLE NAME 1]'" — Form1 bound to the named data source.
-  - Line 33: "DataField: ="[PRIVATE SCHEMA NAME 1]"" — Name data card bound to [PRIVATE SCHEMA NAME 1].
-  - Line 34: "Default: =ThisItem.Name" — Name field default from record.
-  - Line 35: "DisplayName: =DataSourceInfo([@'[PRIVATE TABLE NAME 1]'],DataSourceInfo.DisplayName,'[PRIVATE SCHEMA NAME 1]')" — dynamic display name.
-  - Line 37: "Required: =true" — field marked required.
-  - Line 61: "BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)" — error highlighting logic.
+  - Line 12: "LoadingSpinnerColor: =RGBA(56, 96, 178, 1)" &mdash; explicit spinner color assignment in Screen1.pa.yaml.
+  - Line 20: "DataSource: ='[PRIVATE TABLE NAME 1]'" &mdash; Form1 bound to the named data source.
+  - Line 33: "DataField: ="[PRIVATE SCHEMA NAME 1]"" &mdash; Name data card bound to [PRIVATE SCHEMA NAME 1].
+  - Line 34: "Default: =ThisItem.Name" &mdash; Name field default from record.
+  - Line 35: "DisplayName: =DataSourceInfo([@'[PRIVATE TABLE NAME 1]'],DataSourceInfo.DisplayName,'[PRIVATE SCHEMA NAME 1]')" &mdash; dynamic display name.
+  - Line 37: "Required: =true" &mdash; field marked required.
+  - Line 61: "BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)" &mdash; error highlighting logic.
 
 </pre><h3 id="main-section-6">6. Historical checker evidence
 </h3><pre><span aria-hidden="true"></span>- Source: CanvasApps/[PRIVATE SCHEMA NAME 2].msapp/AppCheckerResult.sarif (tool: PowerApps app checker 1.346). Status: Stale embedded publication-time evidence; not a current checker execution.
@@ -184,7 +355,7 @@ Failed detailed component report preparations (no accepted assessment produced; 
     - C4-V2: Confirm Form1 access to '[PRIVATE TABLE NAME 1]' without connection/permission errors and correct Defaults(...) loading.
     - C4-V3: Confirm Required=true blocks submission when Name is empty and error indication appears.
   - Optional improvement checks guided by historical SARIF (non-binding until verified):
-    - Evaluate whether Screen1’s title/name is meaningful to screen readers.
+    - Evaluate whether Screen1&rsquo;s title/name is meaningful to screen readers.
     - Evaluate AccessibleLabel coverage for data-entry controls (for example, DataCardValue1 and related inputs) in context.
 
 </pre><h3 id="main-section-8">8. Observed strengths
@@ -208,7 +379,7 @@ Failed detailed component report preparations (no accepted assessment produced; 
   - Quote: "Required: =true"
   - Area: Validation
   - Action: Attempt to submit the form with the Name field empty.
-  - Expected: Submission is blocked and an error indication appears for the Name field per the form’s validation behavior.
+  - Expected: Submission is blocked and an error indication appears for the Name field per the form&rsquo;s validation behavior.
   - Status: NOT RUN; Applicability: when Form1 has a submit action wired and validation is active.
 
 </pre><h3 id="main-section-10">10. Omissions and next actions
@@ -216,7 +387,7 @@ Failed detailed component report preparations (no accepted assessment produced; 
   - Degraded path provenance for canvas source: App.pa.yaml and Screen1.pa.yaml are returned outside an extracted Src folder; original hierarchy mapping, collisions, or omissions cannot be excluded.
   - Excerpt-only: solution.xml (78 lines); Screen1.pa.yaml (80 lines); Workflows/.../SyncUser-...json (31 lines). Unreturned portions remain unreviewed.
   - Over budget/not reviewed: customizations.xml (TEXT_FILE_TOO_LARGE).
-  - Unsupported/nonselected inventory excluded from review (≥15 entries), including DataSources.json, Properties.json, Templates.json, Themes.json, Resources.json, ModernThemes.json, QualifiedValues.json, Header.json, 1.json, 4.json, .gitignore, BackgroundImageUri, AdditionalUris0_identity.json, [Content_Types].xml, and the msapp binary (binary not read; see nested coverage).
+  - Unsupported/nonselected inventory excluded from review (&ge;15 entries), including DataSources.json, Properties.json, Templates.json, Themes.json, Resources.json, ModernThemes.json, QualifiedValues.json, Header.json, 1.json, 4.json, .gitignore, BackgroundImageUri, AdditionalUris0_identity.json, [Content_Types].xml, and the msapp binary (binary not read; see nested coverage).
   - Editor-only: _EditorState.pa.yaml inventoried but excluded from runtime source assessment.
 - Readiness impact: Insufficient coverage to establish release readiness; current official checker not run; some accessibility and naming topics only appear as historical hints.
 - Next evidence actions:
@@ -235,7 +406,7 @@ Unavailable detailed passes: [{"code":"DETAILED_COMPONENT_REPORT_UNAVAILABLE","c
 
 COMPLETE AVAILABLE INVENTORY: [PRIVATE SITE URL 1]/SolutionPackages/Results/[PRIVATE IDENTIFIER 1]-inventory.json
 ANALYZED / METADATA-ONLY / SKIPPED / UNSUPPORTED / FAILURE COVERAGE: [PRIVATE SITE URL 1]/SolutionPackages/Results/[PRIVATE IDENTIFIER 1]-coverage.json
-The main file plus every linked section and appendix is the authoritative report. No valid saved component finding text is shortened for email. Unknown original archive members, meaningful omitted sources and failed passes remain unreviewed; static analysis cannot certify runtime/accessibility/import readiness.</pre></div></section><section class="example-document" id="component" aria-labelledby="component-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="component-title">C4 · complete accepted screen assessment</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-C4.txt" download>Download .txt ↓</a></header><p class="document-pin">3,602 bytes · SHA-256 <code>50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c</code></p><div class="report-text" data-example-text="component"><pre><span aria-hidden="true"></span>PSR_COMPONENT_REVIEW_V3
+The main file plus every linked section and appendix is the authoritative report. No valid saved component finding text is shortened for email. Unknown original archive members, meaningful omitted sources and failed passes remain unreviewed; static analysis cannot certify runtime/accessibility/import readiness.</pre></div></section><section class="example-document" id="component" aria-labelledby="component-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="component-title">C4 &middot; complete accepted screen assessment</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-C4.txt" download>Download .txt &darr;</a></header><p class="document-pin">3,602 bytes &middot; SHA-256 <code>50d74ad328a2266823bb16266d60b5a5bee3df58badfae708440a3ceb6ddb69c</code></p><div class="report-text" data-example-text="component"><pre><span aria-hidden="true"></span>PSR_COMPONENT_REVIEW_V3
 Job: [PRIVATE IDENTIFIER 1]; pass: C4; actual extracted source: Screen1.pa.yaml
 Contract: PSR_COMPONENT_V3; source-evidence checks passed. Not runtime/import/accessibility certification.
 
@@ -277,10 +448,10 @@ Contract: PSR_COMPONENT_V3; source-evidence checks passed. Not runtime/import/ac
   Property: Required; observed serialization state: EXPLICIT_EXPRESSION
   Defect/impact/severity: NOT ESTABLISHED by this verification item.
   Check: Attempt to submit the form with the Name field empty.
-  Expected observation: Submission is blocked and an error indication appears for the Name field per the form’s validation behavior.
+  Expected observation: Submission is blocked and an error indication appears for the Name field per the form&rsquo;s validation behavior.
 
 Current official checker: NOT RUN. Historical checker evidence only if actually acquired.
-END_PSR_COMPONENT_REVIEW_V3</pre></div></section><section class="example-document" id="inventory" aria-labelledby="inventory-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="inventory-title">Complete retained inventory</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-inventory.txt" download>Download .txt ↓</a></header><p class="document-pin">13,612 bytes · SHA-256 <code>4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4</code></p><div class="report-text tree-text" data-example-text="inventory"><pre><span aria-hidden="true"></span>INVENTORY — COMPLETE REDACTED APPENDIX
+END_PSR_COMPONENT_REVIEW_V3</pre></div></section><section class="example-document" id="inventory" aria-labelledby="inventory-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="inventory-title">Complete retained inventory</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-inventory.txt" download>Download .txt &darr;</a></header><p class="document-pin">13,612 bytes &middot; SHA-256 <code>4f02bf984b5a3c749408cade4b1ef4f46d35640b92cf3694fc3a91c27c7bacd4</code></p><div class="report-text tree-text" data-example-text="inventory"><pre><span aria-hidden="true"></span>INVENTORY &mdash; COMPLETE REDACTED APPENDIX
 
 $.declaredRootComponents[0].boundary = "Manifest declarations only, not proof that components were analyzed, imported or checked. At most 200 declarations; absent attributes remain empty."
 $.declaredRootComponents[0].components[0].behavior = "0"
@@ -497,7 +668,7 @@ $.sourceSnapshot.sourceBytes = 352120
 $.sourceSnapshot.uniqueId = "[PRIVATE IDENTIFIER 3]"
 $.sourceSnapshot.version = "1.0"
 $.unavailableOrRejectedInventory = []
-</pre></div></section><section class="example-document" id="coverage" aria-labelledby="coverage-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="coverage-title">Complete retained coverage · no fields omitted</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-coverage.txt" download>Download .txt ↓</a></header><p class="document-pin">58,939 bytes · SHA-256 <code>26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e</code></p><div class="report-text tree-text" data-example-text="coverage"><pre><span aria-hidden="true"></span>COVERAGE — COMPLETE REDACTED APPENDIX
+</pre></div></section><section class="example-document" id="coverage" aria-labelledby="coverage-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="coverage-title">Complete retained coverage &middot; no fields omitted</h2></div><a class="small-button" href="examples/real-canvas/real-canvas-coverage.txt" download>Download .txt &darr;</a></header><p class="document-pin">58,939 bytes &middot; SHA-256 <code>26dca2c3b5e299bbcfaa75382f84a9b2bccf54cffb0c53d0ed916bd38006e27e</code></p><div class="report-text tree-text" data-example-text="coverage"><pre><span aria-hidden="true"></span>COVERAGE &mdash; COMPLETE REDACTED APPENDIX
 
 $.acquiredSourceExcerpts[0].boundary = "This is content-acquisition/excerpt metadata. Detailed analysis success is recorded separately per source pass."
 $.acquiredSourceExcerpts[0].bytes = 5440
@@ -1265,7 +1436,7 @@ $.unsupported[14].folder = false
 $.unsupported[14].package = "CanvasApps/[PRIVATE SCHEMA NAME 2].msapp"
 $.unsupported[14].path = "PublishInfo.json"
 $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF"
-</pre></div></section><section class="example-document" id="provenance" aria-labelledby="provenance-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="provenance-title">Native-capture and report provenance</h2></div><a class="small-button" href="examples/real-canvas/public-provenance.json" download>Download .json ↓</a></header><p class="document-pin">7,079 bytes · SHA-256 <code>63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff</code></p><div class="report-text tree-text" data-example-text="provenance"><pre><span aria-hidden="true"></span>{
+</pre></div></section><section class="example-document" id="provenance" aria-labelledby="provenance-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="provenance-title">Native-capture and report provenance</h2></div><a class="small-button" href="examples/real-canvas/public-provenance.json" download>Download .json &darr;</a></header><p class="document-pin">7,079 bytes &middot; SHA-256 <code>63885fbade623b1a7de7f36503b1e1b2594298b40f2b6bc3c43b09f1a8679fff</code></p><div class="report-text tree-text" data-example-text="provenance"><pre><span aria-hidden="true"></span>{
   "status": "PARENT_APPROVED_PUBLIC_REAL_CANVAS_DERIVATIVE_NOT_RUNTIME_ACCEPTANCE",
   "category": "Real classic canvas solution review; not a synthetic or source-app runtime demonstration.",
   "observedReviewerVersion": "3.3.1.3",
@@ -1393,7 +1564,7 @@ $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF
   },
   "inputProvenanceSha256": "79b2cf94ba22bc4dda99229da77e8506af45506fefb74288a40e4372a22a2a92"
 }
-</pre></div></section><section class="example-document" id="user-provenance" aria-labelledby="user-provenance-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="user-provenance-title">User-provided capture provenance and correlation limits</h2></div><a class="small-button" href="examples/real-canvas/user-capture-provenance.v1.json" download>Download .json ↓</a></header><p class="document-pin">12,540 bytes · SHA-256 <code>49d09e1ab46e79fc747c83471b182d30ab62740f4772de1cc81d835b0af64e79</code></p><div class="report-text tree-text" data-example-text="user-provenance"><pre><span aria-hidden="true"></span>{
+</pre></div></section><section class="example-document" id="user-provenance" aria-labelledby="user-provenance-title"><header class="document-header"><div><p class="eyebrow">Complete published file</p><h2 id="user-provenance-title">User-provided capture provenance and correlation limits</h2></div><a class="small-button" href="examples/real-canvas/user-capture-provenance.v1.json" download>Download .json &darr;</a></header><p class="document-pin">12,540 bytes &middot; SHA-256 <code>49d09e1ab46e79fc747c83471b182d30ab62740f4772de1cc81d835b0af64e79</code></p><div class="report-text tree-text" data-example-text="user-provenance"><pre><span aria-hidden="true"></span>{
   "version": "USER_CAPTURE_ADDENDUM_V1",
   "status": "PARENT_APPROVED_PUBLIC_USER_CAPTURE_DERIVATIVES_NOT_INBOX_RECEIPT_PROOF",
   "publicApproval": true,
@@ -1425,7 +1596,7 @@ $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF
       "bytes": 305120,
       "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
       "captureTimeEstablished": false,
-      "caption": "User-provided MAIN opening and sections 1–3, including Partial status, scope and inventory limitations. Browser chrome and private identities/paths are cropped or masked; the complete redacted MAIN text is supplied separately.",
+      "caption": "User-provided MAIN opening and sections 1&ndash;3, including Partial status, scope and inventory limitations. Browser chrome and private identities/paths are cropped or masked; the complete redacted MAIN text is supplied separately.",
       "correlation": "The original visibly contains the exact retained job/report URL, source filename, source file identity, job ID and MAIN conversation, and matches the retained report header and substantive opening.",
       "evidenceBoundary": "This proves displayed retained-report identity, not capture time or a new runtime execution. The native viewport clips some long right-hand lines.",
       "visibleAnalysisTime": "2026-09-13T20:05:28.5739946Z",
@@ -1438,7 +1609,7 @@ $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF
       "bytes": 355766,
       "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
       "captureTimeEstablished": false,
-      "caption": "User-provided MAIN sections 4–8: accepted C4 scope, four unavailable assessments, source observations, historical checker, suggested next steps and no confirmed strengths. Private bindings/paths are masked.",
+      "caption": "User-provided MAIN sections 4&ndash;8: accepted C4 scope, four unavailable assessments, source observations, historical checker, suggested next steps and no confirmed strengths. Private bindings/paths are masked.",
       "correlation": "Visible text, C4 source path, failed-pass list, seven source observations and historical-checker section match the retained MAIN. This image contains no independent complete job identifier; correlation is by retained document content and the user-provided companion images.",
       "evidenceBoundary": "Not an independently authenticated job capture or a complete standalone report. Native right-edge clipping is preserved.",
       "visibleAnalysisTime": null,
@@ -1451,7 +1622,7 @@ $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF
       "bytes": 249742,
       "origin": "USER_PROVIDED_IMAGE_NOT_A_TEST_CAPTURE",
       "captureTimeEstablished": false,
-      "caption": "User-provided MAIN sections 8–10: no confirmed strengths, three NOT RUN verification checks, omissions and next actions. Private data-source names are masked; the lower private report-link/footer area is cropped.",
+      "caption": "User-provided MAIN sections 8&ndash;10: no confirmed strengths, three NOT RUN verification checks, omissions and next actions. Private data-source names are masked; the lower private report-link/footer area is cropped.",
       "correlation": "Three exact NOT RUN verification topics, omissions and the end-of-report marker match the retained MAIN. No intact independent job identifier is used from this image; correlation is by retained document content and companion images.",
       "evidenceBoundary": "Recommendations are unexecuted report content. Neither this image nor this curation ran the source application, workflow, checks or another review.",
       "visibleAnalysisTime": null,
@@ -1600,4 +1771,4 @@ $.unsupported[14].pathKind = "EXTRACTED_RELATIVE_PATH_NOT_ORIGINAL_ARCHIVE_PROOF
   ]
 }
 </pre></div></section></div></div></main>
-<footer class="wrap site-footer"><p><strong>Actual real-canvas review · Partial</strong><br>Source-backed advice, not runtime certification.</p><p><a href="index.html#showcase">Back to the actual journey</a> · <a href="downloads/real-canvas-example-manifest.json">Verify complete-file hashes</a></p></footer></body></html>
+<!-- dl-series:start --><section class="wrap dl-series" id="more-projects" aria-label="More community projects"><p class="eyebrow">More community projects</p><h2>More community projects</h2><div class="dl-series-grid"><a class="dl-series-card" href="https://ryanbowie.github.io/custom-agent-reporting-architecture/"><small>01</small><h3>Custom Agent Reporting &ndash; Architecture</h3><p>How a custom Power BI model can report on agents across Copilot Studio, Agent Builder and Microsoft Foundry. Documentation only.</p><span>Open &rarr;</span></a><a class="dl-series-card" href="https://ryanbowie.github.io/copilot-interaction-logging/"><small>02</small><h3>Copilot Interaction Logging</h3><p>Build guide: Copilot interaction records from the Purview audit log, collected into Dataverse by two Power Automate flows.</p><span>Open &rarr;</span></a><a class="dl-series-card" href="#top" aria-current="page"><small>03</small><h3>Power Platform Solution Reviewer</h3><p>A Copilot Studio agent that reviews Power Platform solutions, with a real canvas-app walkthrough, detailed output and setup guidance.</p><span>You are here</span></a><a class="dl-series-card" href="https://ryanbowie.github.io/copilot-studio-sharepoint-search-hub/"><small>04</small><h3>SharePoint Search Hub</h3><p>Hub-and-spoke SharePoint search in Copilot Studio, with caller-checked results, a private Excel export and a verified 512-item demo.</p><span>Open &rarr;</span></a><a class="dl-series-card" href="https://ryanbowie.github.io/copilot-studio-powerbi-agent/"><small>05</small><h3>Power BI Agent</h3><p>A standard Copilot Studio agent that writes DAX and queries Power BI semantic models as the signed-in user.</p><span>Open &rarr;</span></a><a class="dl-series-card" href="https://ryanbowie.github.io/copilot-studio-documentation-builder/"><small>06</small><h3>Documentation Builder</h3><p>Template-aligned Word and PowerPoint documents from Copilot Studio, comparing the Standard and GitHub Copilot harnesses.</p><span>Open &rarr;</span></a></div></section><!-- dl-series:end --><footer class="wrap site-footer"><p><strong>Power Platform Solution Reviewer</strong> &middot; MIT licence &middot; <a href="README.md">README</a> &middot; <a href="https://github.com/RyanBowie/copilot-studio-powerplatform-solution-reviewer-site/blob/main/LICENSE">LICENSE</a> &middot; <a href="#top">Back to top &uarr;</a></p><p>Provided as is, without warranty of any kind. You're responsible for assessing, operating and securing anything you deploy from this site.</p></footer></body></html>

@@ -397,3 +397,7 @@ The import-first manifest additionally pins both real ZIPs and sanitized
 artifact-specific native receipts. Successful import jobs or matching action
 counts alone do not satisfy its exact-definition gate. Parent permission to
 distribute new downloads remains separate from the reviewed historical evidence.
+
+## Licence and support
+
+This repository is licensed under the MIT licence. It is a community project, not a Microsoft product, and it is not supported by Microsoft. It is provided as is, without warranty or SLA. Test in a non-production environment first and get your organisation's approvals before importing anything into an environment that holds real data.

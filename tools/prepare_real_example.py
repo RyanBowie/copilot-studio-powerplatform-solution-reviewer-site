@@ -7,6 +7,7 @@ import json
 import re
 from pathlib import Path
 from zipfile import ZipFile, ZipInfo, ZIP_STORED
+from design_layer import html_entities, chips, community_notice, design_js, footer as design_footer, head_extras
 
 SITE = Path(__file__).resolve().parents[1]
 PREFIX = "examples/real-canvas"
@@ -164,7 +165,7 @@ def reader(m):
     index = (SITE / "index.html").read_text(encoding="utf-8")
     script = re.search(r"<script>(.*?)</script>", index, re.S).group(1)
     style = re.search(r"<style>(.*?)</style>", index, re.S).group(1)
-    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1)
+    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1).replace("--cp-text: #102631;", "--cp-text: #242424;")
     pins = {row["archivePath"]: row for row in m["files"]}
     sections, navigation, main_nav = [], [], []
     for name, kind, title in DOCUMENTS:
@@ -175,12 +176,13 @@ def reader(m):
         navigation.append(f'<li><a href="#{kind}">{html.escape(title)}</a></li>')
         if kind == "main":
             main_nav = [f'<li><a href="#main-section-{number}">{html.escape(title)}</a></li>' for number, title in re.findall(r"^(10|[1-9])\. (.+)$", value, re.M)]
-    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historical real canvas review · original 1/5 Partial</title>
+    return html_entities(f'''<!doctype html><html lang="en-GB" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head_extras()}<title>Historical real canvas review · original 1/5 Partial</title>
 <script>{script}</script><style>{style}
-@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>
+@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>{design_js()}
 <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
-<body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Actual real-canvas review</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Actual journey</a><a href="index.html#boundaries">Evidence boundaries</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
-<main class="wrap"><section class="example-intro"><p class="eyebrow">Historical original 1/5 review · not the improved matched email walkthrough</p><h1>The original available record.<br><span>A historical Partial assessment.</span></h1><p class="example-boundary"><a href="walkthrough.html">Read the current matched improved-run report →</a> · <a href="index.html#history">Historical evidence context</a>. The original report, image and provenance bytes below are unchanged.</p>
+<body class="example-reader"><div id="dl-progress" aria-hidden="true"></div><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Actual real-canvas review</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Actual journey</a><a href="index.html#boundaries">Evidence boundaries</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
+{chips([("top", "Overview"), ("read-this-first", "Read this first"), ("main", "Details"), ("more-projects", "More projects")])}
+<main class="wrap"><!-- dl-hero:start --><section class="example-intro"><p class="eyebrow">Historical original 1/5 review · not the improved matched email walkthrough</p><h1 id="top">The original available record.<br><span>A historical Partial assessment.</span></h1><p class="example-boundary"><a href="walkthrough.html">Read the current matched improved-run report →</a> · <a href="index.html#history">Historical evidence context</a>. The original report, image and provenance bytes below are unchanged.</p>
 <p class="example-lead">All ten MAIN sections and footer, the sole accepted C4 report, complete inventory and complete coverage. Four unavailable assessments are not fabricated or filled in.</p>
 <div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the MAIN assessment ↓</a><a class="button secondary" href="{PREFIX}/real-canvas-MAIN.txt" download>Complete MAIN (.txt) ↓</a><a class="button secondary" href="{BUNDLE}" download>All 14 files (.zip) ↓</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
 <div class="example-facts"><div><strong>1 / 5</strong><span>selected assessments accepted · four unavailable</span></div><div><strong>80 / 326</strong><span>screen lines covered by accepted C4</span></div><div><strong>6</strong><span>actual model calls · not phase-record count</span></div><div><strong>Partial</strong><span>not full application assessment</span></div></div>
@@ -188,9 +190,9 @@ def reader(m):
 <p class="example-boundary"><strong>Notification is not verified Inbox receipt.</strong> One guarded SendEmailV2 succeeded. Original owner Inbox receipt and recipient containment remain unverified after observed forwarding/autoreply. The user-provided body image shows no mailbox/recipient headers and does not guarantee single delivery.</p>
 <p class="fine-print">All four TXT payloads are byte-identical to the approved redacted inputs, including the complete 58,939-byte coverage file. Bracketed privacy labels are not original source literals or working links. Existing replacement characters/wording are retained, not silently corrected. Every file below is visible and printable without JavaScript.</p>
 <p class="fine-print">ZIP SHA-256: <code class="example-bundle-sha">{m["bundle"]["sha256"]}</code> · <a href="{MANIFEST}">Input/published pins and exact archive manifest</a>. The ZIP contains reports, eight approved images and two provenance records—not the app or an installer.</p>
-<p class="fine-print">Current report output is TXT/JSON. This static reader and browser Print / Save as PDF are presentation options, not a deployed document-generation flow. <a href="index.html#report-formats">Optional protected Word/PDF guidance</a>.</p></section>
+<p class="fine-print">Current report output is TXT/JSON. This static reader and browser Print / Save as PDF are presentation options, not a deployed document-generation flow. <a href="index.html#report-formats">Optional protected Word/PDF guidance</a>.</p></section><!-- dl-hero:end -->{community_notice()}
 <div class="report-layout"><aside class="example-toc" aria-label="Complete record contents"><p class="eyebrow">Read every available file</p><ol>{''.join(navigation)}</ol><details open><summary>MAIN sections</summary><ol class="main-section-links">{''.join(main_nav)}</ol></details><p class="fine-print">C1/C2/C3/C5 are unavailable. Their records remain in MAIN and coverage; no report is invented.</p></aside><div class="report-documents">{''.join(sections)}</div></div></main>
-<footer class="wrap site-footer"><p><strong>Actual real-canvas review · Partial</strong><br>Source-backed advice, not runtime certification.</p><p><a href="index.html#showcase">Back to the actual journey</a> · <a href="{MANIFEST}">Verify complete-file hashes</a></p></footer></body></html>'''
+{design_footer()}</body></html>''')
 
 
 def main():

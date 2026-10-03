@@ -6,6 +6,7 @@ import io
 import json
 from pathlib import Path, PurePosixPath
 import re
+from design_layer import signal_diagram
 import struct
 from zipfile import ZipFile
 from urllib.parse import unquote
@@ -217,12 +218,11 @@ def section(release, hero=False, solutions=None):
         for number, role in enumerate(("page1", "page2"), 1)
     )
     heading, identifier = ("h1", "top") if hero else ("h2", "word-title")
-    rendered = f'''<section class="section wrap word-release" id="word-output" aria-labelledby="{identifier}">
-<div class="section-heading"><p class="eyebrow">New &middot; Word output and solution bundle {VERSION}</p>
+    rendered = f'''<section class="section wrap word-release dl-shell" id="word-output" aria-labelledby="{identifier}">
+<!-- dl-hero:start --><div class="dl-hero"><div><p class="dl-kicker">New &middot; Word output and solution bundle {VERSION}</p>
 <{heading} id="{identifier}">Readable Word reports.<br>The same solution reviewer.</{heading}>
-<p>The existing reviewer can turn its completed assessment into a formatted <code>.docx</code>,
-save it beneath <code>Results/solution-&lt;filename&gt;/</code>, and grant the established
-requester Read access to that report. No separate agent or separate private Word-output store.</p></div>
+<p class="dl-lede">The existing reviewer can turn its completed assessment into a formatted <code>.docx</code>, save it beneath <code>Results/solution-&lt;filename&gt;/</code>, and grant the established requester Read access to that report. No separate agent or separate private Word-output store.</p>
+<ul class="dl-facts"><li><strong>MIT licence</strong> / As-is, no SLA</li><li><strong>3.3.2.7</strong> unmanaged solutions</li><li><strong>4/5</strong> matched walkthrough</li></ul></div>{signal_diagram()}</div><!-- dl-hero:end -->
 <div class="two-up"><article class="card">
 <span class="tag">Native Word delivery verified &middot; synthetic fixture</span>
 <h3>Read the report, not formatting markers.</h3>

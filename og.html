@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-GB" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Platform Solution Reviewer OG card</title>
+<style>
+:root { --cp-bg:#171717; --cp-surface:#1f1f1f; --cp-border:#3b3b3b; --cp-text:#f2f2f2; --cp-text-muted:#bdbdbd; --cp-accent:#c3a0ef; --cp-link:#80baff; --cp-chart-blue:#69aeff; --cp-chart-purple:#bc98ed; --cp-chart-magenta:#ed8fea; }
+* { box-sizing: border-box; }
+body { margin:0; width:1280px; height:640px; overflow:hidden; background: radial-gradient(circle at 82% 18%, rgba(195,160,239,.24), transparent 34%), var(--cp-bg); color:var(--cp-text); font-family:"Segoe UI", Aptos, Calibri, sans-serif; }
+.card { width:100%; height:100%; padding:50px 74px; display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:center; }
+.kicker { color:var(--cp-accent); text-transform:uppercase; letter-spacing:.13em; font-weight:750; font-size:24px; }
+h1 { margin:18px 0 22px; font-size:68px; line-height:1.02; letter-spacing:-.055em; background:linear-gradient(105deg,var(--cp-chart-blue),var(--cp-chart-purple) 56%,var(--cp-chart-magenta)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+p { margin:0; color:var(--cp-text-muted); font-size:27px; line-height:1.35; }
+.facts { display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+.facts span { border:1px solid var(--cp-border); background:var(--cp-surface); color:var(--cp-text); border-radius:999px; padding:11px 18px; font-size:22px; }
+.diagram { border:1px solid var(--cp-border); border-radius:28px; padding:28px; background:rgba(31,31,31,.72); }
+svg { width:100%; height:auto; display:block; }
+.node { fill:var(--cp-surface); stroke:var(--cp-border); stroke-width:3; }
+.accent { fill:#2b2b2b; stroke:var(--cp-accent); }
+.path { fill:none; stroke:var(--cp-chart-purple); stroke-width:7; stroke-linecap:round; stroke-dasharray:18 18; }
+.hot { stroke:var(--cp-chart-blue); }
+text { fill:var(--cp-text); font:700 24px Consolas,"Courier New",monospace; }
+.note { fill:var(--cp-text-muted); font:20px "Segoe UI",sans-serif; }
+.footer { position:absolute; left:74px; right:74px; bottom:24px; display:flex; justify-content:space-between; color:var(--cp-text-muted); font-size:22px; }
+</style>
+</head>
+<body><main class="card"><section><div class="kicker">Community project &middot; MIT licence</div><h1>Power Platform Solution Reviewer</h1><p>A Copilot Studio agent that reviews Power Platform solutions, with real walkthrough evidence, Word report output and import-first setup guidance.</p><div class="facts"><span>Unmanaged solutions</span><span>Real canvas-app walkthrough</span><span>As-is, no SLA</span></div></section><section class="diagram" aria-label="Flow diagram"><svg viewBox="0 0 520 360" role="img" aria-labelledby="og-title og-desc"><title id="og-title">Solution review flow</title><desc id="og-desc">Solution package, automation, Copilot Studio review and protected outputs.</desc><path class="path hot" d="M90 100 C170 60 230 60 300 100 S410 140 470 100"/><path class="path" d="M90 260 C170 300 230 300 300 260 S410 220 470 260"/><rect class="node accent" x="24" y="58" width="132" height="84" rx="18"/><text x="90" y="94" text-anchor="middle">ZIP</text><text class="note" x="90" y="120" text-anchor="middle">Incoming</text><rect class="node" x="194" y="58" width="150" height="84" rx="18"/><text x="269" y="94" text-anchor="middle">Flow</text><text class="note" x="269" y="120" text-anchor="middle">Gates</text><rect class="node accent" x="384" y="58" width="112" height="84" rx="18"/><text x="440" y="94" text-anchor="middle">Agent</text><text class="note" x="440" y="120" text-anchor="middle">Review</text><rect class="node" x="96" y="224" width="150" height="84" rx="18"/><text x="171" y="260" text-anchor="middle">Report</text><text class="note" x="171" y="286" text-anchor="middle">TXT / Word</text><rect class="node" x="304" y="224" width="150" height="84" rx="18"/><text x="379" y="260" text-anchor="middle">Link</text><text class="note" x="379" y="286" text-anchor="middle">Requester</text></svg></section></main><div class="footer"><span>ryanbowie.github.io</span><span>Not a Microsoft product</span></div></body></html>

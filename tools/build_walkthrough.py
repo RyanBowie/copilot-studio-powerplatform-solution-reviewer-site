@@ -9,6 +9,7 @@ import struct
 import zlib
 
 from prepare_real_example import render_text
+from design_layer import html_entities, chips, community_notice, design_js, footer as design_footer, head_extras
 
 SITE = Path(__file__).resolve().parents[1]
 PREFIX = "examples/walkthrough-325"
@@ -261,7 +262,7 @@ def reader(p, site=SITE):
     index = (site / "index.html").read_text(encoding="utf-8")
     script = re.search(r"<script>(.*?)</script>", index, re.S).group(1)
     style = re.search(r"<style>(.*?)</style>", index, re.S).group(1)
-    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1)
+    light = re.search(r":root\s*\{(.*?)\}", style, re.S).group(1).replace("--cp-text: #102631;", "--cp-text: #242424;")
     sections, navigation, main_nav = [], [], []
     for row in documents(p):
         name, role = row["file"], row["role"]
@@ -278,11 +279,13 @@ def reader(p, site=SITE):
     accepted = ", ".join(p["acceptedPassIds"])
     unavailable = ", ".join(item for item in PASS_IDS if item not in p["acceptedPassIds"]) or "none selected"
     target = combined_target(p)
-    return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer">
+    return html_entities(f'''<!doctype html><html lang="en-GB" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head_extras()}<meta name="referrer" content="no-referrer">
 <script>{script}</script><title>Matched canvas walkthrough · complete {p["accepted"]}/5 review</title><style>{style}
-@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style><link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
-<body class="example-reader"><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Matched improved-run report</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Screenshot journey</a><a href="index.html#history">Historical evidence</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
-<main class="wrap"><section class="example-intro"><p class="eyebrow">Data Entry Testing · genuine original canvas solution · revision {p["revision"]}</p><h1>The full matched report.<br><span>Partial, not an app verdict.</span></h1>
+@media print {{ :root, html[data-theme="dark"] {{{light}}} }}</style>{design_js()}
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="example.css"><script src="example.js" defer></script></head>
+<body class="example-reader"><div id="dl-progress" aria-hidden="true"></div><a class="skip-link" href="#main">Skip to the complete MAIN report</a><header class="site-header"><a class="brand" href="index.html#showcase"><span class="brand-mark" aria-hidden="true">[r]</span><span>Solution Reviewer<small>Matched improved-run report</small></span></a><nav aria-label="Reader navigation"><a href="index.html#showcase">Screenshot journey</a><a href="index.html#history">Historical evidence</a><a href="index.html#report-formats">Word / PDF options</a></nav><button id="theme-toggle" class="theme-button" type="button">Change theme</button></header>
+{chips([("top", "Overview"), ("read-this-first", "Read this first"), ("main", "Details"), ("more-projects", "More projects")])}
+<main class="wrap"><!-- dl-hero:start --><section class="example-intro"><p class="eyebrow">Data Entry Testing · genuine original canvas solution · revision {p["revision"]}</p><h1 id="top">The full matched report.<br><span>Partial, not an app verdict.</span></h1>
 <p class="example-lead">{p["accepted"]}/5 selected-source assessments accepted; {p["unavailable"]} unavailable. This is the same native upload, review job, saved output and verified owner Inbox email shown in the primary walkthrough—not either earlier no-email benchmark.</p>
 <div class="actions reader-actions"><a class="button primary" href="#main-section-1">Read the full MAIN ↓</a><a class="button secondary" href="{MARKDOWN}" download>Full report (.md) ↓</a><a class="button secondary" href="{PREFIX}/MAIN.txt" download>Authoritative MAIN (.txt) ↓</a><button class="button secondary" id="print-example" hidden type="button">Print / Save as PDF</button></div>
 <div class="example-facts"><div><strong>{p["accepted"]} / 5</strong><span>accepted · {p["unavailable"]} unavailable, not an app pass rate</span></div><div><strong>326 / 326</strong><span>screen lines supplied · not exhaustive semantic examination</span></div><div><strong>{p["logicalAgentInvocations"]}</strong><span>logical agent invocations, not internal model inference count</span></div><div><strong>Verified</strong><span>owner Inbox receipt and matching protected-report link</span></div></div>
@@ -290,9 +293,9 @@ def reader(p, site=SITE):
 <p class="example-boundary"><strong>AI component assessments; deterministic MAIN assembly.</strong> Complete accepted canonical records ({accepted}), unavailable records ({unavailable}), findings, strengths, checks, inventory, omissions and footer are retained. MAIN is not another AI inference, repair or regrade. All five selected original files were acquired completely; latest accepted screen citation: line {p["latestScreenCitation"]}. This does not prove each supplied line was semantically examined or that the whole app was assessed.</p>
 <p class="example-boundary"><strong>Verification remains NOT RUN.</strong> No current checker, compilation, source-app/role/workflow import or runtime/accessibility execution occurred. Unavailable assessments are validation outcomes, not confirmed app defects. Retained syntax/default/fallback wording is not compiler or runtime proof.</p>
 <p class="example-boundary"><strong>Matched delivery, bounded proof.</strong> Native SendEmailV2 succeeded; owner Inbox receipt and the expected protected-report link were verified. Existing forwarding keeps the original mailbox copy; forwarded corporate receipt is not established. Controls were restored. No mailbox settings changed, no Cc/Bcc or mail retry, and no exactly-once or all-client delivery guarantee is claimed.</p>
-<p class="fine-print">All authoritative TXT/JSON files below are byte-identical to reviewed inputs. Privacy labels and masked links are not original source literals or live links. The Markdown download includes every full file, not a summary or new assessment. This historical run did not produce Word; <a href="index.html#word-output">the new Word output and solution bundle</a> have separate proof. Browser Print / Save as PDF is presentation only; automated PDF output is not implemented. <a href="{PROVENANCE}">Reviewed public derivative hashes</a>.</p></section>
+<p class="fine-print">All authoritative TXT/JSON files below are byte-identical to reviewed inputs. Privacy labels and masked links are not original source literals or live links. The Markdown download includes every full file, not a summary or new assessment. This historical run did not produce Word; <a href="index.html#word-output">the new Word output and solution bundle</a> have separate proof. Browser Print / Save as PDF is presentation only; automated PDF output is not implemented. <a href="{PROVENANCE}">Reviewed public derivative hashes</a>.</p></section><!-- dl-hero:end -->{community_notice()}
 <div class="report-layout"><aside class="example-toc" aria-label="Complete matched report contents"><p class="eyebrow">All authoritative documents</p><ol>{''.join(navigation)}</ol><details open><summary>All ten MAIN sections</summary><ol class="main-section-links">{''.join(main_nav)}</ol></details><p class="fine-print">No substitute unavailable component reports are invented. Complete content works without JavaScript.</p></aside><div class="report-documents">{''.join(sections)}</div></div></main>
-<footer class="wrap site-footer"><p><strong>Matched genuine canvas review · {p["outcome"]}</strong><br>Source advice, not whole-app certification.</p><p><a href="index.html#showcase">Back to the screenshot journey</a> · <a href="follow-up.html">Separate no-email benchmarks</a></p></footer></body></html>'''
+{design_footer()}</body></html>''')
 
 
 def verify_outputs(p, site=SITE):
