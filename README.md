@@ -8,6 +8,10 @@ The new Word example is a separate synthetic format-only test, not a Word
 version of that historical 4/5 assessment. There is no upload/chat backend, telemetry, tracking,
 external font or runtime service on this website.
 
+> **Community project, built with GitHub Copilot, under the [MIT licence](LICENSE).**
+> Not a Microsoft product and not supported by Microsoft; provided as is, without
+> warranty. See [Licence and support](#licence-and-support).
+
 All four public HTML pages share the benchmark's purple/neutral screen palette
 through `site.css`, layered over the original Clawpilot `--cp-*` variables.
 Dark is the default regardless of system preference. The existing
@@ -400,4 +404,4 @@ distribute new downloads remains separate from the reviewed historical evidence.
 
 ## Licence and support
 
-This repository is licensed under the MIT licence. It is a community project, not a Microsoft product, and it is not supported by Microsoft. It is provided as is, without warranty or SLA. Test in a non-production environment first and get your organisation's approvals before importing anything into an environment that holds real data.
+This repository is licensed under the [MIT licence](LICENSE). It is a community project, built with GitHub Copilot, not a Microsoft product, and it is not supported by Microsoft. It is provided as is, without warranty or SLA. Test in a non-production environment first and get your organisation's approvals before importing anything into an environment that holds real data.

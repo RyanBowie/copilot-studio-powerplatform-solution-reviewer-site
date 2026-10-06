@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "9a6d91cdf0c34bff5ec46c03d7fae5c5158cabf5985edb5f7d91ead5ea7e7920",
-      "bytes": 232921,
+      "sha256": "bbd40b981f1d8ad3221bc8aa790278299a1608d884c11448142d3b9defcf0922",
+      "bytes": 233072,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "ad489b00fcd65f50e740a3f4614ea78e5e1738e5c3ea05d4ddaf7ab8363167a9",
-      "bytes": 141093,
+      "sha256": "2ecfcaee869c75a14a990629b39fa31e953e7a24bfaf3d40f6e48742e1b83e07",
+      "bytes": 141244,
       "deployToPages": true
     },
     {
@@ -1144,8 +1144,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "4b6f954aa140c766a31df0d62f579c93b1887b95e3619b97bab1e4707c1fe4ad",
-      "bytes": 24653,
+      "sha256": "ede6b6c58fd650f6ea7ed144339c08a81e26b3c2df373941fa61b89e7c4b189e",
+      "bytes": 24925,
       "deployToPages": true
     },
     {
@@ -1174,7 +1174,7 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "3cdb49b68051ae7a0f4550be2263f854d905406bd50fb831ae569f0e77cda69e",
+      "sha256": "52e33567d051bac1acf1244f6cf806c87d289d428f18ac482c71a8d9594c1200",
       "bytes": 12352,
       "deployToPages": true
     },
@@ -1186,8 +1186,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "bd56437f8aeb34eeca65a0ae4765e7a0f0747576e056464b43d0716664524480",
-      "bytes": 67579,
+      "sha256": "dfa72ad8822b3246f6e63649827c0516ebf73f248ca7213fc6cc96ad088748b4",
+      "bytes": 67730,
       "deployToPages": true
     },
     {
@@ -1312,8 +1312,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "5affd8e62d81a98905bb8591f29f8d499f7dbe7b0944c915d9d0e7585fcf9d38",
-      "bytes": 142852,
+      "sha256": "34814aaa8b779411f41017d9101f559cf7c008f1c78b343ed60d42bb1451f398",
+      "bytes": 143003,
       "deployToPages": true
     },
     {
@@ -1516,7 +1516,7 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "6d6c8e45eb9b6e4e422272e5a14f511667965a27958713fd960d095b75fa1e32",
+      "sha256": "7dbfa6fc1136488494796c00d4a271e0f7ead1da6dc07f6218c779b1249c2c56",
       "bytes": 119707,
       "deployToPages": false
     },
@@ -1528,8 +1528,8 @@
     },
     {
       "path": "tools/design_layer.py",
-      "sha256": "01e737e165c6c67c3a4ec5db90f74f55f7f84cce2e829e6495a378062c144853",
-      "bytes": 26765,
+      "sha256": "8d73a550b5a3ab435a20eb737e0247e48379b36876576dc9db188310aafe1b4b",
+      "bytes": 26910,
       "deployToPages": false
     },
     {
