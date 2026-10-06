@@ -253,6 +253,7 @@ SERIES = [
     ("04", "SharePoint Search Hub", "https://ryanbowie.github.io/copilot-studio-sharepoint-search-hub/", "Hub-and-spoke SharePoint search in Copilot Studio, with caller-checked results, a private Excel export and a verified 512-item demo."),
     ("05", "Power BI Agent", "https://ryanbowie.github.io/copilot-studio-powerbi-agent/", "A standard Copilot Studio agent that writes DAX and queries Power BI semantic models as the signed-in user."),
     ("06", "Documentation Builder", "https://ryanbowie.github.io/copilot-studio-documentation-builder/", "Template-aligned Word and PowerPoint documents from Copilot Studio, comparing the Standard and GitHub Copilot harnesses."),
+    ("07", "AI Video Creation Guide", "https://ryanbowie.github.io/ai-video-creation-guide/", "Make code-drawn animated videos from one prompt with Claude Opus 5.5 in the GitHub Copilot app, with prompts, skills and examples."),
 ]
 
 def head_extras():

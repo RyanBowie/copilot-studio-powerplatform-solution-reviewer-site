@@ -196,7 +196,7 @@ try:
             check(page.locator("main > section").evaluate_all("(nodes)=>nodes.map(n=>n.id).join(',')") == HOME_SECTION_ORDER, label + ": Word release leads; unchanged real journey still precedes its complete report")
             check(page.locator(".community-notice").count() == 1, label + ": community notice present")
             check(page.locator("main + section#more-projects").count() == 1, label + ": community projects band follows main")
-            check(page.locator(".dl-series-card").count() == 6, label + ": six project series cards")
+            check(page.locator(".dl-series-card").count() == 7, label + ": seven project series cards")
             for node in page.locator(".dl-reveal").all():
                 node.scroll_into_view_if_needed()
                 page.wait_for_timeout(50)
