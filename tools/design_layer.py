@@ -1,6 +1,7 @@
 """Shared design-layer snippets for the public documentation pages."""
 from pathlib import Path
 import html
+import json
 
 SITE_NAME = "Power Platform Solution Reviewer"
 BASE_URL = "https://ryanbowie.github.io/copilot-studio-powerplatform-solution-reviewer-site/"
@@ -157,15 +158,8 @@ html.dl-motion .dl-reveal.dl-in { opacity: 1; transform: translateY(0); }
 .stepper { counter-reset: step; list-style: none; padding: 0; display: grid; gap: 1rem; }
 .stepper li { counter-increment: step; position: relative; padding: 1.25rem 1.25rem 1.25rem 4.25rem; border: 1px solid var(--cp-border); border-radius: .9rem; background: var(--cp-surface); }
 .stepper li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 1rem; top: 1rem; display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .55rem; background: var(--cp-accent-soft); color: var(--cp-accent); font: 700 .9rem Consolas, "Courier New", Courier, monospace; }
-.dl-series { margin-block: 3rem; padding-block: 2rem; border-block: 1px solid var(--cp-border); }
-.dl-series-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.dl-series-card { display: flex; flex-direction: column; min-height: 13rem; padding: 1.1rem; border: 1px solid var(--cp-border); border-radius: 1rem; background: var(--cp-surface); text-decoration: none; color: var(--cp-text); }
-.dl-series-card[aria-current="page"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
-.dl-series-card small { color: var(--cp-accent); text-transform: uppercase; letter-spacing: .08em; font-weight: 750; }
-.dl-series-card span { margin-top: auto; color: var(--cp-link); font-weight: 650; }
-.dl-series-card p { color: var(--cp-text-muted); font-size: .92rem; }
-@media (max-width: 900px) { .dl-hero, .dl-toc-card { grid-template-columns: 1fr; } .dl-series-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .download-row { grid-template-columns: 1fr; } }
-@media (max-width: 560px) { .dl-series-grid { grid-template-columns: 1fr; } .dl-chips { top: 0; } .dl-hero { padding-block-start: 2rem; } }
+@media (max-width: 900px) { .dl-hero, .dl-toc-card { grid-template-columns: 1fr; } .download-row { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .dl-chips { top: 0; } .dl-hero { padding-block-start: 2rem; } }
 @media print { #dl-progress, .dl-chips, .theme-button, .image-viewer { display: none !important; } .dl-reveal { opacity: 1 !important; transform: none !important; } .dl-path { animation: none !important; } h1, .dl-hero h1, .example-intro h1 { background: none !important; color: var(--cp-text) !important; -webkit-text-fill-color: currentColor !important; } }
 @media (forced-colors: active) { #dl-progress { forced-color-adjust: none; background: Highlight; } h1, .dl-hero h1 { color: CanvasText !important; -webkit-text-fill-color: CanvasText !important; } }
 @media (prefers-reduced-motion: reduce) { .dl-path, .dl-hero h1::after { animation: none !important; } html.dl-motion .dl-reveal { opacity: 1; transform: none; transition: none; } }
@@ -246,21 +240,48 @@ META_BLOCK = """
 <!-- dl-meta:end -->
 """
 
-SERIES = [
-    ("01", "Custom Agent Reporting – Architecture", "https://ryanbowie.github.io/custom-agent-reporting-architecture/", "How a custom Power BI model can report on agents across Copilot Studio, Agent Builder and Microsoft Foundry. Documentation only."),
-    ("02", "Copilot Interaction Logging", "https://ryanbowie.github.io/copilot-interaction-logging/", "Build guide: Copilot interaction records from the Purview audit log, collected into Dataverse by two Power Automate flows."),
-    ("03", "Power Platform Solution Reviewer", "#top", "A Copilot Studio agent that reviews Power Platform solutions, with a real canvas-app walkthrough, detailed output and setup guidance."),
-    ("04", "SharePoint Search Hub", "https://ryanbowie.github.io/copilot-studio-sharepoint-search-hub/", "Hub-and-spoke SharePoint search in Copilot Studio, with caller-checked results, a private Excel export and a verified 512-item demo."),
-    ("05", "Power BI Agent", "https://ryanbowie.github.io/copilot-studio-powerbi-agent/", "A standard Copilot Studio agent that writes DAX and queries Power BI semantic models as the signed-in user."),
-    ("06", "Documentation Builder", "https://ryanbowie.github.io/copilot-studio-documentation-builder/", "Template-aligned Word and PowerPoint documents from Copilot Studio, comparing the Standard and GitHub Copilot harnesses."),
-    ("07", "AI Video Creation Guide", "https://ryanbowie.github.io/ai-video-creation-guide/", "Make code-drawn animated videos from one prompt with Claude Opus 5.5 in the GitHub Copilot app, with prompts, skills and examples."),
+SLUG = "copilot-studio-powerplatform-solution-reviewer-site"
+COMMUNITY_BASE = "https://ryanbowie.github.io/"
+FX_DIR = Path(__file__).resolve().parent
+# Ported from the shared community kit (apply.py, fx-site.css, fx-site.js), kept verbatim.
+COMMUNITY_GROUPS = [
+    ("copilot-studio", "Copilot Studio", "Agents, reviewers and tests built with Copilot Studio."),
+    ("governance", "Governance & reporting", "Seeing what agents and Copilot are doing across a tenant."),
+    ("m365", "Microsoft 365 Copilot", "Copilot Cowork and migration to Microsoft Teams."),
+    ("build", "Build with GitHub Copilot", "Videos, interaction effects and skills made with the GitHub Copilot app."),
 ]
+COMMUNITY_PROJECTS = [
+    ("copilot-studio-powerbi-agent", "copilot-studio", "Power BI Agent", "A standard Copilot Studio agent that writes DAX and queries Power BI semantic models as the signed-in user.", "Agent", COMMUNITY_BASE + "copilot-studio-powerbi-agent/"),
+    ("copilot-studio-sharepoint-search-hub", "copilot-studio", "SharePoint Search Hub", "Hub-and-spoke SharePoint search for Copilot Studio, with results checked against the caller's access and a private Excel export.", "Agent", COMMUNITY_BASE + "copilot-studio-sharepoint-search-hub/"),
+    ("copilot-studio-powerplatform-solution-reviewer-site", "copilot-studio", "Power Platform Solution Reviewer", "A Copilot Studio agent that reviews Power Platform solutions, shown on a real canvas app with its full output and setup guidance.", "Agent", COMMUNITY_BASE + "copilot-studio-powerplatform-solution-reviewer-site/"),
+    ("copilot-studio-documentation-builder", "copilot-studio", "Documentation Builder", "Template-aligned technical documents from Copilot Studio, comparing the standard and GitHub Copilot harnesses.", "Agent", COMMUNITY_BASE + "copilot-studio-documentation-builder/"),
+    ("copilot-studio-load-test", "copilot-studio", "Copilot Studio Load Test", "90,384 real messages against a Copilot Studio agent in Microsoft 365 Copilot: where the limits are and why throttles arrive as HTTP 200.", "Test results", COMMUNITY_BASE + "copilot-studio-load-test/"),
+    ("custom-agent-reporting-architecture", "governance", "Custom Agent Reporting", "How a custom Power BI model can report on agents across Copilot Studio, Agent Builder, SharePoint agents and Microsoft Foundry.", "Architecture", COMMUNITY_BASE + "custom-agent-reporting-architecture/"),
+    ("copilot-interaction-logging", "governance", "Copilot Interaction Logging", "Copilot interaction records from the Purview audit log, collected into Dataverse by two Power Automate flows.", "Build guide", COMMUNITY_BASE + "copilot-interaction-logging/"),
+    ("copilot-cowork-app-benchmark", "m365", "Copilot Cowork App Benchmark", "Evidence-led costs, time and capabilities for Copilot Cowork managed apps, with model and effort comparisons.", "Benchmark", COMMUNITY_BASE + "copilot-cowork-app-benchmark/"),
+    ("slack-to-teams-migration-kit", "m365", "Slack to Teams Migration", "Slack-to-Teams migration demonstrations with GitHub Copilot: screenshots, workflow, measured costs and limitations.", "Showcase", COMMUNITY_BASE + "slack-to-teams-migration-kit/"),
+    ("ai-video-creation-guide", "build", "AI Video Creation Guide", "Make code-drawn animated videos with one prompt using Claude Opus 5.5 in the GitHub Copilot app.", "Guide", COMMUNITY_BASE + "ai-video-creation-guide/"),
+    ("universe-fx-kit", "build", "Universe FX Kit", "Cursor trail, text decode, an octopus mascot, scroll reveals and a mini game for GitHub Pages.", "Showcase", COMMUNITY_BASE + "universe-fx-kit/"),
+    ("copilot-autoharness", "build", "Copilot Autoharness", "A self-learning skill layer for the GitHub Copilot app.", "Repository", "https://github.com/RyanBowie/copilot-autoharness"),
+]
+# Tuned to this site's markup: chips and the header nav decode; the hero is the home hero or a reader intro.
+FX_CONFIG = {"nav": ".dl-chips a, .site-header nav a", "hero": ".dl-hero, .example-intro"}
 
 def head_extras():
     return META_BLOCK
 
+def fx_css():
+    return (FX_DIR / "fx-site.css").read_text(encoding="utf-8").replace("\r\n", "\n")
+
+def fx_js():
+    return (FX_DIR / "fx-site.js").read_text(encoding="utf-8").replace("\r\n", "\n")
+
+def fx_script():
+    return ("<!-- fx-site:start -->\n<script>window.FX_SITE=" + json.dumps(FX_CONFIG, ensure_ascii=False) + ";</script>\n<script>\n"
+            + fx_js() + "</script>\n<!-- fx-site:end -->")
+
 def style_block():
-    return "<style>\n" + PALETTE_STYLE + DESIGN_CSS + "</style>"
+    return "<style>\n" + PALETTE_STYLE + DESIGN_CSS + fx_css() + "</style>"
 
 def design_js():
     return DESIGN_JS
@@ -333,12 +354,31 @@ def downloads_section(site, solutions=True):
     return f'''<section class="section wrap dl-reveal" id="downloads"><div class="section-heading"><p class="eyebrow">Downloads</p><h2>Every downloadable artefact.<br>With the import boundary visible.</h2><p>Links point to files in this repository. There are no GitHub Releases for this site.</p></div><div class="downloads-grid">{download_rows(site, solutions)}</div></section>'''
 
 def series_block():
-    cards = []
-    for number, title, href, desc in SERIES:
-        current = ' aria-current="page"' if href == "#top" else ""
-        label = "You are here" if href == "#top" else "Open →"
-        cards.append(f'<a class="dl-series-card" href="{href}"{current}><small>{number}</small><h3>{html.escape(title)}</h3><p>{html.escape(desc)}</p><span>{label}</span></a>')
-    return '<!-- dl-series:start --><section class="wrap dl-series" id="more-projects" aria-label="More community projects"><p class="eyebrow">More community projects</p><h2>More community projects</h2><div class="dl-series-grid">' + "".join(cards) + '</div></section><!-- dl-series:end -->'
+    current = next(p for p in COMMUNITY_PROJECTS if p[0] == SLUG)
+    order = sorted(COMMUNITY_GROUPS, key=lambda g: 0 if g[0] == current[1] else 1)
+    e = html.escape
+    out = ['<!-- community:start -->',
+           '<aside class="cm-hub" id="more-community-projects" aria-label="More community projects" data-fx-community>',
+           '  <p class="cm-k">More community projects</p>',
+           '  <p class="cm-lede">Personal, community-built projects made with GitHub Copilot. Pick a group to jump to the related sites.</p>']
+    for gid, label, blurb in order:
+        items = [p for p in COMMUNITY_PROJECTS if p[1] == gid and p[0] != SLUG]
+        if not items:
+            continue
+        here = ' <span class="cm-here">This site&rsquo;s group</span>' if gid == current[1] else ""
+        out.append(f'  <div class="cm-group" role="group" data-group="{gid}" data-label="{e(label)}" aria-label="{e(label)}">')
+        out.append(f'    <p class="cm-gh">{e(label)} <span class="cm-count">{len(items)}</span>{here}</p>')
+        out.append(f'    <p class="cm-blurb">{e(blurb)}</p>')
+        out.append('    <ul class="cm-grid">')
+        for _, _, title, desc, tag, url in items:
+            go = "Open repository &rarr;" if "github.com" in url else "Visit site &rarr;"
+            out.append(f'      <li><a class="cm-card" href="{e(url)}"><span class="cm-tag">{e(tag)}</span><strong>{e(title)}</strong>'
+                       f'<span class="cm-desc">{e(desc)}</span><span class="cm-go">{go}</span></a></li>')
+        out.append('    </ul>')
+        out.append('  </div>')
+    out.append('</aside>')
+    out.append('<!-- community:end -->')
+    return '<div class="wrap">' + "\n".join(out) + '</div>'
 
 def footer(extra=''):
-    return f'''{series_block()}<footer class="wrap site-footer"><p><strong>{SITE_NAME}</strong> · Community project built with GitHub Copilot · MIT licence · <a href="README.md">README</a> · <a href="https://github.com/RyanBowie/copilot-studio-powerplatform-solution-reviewer-site/blob/main/LICENSE">LICENSE</a> · <a href="#top">Back to top ↑</a></p><p>Not a Microsoft product or supported by Microsoft. Provided as is, without warranty of any kind. You're responsible for assessing, operating and securing anything you deploy from this site.</p>{extra}</footer>'''
+    return f'''{series_block()}<footer class="wrap site-footer"><p><strong>{SITE_NAME}</strong> · Community project built with GitHub Copilot · MIT licence · <a href="README.md">README</a> · <a href="https://github.com/RyanBowie/copilot-studio-powerplatform-solution-reviewer-site/blob/main/LICENSE">LICENSE</a> · <a href="#top">Back to top ↑</a></p><p>Not a Microsoft product or supported by Microsoft. Provided as is, without warranty of any kind. You're responsible for assessing, operating and securing anything you deploy from this site.</p>{extra}</footer>{fx_script()}'''

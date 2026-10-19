@@ -33,7 +33,7 @@ REPOSITORY_ONLY = [
     "tools/build_followup.py", "tools/build_walkthrough.py", "tools/test_walkthrough.py",
     "tools/word_release.py", "tools/test_word_release.py",
     "tools/solution_release.py", "tools/test_solution_release.py",
-    "tools/prepare_solution_release.py",
+    "tools/prepare_solution_release.py", "tools/fx-site.css", "tools/fx-site.js",
 ]
 MANIFEST = "PUBLICATION-MANIFEST.json"
 ALL = DEPLOY + REPOSITORY_ONLY + [MANIFEST]

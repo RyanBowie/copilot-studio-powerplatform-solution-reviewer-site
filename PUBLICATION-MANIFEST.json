@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "bbd40b981f1d8ad3221bc8aa790278299a1608d884c11448142d3b9defcf0922",
-      "bytes": 233072,
+      "sha256": "f430068d6a0668d5da9f37f74e27eab8c7817804762e20c76ba937ef7ceed3eb",
+      "bytes": 258291,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "2ecfcaee869c75a14a990629b39fa31e953e7a24bfaf3d40f6e48742e1b83e07",
-      "bytes": 141244,
+      "sha256": "091391633edc73d282395fd192651306b6cdf97c7f58d332dc7069546041c824",
+      "bytes": 166473,
       "deployToPages": true
     },
     {
@@ -1174,8 +1174,8 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "52e33567d051bac1acf1244f6cf806c87d289d428f18ac482c71a8d9594c1200",
-      "bytes": 12352,
+      "sha256": "6e036cca39f31155b105055cfb9cc0b60719f8d6c5885bbe7bdfa8b51c0d297c",
+      "bytes": 12539,
       "deployToPages": true
     },
     {
@@ -1186,8 +1186,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "dfa72ad8822b3246f6e63649827c0516ebf73f248ca7213fc6cc96ad088748b4",
-      "bytes": 67730,
+      "sha256": "ec0fcbce69d8bd869af6650ec88db4f7bfde4ff395c8886d33392eb4834a719c",
+      "bytes": 92959,
       "deployToPages": true
     },
     {
@@ -1312,8 +1312,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "34814aaa8b779411f41017d9101f559cf7c008f1c78b343ed60d42bb1451f398",
-      "bytes": 143003,
+      "sha256": "4cf8cacfd186520bf1b93cdcd11b54ad8f4a93b3497b0c3e75fd75f90ad67e17",
+      "bytes": 168232,
       "deployToPages": true
     },
     {
@@ -1516,8 +1516,8 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "7dbfa6fc1136488494796c00d4a271e0f7ead1da6dc07f6218c779b1249c2c56",
-      "bytes": 119707,
+      "sha256": "8471960abef27e94b6f71e28b8542c6173c3c22bf10f39e9be43217f46ec93f5",
+      "bytes": 120549,
       "deployToPages": false
     },
     {
@@ -1528,8 +1528,8 @@
     },
     {
       "path": "tools/design_layer.py",
-      "sha256": "8d73a550b5a3ab435a20eb737e0247e48379b36876576dc9db188310aafe1b4b",
-      "bytes": 26910,
+      "sha256": "5f1f254133e31e04468ea2981e4b13b136074433a9fd8e3b831eb4f95e9f15e3",
+      "bytes": 29915,
       "deployToPages": false
     },
     {
@@ -1540,14 +1540,14 @@
     },
     {
       "path": "tools/prepare_real_example.py",
-      "sha256": "27eb560fca98ccdfdd3062589f6e41b49de80a274ba1373c6328ab5f700cb3e2",
-      "bytes": 17517,
+      "sha256": "55b03734e50ba22e2a9ebbe5db663ed277d3d13be6585d90b309882aa613f169",
+      "bytes": 17527,
       "deployToPages": false
     },
     {
       "path": "tools/public_inventory.py",
-      "sha256": "cd8920009ea6ab52861ec509903a171c57bc9db9d71c2250c53a85a7ed932430",
-      "bytes": 2866,
+      "sha256": "57050c36822ffa09562e653baae2b4097f4164c879e891212c9999c2c1ea5984",
+      "bytes": 2907,
       "deployToPages": false
     },
     {
@@ -1558,8 +1558,8 @@
     },
     {
       "path": "tools/qa_site.py",
-      "sha256": "5c1a8461e2612d916244a937485dca4c74b2ecdd7f9e3e78b16a9acee5d0aaf6",
-      "bytes": 40438,
+      "sha256": "5727a76fc9475401f5594fb7ab055be0d7fef015b4ec2fd6f3a935d31f65befb",
+      "bytes": 40775,
       "deployToPages": false
     },
     {
@@ -1582,14 +1582,14 @@
     },
     {
       "path": "tools/build_followup.py",
-      "sha256": "481007288ec6c5ff8abaac5b51d18ddaa6f77c0278c6fea5b696378c7a9f48f5",
-      "bytes": 15362,
+      "sha256": "b9002e8506b50813081db30d30436e4b04b8173bb517a8bf22a3bf16b58f1661",
+      "bytes": 15372,
       "deployToPages": false
     },
     {
       "path": "tools/build_walkthrough.py",
-      "sha256": "27dc4be50ba3cef16b2796d5e5cb57b6af1c5188055facaf6ec77d2d3095b0f8",
-      "bytes": 23613,
+      "sha256": "4644517c1f0cb8fe0fd227669da57f414d77719a01fcf6d6e62f4520bbb400cb",
+      "bytes": 23623,
       "deployToPages": false
     },
     {
@@ -1626,6 +1626,18 @@
       "path": "tools/prepare_solution_release.py",
       "sha256": "f6fd8dd82100c3b8ef2a4ac0efe06d4a4e218cf96987872f2ca95ee75ddefabf",
       "bytes": 6524,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/fx-site.css",
+      "sha256": "b90cb79c9d2a8140158aecfb51f92fa91171d5e90a2858f9ec7f7d946bd1ce59",
+      "bytes": 7897,
+      "deployToPages": false
+    },
+    {
+      "path": "tools/fx-site.js",
+      "sha256": "5851cd8e01b28beb841c0cd63773f6e0e96faea44757a278f88e9c79e5b2a594",
+      "bytes": 15013,
       "deployToPages": false
     }
   ],
@@ -1721,6 +1733,8 @@
     "tools/solution_release.py",
     "tools/test_solution_release.py",
     "tools/prepare_solution_release.py",
+    "tools/fx-site.css",
+    "tools/fx-site.js",
     "PUBLICATION-MANIFEST.json"
   ],
   "exactDeploymentAllowlist": [
@@ -1817,12 +1831,14 @@
     "tools/test_word_release.py",
     "tools/solution_release.py",
     "tools/test_solution_release.py",
-    "tools/prepare_solution_release.py"
+    "tools/prepare_solution_release.py",
+    "tools/fx-site.css",
+    "tools/fx-site.js"
   ],
   "privacyReport": "PRIVACY-REPORT.json",
   "freshLocalQa": {
     "status": "PASS",
-    "checksPassed": 898,
+    "checksPassed": 903,
     "source": "qa/RESULTS.json",
     "historicalQaInherited": false
   },

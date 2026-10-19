@@ -195,8 +195,9 @@ try:
             check(page.evaluate("document.documentElement.scrollWidth<=innerWidth"), label + ": homepage no overflow")
             check(page.locator("main > section").evaluate_all("(nodes)=>nodes.map(n=>n.id).join(',')") == HOME_SECTION_ORDER, label + ": Word release leads; unchanged real journey still precedes its complete report")
             check(page.locator(".community-notice").count() == 1, label + ": community notice present")
-            check(page.locator("main + section#more-projects").count() == 1, label + ": community projects band follows main")
-            check(page.locator(".dl-series-card").count() == 7, label + ": seven project series cards")
+            check(page.locator("main + .wrap > aside#more-community-projects").count() == 1, label + ": community projects hub follows main")
+            check(page.locator(".cm-group").evaluate_all("(nodes)=>nodes.map(n=>n.dataset.group).join(',')") == "copilot-studio,governance,m365,build", label + ": hub groups with Copilot Studio first")
+            check(page.locator(".cm-card").count() == 11 and page.locator('.cm-card[href*="copilot-studio-powerplatform-solution-reviewer-site"]').count() == 0, label + ": eleven other community projects, never this site")
             for node in page.locator(".dl-reveal").all():
                 node.scroll_into_view_if_needed()
                 page.wait_for_timeout(50)
