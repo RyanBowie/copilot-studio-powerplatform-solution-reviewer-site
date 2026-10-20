@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "f430068d6a0668d5da9f37f74e27eab8c7817804762e20c76ba937ef7ceed3eb",
-      "bytes": 258291,
+      "sha256": "ba6dc17002499c4e892201d96a2959ec75b0a90af3e8f45c9ef9133f0250a378",
+      "bytes": 260801,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "091391633edc73d282395fd192651306b6cdf97c7f58d332dc7069546041c824",
-      "bytes": 166473,
+      "sha256": "dfc7ff42a465f832b2f7f16da5131b53e85cb189885526ad8d9f9445e5b93c5a",
+      "bytes": 168983,
       "deployToPages": true
     },
     {
@@ -1174,7 +1174,7 @@
     },
     {
       "path": "PRIVACY-REPORT.json",
-      "sha256": "6e036cca39f31155b105055cfb9cc0b60719f8d6c5885bbe7bdfa8b51c0d297c",
+      "sha256": "41ba78779f01322aa955824c87d7584f07a6be2f6345f36f14f09cd5d598699a",
       "bytes": 12539,
       "deployToPages": true
     },
@@ -1186,8 +1186,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "ec0fcbce69d8bd869af6650ec88db4f7bfde4ff395c8886d33392eb4834a719c",
-      "bytes": 92959,
+      "sha256": "16c90985407ab3451e9edfbc06712efef08264ed0ad67d036d602358f2be16f4",
+      "bytes": 95469,
       "deployToPages": true
     },
     {
@@ -1312,8 +1312,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "4cf8cacfd186520bf1b93cdcd11b54ad8f4a93b3497b0c3e75fd75f90ad67e17",
-      "bytes": 168232,
+      "sha256": "5342ae45637b6b9d956dcc955961b1dbc19e5f167fc712d8a55aae66a56068a8",
+      "bytes": 170742,
       "deployToPages": true
     },
     {
@@ -1516,7 +1516,7 @@
     },
     {
       "path": "qa/RESULTS.json",
-      "sha256": "8471960abef27e94b6f71e28b8542c6173c3c22bf10f39e9be43217f46ec93f5",
+      "sha256": "fcad3afc8236a0069867ae7f6b50c0a36925377b1e4055f50c9100387cf737db",
       "bytes": 120549,
       "deployToPages": false
     },
@@ -1630,14 +1630,14 @@
     },
     {
       "path": "tools/fx-site.css",
-      "sha256": "b90cb79c9d2a8140158aecfb51f92fa91171d5e90a2858f9ec7f7d946bd1ce59",
-      "bytes": 7897,
+      "sha256": "97e73b91ac19573a572de88f8af1c01f1efc5490735b78d37ab494f09fdf8e58",
+      "bytes": 8873,
       "deployToPages": false
     },
     {
       "path": "tools/fx-site.js",
-      "sha256": "5851cd8e01b28beb841c0cd63773f6e0e96faea44757a278f88e9c79e5b2a594",
-      "bytes": 15013,
+      "sha256": "34ba5950ac49f8d7974afe4f2981bcc28cec8117aaf194ff82c9b73e599d3de4",
+      "bytes": 16585,
       "deployToPages": false
     }
   ],
