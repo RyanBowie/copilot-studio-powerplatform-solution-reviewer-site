@@ -1084,8 +1084,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "ba6dc17002499c4e892201d96a2959ec75b0a90af3e8f45c9ef9133f0250a378",
-      "bytes": 260801,
+      "sha256": "5f84cce12b44d9f0cfd4a60fc371e514483ca065136f926a9ab9cbcf02ab644c",
+      "bytes": 260917,
       "deployToPages": true
     },
     {
@@ -1120,8 +1120,8 @@
     },
     {
       "path": "full-example.html",
-      "sha256": "dfc7ff42a465f832b2f7f16da5131b53e85cb189885526ad8d9f9445e5b93c5a",
-      "bytes": 168983,
+      "sha256": "b122f158d35864477627f32018e4828f3f3652975600f89b8ed35bfa31bc8976",
+      "bytes": 169100,
       "deployToPages": true
     },
     {
@@ -1186,8 +1186,8 @@
     },
     {
       "path": "follow-up.html",
-      "sha256": "16c90985407ab3451e9edfbc06712efef08264ed0ad67d036d602358f2be16f4",
-      "bytes": 95469,
+      "sha256": "0a01014425db618fff47979ead495821efb122d6e0a55d70fc86a3cd3848f1ac",
+      "bytes": 95586,
       "deployToPages": true
     },
     {
@@ -1312,8 +1312,8 @@
     },
     {
       "path": "walkthrough.html",
-      "sha256": "5342ae45637b6b9d956dcc955961b1dbc19e5f167fc712d8a55aae66a56068a8",
-      "bytes": 170742,
+      "sha256": "08eadf560db44e35241badebdb0636ca5fbf5ef834826a84b1fd77c41e48996f",
+      "bytes": 170859,
       "deployToPages": true
     },
     {
@@ -1528,8 +1528,8 @@
     },
     {
       "path": "tools/design_layer.py",
-      "sha256": "5f1f254133e31e04468ea2981e4b13b136074433a9fd8e3b831eb4f95e9f15e3",
-      "bytes": 29915,
+      "sha256": "adf5075e63f0c516ae0602cba4b7398ddeacc1cbcaa8661094223bc81731b5b4",
+      "bytes": 30210,
       "deployToPages": false
     },
     {
