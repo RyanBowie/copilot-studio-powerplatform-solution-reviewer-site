@@ -382,3 +382,6 @@ def series_block():
 
 def footer(extra=''):
     return f'''{series_block()}<footer class="wrap site-footer"><p><strong>{SITE_NAME}</strong> · Community project built with GitHub Copilot · MIT licence · <a href="README.md">README</a> · <a href="https://github.com/RyanBowie/copilot-studio-powerplatform-solution-reviewer-site/blob/main/LICENSE">LICENSE</a> · <a href="#top">Back to top ↑</a></p><p>Not a Microsoft product or supported by Microsoft. Provided as is, without warranty of any kind. You're responsible for assessing, operating and securing anything you deploy from this site.</p>{extra}</footer>{fx_script()}'''
+
+# ryanbow230.com shared theme: every generated page links /rb/theme.css and /rb/chrome.js
+META_BLOCK = META_BLOCK.replace('<!-- dl-meta:end -->', '<!-- rb:theme --><link rel="stylesheet" href="/rb/theme.css"><script src="/rb/chrome.js"></script><!-- /rb:theme -->\n<!-- dl-meta:end -->', 1)
